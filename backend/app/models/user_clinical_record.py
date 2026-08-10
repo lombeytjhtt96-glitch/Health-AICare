@@ -161,7 +161,7 @@ class UserClinicalRecord(Base):
     # INTERNAL NOTES (Counselor/Admin only)
     # =====================================================================
     health_aicare_team_notes = Column(
-        "health_aicare_team_notes",
+        "health-aicare_team_notes",
         Text,
         comment="Internal notes from HealthAICare Support team (not visible to user)"
     )
