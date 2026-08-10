@@ -153,9 +153,9 @@ const AgentNode = ({ data }: NodeProps<AgentNodeData>) => {
   );
 };
 
-const nodeTypes = { agent: AgentNode };
-
 const LangGraphViewer = () => {
+  const nodeTypes = useMemo(() => ({ agent: AgentNode }), []);
+
   const [graphState, setGraphState] = useState<GraphState | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

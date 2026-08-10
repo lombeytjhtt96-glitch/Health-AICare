@@ -112,21 +112,21 @@ const UserNode = ({ data, isConnectable }: NodeProps) => (
     </div>
 );
 
-const nodeTypes = {
-    agent:          AgentNode,
-    user:           UserNode,
-    parallelCrisis: ParallelCrisisNode,
-    synthesize:     SynthesizeNode,
-    endNode:        EndNode,
-    background:     BackgroundNode,
-};
-
 interface AgenticArchitectureGraphProps {
     onNodeClick: (nodeId: string) => void;
     healthData: any;
 }
 
 export function AgenticArchitectureGraph({ onNodeClick, healthData }: AgenticArchitectureGraphProps) {
+    const nodeTypes = useMemo(() => ({
+        agent:          AgentNode,
+        user:           UserNode,
+        parallelCrisis: ParallelCrisisNode,
+        synthesize:     SynthesizeNode,
+        endNode:        EndNode,
+        background:     BackgroundNode,
+    }), []);
+
     const getGraphData = (graphName: string) => {
         const graph = healthData?.graphs?.find(
             (g: any) => g?.graph_name && g.graph_name.toLowerCase() === graphName.toLowerCase()
