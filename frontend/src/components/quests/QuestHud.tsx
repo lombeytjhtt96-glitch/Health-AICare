@@ -67,7 +67,7 @@ export default function QuestHud({ className }: QuestHudProps) {
               <span className="font-semibold text-[#FFCA40]">{formatMetric(wellness.harmony_score, 1)}</span>
               <span
                 className="cursor-help rounded-md bg-white/5 px-1 text-[11px] uppercase tracking-wide text-white/60"
-                title="Harmony: keseimbangan emosional dan kemajuan harianmu. Bertambah ketika menjaga streak dan menyeleshealth_ain quest."
+                title="Harmony: keseimbangan emosional dan kemajuan harianmu. Bertambah ketika menjaga streak dan menyelesaikan quest."
               >
                 Harmony
               </span>

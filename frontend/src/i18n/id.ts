@@ -112,7 +112,7 @@ export const id = {
   'landing.benefits.card2.f4': 'Tujuan pribadi yang bisa kamu tinjau lagi',
   'landing.benefits.card3.title': 'Jembatan ke dukungan kehidupan',
   'landing.benefits.card3.desc':
-    'Saat kamu ingin bicara dengan profesional, HealthAI bisa mengarahkanmu ke layanan terverifikasi dan membantu menyiapkan apa yang ingin kamu samphealth_ain.',
+    'Saat kamu ingin bicara dengan profesional, HealthAI bisa mengarahkanmu ke layanan terverifikasi dan membantu menyiapkan apa yang ingin kamu sampaikan.',
   'landing.benefits.card3.f1': 'Jalur layanan klinis terverifikasi',
   'landing.benefits.card3.f2': 'Membantu merangkum situasimu',
   'landing.benefits.card3.f3': 'Mendorong untuk mencari bantuan lebih awal',
@@ -167,7 +167,7 @@ export const id = {
   'landing.meet.features.f3.title': 'Mengutamakan privasi',
   'landing.meet.features.f3.desc': 'Kamu tetap memegang kendali atas apa dan kapan kamu berbagi.',
   'landing.meet.features.f4.title': 'Teknik terpandu',
-  'landing.meet.features.f4.desc': 'Latihan terinspirasi pendekatan berbasis bukti, disesuhealth_ain untuk kehidupan sehari-hari.',
+  'landing.meet.features.f4.desc': 'Latihan terinspirasi pendekatan berbasis bukti, disesuaikan untuk kehidupan sehari-hari.',
   'landing.meet.cta': 'Bicara dengan HealthAI',
 
   'landing.how.eyebrow': 'Cara kerja',

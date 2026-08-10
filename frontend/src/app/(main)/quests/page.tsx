@@ -13,7 +13,7 @@ export default function QuestsPage() {
             <p className="text-xs uppercase tracking-wide text-white/60">HealthAICare Quest</p>
             <h1 className="text-3xl font-semibold text-white">Quest harianmu</h1>
             <p className="mt-2 text-sm text-white/60">
-              Seleshealth_ain quest untuk menjaga keseimbangan harian dan kumpulkan Harmony bersama guild-mu.
+              Selesaikan quest untuk menjaga keseimbangan harian dan kumpulkan Harmony bersama guild-mu.
             </p>
           </div>
           <Link

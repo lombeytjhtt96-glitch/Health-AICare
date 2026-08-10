@@ -458,7 +458,7 @@ export function useHealthAI(options: UseHealthAIOptions = {}) {
 
         if (showToasts) {
           toast.success(
-            '✅ Kasusmu telah disamphealth_ain ke konselor profesional.',
+            '✅ Kasusmu telah disampaikan ke konselor profesional.',
             { duration: 5000 }
           );
         }

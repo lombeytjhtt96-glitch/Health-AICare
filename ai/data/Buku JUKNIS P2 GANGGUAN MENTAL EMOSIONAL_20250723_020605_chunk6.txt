@@ -112,7 +112,7 @@ Saya berpikir terlebih dahulu akibat yang akan terjadi, sebelum berbuat atau mel
 Saya mengambil barang yang bukan milik saya dari rumah, sekolah atau dari mana saja (C)
 Saya lebih mudah berteman dengan orang dewasa daripada dengan orang seusia Saya (P)
 Banyak yang saya takuti, saya mudah menjadi takut (E)
-Saya menyeleshealth_ain pekerjaan yang sedang saya lakukan. Saya mempunyai perhatian yang baik terhadap apapun (H)
+Saya menyelesaikan pekerjaan yang sedang saya lakukan. Saya mempunyai perhatian yang baik terhadap apapun (H)
 0 1 2
 0 1 2
 0 1 2
@@ -191,7 +191,7 @@ Gelisah, terlalu aktif, tidak dapat diam lama.
 Terus bergerak dengan resah.
 Mudah teralih, konsentrasi buyar.
 Tidak berpikir sebelum bertindak
-Tidak mampu menyeleshealth_ain tugas sampai selesai.
+Tidak mampu menyelesaikan tugas sampai selesai.
 Penilaian:
 
 | Usia < 11 tahun : | Usia 11-18 tahun : |

@@ -166,7 +166,7 @@ export function ChatControlCenter({
               <div className="flex-1">
                 <h2 className="text-xl font-semibold text-white md:text-2xl">Pusat Kontrol HealthAI</h2>
                 <p className="mt-1 text-sm text-white/60">
-                  Sesuhealth_ain pengaturan AI, chat, dan audio
+                  Sesuaikan pengaturan AI, chat, dan audio
                 </p>
               </div>
               <button

@@ -2398,7 +2398,7 @@
         "Pola Asuh Keluarga",
         "Upaya Preventif"
       ],
-      "golden_answer": "Cara mengatasi faktor risiko di lingkungan keluarga antara lain dengan peningkatan komunikasi efektif dalam keluarga, perbhealth_ain pola asuh, dan pelaksanaan tugas kesehatan keluarga seperti mengenal masalah anggota keluarga, memutuskan cara mengatasi masalah, merawat sesuai kebutuhan, menciptakan suasana gembira, dan menggunakan pelayanan kesehatan terdekat (5M)."
+      "golden_answer": "Cara mengatasi faktor risiko di lingkungan keluarga antara lain dengan peningkatan komunikasi efektif dalam keluarga, perbaikan pola asuh, dan pelaksanaan tugas kesehatan keluarga seperti mengenal masalah anggota keluarga, memutuskan cara mengatasi masalah, merawat sesuai kebutuhan, menciptakan suasana gembira, dan menggunakan pelayanan kesehatan terdekat (5M)."
     },
     {
       "id": null,
@@ -2968,7 +2968,7 @@
         "Dewasa",
         "Lansia"
       ],
-      "golden_answer": "Materi promosi kesehatan jiwa mengajarkan pengertian sehat jiwa, risiko (ODMK), dan sakit (ODGJ) yang disesuhealth_ain untuk setiap kelompok usia, yaitu remaja, dewasa, dan lansia."
+      "golden_answer": "Materi promosi kesehatan jiwa mengajarkan pengertian sehat jiwa, risiko (ODMK), dan sakit (ODGJ) yang disesuaikan untuk setiap kelompok usia, yaitu remaja, dewasa, dan lansia."
     },
     {
       "id": null,
@@ -3150,7 +3150,7 @@
         "Pola Asuh Keluarga",
         "Faktor Sosial"
       ],
-      "golden_answer": "Untuk mengatasi konflik orang tua sebagai faktor risiko GME pada anak, dapat dilakukan peningkatan komunikasi efektif dalam keluarga, perbhealth_ain pola asuh, dan pelaksanaan tugas kesehatan keluarga yang berfokus pada menciptakan suasana gembira dan kondusif."
+      "golden_answer": "Untuk mengatasi konflik orang tua sebagai faktor risiko GME pada anak, dapat dilakukan peningkatan komunikasi efektif dalam keluarga, perbaikan pola asuh, dan pelaksanaan tugas kesehatan keluarga yang berfokus pada menciptakan suasana gembira dan kondusif."
     },
     {
       "id": null,
@@ -3289,7 +3289,7 @@
         "Dinas Kesehatan Kabupaten/Kota",
         "Puskesmas"
       ],
-      "golden_answer": "Dinas Kesehatan Kabupaten/Kota akan melakukan rekapitulasi data dari Puskesmas, menganalisisnya, kemudian menyamphealth_ainnya sebagai umpan balik ke Puskesmas dan melaporkan ke Dinas Kesehatan Provinsi setiap bulan."
+      "golden_answer": "Dinas Kesehatan Kabupaten/Kota akan melakukan rekapitulasi data dari Puskesmas, menganalisisnya, kemudian menyampaikannya sebagai umpan balik ke Puskesmas dan melaporkan ke Dinas Kesehatan Provinsi setiap bulan."
     },
     {
       "id": null,
@@ -3448,7 +3448,7 @@
         "Puskesmas",
         "Dinas Kesehatan Provinsi"
       ],
-      "golden_answer": "Umpan balik disamphealth_ain oleh Dinas Kesehatan Kabupaten/Kota kepada Puskesmas, dan oleh Dinas Kesehatan Provinsi kepada Kabupaten/Kota, berdasarkan hasil analisis data laporan untuk perbhealth_ain program."
+      "golden_answer": "Umpan balik disampaikan oleh Dinas Kesehatan Kabupaten/Kota kepada Puskesmas, dan oleh Dinas Kesehatan Provinsi kepada Kabupaten/Kota, berdasarkan hasil analisis data laporan untuk perbaikan program."
     },
     {
       "id": null,
@@ -3990,7 +3990,7 @@
       "golden_nodes": [
         "Evaluasi (Siklus Manajemen)"
       ],
-      "golden_answer": "Evaluasi adalah penilaian yang dilakukan secara periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbhealth_ain, kelanjutan, atau perluasan program."
+      "golden_answer": "Evaluasi adalah penilaian yang dilakukan secara periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbaikan, kelanjutan, atau perluasan program."
     },
     {
       "id": null,
@@ -4055,9 +4055,9 @@
       "query": "Apa gunanya hasil monitoring dan evaluasi?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi sangat penting karena digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbhealth_ain program. Pelaksanaan rencana tindak lanjut ini kemudian dievaluasi pada monev termin selanjutnya."
+      "golden_answer": "Hasil monitoring dan evaluasi sangat penting karena digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbaikan program. Pelaksanaan rencana tindak lanjut ini kemudian dievaluasi pada monev termin selanjutnya."
     },
     {
       "id": null,
@@ -4066,7 +4066,7 @@
       "golden_nodes": [
         "Bahan Advokasi dan Koordinasi"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi di Dinas Kesehatan juga digunakan sebagai bahan advokasi dan koordinasi dengan lintas program dan lintas sektor, selain sebagai acuan untuk menyusun rencana tindak lanjut perbhealth_ain program."
+      "golden_answer": "Hasil monitoring dan evaluasi di Dinas Kesehatan juga digunakan sebagai bahan advokasi dan koordinasi dengan lintas program dan lintas sektor, selain sebagai acuan untuk menyusun rencana tindak lanjut perbaikan program."
     },
     {
       "id": null,
@@ -4247,7 +4247,7 @@
       "golden_nodes": [
         "Kendala",
         "Tindak Lanjut",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
       "golden_answer": "Setelah mengidentifikasi kendala dalam program, perlu ada rencana tindak lanjut yang disusun. Rencana tindak lanjut ini kemudian akan dievaluasi pada monitoring dan evaluasi termin selanjutnya."
     },
@@ -4256,7 +4256,7 @@
       "query": "Kapan pelaksanaan rencana tindak lanjut dievaluasi?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program",
+        "Rencana Tindak Lanjut Perbaikan Program",
         "Monev Termin Selanjutnya"
       ],
       "golden_answer": "Pelaksanaan rencana tindak lanjut dievaluasi pada monitoring dan evaluasi termin selanjutnya."
@@ -4301,7 +4301,7 @@
         "Monitoring (Siklus Manajemen)",
         "Evaluasi (Siklus Manajemen)"
       ],
-      "golden_answer": "Siklus manajemen dalam tata kelola GME bekerja dengan memulai dari perencanaan, kemudian dilanjutkan dengan pelaksanaan kegiatan, diikuti monitoring secara terus menerus, dan diakhiri dengan evaluasi secara periodik untuk perbhealth_ain berkelanjutan."
+      "golden_answer": "Siklus manajemen dalam tata kelola GME bekerja dengan memulai dari perencanaan, kemudian dilanjutkan dengan pelaksanaan kegiatan, diikuti monitoring secara terus menerus, dan diakhiri dengan evaluasi secara periodik untuk perbaikan berkelanjutan."
     },
     {
       "id": null,
@@ -4330,7 +4330,7 @@
       "golden_nodes": [
         "Monitoring (Siklus Manajemen)"
       ],
-      "golden_answer": "Monitoring di FKTP dilakukan secara internal oleh pihak FKTP itu sendiri, dan hasilnya digunakan untuk menyusun rencana tindak lanjut perbhealth_ain program."
+      "golden_answer": "Monitoring di FKTP dilakukan secara internal oleh pihak FKTP itu sendiri, dan hasilnya digunakan untuk menyusun rencana tindak lanjut perbaikan program."
     },
     {
       "id": null,
@@ -4395,9 +4395,9 @@
       "query_lable": "path_query",
       "golden_nodes": [
         "Monev Termin Selanjutnya",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Pada monev termin selanjutnya, yang dievaluasi adalah pelaksanaan dari rencana tindak lanjut perbhealth_ain program yang telah disusun sebelumnya."
+      "golden_answer": "Pada monev termin selanjutnya, yang dievaluasi adalah pelaksanaan dari rencana tindak lanjut perbaikan program yang telah disusun sebelumnya."
     },
     {
       "id": null,
@@ -4554,9 +4554,9 @@
       "golden_nodes": [
         "Monitoring (Siklus Manajemen)",
         "Evaluasi (Siklus Manajemen)",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi digunakan sebagai acuan penting untuk menyusun rencana tindak lanjut perbhealth_ain program, memastikan perbhealth_ain berkelanjutan berdasarkan temuan dan umpan balik."
+      "golden_answer": "Hasil monitoring dan evaluasi digunakan sebagai acuan penting untuk menyusun rencana tindak lanjut perbaikan program, memastikan perbaikan berkelanjutan berdasarkan temuan dan umpan balik."
     },
     {
       "id": null,
@@ -4691,7 +4691,7 @@
       "golden_nodes": [
         "Evaluasi (Siklus Manajemen)"
       ],
-      "golden_answer": "Evaluasi berkala setiap 3 bulan di FKTP bermanfaat untuk menilai secara rutin kemajuan program, mengidentifikasi perubahan atau kendala, dan memungkinkan perbhealth_ain pelaksanaan kegiatan pada termin berikutnya."
+      "golden_answer": "Evaluasi berkala setiap 3 bulan di FKTP bermanfaat untuk menilai secara rutin kemajuan program, mengidentifikasi perubahan atau kendala, dan memungkinkan perbaikan pelaksanaan kegiatan pada termin berikutnya."
     },
     {
       "id": null,

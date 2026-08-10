@@ -468,7 +468,7 @@ ACADEMIC_STRESS_DOMAINS: List[InstrumentDomain] = [
         name="thesis_stress",
         description="Stress related to projects/work targets",
         keywords_en=["project stuck", "can't finish project", "manager problems", "target deadline"],
-        keywords_id=["proyek macet", "nggak bisa menyeleshealth_ain proyek", "atasan", "target kerja"],
+        keywords_id=["proyek macet", "nggak bisa menyelesaikan proyek", "atasan", "target kerja"],
         weight=1.2,
     ),
     InstrumentDomain(

@@ -31,8 +31,8 @@ Berikut adalah informasi yang ditemukan dari knowledge graph:
 - Skor Relevansi Awal: 3.70
 - Hubungan Terkait:
   - [OUTGOING] --[datang ke|Tipe: Terkait_Dengan]--> Fasilitas pelayanan kesehatan (Tipe: ['Entity', 'Layanan_Kesehatan'] | Deskripsi: "Tempat penderita datang dengan keluhan-keluhan fisik.")
-  - [OUTGOING] --[dengan|Tipe: Memiliki_Atribut]--> Keluhan-keluhan fisik (Tipe: ['Entity', 'Gejala'] | Deskripsi: "Keluhan yang sering disamphealth_ain penderita gangguan mental emosional, yang menyebabkan gangguan terse...")
-  - [INCOMING] <--[menyebabkan tidak terdeteksi pada|Tipe: Menyebabkan]-- Keluhan-keluhan fisik (Tipe: ['Entity', 'Gejala'] | Deskripsi: "Keluhan yang sering disamphealth_ain penderita gangguan mental emosional, yang menyebabkan gangguan terse...")
+  - [OUTGOING] --[dengan|Tipe: Memiliki_Atribut]--> Keluhan-keluhan fisik (Tipe: ['Entity', 'Gejala'] | Deskripsi: "Keluhan yang sering disampaikan penderita gangguan mental emosional, yang menyebabkan gangguan terse...")
+  - [INCOMING] <--[menyebabkan tidak terdeteksi pada|Tipe: Menyebabkan]-- Keluhan-keluhan fisik (Tipe: ['Entity', 'Gejala'] | Deskripsi: "Keluhan yang sering disampaikan penderita gangguan mental emosional, yang menyebabkan gangguan terse...")
 
 ### Entitas: Gangguan Mental Emosional (GME) (Tipe: ['Entity', 'Gangguan_Mental'])
 - Deskripsi: Perubahan dalam pikiran, perasaan, dan perilaku yang dapat mengganggu aktivitas sehari-hari, tapi tidak dijumpai tanda dan gejala gangguan dalam daya nilai realita, dan bukan diagnosa gangguan jiwa.

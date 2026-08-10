@@ -2399,14 +2399,14 @@
     },
     {
       "id": null,
-      "query": "Bagaimana Materi Promosi Kesehatan Jiwa disesuhealth_ain?",
+      "query": "Bagaimana Materi Promosi Kesehatan Jiwa disesuaikan?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Materi Promosi Kesehatan Jiwa",
         "Sasaran Kelompok Usia",
         "Istilah Medis"
       ],
-      "golden_answer": "Materi promosi kesehatan jiwa disesuhealth_ain dengan sasaran kelompok usia dan diminimalkan penggunaan istilah medis agar lebih mudah dipahami oleh masyarakat."
+      "golden_answer": "Materi promosi kesehatan jiwa disesuaikan dengan sasaran kelompok usia dan diminimalkan penggunaan istilah medis agar lebih mudah dipahami oleh masyarakat."
     },
     {
       "id": null,
@@ -2418,7 +2418,7 @@
         "Dewasa",
         "Lansia"
       ],
-      "golden_answer": "Sasaran kelompok usia dalam promosi kesehatan jiwa mencakup remaja, dewasa, dan lansia, dengan materi yang disesuhealth_ain untuk masing-masing kelompok."
+      "golden_answer": "Sasaran kelompok usia dalam promosi kesehatan jiwa mencakup remaja, dewasa, dan lansia, dengan materi yang disesuaikan untuk masing-masing kelompok."
     },
     {
       "id": null,
@@ -3114,7 +3114,7 @@
         "Tugas Kesehatan Keluarga",
         "Kegiatan Bersama dalam Keluarga"
       ],
-      "golden_answer": "Cara mengatasi faktor risiko di lingkungan keluarga antara lain dengan peningkatan komunikasi efektif, perbhealth_ain pola asuh, pelaksanaan tugas kesehatan keluarga (mengenal masalah, memutuskan cara mengatasi, merawat, menciptakan suasana gembira, menggunakan layanan kesehatan terdekat), serta peningkatan kegiatan bersama dalam keluarga."
+      "golden_answer": "Cara mengatasi faktor risiko di lingkungan keluarga antara lain dengan peningkatan komunikasi efektif, perbaikan pola asuh, pelaksanaan tugas kesehatan keluarga (mengenal masalah, memutuskan cara mengatasi, merawat, menciptakan suasana gembira, menggunakan layanan kesehatan terdekat), serta peningkatan kegiatan bersama dalam keluarga."
     },
     {
       "id": null,
@@ -4637,7 +4637,7 @@
         "Tempat Kerja",
         "Materi Promosi Kesehatan Jiwa"
       ],
-      "golden_answer": "Materi promosi kesehatan jiwa yang disesuhealth_ain dapat membantu pekerja di tempat kerja untuk memahami dan menjaga kesehatan jiwa mereka, mengurangi stigma terkait GME."
+      "golden_answer": "Materi promosi kesehatan jiwa yang disesuaikan dapat membantu pekerja di tempat kerja untuk memahami dan menjaga kesehatan jiwa mereka, mengurangi stigma terkait GME."
     },
     {
       "id": null,
@@ -4990,14 +4990,14 @@
     },
     {
       "id": null,
-      "query": "Bagaimana materi promosi kesehatan jiwa disesuhealth_ain untuk sasaran kelompok usia yang berbeda?",
+      "query": "Bagaimana materi promosi kesehatan jiwa disesuaikan untuk sasaran kelompok usia yang berbeda?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Materi Promosi Kesehatan Jiwa",
         "Sasaran Kelompok Usia",
         "Istilah Medis"
       ],
-      "golden_answer": "Materi promosi kesehatan jiwa disesuhealth_ain dengan sasaran kelompok usia (remaja, dewasa, lansia) dan diminimalkan penggunaan istilah medis agar lebih mudah dipahami oleh masyarakat luas."
+      "golden_answer": "Materi promosi kesehatan jiwa disesuaikan dengan sasaran kelompok usia (remaja, dewasa, lansia) dan diminimalkan penggunaan istilah medis agar lebih mudah dipahami oleh masyarakat luas."
     },
     {
       "id": null,
@@ -5257,7 +5257,7 @@
       "golden_nodes": [
         "Regulasi Emosi Rendah"
       ],
-      "golden_answer": "Melatih kemampuan mengekspresikan emosi secara asertif dapat membantu mengatasi regulasi emosi yang rendah, memungkinkan Anda menyamphealth_ain perasaan dengan jelas dan hormat."
+      "golden_answer": "Melatih kemampuan mengekspresikan emosi secara asertif dapat membantu mengatasi regulasi emosi yang rendah, memungkinkan Anda menyampaikan perasaan dengan jelas dan hormat."
     },
     {
       "id": null,
@@ -6847,7 +6847,7 @@
         "Umpan Balik",
         "Informasi"
       ],
-      "golden_answer": "Umpan Balik adalah informasi hasil analisis yang disamphealth_ain kembali ke unit pelaksana, seperti dari Dinas Kesehatan Kabupaten/Kota ke Puskesmas, atau dari Dinas Kesehatan Provinsi ke Kabupaten/Kota, untuk mengetahui capaian program."
+      "golden_answer": "Umpan Balik adalah informasi hasil analisis yang disampaikan kembali ke unit pelaksana, seperti dari Dinas Kesehatan Kabupaten/Kota ke Puskesmas, atau dari Dinas Kesehatan Provinsi ke Kabupaten/Kota, untuk mengetahui capaian program."
     },
     {
       "id": null,
@@ -6936,7 +6936,7 @@
         "Dinas Kesehatan Provinsi",
         "FKTP/Puskesmas"
       ],
-      "golden_answer": "Dinas Kesehatan Kabupaten/Kota melakukan rekapitulasi data dari Puskesmas. Hasilnya dianalisis untuk disamphealth_ain sebagai umpan balik ke Puskesmas, dan dilaporkan ke Dinas Kesehatan Provinsi setiap bulan."
+      "golden_answer": "Dinas Kesehatan Kabupaten/Kota melakukan rekapitulasi data dari Puskesmas. Hasilnya dianalisis untuk disampaikan sebagai umpan balik ke Puskesmas, dan dilaporkan ke Dinas Kesehatan Provinsi setiap bulan."
     },
     {
       "id": null,
@@ -7024,7 +7024,7 @@
         "Kunjungan Pasien GME ke FKTP",
         "Format Pencatatan Kegiatan Preventif"
       ],
-      "golden_answer": "Kunjungan Pasien GME ke FKTP dicatat sebagai salah satu kegiatan preventif, dengan lembar laporan yang disesuhealth_ain dengan format yang tersedia di FKTP/puskesmas."
+      "golden_answer": "Kunjungan Pasien GME ke FKTP dicatat sebagai salah satu kegiatan preventif, dengan lembar laporan yang disesuaikan dengan format yang tersedia di FKTP/puskesmas."
     },
     {
       "id": null,
@@ -7046,7 +7046,7 @@
         "Umpan Balik",
         "Dinas Kesehatan Kabupaten/Kota"
       ],
-      "golden_answer": "Dinas Kesehatan Provinsi melakukan kompilasi laporan dari Dinas Kesehatan Kabupaten/Kota. Hasil kompilasi ini dianalisis untuk disamphealth_ain sebagai umpan balik ke Dinas Kesehatan Kabupaten/Kota."
+      "golden_answer": "Dinas Kesehatan Provinsi melakukan kompilasi laporan dari Dinas Kesehatan Kabupaten/Kota. Hasil kompilasi ini dianalisis untuk disampaikan sebagai umpan balik ke Dinas Kesehatan Kabupaten/Kota."
     },
     {
       "id": null,
@@ -7199,7 +7199,7 @@
         "Umpan Balik",
         "Dinas Kesehatan Kabupaten/Kota"
       ],
-      "golden_answer": "Dinas Kesehatan Provinsi menganalisis hasil kompilasi laporan dan menyamphealth_ainnya sebagai umpan balik ke Dinas Kesehatan Kabupaten/Kota."
+      "golden_answer": "Dinas Kesehatan Provinsi menganalisis hasil kompilasi laporan dan menyampaikannya sebagai umpan balik ke Dinas Kesehatan Kabupaten/Kota."
     },
     {
       "id": null,
@@ -7439,7 +7439,7 @@
       "golden_nodes": [
         "Evaluasi"
       ],
-      "golden_answer": "Evaluasi bertujuan untuk menilai kontribusi program terhadap perubahan, kebutuhan perbhealth_ain, kelanjutan, atau perluasan program."
+      "golden_answer": "Evaluasi bertujuan untuk menilai kontribusi program terhadap perubahan, kebutuhan perbaikan, kelanjutan, atau perluasan program."
     },
     {
       "id": null,
@@ -7562,9 +7562,9 @@
       "golden_nodes": [
         "Monitoring",
         "Evaluasi",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi di FKTP digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbhealth_ain program."
+      "golden_answer": "Hasil monitoring dan evaluasi di FKTP digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbaikan program."
     },
     {
       "id": null,
@@ -7582,11 +7582,11 @@
       "query": "Apa manfaat hasil monitoring dan evaluasi bagi Dinas Kesehatan?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program",
+        "Rencana Tindak Lanjut Perbaikan Program",
         "Advokasi",
         "Koordinasi Lintas Program dan Lintas Sektor"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi di Dinas Kesehatan digunakan sebagai acuan untuk menyusun rencana tindak lanjut perbhealth_ain program, serta sebagai bahan advokasi dan koordinasi dengan lintas program dan lintas sektor."
+      "golden_answer": "Hasil monitoring dan evaluasi di Dinas Kesehatan digunakan sebagai acuan untuk menyusun rencana tindak lanjut perbaikan program, serta sebagai bahan advokasi dan koordinasi dengan lintas program dan lintas sektor."
     },
     {
       "id": null,
@@ -7723,9 +7723,9 @@
       "query": "Apa yang akan dicatat jika ada kendala dalam pelaksanaan program?",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Jika ada kendala dalam pelaksanaan program, hal tersebut akan dicatat dan menjadi dasar untuk menyusun rencana tindak lanjut perbhealth_ain program."
+      "golden_answer": "Jika ada kendala dalam pelaksanaan program, hal tersebut akan dicatat dan menjadi dasar untuk menyusun rencana tindak lanjut perbaikan program."
     },
     {
       "id": null,
@@ -7751,9 +7751,9 @@
       "query": "Apa yang harus dilakukan jika ada kendala dalam monitoring dan evaluasi?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Jika teridentifikasi kendala dalam monitoring dan evaluasi, hasilnya akan digunakan untuk menyusun rencana tindak lanjut perbhealth_ain program."
+      "golden_answer": "Jika teridentifikasi kendala dalam monitoring dan evaluasi, hasilnya akan digunakan untuk menyusun rencana tindak lanjut perbaikan program."
     },
     {
       "id": null,
@@ -7773,7 +7773,7 @@
         "Monitoring",
         "Evaluasi"
       ],
-      "golden_answer": "Ya, hasil monitoring dan evaluasi di Dinas Kesehatan digunakan sebagai bahan koordinasi dengan lintas program dan lintas sektor untuk perbhealth_ain program."
+      "golden_answer": "Ya, hasil monitoring dan evaluasi di Dinas Kesehatan digunakan sebagai bahan koordinasi dengan lintas program dan lintas sektor untuk perbaikan program."
     },
     {
       "id": null,
@@ -7820,14 +7820,14 @@
     },
     {
       "id": null,
-      "query": "Kapan rencana tindak lanjut perbhealth_ain program dievaluasi kembali?",
+      "query": "Kapan rencana tindak lanjut perbaikan program dievaluasi kembali?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program",
+        "Rencana Tindak Lanjut Perbaikan Program",
         "Monitoring",
         "Evaluasi"
       ],
-      "golden_answer": "Pelaksanaan rencana tindak lanjut perbhealth_ain program akan dievaluasi pada monitoring dan evaluasi termin selanjutnya."
+      "golden_answer": "Pelaksanaan rencana tindak lanjut perbaikan program akan dievaluasi pada monitoring dan evaluasi termin selanjutnya."
     },
     {
       "id": null,

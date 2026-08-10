@@ -149,7 +149,7 @@ export function EscalationNotification({ caseId, onDismiss }: EscalationNotifica
         </div>
         <div className="flex-1 space-y-1">
           <h4 className="text-sm font-medium text-teal-400">
-            Kasus Telah Disamphealth_ain
+            Kasus Telah Disampaikan
           </h4>
           <p className="text-xs text-white/70">
             Tim konselor profesional kami telah dihubungi dan akan segera menghubungi Anda.

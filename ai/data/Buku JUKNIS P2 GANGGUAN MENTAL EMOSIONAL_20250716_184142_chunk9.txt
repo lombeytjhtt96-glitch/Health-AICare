@@ -14,7 +14,7 @@ Tenaga kesehatan melaksanakan kegiatan sesuai isian form perencanaan kegiatan.
 Monitoring
 Monitoring merupakan penilaian secara terus menerus terhadap kemajuan program untuk memastikan program berjalan sesuai yang direncanakan dan mendapatkan umpan balik secara teratur
 Evaluasi
-Evaluasi merupakan penilaian secara periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbhealth_ain, kelanjutan atau perluasan program Tenaga kesehatan melakukan penilaian tentang proses kegiatan dan keberhasilan kegiatan promotif dan preventif
+Evaluasi merupakan penilaian secara periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbaikan, kelanjutan atau perluasan program Tenaga kesehatan melakukan penilaian tentang proses kegiatan dan keberhasilan kegiatan promotif dan preventif
 Evaluasi proses
 Evaluasi proses dilakukan tiap 3 bulan sekali untuk menilai apakah proses kegiatan yang dilakukan telah dilaksanakan sesuai perencanaan, ada perubahan atau kendala. Manfaat evaluasi ini untuk memperbaiki pelaksaan kegiatan pada termin berikutnya.
 Evaluasi hasil
@@ -24,11 +24,11 @@ Monitoring dan Evaluasi di FKTP
 Monitoring dilakukan oleh internal FKTP
 Evaluasi dilakukan secara berkala sekurang-kurangnya setiap 3 (tiga) bulan.
 Monitoring dan evaluasi dapat menggunakan format yang ada di bagian lampiran.
-Hasil monitoring dan evaluasi digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbhealth_ain program.
+Hasil monitoring dan evaluasi digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbaikan program.
 Pelaksanaan rencana tindak lanjut dievaluasi pada monev termin selanjutnya.
 Monitoring dan Evaluasi di Dinas Kesehatan
 Monitoring dan evaluasi dilakukan secara berkala sekurang- kurangnya setiap 3 (tiga) bulan terhadap laporan capaian program P2 GME.
-Hasil monitoring dan evaluasi digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbhealth_ain program dan bahan advokasi dan koordinasi dengan lintas program dan lintas sektor.
+Hasil monitoring dan evaluasi digunakan sebagai salah satu acuan untuk menyusun rencana tindak lanjut perbaikan program dan bahan advokasi dan koordinasi dengan lintas program dan lintas sektor.
 Pelaksanaan rencana tindak lanjut dievaluasi pada monev termin selanjutnya.
 Indikator keberhasilan bagi provinsi yang melaksanakan pelayanan bagi penderita GME dibagi menjadi 2 kategori:
 Baik, bila mencapai target per tahun;

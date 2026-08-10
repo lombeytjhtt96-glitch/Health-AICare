@@ -13,9 +13,9 @@ Jumlah penderita GME usia >15 tahun yang mendaptkan layanan
 Rekapitulasi data dari kegiatan yang dilakukan di dalam dan luar gedung, pengolahan data dan pelaporan perbulan dikirimkan ke Dinas Kesehatan kabupaten/kota.
 Pencatatan dan Pelaporan di Dinas Kesehatan
 Dinas Kesehatan Kabupaten/Kota melakukan rekapitulasi data dari Puskesmas.
-Hasil rekapitulasi dianalisis kemudian disamphealth_ain sebagai umpan balik ke Puskesmas dan dilaporkan ke Dinas Kesehatan Provinsi setiap bulan
+Hasil rekapitulasi dianalisis kemudian disampaikan sebagai umpan balik ke Puskesmas dan dilaporkan ke Dinas Kesehatan Provinsi setiap bulan
 Dinas Kesehatan Provinsi melakukan kompilasi laporan dari Dinas Kesehatan Kabupaten/Kota
-Hasil kompilasi dilaporkan ke Kementerian Kesehatan setiap 3 (tiga) bulan dan dianalisis untuk disamphealth_ain sebagai umpan balik ke Kabupaten/Kota.
+Hasil kompilasi dilaporkan ke Kementerian Kesehatan setiap 3 (tiga) bulan dan dianalisis untuk disampaikan sebagai umpan balik ke Kabupaten/Kota.
 Pelaporan dari organisasi profesi /lintas sektor/lembaga non pemerintah yang melakukan deteksi dini di komunitas
 Organisasi profesi/lintas sektor/ lembaga non pemerintah dapat melakukan kegiatan dalam rangka upaya promotif dan preventif pencegahan dan pengendalian GME. Dalam melakukan kegiatan tersebut perlu bekerja sama dengan Dinas Kesehatan Kab/Kota setempat dan melaporkan hasil kegiatannya kepada Dinas Kesehatan Kab/Kota.
 Alur pencatatan dan pelaporan
@@ -34,7 +34,7 @@ Pembentukan kelurahan sehat jiwa, tempat kerja sehat jiwa,
 Pembentukan kelompok swa bantu, kelompok dukungan (support group)
 Lainnya, sebutkan .
 Format Pencatatan Kegiatan Preventif
-Kunjungan pasien GME ke FKTP (lembar laporan disesuhealth_ain dengan yang tersedia di FKTP/puskesmas
+Kunjungan pasien GME ke FKTP (lembar laporan disesuaikan dengan yang tersedia di FKTP/puskesmas
 
 | No | Nama pasien | Alamat | Usia | Waktu | Kegiatan preventif yang dilakukan | Pelaksana | Hasil |
 | --- | ----------- | ------ | ---- | ----- | --------------------------------- | --------- | ----- |

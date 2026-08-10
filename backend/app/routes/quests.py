@@ -89,7 +89,7 @@ async def complete_quest(req: QuestCompleteRequest, db: AsyncSession = Depends(g
     if instance.status == "completed":
         return QuestCompleteResponse(
             status="already_completed",
-            message="Quest sudah pernah diseleshealth_ain sebelumnya.",
+            message="Quest sudah pernah diselesaikan sebelumnya.",
             xp_gained=0,
             joy_gained=0,
             attestation_queued=False
@@ -147,7 +147,7 @@ async def complete_quest(req: QuestCompleteRequest, db: AsyncSession = Depends(g
 
     return QuestCompleteResponse(
         status="success",
-        message=f"Selamat! Quest '{template.name}' berhasil diseleshealth_ain.",
+        message=f"Selamat! Quest '{template.name}' berhasil diselesaikan.",
         xp_gained=template.base_xp,
         joy_gained=template.base_joy,
         attestation_queued=True

@@ -448,7 +448,7 @@
         "Indikator Kinerja Kegiatan (IKK)",
         "Target capaian IKK terkait GME"
       ],
-      "golden_answer": "IKK untuk GME adalah persentase penderita berusia di atas 15 tahun yang mendapatkan layanan kesehatan jiwa dalam satu tahun. Targetnya disesuhealth_ain dengan Renstra Kemenkes 2020-2024, misalnya 20% pada tahun 2021 untuk membantu monitoring capaian program."
+      "golden_answer": "IKK untuk GME adalah persentase penderita berusia di atas 15 tahun yang mendapatkan layanan kesehatan jiwa dalam satu tahun. Targetnya disesuaikan dengan Renstra Kemenkes 2020-2024, misalnya 20% pada tahun 2021 untuk membantu monitoring capaian program."
     },
     {
       "id": null,
@@ -1379,7 +1379,7 @@
       "golden_nodes": [
         "Guru/Tenaga Pendidik"
       ],
-      "golden_answer": "Guru atau tenaga pendidik menyamphealth_ain materi KIE, mengidentifikasi siswa berisiko, dan bekerja sama dengan puskesmas."
+      "golden_answer": "Guru atau tenaga pendidik menyampaikan materi KIE, mengidentifikasi siswa berisiko, dan bekerja sama dengan puskesmas."
     },
     {
       "id": "67",
@@ -1762,7 +1762,7 @@
         "Informasi",
         "Capaian Pelaksanaan Program"
       ],
-      "golden_answer": "Proses dimulai dengan Pengolahan Data mentah hasil pencatatan, kemudian diolah untuk menghasilkan Informasi yang valid. Informasi ini dipakai untuk menilai dan melaporkan Capaian Pelaksanaan Program GME, sekaligus memberi umpan balik untuk perbhealth_ain berikutnya."
+      "golden_answer": "Proses dimulai dengan Pengolahan Data mentah hasil pencatatan, kemudian diolah untuk menghasilkan Informasi yang valid. Informasi ini dipakai untuk menilai dan melaporkan Capaian Pelaksanaan Program GME, sekaligus memberi umpan balik untuk perbaikan berikutnya."
     },
     {
       "id": null,
@@ -1848,7 +1848,7 @@
       "golden_nodes": [
         "Umpan Balik"
       ],
-      "golden_answer": "Umpan Balik adalah informasi hasil analisis pelaporan yang dikirim kembali ke tingkat yang lebih rendah, misalnya dari dinas kesehatan provinsi ke kabupaten/kota atau dari kabupaten/kota ke puskesmas, untuk perbhealth_ain program."
+      "golden_answer": "Umpan Balik adalah informasi hasil analisis pelaporan yang dikirim kembali ke tingkat yang lebih rendah, misalnya dari dinas kesehatan provinsi ke kabupaten/kota atau dari kabupaten/kota ke puskesmas, untuk perbaikan program."
     },
     {
       "id": null,
@@ -1858,7 +1858,7 @@
         "Umpan Balik",
         "Pencegahan dan Pengendalian GME"
       ],
-      "golden_answer": "Setelah menerima Umpan Balik, pemerintah daerah menganalisis rekomendasi dan menyesuhealth_ain strategi Pencegahan dan Pengendalian GME, seperti memperkuat kegiatan promotif, menambah kapasitas tenaga, atau meninjau ulang frekuensi skrining."
+      "golden_answer": "Setelah menerima Umpan Balik, pemerintah daerah menganalisis rekomendasi dan menyesuaikan strategi Pencegahan dan Pengendalian GME, seperti memperkuat kegiatan promotif, menambah kapasitas tenaga, atau meninjau ulang frekuensi skrining."
     },
     {
       "id": null,
@@ -2037,7 +2037,7 @@
       "golden_nodes": [
         "Evaluasi"
       ],
-      "golden_answer": "Evaluasi adalah penilaian periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbhealth_ain, kelanjutan, atau perluasan program P2 GME."
+      "golden_answer": "Evaluasi adalah penilaian periodik untuk menilai kontribusi program terhadap perubahan, kebutuhan perbaikan, kelanjutan, atau perluasan program P2 GME."
     },
     {
       "id": null,
@@ -2136,16 +2136,16 @@
       "golden_nodes": [
         "Umpan Balik Program"
       ],
-      "golden_answer": "Umpan Balik Program adalah informasi yang didapat secara teratur melalui monitoring untuk perbhealth_ain program selanjutnya."
+      "golden_answer": "Umpan Balik Program adalah informasi yang didapat secara teratur melalui monitoring untuk perbaikan program selanjutnya."
     },
     {
       "id": null,
-      "query": "Apa itu Rencana Tindak Lanjut Perbhealth_ain Program?",
+      "query": "Apa itu Rencana Tindak Lanjut Perbaikan Program?",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Rencana Tindak Lanjut Perbhealth_ain Program adalah dokumen yang disusun berdasarkan hasil monitoring dan evaluasi untuk memperbaiki program P2 GME."
+      "golden_answer": "Rencana Tindak Lanjut Perbaikan Program adalah dokumen yang disusun berdasarkan hasil monitoring dan evaluasi untuk memperbaiki program P2 GME."
     },
     {
       "id": null,
@@ -2292,7 +2292,7 @@
         "Evaluasi Proses",
         "Evaluasi Hasil"
       ],
-      "golden_answer": "Evaluasi Proses menilai pelaksanaan kegiatan triwulanan sesuai rencana, sedangkan Evaluasi Hasil menilai pencapaian target setahun sekali untuk perbhealth_ain program."
+      "golden_answer": "Evaluasi Proses menilai pelaksanaan kegiatan triwulanan sesuai rencana, sedangkan Evaluasi Hasil menilai pencapaian target setahun sekali untuk perbaikan program."
     },
     {
       "id": null,
@@ -2322,17 +2322,17 @@
         "Monitoring",
         "Umpan Balik Program"
       ],
-      "golden_answer": "Monitoring secara terus menerus menghasilkan data dan umpan balik yang teratur untuk menilai kemajuan program dan kebutuhan perbhealth_ain."
+      "golden_answer": "Monitoring secara terus menerus menghasilkan data dan umpan balik yang teratur untuk menilai kemajuan program dan kebutuhan perbaikan."
     },
     {
       "id": null,
-      "query": "Bagaimana Rencana Tindak Lanjut Perbhealth_ain Program dibuat setelah Evaluasi?",
+      "query": "Bagaimana Rencana Tindak Lanjut Perbaikan Program dibuat setelah Evaluasi?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Evaluasi",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Setelah evaluasi, hasil monitoring dan evaluasi digunakan untuk menyusun rencana tindak lanjut perbhealth_ain program agar efektivitas kegiatan meningkat."
+      "golden_answer": "Setelah evaluasi, hasil monitoring dan evaluasi digunakan untuk menyusun rencana tindak lanjut perbaikan program agar efektivitas kegiatan meningkat."
     },
     {
       "id": null,
@@ -2386,11 +2386,11 @@
     },
     {
       "id": null,
-      "query": "Bagaimana Hasil Monitoring dan Evaluasi digunakan dalam Rencana Tindak Lanjut Perbhealth_ain Program?",
+      "query": "Bagaimana Hasil Monitoring dan Evaluasi digunakan dalam Rencana Tindak Lanjut Perbaikan Program?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Hasil Monitoring dan Evaluasi",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
       "golden_answer": "Hasil monitoring dan evaluasi menjadi dasar bagi penyusunan rencana tindak lanjut untuk memperbaiki dan mengembangkan kegiatan selanjutnya."
     },
@@ -2402,7 +2402,7 @@
         "Pelaksanaan Evaluasi Berkala Setiap 3 Bulan",
         "Evaluasi Proses"
       ],
-      "golden_answer": "Evaluasi Proses triwulanan memungkinkan tenaga kesehatan mengidentifikasi perubahan atau kendala lebih cepat untuk perbhealth_ain kegiatan."
+      "golden_answer": "Evaluasi Proses triwulanan memungkinkan tenaga kesehatan mengidentifikasi perubahan atau kendala lebih cepat untuk perbaikan kegiatan."
     },
     {
       "id": null,
@@ -3688,7 +3688,7 @@
         "Stigma dan pandangan negatif tentang bunuh diri",
         "Hambatan komunikasi"
       ],
-      "golden_answer": "Stigma membuat orang merasa malu atau takut dihakimi, sehingga menutup diri dan tidak menyamphealth_ain pikiran bunuhnya. Mengurangi stigma dengan berbicara terbuka bisa mendorong mereka mencari bantuan."
+      "golden_answer": "Stigma membuat orang merasa malu atau takut dihakimi, sehingga menutup diri dan tidak menyampaikan pikiran bunuhnya. Mengurangi stigma dengan berbicara terbuka bisa mendorong mereka mencari bantuan."
     },
     {
       "id": null,

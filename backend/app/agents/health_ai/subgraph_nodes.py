@@ -66,7 +66,7 @@ def _build_tca_direct_response(state: HealthAIOrchestratorState) -> str:
     intent = state.get("intent", "emotional_support")
 
     plan_mention = (
-        "Aku sudah buatkan rencana dukungan yang disesuhealth_ain buat kamu — "
+        "Aku sudah buatkan rencana dukungan yang disesuaikan buat kamu — "
         "cek di sidebar ya! "
         if plan_id
         else ""

@@ -20,7 +20,7 @@ async def test_analyze_conversation_risk_parses_json(monkeypatch: pytest.MonkeyP
     response = {
         "overall_risk_level": "low",
         "risk_trend": "stable",
-        "conversation_summary": "Mahasiswa menyamphealth_ain stres akademik ringan.",
+        "conversation_summary": "Mahasiswa menyampaikan stres akademik ringan.",
         "user_context": {
             "recent_stressors": ["tugas"],
             "coping_mechanisms": ["istirahat"],

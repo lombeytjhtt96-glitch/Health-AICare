@@ -258,7 +258,7 @@ class DialogueOrchestratorService:
             streak = wellness_state.current_streak
             if streak > 1:
                 return (
-                    f"Halo, {preferred_name}! Kamu baru saja menyeleshealth_ain **{template_name}**. "
+                    f"Halo, {preferred_name}! Kamu baru saja menyelesaikan **{template_name}**. "
                     f"Streak kamu sudah {streak} hari - jaga ritme hangat ini, ya."
                 )
             return (

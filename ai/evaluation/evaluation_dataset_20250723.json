@@ -28,7 +28,7 @@
         "Evaluasi Hasil",
         "Pencapaian Target Pencegahan dan Pengendalian GME"
       ],
-      "golden_answer": "Evaluasi hasil dilakukan setahun sekali untuk menilai seberapa jauh target pencegahan dan pengendalian GME telah dicapai. Ini membantu memastikan program berjalan sesuai tujuan dan ada perbhealth_ain bila diperlukan."
+      "golden_answer": "Evaluasi hasil dilakukan setahun sekali untuk menilai seberapa jauh target pencegahan dan pengendalian GME telah dicapai. Ini membantu memastikan program berjalan sesuai tujuan dan ada perbaikan bila diperlukan."
     },
     {
       "id": null,
@@ -56,7 +56,7 @@
         "Internal FKTP",
         "Monitoring"
       ],
-      "golden_answer": "Monitoring yang dilakukan oleh internal FKTP bertujuan untuk memastikan bahwa program pencegahan dan pengendalian GME berjalan sesuai rencana. Dari monitoring ini, FKTP dapat memperoleh informasi penting untuk perbhealth_ain program di masa mendatang."
+      "golden_answer": "Monitoring yang dilakukan oleh internal FKTP bertujuan untuk memastikan bahwa program pencegahan dan pengendalian GME berjalan sesuai rencana. Dari monitoring ini, FKTP dapat memperoleh informasi penting untuk perbaikan program di masa mendatang."
     },
     {
       "id": null,
@@ -65,7 +65,7 @@
       "golden_nodes": [
         "Pencatatan dan Pelaporan Rutin"
       ],
-      "golden_answer": "Pencatatan dan pelaporan rutin adalah aktivitas penting untuk mendokumentasikan kegiatan dan hasil program GME. Melalui pencatatan yang baik, kemajuan dan kendala dalam program dapat dipantau sehingga perbhealth_ain bisa segera dilakukan jika dibutuhkan."
+      "golden_answer": "Pencatatan dan pelaporan rutin adalah aktivitas penting untuk mendokumentasikan kegiatan dan hasil program GME. Melalui pencatatan yang baik, kemajuan dan kendala dalam program dapat dipantau sehingga perbaikan bisa segera dilakukan jika dibutuhkan."
     },
     {
       "id": null,
@@ -108,7 +108,7 @@
         "Video",
         "Media Lainnya"
       ],
-      "golden_answer": "Ada beberapa jenis media yang digunakan dalam promosi kesehatan jiwa, seperti brosur atau leaflet, poster, lembar balik, banner, video, dan media lainnya. Media ini membantu menyamphealth_ain informasi kesehatan jiwa kepada masyarakat dengan cara yang menarik dan mudah dipahami."
+      "golden_answer": "Ada beberapa jenis media yang digunakan dalam promosi kesehatan jiwa, seperti brosur atau leaflet, poster, lembar balik, banner, video, dan media lainnya. Media ini membantu menyampaikan informasi kesehatan jiwa kepada masyarakat dengan cara yang menarik dan mudah dipahami."
     },
     {
       "id": null,
@@ -117,16 +117,16 @@
       "golden_nodes": [
         "Pelaksanaan Evaluasi Berkala Setiap 3 Bulan"
       ],
-      "golden_answer": "Pelaksanaan evaluasi berkala dilakukan sekurang-kurangnya setiap 3 bulan. Evaluasi ini penting agar program pencegahan dan pengendalian GME tetap berjalan sesuai tujuan dan selalu ada perbhealth_ain yang diperlukan."
+      "golden_answer": "Pelaksanaan evaluasi berkala dilakukan sekurang-kurangnya setiap 3 bulan. Evaluasi ini penting agar program pencegahan dan pengendalian GME tetap berjalan sesuai tujuan dan selalu ada perbaikan yang diperlukan."
     },
     {
       "id": null,
-      "query": "Apakah tujuan dari rencana tindak lanjut perbhealth_ain program?",
+      "query": "Apakah tujuan dari rencana tindak lanjut perbaikan program?",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Rencana tindak lanjut perbhealth_ain program disusun berdasarkan hasil monitoring dan evaluasi. Tujuannya adalah memperbaiki aspek yang masih kurang optimal dalam program agar layanan kesehatan jiwa semakin baik dan berdampak positif."
+      "golden_answer": "Rencana tindak lanjut perbaikan program disusun berdasarkan hasil monitoring dan evaluasi. Tujuannya adalah memperbaiki aspek yang masih kurang optimal dalam program agar layanan kesehatan jiwa semakin baik dan berdampak positif."
     },
     {
       "id": null,
@@ -161,9 +161,9 @@
       "golden_nodes": [
         "Kendala Pelaksanaan",
         "Kendala",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Jika ada kendala dalam pelaksanaan program GME, kendala tersebut akan diidentifikasi dan dicatat. Selanjutnya, rencana tindak lanjut perbhealth_ain program disusun agar permasalahan dapat segera diatasi."
+      "golden_answer": "Jika ada kendala dalam pelaksanaan program GME, kendala tersebut akan diidentifikasi dan dicatat. Selanjutnya, rencana tindak lanjut perbaikan program disusun agar permasalahan dapat segera diatasi."
     },
     {
       "id": null,
@@ -252,7 +252,7 @@
       "golden_nodes": [
         "Laporan Capaian Program P2 GME"
       ],
-      "golden_answer": "Pelaporan capaian program P2 GME dilakukan secara berkala untuk mendokumentasikan hasil program pencegahan dan pengendalian GME. Laporan ini jadi dasar untuk evaluasi dan perbhealth_ain di masa mendatang."
+      "golden_answer": "Pelaporan capaian program P2 GME dilakukan secara berkala untuk mendokumentasikan hasil program pencegahan dan pengendalian GME. Laporan ini jadi dasar untuk evaluasi dan perbaikan di masa mendatang."
     },
     {
       "id": null,
@@ -321,7 +321,7 @@
         "Monitoring",
         "Dinas Kesehatan"
       ],
-      "golden_answer": "Monitoring di Dinas Kesehatan dilakukan secara berkala, setidaknya setiap 3 bulan. Melalui monitoring ini, kemajuan program dan kendala dapat teridentifikasi sehingga perbhealth_ain bisa segera dilakukan."
+      "golden_answer": "Monitoring di Dinas Kesehatan dilakukan secara berkala, setidaknya setiap 3 bulan. Melalui monitoring ini, kemajuan program dan kendala dapat teridentifikasi sehingga perbaikan bisa segera dilakukan."
     },
     {
       "id": null,
@@ -357,9 +357,9 @@
       "query_lable": "entity_query",
       "golden_nodes": [
         "Target Pencapaian Deteksi Dini GME",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Jika target pencapaian deteksi dini GME belum tercapai, perlu disusun rencana tindak lanjut perbhealth_ain program. Evaluasi dilakukan agar strategi atau pendekatan program dapat diperbaiki ke depannya."
+      "golden_answer": "Jika target pencapaian deteksi dini GME belum tercapai, perlu disusun rencana tindak lanjut perbaikan program. Evaluasi dilakukan agar strategi atau pendekatan program dapat diperbaiki ke depannya."
     },
     {
       "id": null,
@@ -379,7 +379,7 @@
         "Program P2 GME (Pencegahan dan Pengendalian GME)",
         "Monitoring"
       ],
-      "golden_answer": "Kemajuan program P2 GME dipantau melalui proses monitoring yang dilakukan secara berkala. Hal ini penting agar setiap langkah program dapat dievaluasi dan disesuhealth_ain dengan kebutuhan di lapangan."
+      "golden_answer": "Kemajuan program P2 GME dipantau melalui proses monitoring yang dilakukan secara berkala. Hal ini penting agar setiap langkah program dapat dievaluasi dan disesuaikan dengan kebutuhan di lapangan."
     },
     {
       "id": null,
@@ -397,7 +397,7 @@
       "golden_nodes": [
         "Pencatatan dan Pelaporan Rutin"
       ],
-      "golden_answer": "Pencatatan dan pelaporan rutin mendokumentasikan kegiatan dan hasil secara terstruktur. Hal ini sangat membantu dalam monitoring, evaluasi, dan perbhealth_ain program P2 GME di masa mendatang."
+      "golden_answer": "Pencatatan dan pelaporan rutin mendokumentasikan kegiatan dan hasil secara terstruktur. Hal ini sangat membantu dalam monitoring, evaluasi, dan perbaikan program P2 GME di masa mendatang."
     },
     {
       "id": null,
@@ -458,7 +458,7 @@
         "Monitoring",
         "Umpan Balik Program"
       ],
-      "golden_answer": "Monitoring yang baik memberikan informasi tentang proses dan kemajuan program secara berkala, sehingga umpan balik yang diperoleh bisa digunakan untuk memperbaiki atau menyesuhealth_ain program sesuai kebutuhan."
+      "golden_answer": "Monitoring yang baik memberikan informasi tentang proses dan kemajuan program secara berkala, sehingga umpan balik yang diperoleh bisa digunakan untuk memperbaiki atau menyesuaikan program sesuai kebutuhan."
     },
     {
       "id": null,
@@ -518,7 +518,7 @@
         "Pelaksanaan Evaluasi Berkala Setiap 3 Bulan",
         "Evaluasi Proses"
       ],
-      "golden_answer": "Evaluasi berkala setiap tiga bulan membantu mengidentifikasi keberhasilan dan kendala dalam pelaksanaan program GME, sehingga perbhealth_ain bisa dilakukan secara tepat dan cepat pada periode berikutnya."
+      "golden_answer": "Evaluasi berkala setiap tiga bulan membantu mengidentifikasi keberhasilan dan kendala dalam pelaksanaan program GME, sehingga perbaikan bisa dilakukan secara tepat dan cepat pada periode berikutnya."
     },
     {
       "id": null,
@@ -528,7 +528,7 @@
         "Pencapaian Target Pencegahan dan Pengendalian GME",
         "Evaluasi Hasil"
       ],
-      "golden_answer": "Evaluasi hasil dilakukan untuk menilai sejauh mana target pencegahan dan pengendalian GME telah tercapai dalam satu tahun. Kegiatan ini sangat penting untuk menentukan langkah perbhealth_ain selanjutnya."
+      "golden_answer": "Evaluasi hasil dilakukan untuk menilai sejauh mana target pencegahan dan pengendalian GME telah tercapai dalam satu tahun. Kegiatan ini sangat penting untuk menentukan langkah perbaikan selanjutnya."
     },
     {
       "id": null,
@@ -567,7 +567,7 @@
         "Poster",
         "Jenis Media KIE Promosi Kesehatan Jiwa"
       ],
-      "golden_answer": "Banner dan poster termasuk media KIE promosi kesehatan jiwa yang efektif. Keduanya dapat menarik perhatian masyarakat dan menyamphealth_ain pesan kesehatan jiwa secara visual dan mudah dipahami."
+      "golden_answer": "Banner dan poster termasuk media KIE promosi kesehatan jiwa yang efektif. Keduanya dapat menarik perhatian masyarakat dan menyampaikan pesan kesehatan jiwa secara visual dan mudah dipahami."
     },
     {
       "id": null,
@@ -597,7 +597,7 @@
         "Lembaga Pendidikan",
         "Skrining GME"
       ],
-      "golden_answer": "Skrining GME di panti dan lembaga pendidikan memiliki sasaran yang berbeda, namun tujuannya sama yaitu untuk mendeteksi dini gangguan mental emosional. Lokasi yang berbeda menyesuhealth_ain kebutuhan populasi yang berbeda."
+      "golden_answer": "Skrining GME di panti dan lembaga pendidikan memiliki sasaran yang berbeda, namun tujuannya sama yaitu untuk mendeteksi dini gangguan mental emosional. Lokasi yang berbeda menyesuaikan kebutuhan populasi yang berbeda."
     },
     {
       "id": null,
@@ -646,7 +646,7 @@
         "Monitoring",
         "Evaluasi"
       ],
-      "golden_answer": "Data kejadian GME digunakan dalam proses monitoring dan evaluasi untuk mengetahui perkembangan dan efektivitas program. Informasi ini menjadi dasar bagi perbhealth_ain dan pengambilan keputusan selanjutnya."
+      "golden_answer": "Data kejadian GME digunakan dalam proses monitoring dan evaluasi untuk mengetahui perkembangan dan efektivitas program. Informasi ini menjadi dasar bagi perbaikan dan pengambilan keputusan selanjutnya."
     },
     {
       "id": null,
@@ -677,7 +677,7 @@
         "Evaluasi Proses",
         "Kendala Pelaksanaan"
       ],
-      "golden_answer": "Evaluasi proses yang dilakukan berkala dapat membantu mengidentifikasi apakah ada perubahan penyelenggaraan program atau kendala pelaksanaan di lapangan. Hasil ini menjadi dasar untuk perbhealth_ain program."
+      "golden_answer": "Evaluasi proses yang dilakukan berkala dapat membantu mengidentifikasi apakah ada perubahan penyelenggaraan program atau kendala pelaksanaan di lapangan. Hasil ini menjadi dasar untuk perbaikan program."
     },
     {
       "id": null,
@@ -690,13 +690,13 @@
     },
     {
       "id": null,
-      "query": "Bagaimana hubungan antara hasil monitoring dan pelaksanaan tindak lanjut perbhealth_ain program?",
+      "query": "Bagaimana hubungan antara hasil monitoring dan pelaksanaan tindak lanjut perbaikan program?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Hasil Monitoring dan Evaluasi",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Hasil monitoring dan evaluasi menjadi acuan utama dalam menyusun dan melaksanakan rencana tindak lanjut perbhealth_ain program. Dengan cara ini, program menjadi lebih responsif terhadap kebutuhan lapangan."
+      "golden_answer": "Hasil monitoring dan evaluasi menjadi acuan utama dalam menyusun dan melaksanakan rencana tindak lanjut perbaikan program. Dengan cara ini, program menjadi lebih responsif terhadap kebutuhan lapangan."
     },
     {
       "id": null,
@@ -726,7 +726,7 @@
         "Target Pencapaian Deteksi Dini GME",
         "Tenaga Kesehatan Terlatih"
       ],
-      "golden_answer": "Tenaga kesehatan menentukan target pencapaian deteksi dini GME berdasarkan perencanaan yang disesuhealth_ain dengan kapasitas dan kebutuhan di wilayah kerja, serta merujuk pada ketentuan yang tercantum dalam dokumen program."
+      "golden_answer": "Tenaga kesehatan menentukan target pencapaian deteksi dini GME berdasarkan perencanaan yang disesuaikan dengan kapasitas dan kebutuhan di wilayah kerja, serta merujuk pada ketentuan yang tercantum dalam dokumen program."
     },
     {
       "id": null,
@@ -759,7 +759,7 @@
       "golden_nodes": [
         "Pencatatan dan Pelaporan Rutin"
       ],
-      "golden_answer": "Pencatatan dan pelaporan rutin membantu memonitor perkembangan program secara berkala, sehingga berbagai kendala atau hambatan bisa segera dideteksi dan diatasi dengan langkah perbhealth_ain yang terencana."
+      "golden_answer": "Pencatatan dan pelaporan rutin membantu memonitor perkembangan program secara berkala, sehingga berbagai kendala atau hambatan bisa segera dideteksi dan diatasi dengan langkah perbaikan yang terencana."
     },
     {
       "id": null,
@@ -794,13 +794,13 @@
     },
     {
       "id": null,
-      "query": "Bagaimana transfer hasil evaluasi menjadi perbhealth_ain program GME?",
+      "query": "Bagaimana transfer hasil evaluasi menjadi perbaikan program GME?",
       "query_lable": "path_query",
       "golden_nodes": [
         "Hasil Monitoring dan Evaluasi",
-        "Rencana Tindak Lanjut Perbhealth_ain Program"
+        "Rencana Tindak Lanjut Perbaikan Program"
       ],
-      "golden_answer": "Hasil dari evaluasi digunakan untuk menyusun rencana tindak lanjut perbhealth_ain program, sehingga hasil kajian dan monitoring benar-benar dimanfaatkan untuk membuat program P2 GME lebih baik ke depannya."
+      "golden_answer": "Hasil dari evaluasi digunakan untuk menyusun rencana tindak lanjut perbaikan program, sehingga hasil kajian dan monitoring benar-benar dimanfaatkan untuk membuat program P2 GME lebih baik ke depannya."
     },
     {
       "id": null,
@@ -820,7 +820,7 @@
         "Evaluasi Hasil",
         "Pencapaian Target Pencegahan dan Pengendalian GME"
       ],
-      "golden_answer": "Evaluasi hasil yang dilakukan setahun sekali bermanfaat untuk mengukur pencapaian target program GME. Dengan hasil ini, program dapat dievaluasi efektivitasnya dan disesuhealth_ain bila diperlukan."
+      "golden_answer": "Evaluasi hasil yang dilakukan setahun sekali bermanfaat untuk mengukur pencapaian target program GME. Dengan hasil ini, program dapat dievaluasi efektivitasnya dan disesuaikan bila diperlukan."
     },
     {
       "id": null,
@@ -888,7 +888,7 @@
         "Dinas Kesehatan",
         "Evaluasi"
       ],
-      "golden_answer": "Monitoring di FKTP dilakukan oleh pihak internal dan evaluasi secara berkala. Sementara, di Dinas Kesehatan, monitoring dan evaluasi dilakukan minimal setiap tiga bulan terhadap capaian program, serta menjadi bahan advokasi dan perbhealth_ain lintas sektor."
+      "golden_answer": "Monitoring di FKTP dilakukan oleh pihak internal dan evaluasi secara berkala. Sementara, di Dinas Kesehatan, monitoring dan evaluasi dilakukan minimal setiap tiga bulan terhadap capaian program, serta menjadi bahan advokasi dan perbaikan lintas sektor."
     },
     {
       "id": null,
@@ -926,7 +926,7 @@
         "Video",
         "Jenis Media KIE Promosi Kesehatan Jiwa"
       ],
-      "golden_answer": "Promosi kesehatan jiwa melalui media video dapat memberikan informasi yang edukatif dengan cara yang menarik dan mudah dipahami masyarakat, sehingga pesan kesehatan jiwa dapat lebih efektif disamphealth_ain."
+      "golden_answer": "Promosi kesehatan jiwa melalui media video dapat memberikan informasi yang edukatif dengan cara yang menarik dan mudah dipahami masyarakat, sehingga pesan kesehatan jiwa dapat lebih efektif disampaikan."
     },
     {
       "id": null,
@@ -975,7 +975,7 @@
       "golden_nodes": [
         "Jumlah Penduduk > 15 tahun yang menderita GME"
       ],
-      "golden_answer": "Pendataan jumlah penduduk di atas 15 tahun yang menderita GME bertujuan untuk mengetahui besarnya masalah kesehatan jiwa di suatu wilayah, sehingga program intervensi dapat disesuhealth_ain dengan kebutuhan nyata."
+      "golden_answer": "Pendataan jumlah penduduk di atas 15 tahun yang menderita GME bertujuan untuk mengetahui besarnya masalah kesehatan jiwa di suatu wilayah, sehingga program intervensi dapat disesuaikan dengan kebutuhan nyata."
     },
     {
       "id": null,
