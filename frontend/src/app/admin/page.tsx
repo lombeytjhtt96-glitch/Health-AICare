@@ -9,8 +9,6 @@ import {
   FiMail, 
   FiAlertCircle, 
   FiLogIn, 
-  FiEye, 
-  FiEyeOff, 
   FiShield
 } from "@/icons";
 import { signIn, useSession } from "next-auth/react";
@@ -21,16 +19,9 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const [showCredentials, setShowCredentials] = useState(false);
   const [sessionExpiredMessage, setSessionExpiredMessage] = useState("");
   const router = useRouter();
   const { data: session, status } = useSession();
-
-  // Development credentials - REMOVE IN PRODUCTION
-  const developmentCredentials = {
-    email: process.env.NEXT_PUBLIC_ADMIN_EMAIL_DEFAULT || "admin@health_aicare.com",
-    password: "admin123" // This would normally come from env, but shown for dev convenience
-  };
 
   useEffect(() => {
     // Check for session expired query parameter
@@ -116,46 +107,6 @@ export default function AdminLoginPage() {
             <h1 className="text-2xl sm:text-3xl font-bold text-white">Admin Panel</h1>
             <p className="text-white/70 text-sm sm:text-base">HealthAICare Management</p>
           </div>
-
-          {/* Development Credentials Hint - REMOVE IN PRODUCTION */}
-          {process.env.NODE_ENV === 'development' && (
-            <div className="mb-6">
-              <button
-                onClick={() => setShowCredentials(!showCredentials)}
-                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-300 text-xs sm:text-sm hover:bg-orange-500/30 transition-colors"
-              >
-                {showCredentials ? <FiEyeOff size={16} /> : <FiEye size={16} />}
-                {showCredentials ? 'Hide' : 'Show'} Development Credentials
-              </button>
-              
-              {showCredentials && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="mt-3 p-3 bg-orange-500/10 border border-orange-500/30 rounded-lg"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <FiAlertCircle className="text-orange-400" size={14} />
-                    <span className="text-orange-300 font-semibold text-xs">Development Only</span>
-                  </div>
-                  <div className="space-y-2 text-[11px] sm:text-xs">
-                    <div>
-                      <span className="text-gray-400">Email:</span>
-                      <span className="text-orange-300 ml-2 font-mono">{developmentCredentials.email}</span>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">Password:</span>
-                      <span className="text-orange-300 ml-2 font-mono">{developmentCredentials.password}</span>
-                    </div>
-                  </div>
-                  <p className="text-orange-400/80 text-xs mt-2">
-                    ⚠️ This will be removed in production builds
-                  </p>
-                </motion.div>
-              )}
-            </div>
-          )}
 
           {/* Session Expired Warning */}
           {sessionExpiredMessage && (
