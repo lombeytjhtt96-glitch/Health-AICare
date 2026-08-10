@@ -12,8 +12,10 @@ if (Test-Path $envFile) {
             [System.Environment]::SetEnvironmentVariable($Matches[1], $Matches[2].Trim('"').Trim("'"))
         }
     }
+    [System.Environment]::SetEnvironmentVariable("PORT", "8080")
     Write-Host "Loaded .env from backend" -ForegroundColor Cyan
 }
+$env:PORT = "8080"
 
 Write-Host "Starting AI Engine on port 8080..." -ForegroundColor Yellow
 C:\Python314\python.exe -m src.main

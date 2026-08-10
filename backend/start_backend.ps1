@@ -21,5 +21,4 @@ Write-Host "  Health-AICare Backend :22001  " -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 Write-Host ""
 
-# NO --reload flag to prevent reloader port conflict on Windows
-C:\Python314\python.exe -X utf8 -m uvicorn app.main:app --host 0.0.0.0 --port 22001
+C:\Python314\python.exe -X utf8 run_backend.py

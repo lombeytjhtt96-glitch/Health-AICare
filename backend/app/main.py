@@ -1,6 +1,11 @@
 import json
 import logging
 import asyncio
+import sys
+
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 from fastapi import FastAPI, Request as FastAPIRequest, HTTPException # type: ignore
 from fastapi.responses import JSONResponse
 from scalar_fastapi import get_scalar_api_reference
