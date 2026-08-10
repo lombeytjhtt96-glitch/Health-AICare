@@ -74,7 +74,7 @@ def load_rq_data(rq_type: str) -> List[Dict]:
 # --- Schemas ---
 class CreateTestUserRequest(BaseModel):
     """Request to create a test user."""
-    email: Optional[EmailStr] = None
+    email: Optional[str] = None
     name: str = Field(..., min_length=1, max_length=100)
     role: str = Field(default="user", pattern="^(user|counselor|admin)$")
     university: Optional[str] = "HealthAICare Portal"
