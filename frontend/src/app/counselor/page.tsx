@@ -230,7 +230,7 @@ export default function CounselorLoginPage() {
           <p className="text-sm text-white/60">
             Not a counselor?{' '}
             <a href="/signin" className="text-[#FFCA40] hover:text-[#FFD55C] font-medium">
-              Student Login
+              User Login
             </a>
           </p>
         </div>

@@ -330,7 +330,7 @@ export default function AboutFeaturesPage() {
                   { name: "Mental", color: "#FFCA40" },
                   { name: "Physical", color: "#6A98F0" },
                   { name: "Social", color: "#FF6B9D" },
-                  { name: "Academic", color: "#50E3C2" },
+                  { name: "Productivity", color: "#50E3C2" },
                   { name: "Spiritual", color: "#B8A4FF" }
                 ].map((dimension, idx) => (
                   <div key={idx}>

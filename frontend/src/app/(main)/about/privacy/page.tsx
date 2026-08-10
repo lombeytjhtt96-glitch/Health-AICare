@@ -141,7 +141,7 @@ export default function AboutPrivacyPage() {
               </div>
               <div className="bg-white/5 rounded-lg p-4 border border-white/10">
                 <p className="text-white/70 text-sm">
-                  <strong className="text-white">Example:</strong> If only 3 students from Computer Science reported anxiety this week, that statistic won't be shown to protect individual privacy.
+                  <strong className="text-white">Example:</strong> If only 3 users from a specific cohort reported anxiety this week, that statistic won't be shown to protect individual privacy.
                 </p>
               </div>
             </motion.div>

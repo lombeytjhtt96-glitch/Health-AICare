@@ -51,13 +51,13 @@ export default function AboutHealthAIPage() {
             <div className="md:w-2/3">
               <h2 className="text-3xl font-bold text-white mb-6">Who is HealthAI?</h2>
               <p className="text-white/90 text-lg mb-4 leading-relaxed">
-                HealthAI is an AI-powered mental health companion. Named after the Japanese word for <span className="text-[#FFCA40] font-semibold">&quot;love song,&quot;</span> HealthAI represents our commitment to care and support for the community.
+                HealthAI is an AI-powered mental health companion built to provide compassionate, accessible support for everyone. HealthAI represents our commitment to care, empathy, and mental wellbeing for the community.
               </p>
               <p className="text-white/90 text-lg mb-4 leading-relaxed">
                 With a focus on accessibility and privacy, HealthAI provides a safe space for users to discuss their feelings, get support during stressful periods, and access resources that promote mental wellbeing.
               </p>
               <p className="text-white/90 text-lg leading-relaxed">
-                Whether you&apos;re dealing with academic pressure, relationship issues, or just need someone to talk to, HealthAI is here for you 24/7, offering judgment-free support and guidance whenever you need it.
+                Whether you&apos;re dealing with work stress, relationship issues, or just need someone to talk to, HealthAI is here for you 24/7, offering judgment-free support and guidance whenever you need it.
               </p>
             </div>
             <div className="md:w-1/3 relative">
@@ -108,7 +108,7 @@ export default function AboutHealthAIPage() {
               {
                 icon: <FiSmile />,
                 title: "Culturally Aware",
-                description: "Understands Indonesian context, university pressures, and the unique challenges faced by students in Indonesia."
+                description: "Understands diverse cultural contexts, daily life pressures, and the unique challenges individuals face in their communities."
               },
               {
                 icon: <FiMessageCircle />,
@@ -145,8 +145,8 @@ export default function AboutHealthAIPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: "Academic Stress",
-                items: ["Exam anxiety", "Assignment overwhelm", "Study burnout", "Performance pressure"]
+                title: "Work & Life Stress",
+                items: ["Burnout & exhaustion", "Deadline overwhelm", "Work pressure", "Performance anxiety"]
               },
               {
                 title: "Emotional Wellbeing",
@@ -245,7 +245,7 @@ export default function AboutHealthAIPage() {
             <h2 className="text-2xl font-bold text-white">Always Available</h2>
           </div>
           <p className="text-white/90 text-lg max-w-2xl mx-auto">
-            HealthAI is here for you 24/7, whether it's 2 AM before an exam or late night when you need someone to talk to. 
+            HealthAI is here for you 24/7, whether it's 2 AM during a tough night or late evening when you need someone to talk to. 
             No appointments needed, no waiting time—just genuine support whenever you need it.
           </p>
         </motion.section>

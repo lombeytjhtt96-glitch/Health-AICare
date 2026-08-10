@@ -1,16 +1,15 @@
-"""Add SIMASTER verification fields to user_profiles.
+"""Add identity verification fields to user_profiles.
 
 Revision ID: add_simaster_fields
 Revises: add_screening_profiles
 Create Date: 2025-01-21
 
-This migration adds fields to track SIMASTER verification status
-for HealthAICare people. The bookmarklet-based import feature allows
-people to securely import their verified academic data from SIMASTER.
+This migration adds fields to track identity verification status
+for HealthAICare users.
 
 Fields added:
-- simaster_verified: Boolean flag indicating if user data was imported from SIMASTER
-- simaster_verified_at: Timestamp of when the SIMASTER data was imported
+- simaster_verified: Boolean flag indicating if user identity has been verified
+- simaster_verified_at: Timestamp of when the verification occurred
 
 IMPORTANT: This migration is IDEMPOTENT - safe to run multiple times.
 """

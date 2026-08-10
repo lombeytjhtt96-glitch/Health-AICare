@@ -93,7 +93,7 @@ export default function GuildPage() {
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-white mb-1">The Mindful Warriors</h2>
-                <p className="text-white/70 text-sm">Est. October 2024 • {mockMembers.length} Members</p>
+                <p className="text-white/70 text-sm">Community Guild • {mockMembers.length} Members</p>
               </div>
             </div>
             
@@ -108,7 +108,7 @@ export default function GuildPage() {
               />
               <RewardBadge
                 title="Support Champions"
-                description="Helped 100+ students"
+                description="Helped 100+ members"
                 icon="crown"
                 rarity="legendary"
                 earned

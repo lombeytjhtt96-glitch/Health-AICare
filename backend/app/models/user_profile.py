@@ -1,7 +1,7 @@
 """
 User Profile Model
 
-Stores public user profile data (names, demographics, academic info, gamification).
+Stores public user profile data (names, demographics, personal info, gamification).
 Separated from core User table for better normalization and performance.
 
 Industry Best Practices Applied:
@@ -9,7 +9,7 @@ Industry Best Practices Applied:
 - VARCHAR(100) for names (industry standard, allows for long names)
 - TEXT for bio (unlimited length, no performance penalty in PostgreSQL)
 - ARRAY for interests (native PostgreSQL, better than comma-separated strings)
-- user_id as UNIQUE (official NIM for HealthAICare integration)
+- user_id as UNIQUE (unique identifier for HealthAICare integration)
 """
 
 from sqlalchemy import Column, Integer, String, Date, Float, ForeignKey, Text, ARRAY, Boolean, DateTime
@@ -88,41 +88,41 @@ class UserProfile(Base):
     )
     
     # =====================================================================
-    # ACADEMIC INFO (HealthAICare-specific)
+    # ORGANIZATION / COMMUNITY INFO (optional context fields)
     # =====================================================================
-    university = Column(String(200))
+    university = Column(String(200), comment="Organization, institution, or community name")
     faculty = Column(
         String(200), 
-        comment="HealthAICare faculty (e.g., 'FMIPA', 'FEB', 'FK')"
+        comment="Department, division, or group within an organization"
     )
     department = Column(
         String(200), 
-        comment="Department/Program (e.g., 'Computer Science')"
+        comment="Sub-department or team (e.g., 'Engineering', 'Design')"
     )
-    major = Column(String(200))
-    year_of_study = Column(Integer)
+    major = Column(String(200), comment="Field of study or specialization")
+    year_of_study = Column(Integer, comment="Year or level of experience")
     student_id = Column(
         String(50), 
         unique=True, 
         index=True,
-        comment="Official NIM (Nomor Induk Semua Orang) - UNIQUE identifier"
+        comment="Unique membership or registration identifier"
     )
     batch_year = Column(
         Integer,
-        comment="Enrollment year (e.g., 2021)"
+        comment="Cohort or enrollment year"
     )
     
     # =====================================================================
-    # SIMASTER INTEGRATION
+    # IDENTITY VERIFICATION
     # =====================================================================
-    simaster_verified = Column(
+    identity_verified = Column(
         Boolean,
         default=False,
-        comment="Whether profile was verified via SIMASTER import"
+        comment="Whether profile identity has been verified"
     )
-    simaster_verified_at = Column(
+    identity_verified_at = Column(
         DateTime,
-        comment="Timestamp when SIMASTER verification occurred"
+        comment="Timestamp when identity verification occurred"
     )
     
     # =====================================================================
@@ -144,7 +144,7 @@ class UserProfile(Base):
     total_care_tokens = Column(
         Integer, 
         default=0,
-        comment="Total CARE tokens earned (token economy integration)"
+        comment="Total wellness points earned"
     )
     
     # =====================================================================

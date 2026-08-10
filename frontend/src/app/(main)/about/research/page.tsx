@@ -35,7 +35,7 @@ export default function AboutResearchPage() {
             Evidence-Based <span className="text-[#FFCA40]">Research</span>
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Rigorous research methodology and clinical oversight to advance university mental health care
+            Rigorous research methodology and clinical oversight to advance community mental health care
           </p>
         </motion.div>
 
@@ -136,7 +136,7 @@ export default function AboutResearchPage() {
             {[
               {
                 id: "RQ1",
-                question: "What is the sensitivity and specificity of AI-powered crisis detection in a university setting?",
+                question: "What is the sensitivity and specificity of AI-powered crisis detection in a general mental health platform?",
                 hypothesis: "The Safety Triage Agent can detect crisis indicators with >90% sensitivity while maintaining low false-positive rates.",
                 methods: ["Ground truth labeling by licensed counselors", "ROC curve analysis", "Comparison with baseline keyword detection"]
               },
@@ -148,8 +148,8 @@ export default function AboutResearchPage() {
               },
               {
                 id: "RQ3",
-                question: "Does CBT-informed coaching improve student mental health outcomes?",
-                hypothesis: "Students receiving structured CBT interventions show measurable improvements in PAD-derived affective indicators over 4 weeks.",
+                question: "Does CBT-informed coaching improve user mental health outcomes?",
+                hypothesis: "Users receiving structured CBT interventions show measurable improvements in PAD-derived affective indicators over 4 weeks.",
                 methods: ["Pre/post PHQ-9 and GAD-7 assessments", "Longitudinal PAD signal tracking", "Control group comparison"]
               },
               {
@@ -253,7 +253,7 @@ export default function AboutResearchPage() {
           <div className="mt-6 bg-gradient-to-r from-[#FFCA40]/10 to-[#FFB700]/10 rounded-xl p-6 border border-[#FFCA40]/20">
             <h3 className="text-xl font-bold text-white mb-3">Harm Mitigation</h3>
             <p className="text-white/70 mb-4">
-              We prioritize student safety above all else. Our harm mitigation protocols include:
+              We prioritize user safety above all else. Our harm mitigation protocols include:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <ul className="space-y-2">
@@ -270,10 +270,10 @@ export default function AboutResearchPage() {
               </ul>
               <ul className="space-y-2">
                 {[
-                  "Regular safety audits by external reviewers",
-                  "Student advisory board feedback",
-                  "Continuous monitoring of adverse events"
-                ].map((item, idx) => (
+                   "Regular safety audits by external reviewers",
+                   "Community advisory board feedback",
+                   "Continuous monitoring of adverse events"
+                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-white/70 text-sm">
                     <div className="w-1.5 h-1.5 bg-[#FFCA40] rounded-full mt-2 flex-shrink-0"></div>
                     {item}
@@ -373,7 +373,7 @@ export default function AboutResearchPage() {
               </div>
               <ul className="space-y-2">
                 <li className="text-white/70 text-sm">
-                  "AI-Powered Safety Agent Frameworks for University Mental Health: A Design Science Approach" (in preparation)
+                  "AI-Powered Safety Agent Frameworks for Community Mental Health: A Design Science Approach" (in preparation)
                 </li>
                 <li className="text-white/70 text-sm">
                   "Differential Privacy in Mental Health Analytics: Balancing Insights and Individual Privacy" (under review)

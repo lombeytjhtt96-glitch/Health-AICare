@@ -35,11 +35,11 @@ export default function AboutPage() {
               </motion.div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                A student-first framework for <span className="text-[#FFCA40]">university mental health support</span>
+                A privacy-first framework for <span className="text-[#FFCA40]">community mental health support</span>
               </h1>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
                 HealthAICare combines safety triage, supportive coaching, and case management workflows. The goal is not to replace counselors.
-                It is to reduce friction in help-seeking, detect risk earlier, and route students to the right support pathway.
+                It is to reduce friction in help-seeking, detect risk earlier, and route users to the right support pathway.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
 
           <p className="text-white/90 text-lg leading-relaxed mb-6">
-            Many campus mental health services are forced into a reactive posture: help arrives late, workflows are fragmented, and risk signals are easy to miss.
+            Many public mental health services are forced into a reactive posture: help arrives late, workflows are fragmented, and risk signals are easy to miss.
             HealthAICare is built to shift the default from crisis response to earlier support.
           </p>
 
@@ -89,7 +89,7 @@ export default function AboutPage() {
               {
                 icon: <FiUsers />,
                 title: "Workflow-Aware",
-                description: "Route students across coaching, counseling, and follow-up pathways"
+                description: "Route users across coaching, counseling, and follow-up pathways"
               },
               {
                 icon: <FiShield />,
@@ -140,7 +140,7 @@ export default function AboutPage() {
               },
               {
                 name: "Insights Agent (IA)",
-                description: "Aggregates patterns for campus-level insights while aiming to reduce privacy risk"
+                description: "Aggregates patterns for organization-level insights while aiming to reduce privacy risk"
               }
             ].map((agent, idx) => (
               <motion.div
@@ -158,7 +158,7 @@ export default function AboutPage() {
 
           <div className="mt-10 grid gap-4 md:grid-cols-5">
             {[
-              { label: "Signal", detail: "Student message / check-in" },
+              { label: "Signal", detail: "User message / check-in" },
               { label: "Triage", detail: "Risk estimation + routing" },
               { label: "Support", detail: "Coaching + exercises" },
               { label: "Escalate", detail: "Case creation when needed" },

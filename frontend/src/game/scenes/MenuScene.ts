@@ -4,9 +4,9 @@ import * as Phaser from 'phaser';
  * MenuScene - Developer Testing Menu
  * 
  * Scene selection hub for easier development and testing.
- * Provides quick access to all game scenes with UGM design system styling.
+ * Provides quick access to all game scenes with HealthAICare design system styling.
  * 
- * UGM Design System:
+ * HealthAICare Design System:
  * - Blue: #001D58 (primary)
  * - Blue Dark: #00308F (gradient)
  * - Gold: #FFCA40 (accent)
@@ -23,7 +23,7 @@ export class MenuScene extends Phaser.Scene {
     const centerX = width / 2;
     const centerY = height / 2;
 
-    // Background - UGM Blue gradient
+    // Background - HealthAICare Blue gradient
     const bgGraphics = this.add.graphics();
     bgGraphics.fillGradientStyle(0x001d58, 0x001d58, 0x00308f, 0x00308f, 1);
     bgGraphics.fillRect(0, 0, width, height);
@@ -36,7 +36,7 @@ export class MenuScene extends Phaser.Scene {
       fontFamily: 'Arial, sans-serif',
       fontSize: '72px',
       fontStyle: 'bold',
-      color: '#FFCA40', // UGM Gold
+      color: '#FFCA40', // HealthAICare Gold
       stroke: '#001D58',
       strokeThickness: 4,
     });
