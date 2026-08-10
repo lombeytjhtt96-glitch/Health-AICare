@@ -12,6 +12,8 @@ __pycache__/
 *.pyo
 *.pyd
 *.sqlite3
+*.db
+*.sqlite
 .env
 .env.local
 .env.prod
