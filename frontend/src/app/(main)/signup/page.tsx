@@ -111,10 +111,18 @@ export default function SignUp() {
 
     switch (step) {
       case 1:
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Email validation - only letters, numbers, dots, and @
+        const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z0-9.]+$/;
+        if (!formData.email) {
+          setError("Please enter your email address.");
+          return false;
+        }
+        if (/[_\-]/.test(formData.email)) {
+          setError("Email may only contain letters, numbers, dots, and @. Underscores (_) and hyphens (-) are not allowed.");
+          return false;
+        }
         if (!emailRegex.test(formData.email)) {
-          setError("Please enter a valid email address.");
+          setError("Please enter a valid email address (e.g. yourname@example.com).");
           return false;
         }
         

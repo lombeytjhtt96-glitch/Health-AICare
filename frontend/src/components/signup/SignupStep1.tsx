@@ -54,15 +54,19 @@ export default function SignupStep1({ formData, onChange, onNext }: SignupStep1P
             Email Address *
           </label>
           <input
-            type="email"
+            type="text"
             id="email"
             name="email"
             value={formData.email}
             onChange={onChange}
             required
+            pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z0-9.]+"
             className="w-full px-4 py-3 bg-white/8 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFCA40] focus:border-[#FFCA40] transition-all duration-200"
-            placeholder="your.email@example.com"
+            placeholder="yourname@example.com"
           />
+          <p className="text-white/40 text-xs mt-1 pl-1">
+            Only letters, numbers, dots (.) and @ are allowed. No underscores or hyphens.
+          </p>
         </div>
 
         {/* Password */}
