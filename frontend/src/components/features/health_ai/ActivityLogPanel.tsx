@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 import type { ActivityLog, ActivityType } from '@/types/activity';
-import type { AikaMetadata } from '@/hooks/useHealthAI';
+import type { HealthAIMetadata } from '@/hooks/useHealthAI';
 import type { InterventionPlanListResponse } from '@/services/interventionPlanApi';
 import { MetadataDisplay } from '@/components/features/health_ai/HealthAIComponents';
 import { AgentActivityIndicator } from '@/components/features/health_ai/AgentActivityIndicator';
@@ -38,7 +38,7 @@ type TabKey = 'activity' | 'details';
 
 export interface ActivityLogPanelProps {
   activities: ActivityLog[];
-  metadata: AikaMetadata | null;
+  metadata: HealthAIMetadata | null;
   interventionPlans?: InterventionPlanListResponse | null;
   interventionPlansLoading?: boolean;
   interventionPlansError?: Error | null;
@@ -77,7 +77,7 @@ const AGENT_COLORS: Record<string, string> = {
   CMA: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
   IA: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
   HEALTH_AI: 'bg-health-gold/20 text-health-gold border-health-gold/30',
-  'Health-AI': 'bg-health-gold/20 text-health-gold border-health-gold/30',
+  'HealthAI': 'bg-health-gold/20 text-health-gold border-health-gold/30',
 };
 
 const EVENT_CONFIG: Record<ActivityType, { icon: React.ElementType; color: string }> = {
@@ -335,7 +335,7 @@ export function ActivityLogPanel({
                       <Activity className="w-4 h-4 text-white/70" />
                     </div>
                     <div>
-                      <h2 className="text-xs font-semibold text-white">Health-AI Panel</h2>
+                      <h2 className="text-xs font-semibold text-white">HealthAI Panel</h2>
                       <p className="text-[10px] text-white/40">{orderedActivities.length} aktivitas</p>
                     </div>
                   </div>

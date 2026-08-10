@@ -4,18 +4,18 @@ title: Autopilot Implementation Plan
 sidebar_position: 1
 ---
 
-# Health-AI Autopilot Phased Implementation Plan
+# HealthAI Autopilot Phased Implementation Plan
 
 **Date**: 2026-02-16 
 **Status**: Phases 0-5 implemented (demo-grade) 
-This plan converts the current Health-AI orchestration into an autonomous onchain operations flow.
+This plan converts the current HealthAI orchestration into an autonomous onchain operations flow.
 **Track fit**: Agent (primary), Consumer (secondary)
 
 ## Implementation snapshot (2026-02-16)
 
 - Phase 0: Completed (`docs/AUTOPILOT_POLICY_MATRIX.md`)
 - Phase 1: Completed (model, migration, service, admin list/detail API)
-- Phase 2: Completed (policy engine integrated into Health-AI orchestrator)
+- Phase 2: Completed (policy engine integrated into HealthAI orchestrator)
 - Phase 3: Completed (durable worker, retries, dead-letter flow)
 - Phase 4: Completed (approve/reject admin flow + proof timeline API/UI)
 - Phase 5: Completed (replay script + runbook + artifact generation)
@@ -26,14 +26,14 @@ Note: onchain worker handlers currently include a documented placeholder tx mode
 
 ## 1) Why this plan exists
 
-Current Health-AICare already has:
+Current HealthAICare already has:
 
 - LangGraph orchestration and conditional routing.
 - Tool calling and appointment workflows.
 - Multi-chain NFT capabilities including BNB chain IDs.
 - Streaming trace UX and admin dashboards.
 
-The Health-AI Autopilot implementation addresses the transition from a standard assistant to an autonomous operator. This plan integrates policy-governed actions, durable execution, and onchain verification.
+The HealthAI Autopilot implementation addresses the transition from a standard assistant to an autonomous operator. This plan integrates policy-governed actions, durable execution, and onchain verification.
 This plan closes that gap by adding:
 
 1. Policy-governed autonomous actions.
@@ -64,7 +64,7 @@ This plan closes that gap by adding:
 
 - Phase 0: Autopilot contract and policy spec
 - Phase 1: Action Control Plane and DB model
-- Phase 2: Policy engine and Health-AI integration
+- Phase 2: Policy engine and HealthAI integration
 - Phase 3: Durable worker and blockchain attestation publisher
 - Phase 4: Admin approval flow and public proof timeline
 - Phase 5: Replayable demo harness and submission package
@@ -214,11 +214,11 @@ Follow existing backend style and async patterns.
 
 ---
 
-## Phase 2 - Policy engine and Health-AI integration
+## Phase 2 - Policy engine and HealthAI integration
 
 ### Goal
 
-Health-AI decides and enqueues actions through explicit policy checks.
+HealthAI decides and enqueues actions through explicit policy checks.
 
 ### Tasks
 
@@ -239,7 +239,7 @@ Health-AI decides and enqueues actions through explicit policy checks.
 Implement Phase 2 policy integration:
 
 - Create policy engine function `evaluate_action_policy(risk_level, action_type, context) -> decision`.
-- In Health-AI orchestration flow, before executing operational side effects, call policy engine.
+- In HealthAI orchestration flow, before executing operational side effects, call policy engine.
 - If `allow`, enqueue action with `queued`.
 - If `require_approval`, enqueue action with `awaiting_approval`.
 - If `deny`, store audit event and skip side effect.
@@ -430,7 +430,7 @@ If targeting opBNB:
 
 ## 10) Final acceptance checklist (judge-facing)
 
-- [ ] Health-AI performs policy-governed autonomous decisions.
+- [ ] HealthAI performs policy-governed autonomous decisions.
 - [ ] High/critical actions are approval-gated.
 - [ ] At least one action is confirmed onchain with tx hash.
 - [ ] Public proof timeline shows lifecycle and explorer links.

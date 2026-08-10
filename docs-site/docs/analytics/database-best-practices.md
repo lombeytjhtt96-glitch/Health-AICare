@@ -12,7 +12,7 @@ sidebar_position: 2
 
 ## Overview
 
-Health-AICare utilizes PostgreSQL, hosted on Supabase, as its primary database. The schema centers on essential mental health support system entities, including users, conversations, risk assessments, cases, appointments, and blockchain records.
+HealthAICare utilizes PostgreSQL, hosted on Supabase, as its primary database. The schema centers on essential mental health support system entities, including users, conversations, risk assessments, cases, appointments, and blockchain records.
 
 All schema migrations are managed via **Alembic**. Never modify the database schema directly; always generate a migration file.
 

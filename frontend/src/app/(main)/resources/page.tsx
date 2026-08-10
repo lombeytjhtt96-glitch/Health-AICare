@@ -41,7 +41,7 @@ export default function ResourcesPage() {
           <div>
             <h2 className="text-base font-bold text-white">Butuh bantuan segera?</h2>
             <p className="mt-1 text-sm text-gray-300 leading-relaxed">
-              Health-AI adalah pendamping kesehatan mental berbasis kecerdasan buatan dan bukan pengganti layanan darurat medis atau psikologis profesional. Jika Anda berada dalam situasi krisis atau membahayakan diri sendiri, segera hubungi nomor darurat di bawah ini.
+              HealthAI adalah pendamping kesehatan mental berbasis kecerdasan buatan dan bukan pengganti layanan darurat medis atau psikologis profesional. Jika Anda berada dalam situasi krisis atau membahayakan diri sendiri, segera hubungi nomor darurat di bawah ini.
             </p>
           </div>
         </motion.div>
@@ -89,7 +89,7 @@ export default function ResourcesPage() {
         </div>
 
         {/* Platform Support Services */}
-        <h3 className="text-lg font-bold text-white mb-4">Layanan Dukungan Health-AICare</h3>
+        <h3 className="text-lg font-bold text-white mb-4">Layanan Dukungan HealthAICare</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           <motion.div

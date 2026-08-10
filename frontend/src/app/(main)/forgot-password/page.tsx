@@ -104,7 +104,7 @@ export default function ForgotPassword() {
           </motion.div>
         </div>
         <footer className="py-4 px-6 text-center text-sm text-gray-400 border-t border-white/10">
-          <p>© 2025 Health-AICare Team. All rights reserved.</p>
+          <p>© 2025 HealthAICare Team. All rights reserved.</p>
         </footer>
       </div>
     );
@@ -122,8 +122,8 @@ export default function ForgotPassword() {
         >
           <div className="flex justify-center mb-6">
             <Image 
-              src="/health-ai-avatar.png" 
-              alt="Health-AI" 
+              src="/health_ai-avatar.png" 
+              alt="HealthAI" 
               width={80} 
               height={80}
               className="rounded-full bg-[#FFCA40]/20 p-2"
@@ -200,7 +200,7 @@ export default function ForgotPassword() {
       
       {/* Footer */}
       <footer className="py-4 px-6 text-center text-sm text-gray-400 border-t border-white/10">
-        <p>© 2025 Health-AICare Team. All rights reserved.</p>
+        <p>© 2025 HealthAICare Team. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -23,7 +23,7 @@ if settings.celery_store_results:
     result_backend = _resolve_celery_url(settings.celery_result_backend)
 
 celery_app = Celery(
-    "health-aicare_health-aicare",
+    "health_aicare_health_aicare",
     broker=broker_url,
     backend=result_backend,
 )

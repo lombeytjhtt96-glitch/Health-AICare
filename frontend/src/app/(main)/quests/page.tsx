@@ -10,10 +10,10 @@ export default function QuestsPage() {
       <div className="mx-auto max-w-5xl px-4 pt-24 pb-12 space-y-8">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-wide text-white/60">Health-AICare Quest</p>
+            <p className="text-xs uppercase tracking-wide text-white/60">HealthAICare Quest</p>
             <h1 className="text-3xl font-semibold text-white">Quest harianmu</h1>
             <p className="mt-2 text-sm text-white/60">
-              Selesaikan quest untuk menjaga keseimbangan harian dan kumpulkan Harmony bersama guild-mu.
+              Seleshealth_ain quest untuk menjaga keseimbangan harian dan kumpulkan Harmony bersama guild-mu.
             </p>
           </div>
           <Link

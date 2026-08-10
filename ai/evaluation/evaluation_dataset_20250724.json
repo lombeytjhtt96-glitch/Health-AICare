@@ -3780,13 +3780,13 @@
       "query": "Siapa saja target yang dimediasi oleh CPMH?",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Sivitas Akademika Fakultas Psikologi Health-AICare",
+        "Sivitas Akademika Fakultas Psikologi HealthAICare",
         "Masyarakat",
         "Pengambil Kebijakan",
         "Himpunan Profesi Kesehatan Mental",
         "Lembaga Lain"
       ],
-      "golden_answer": "CPMH berperan sebagai mediator bagi berbagai pihak, mulai dari sivitas akademika Fakultas Psikologi Health-AICare, masyarakat umum, pengambil kebijakan, himpunan profesi kesehatan mental, hingga lembaga lain di dalam maupun luar negeri. Dengan begitu, ilmu dan pengalaman dapat tersalur dengan lebih efektif."
+      "golden_answer": "CPMH berperan sebagai mediator bagi berbagai pihak, mulai dari sivitas akademika Fakultas Psikologi HealthAICare, masyarakat umum, pengambil kebijakan, himpunan profesi kesehatan mental, hingga lembaga lain di dalam maupun luar negeri. Dengan begitu, ilmu dan pengalaman dapat tersalur dengan lebih efektif."
     },
     {
       "id": null,
@@ -3821,13 +3821,13 @@
     },
     {
       "id": null,
-      "query": "Bagaimana CPMH memfasilitasi sivitas akademika Fakultas Psikologi Health-AICare?",
+      "query": "Bagaimana CPMH memfasilitasi sivitas akademika Fakultas Psikologi HealthAICare?",
       "query_lable": "path_query",
       "golden_nodes": [
         "CPMH",
-        "Sivitas Akademika Fakultas Psikologi Health-AICare"
+        "Sivitas Akademika Fakultas Psikologi HealthAICare"
       ],
-      "golden_answer": "CPMH memfasilitasi sivitas akademika Fakultas Psikologi Health-AICare dengan menyediakan akses ke pusat kajian, pendidikan, pelatihan, serta kesempatan untuk terlibat dalam advokasi kebijakan dan layanan kesehatan mental masyarakat. Dengan dukungan ini, akademisi dapat mengembangkan ilmu dan profesinya demi kesejahteraan bersama."
+      "golden_answer": "CPMH memfasilitasi sivitas akademika Fakultas Psikologi HealthAICare dengan menyediakan akses ke pusat kajian, pendidikan, pelatihan, serta kesempatan untuk terlibat dalam advokasi kebijakan dan layanan kesehatan mental masyarakat. Dengan dukungan ini, akademisi dapat mengembangkan ilmu dan profesinya demi kesejahteraan bersama."
     },
     {
       "id": null,
@@ -3897,10 +3897,10 @@
       "query_lable": "path_query",
       "golden_nodes": [
         "CPMH",
-        "Sivitas Akademika Fakultas Psikologi Health-AICare",
+        "Sivitas Akademika Fakultas Psikologi HealthAICare",
         "Masyarakat"
       ],
-      "golden_answer": "CPMH bertindak sebagai mediator dengan menghubungkan sivitas akademika Fakultas Psikologi Health-AICare yang memiliki keahlian penelitian dan praktis, dengan masyarakat yang menjadi penerima manfaat. Cara ini memfasilitasi transfer pengetahuan dan kolaborasi untuk meningkatkan kesehatan mental komunitas."
+      "golden_answer": "CPMH bertindak sebagai mediator dengan menghubungkan sivitas akademika Fakultas Psikologi HealthAICare yang memiliki keahlian penelitian dan praktis, dengan masyarakat yang menjadi penerima manfaat. Cara ini memfasilitasi transfer pengetahuan dan kolaborasi untuk meningkatkan kesehatan mental komunitas."
     },
     {
       "id": null,
@@ -3919,7 +3919,7 @@
       "golden_nodes": [
         "Chatbot Lintang"
       ],
-      "golden_answer": "Chatbot Lintang adalah sebuah chatbot kesehatan mental yang dikembangkan oleh Pokja Health Literacy Health Promoting University (HPU) Health-AICare untuk melakukan skrining masalah kesehatan mental dan memberikan pertolongan pertama psikologis secara online."
+      "golden_answer": "Chatbot Lintang adalah sebuah chatbot kesehatan mental yang dikembangkan oleh Pokja Health Literacy Health Promoting University (HPU) HealthAICare untuk melakukan skrining masalah kesehatan mental dan memberikan pertolongan pertama psikologis secara online."
     },
     {
       "id": null,
@@ -3987,7 +3987,7 @@
         "Direktori Layanan",
         "Chatbot Lintang"
       ],
-      "golden_answer": "Direktori Layanan pada Chatbot Lintang menyediakan informasi kontak dan detail layanan kesehatan mental di lingkungan Health-AICare, sehingga Anda dapat menemukan dukungan profesional yang sesuai dengan kebutuhan."
+      "golden_answer": "Direktori Layanan pada Chatbot Lintang menyediakan informasi kontak dan detail layanan kesehatan mental di lingkungan HealthAICare, sehingga Anda dapat menemukan dukungan profesional yang sesuai dengan kebutuhan."
     },
     {
       "id": null,
@@ -4011,13 +4011,13 @@
     },
     {
       "id": null,
-      "query": "Mengapa pengguna dengan masalah parah perlu dihubungkan dengan Crisis Center Health-AICare?",
+      "query": "Mengapa pengguna dengan masalah parah perlu dihubungkan dengan Crisis Center HealthAICare?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Crisis Center Health-AICare",
+        "Crisis Center HealthAICare",
         "Chatbot Lintang"
       ],
-      "golden_answer": "Jika skrining menunjukkan masalah yang mengganggu kehidupan sehari-hari secara signifikan, Chatbot Lintang akan merekomendasikan menghubungi Crisis Center Health-AICare agar Anda mendapatkan penanganan darurat yang tepat."
+      "golden_answer": "Jika skrining menunjukkan masalah yang mengganggu kehidupan sehari-hari secara signifikan, Chatbot Lintang akan merekomendasikan menghubungi Crisis Center HealthAICare agar Anda mendapatkan penanganan darurat yang tepat."
     },
     {
       "id": null,
@@ -4026,7 +4026,7 @@
       "golden_nodes": [
         "Klinik GMC (Mental Health Support)"
       ],
-      "golden_answer": "Klinik GMC (Mental Health Support) adalah penyedia dukungan kesehatan mental di lingkungan Health-AICare. Anda dapat menghubungi Psikolog kami di +62 813-2620-0342 atau layanan umum di +62 851-0047-3123."
+      "golden_answer": "Klinik GMC (Mental Health Support) adalah penyedia dukungan kesehatan mental di lingkungan HealthAICare. Anda dapat menghubungi Psikolog kami di +62 813-2620-0342 atau layanan umum di +62 851-0047-3123."
     },
     {
       "id": null,
@@ -4035,7 +4035,7 @@
       "golden_nodes": [
         "Mental Health Emergency Response Line (MHERL)"
       ],
-      "golden_answer": "MHERL adalah layanan tanggap darurat kesehatan mental dari Unit Konsultasi Psikologi Fakultas Psikologi Health-AICare, menyediakan dukungan segera melalui telepon di +62 813-2952-0052."
+      "golden_answer": "MHERL adalah layanan tanggap darurat kesehatan mental dari Unit Konsultasi Psikologi Fakultas Psikologi HealthAICare, menyediakan dukungan segera melalui telepon di +62 813-2952-0052."
     },
     {
       "id": null,
@@ -4044,36 +4044,36 @@
       "golden_nodes": [
         "Portal SINTESIS"
       ],
-      "golden_answer": "Portal SINTESIS adalah platform online yang digunakan untuk registrasi layanan konsultasi psikologi Fakultas Ekonomika dan Bisnis Health-AICare melalui form yang tersedia."
+      "golden_answer": "Portal SINTESIS adalah platform online yang digunakan untuk registrasi layanan konsultasi psikologi Fakultas Ekonomika dan Bisnis HealthAICare melalui form yang tersedia."
     },
     {
       "id": null,
-      "query": "Bagaimana sivitas bisa mengakses Layanan Psikologi Fakultas Teknik Health-AICare?",
+      "query": "Bagaimana sivitas bisa mengakses Layanan Psikologi Fakultas Teknik HealthAICare?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Layanan Psikologi Fakultas Teknik Health-AICare",
-        "Health-AICare (Health-AICare)"
+        "Layanan Psikologi Fakultas Teknik HealthAICare",
+        "HealthAICare (HealthAICare)"
       ],
-      "golden_answer": "Sivitas Fakultas Teknik Health-AICare dapat mengakses layanan psikologi dengan menghubungi nomor +62 813-2593-4202 atau mengisi form registrasi yang disediakan untuk civitas."
+      "golden_answer": "Sivitas Fakultas Teknik HealthAICare dapat mengakses layanan psikologi dengan menghubungi nomor +62 813-2593-4202 atau mengisi form registrasi yang disediakan untuk civitas."
     },
     {
       "id": null,
-      "query": "Apa hubungan antara Rumah Sakit Akademik Health-AICare dan Chatbot Lintang?",
+      "query": "Apa hubungan antara Rumah Sakit Akademik HealthAICare dan Chatbot Lintang?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Rumah Sakit Akademik Health-AICare (RSA Health-AICare)",
+        "Rumah Sakit Akademik HealthAICare (RSA HealthAICare)",
         "Chatbot Lintang"
       ],
-      "golden_answer": "Chatbot Lintang dapat merekomendasikan pengguna menghubungi Rumah Sakit Akademik Health-AICare (RSA Health-AICare) jika skrining menunjukkan kebutuhan penanganan profesional lebih lanjut."
+      "golden_answer": "Chatbot Lintang dapat merekomendasikan pengguna menghubungi Rumah Sakit Akademik HealthAICare (RSA HealthAICare) jika skrining menunjukkan kebutuhan penanganan profesional lebih lanjut."
     },
     {
       "id": null,
-      "query": "Apa yang dimaksud dengan Health-AICare (Health-AICare)?",
+      "query": "Apa yang dimaksud dengan HealthAICare (HealthAICare)?",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Health-AICare (Health-AICare)"
+        "HealthAICare (HealthAICare)"
       ],
-      "golden_answer": "Health-AICare (Health-AICare) adalah institusi pendidikan di Indonesia yang menaungi Pokja HPU serta berbagai layanan kesehatan mental termasuk Chatbot Lintang."
+      "golden_answer": "HealthAICare (HealthAICare) adalah institusi pendidikan di Indonesia yang menaungi Pokja HPU serta berbagai layanan kesehatan mental termasuk Chatbot Lintang."
     },
     {
       "id": null,
@@ -4087,12 +4087,12 @@
     },
     {
       "id": null,
-      "query": "Jelaskan apa itu Pokja Health Literacy Health Promoting University (HPU) Health-AICare.",
+      "query": "Jelaskan apa itu Pokja Health Literacy Health Promoting University (HPU) HealthAICare.",
       "query_lable": "entity_query",
       "golden_nodes": [
-        "Pokja Health Literacy Health Promoting University (HPU) Health-AICare"
+        "Pokja Health Literacy Health Promoting University (HPU) HealthAICare"
       ],
-      "golden_answer": "Pokja Health Literacy HPU adalah kelompok kerja di Health-AICare yang bertanggung jawab mengembangkan Chatbot Lintang untuk meningkatkan literasi dan akses layanan kesehatan mental."
+      "golden_answer": "Pokja Health Literacy HPU adalah kelompok kerja di HealthAICare yang bertanggung jawab mengembangkan Chatbot Lintang untuk meningkatkan literasi dan akses layanan kesehatan mental."
     },
     {
       "id": null,

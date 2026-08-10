@@ -1,21 +1,21 @@
 """
-Health-AI's Screening Awareness Module
+HealthAI's Screening Awareness Module
 
-This module provides Health-AI with awareness of:
+This module provides HealthAI with awareness of:
 1. What mental health dimensions we're tracking
 2. What information gaps exist in the user's profile
 3. Natural conversation prompts to elicit missing information
 
 Design Philosophy:
-- Health-AI should feel like a genuine friend, NOT a clinical interviewer
+- HealthAI should feel like a genuine friend, NOT a clinical interviewer
 - Questions are woven into natural conversation, never as a checklist
 - Timing matters - ask when contextually appropriate
 - Never ask more than 1 probing question per response
 - Respect the conversation flow
 
 Integration:
-- This module is called during Health-AI's response generation
-- It adds "screening guidance" to Health-AI's system prompt
+- This module is called during HealthAI's response generation
+- It adds "screening guidance" to HealthAI's system prompt
 - STA can use the same LLM call to analyze the response
 """
 from __future__ import annotations
@@ -523,9 +523,9 @@ def generate_screening_guidance(
     gap_analysis: ScreeningGapAnalysis,
     max_probes_per_session: int = 3,
 ) -> str:
-    """Generate screening guidance to add to Health-AI's system prompt.
+    """Generate screening guidance to add to HealthAI's system prompt.
     
-    This gives Health-AI awareness of what to naturally explore without
+    This gives HealthAI awareness of what to naturally explore without
     making her responses feel clinical.
     
     Args:
@@ -544,7 +544,7 @@ def generate_screening_guidance(
 **Discordance Level:** {gap_analysis.discordance_level}
 **Reason:** {gap_analysis.discordance_reason}
 
-**Instructions for Health-AI:**
+**Instructions for HealthAI:**
 """
         if gap_analysis.discordance_level == "high":
             discordance_text += "- CRITICAL: User's self-report is significantly more positive than detected sentiment. Possible crisis masking.\n- STRATEGY: Use validating, deep-probing questions to explore the 'underlying' feelings."
@@ -595,13 +595,13 @@ async def enhance_response_with_probe(
     conversation_history: List[Dict[str, str]],
     preferred_model: Optional[str] = None,
 ) -> Tuple[str, bool]:
-    """Enhance Health-AI's response with a natural screening probe if appropriate.
+    """Enhance HealthAI's response with a natural screening probe if appropriate.
     
-    This is called AFTER Health-AI generates her response, to optionally add
+    This is called AFTER HealthAI generates her response, to optionally add
     a natural probe at the end.
     
     Args:
-        base_response: Health-AI's original response
+        base_response: HealthAI's original response
         gap_analysis: Gap analysis results
         conversation_history: Conversation context
         preferred_model: LLM model to use
@@ -653,9 +653,9 @@ async def get_screening_aware_prompt_addition(
     current_message: str,
     session_id: Optional[str] = None,
 ) -> Tuple[str, ScreeningGapAnalysis]:
-    """Get screening-aware addition to Health-AI's system prompt.
+    """Get screening-aware addition to HealthAI's system prompt.
     
-    Call this before generating Health-AI's response to give her awareness
+    Call this before generating HealthAI's response to give her awareness
     of what information would be valuable to naturally explore.
     
     Args:

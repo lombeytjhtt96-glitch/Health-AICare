@@ -170,9 +170,9 @@ async def _build_timeline(user_id: int, db: AsyncSession) -> List[TimelineEntry]
             topic = normalized[:80]
             if len(normalized) > 80:
                 topic = topic.rstrip() + "..."
-            title = f"Opened a session with Health-AI about {topic}"
+            title = f"Opened a session with HealthAI about {topic}"
         else:
-            title = "Opened a session with Health-AI"
+            title = "Opened a session with HealthAI"
 
         timeline.append(
             TimelineEntry(

@@ -12,7 +12,7 @@ import type { Appointment } from '@/types/chat';
 
 interface HealthAISchedulingWidgetProps {
   onScheduled?: (appointment: Appointment) => void;
-  onAikaFollowup?: (text: string) => void;
+  onHealthAIFollowup?: (text: string) => void;
 }
 
 function mapApiAppointmentToChat(appointment: ApiAppointment): Appointment {
@@ -43,7 +43,7 @@ function mapApiAppointmentToChat(appointment: ApiAppointment): Appointment {
   };
 }
 
-export function HealthAISchedulingWidget({ onScheduled, onAikaFollowup }: HealthAISchedulingWidgetProps) {
+export function HealthAISchedulingWidget({ onScheduled, onHealthAIFollowup }: HealthAISchedulingWidgetProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [loadingInitial, setLoadingInitial] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -129,7 +129,7 @@ export function HealthAISchedulingWidget({ onScheduled, onAikaFollowup }: Health
       const mapped = mapApiAppointmentToChat(apiAppointment);
       setCreatedAppointment(mapped);
       onScheduled?.(mapped);
-      onAikaFollowup?.(
+      onHealthAIFollowup?.(
         `Saya sudah jadwalkan konseling dengan ${mapped.psychologist?.full_name || 'psikolog'} pada ${mapped.appointment_datetime}.`
       );
     } catch (submitError) {

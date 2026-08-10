@@ -1,4 +1,4 @@
-"""Pure message-classification utilities for the Health-AI decision pipeline.
+"""Pure message-classification utilities for the HealthAI decision pipeline.
 
 All functions are stateless and free of I/O — safe to call on every request
 and straightforward to unit-test.  They depend only on ``constants`` from the
@@ -81,7 +81,7 @@ def is_smalltalk_message(text: str) -> bool:
     if cleaned in SMALLTALK_EXACT:
         return True
 
-    # Tier 2 — Health-AI-name prefix variants (capped at 22 chars to stay O(1))
+    # Tier 2 — HealthAI-name prefix variants (capped at 22 chars to stay O(1))
     if len(cleaned) <= 22 and cleaned in SMALLTALK_HEALTH_AI_PREFIX:
         return True
 

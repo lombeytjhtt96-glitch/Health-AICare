@@ -77,7 +77,7 @@ class CreateTestUserRequest(BaseModel):
     email: Optional[EmailStr] = None
     name: str = Field(..., min_length=1, max_length=100)
     role: str = Field(default="user", pattern="^(user|counselor|admin)$")
-    university: Optional[str] = "Health-AICare Portal"
+    university: Optional[str] = "HealthAICare Portal"
     major: Optional[str] = None
     year_of_study: Optional[str] = None
     gender: Optional[str] = None
@@ -415,7 +415,7 @@ async def create_test_user(
     if not request.email:
         random_suffix = secrets.token_hex(4)
         sanitized_name = request.name.lower().replace(" ", ".")
-        request.email = f"{sanitized_name}.test.{random_suffix}@health-aicare.com"
+        request.email = f"{sanitized_name}.test.{random_suffix}@health_aicare.com"
 
     # Check if email already exists
     result = await db.execute(select(User).where(User.email == request.email))
@@ -490,9 +490,9 @@ async def seed_database(
             "bio": "Dr. Sinta adalah psikolog klinis berpengalaman dengan fokus pada gangguan kecemasan dan depresi. Beliau telah menangani lebih dari 500 klien selama 12 tahun karirnya.",
             "education": {
                 "degrees": [
-                    {"degree": "S.Psi", "institution": "Health-AICare Portal", "year": 2008},
+                    {"degree": "S.Psi", "institution": "HealthAICare Portal", "year": 2008},
                     {"degree": "M.Psi (Psikologi Klinis)", "institution": "Universitas Indonesia", "year": 2012},
-                    {"degree": "Dr. (Psikologi)", "institution": "Health-AICare Portal", "year": 2018}
+                    {"degree": "Dr. (Psikologi)", "institution": "HealthAICare Portal", "year": 2018}
                 ]
             },
             "certifications": {
@@ -523,7 +523,7 @@ async def seed_database(
             "education": {
                 "degrees": [
                     {"degree": "S.Psi", "institution": "Universitas Airlangga", "year": 2010},
-                    {"degree": "M.Psi (Psikologi Pendidikan)", "institution": "Health-AICare Portal", "year": 2014}
+                    {"degree": "M.Psi (Psikologi Pendidikan)", "institution": "HealthAICare Portal", "year": 2014}
                 ]
             },
             "certifications": {
@@ -553,8 +553,8 @@ async def seed_database(
             "bio": "Ibu Ratna adalah spesialis intervensi krisis dengan pengalaman menangani kasus darurat kesehatan mental. Beliau available untuk konsultasi urgent dan memiliki pendekatan yang warm dan supportive.",
             "education": {
                 "degrees": [
-                    {"degree": "S.Psi", "institution": "Health-AICare Portal", "year": 2005},
-                    {"degree": "M.Psi (Psikologi Konseling)", "institution": "Health-AICare Portal", "year": 2009}
+                    {"degree": "S.Psi", "institution": "HealthAICare Portal", "year": 2005},
+                    {"degree": "M.Psi (Psikologi Konseling)", "institution": "HealthAICare Portal", "year": 2009}
                 ]
             },
             "certifications": {
@@ -610,7 +610,7 @@ async def seed_database(
             first_name=name.split()[0],
             last_name=name.split()[-1] if " " in name else None,
             role="user",
-            university="Health-AICare Portal",
+            university="HealthAICare Portal",
             is_active=True,
             email_verified=True,
             created_at=datetime.now(),
@@ -640,7 +640,7 @@ async def seed_database(
         name = data["name"]
         random_suffix = secrets.token_hex(4)
         sanitized_name = name.lower().replace(" ", ".").replace(",", "").replace(".", "")[:20]
-        email = f"{sanitized_name}.test.{random_suffix}@health-aicare.com"
+        email = f"{sanitized_name}.test.{random_suffix}@health_aicare.com"
         
         # Determine gender from name prefix
         gender = "Female" if any(x in name.lower() for x in ["ibu", "dr. sinta", "ratna"]) else "Male"
@@ -652,7 +652,7 @@ async def seed_database(
             first_name=name.split()[0],
             last_name=name.split()[-1] if " " in name else None,
             role="counselor",
-            university="Health-AICare Portal",
+            university="HealthAICare Portal",
             is_active=True,
             email_verified=True,
             created_at=datetime.now(),
@@ -695,7 +695,7 @@ async def seed_database(
         name = admin_names[i]
         random_suffix = secrets.token_hex(4)
         sanitized_name = f"admin{i+1}.test.{random_suffix}"
-        email = f"{sanitized_name}@health-aicare.com"
+        email = f"{sanitized_name}@health_aicare.com"
         
         user = User(
             email=email,
@@ -703,7 +703,7 @@ async def seed_database(
             first_name="Admin",
             last_name=f"Portal {i+1}",
             role="admin",
-            university="Health-AICare Portal",
+            university="HealthAICare Portal",
             is_active=True,
             email_verified=True,
             created_at=datetime.now(),
@@ -896,7 +896,7 @@ async def simulate_real_chat(
     """
     Simulate a real user conversation by calling the chat endpoint.
     
-    This endpoint simulates how a real user would interact with Health-AI:
+    This endpoint simulates how a real user would interact with HealthAI:
     1. Each message is sent through the actual /chat endpoint
     2. AI generates real responses (not pre-written)
     3. STA analyzes risk in the background
@@ -956,7 +956,7 @@ async def simulate_real_chat(
     personal_context = await build_user_personal_context(db, user)
     
     # System prompt
-    system_prompt = """Kamu adalah Health-AI, AI pendamping kesehatan mental dari Health-AICare Support. Anggap dirimu sebagai teman dekat bagi siapa saja yang sedang butuh teman cerita. Gunakan bahasa Indonesia yang santai dan kasual (gaya obrolan sehari-hari), jangan terlalu formal, kaku, atau seperti robot. Buat suasana ngobrol jadi nyaman dan nggak canggung (awkward). Sebisa mungkin, sesuhealth_ain juga gaya bahasamu dengan yang dipakai pengguna.
+    system_prompt = """Kamu adalah HealthAI, AI pendamping kesehatan mental dari HealthAICare Support. Anggap dirimu sebagai teman dekat bagi siapa saja yang sedang butuh teman cerita. Gunakan bahasa Indonesia yang santai dan kasual (gaya obrolan sehari-hari), jangan terlalu formal, kaku, atau seperti robot. Buat suasana ngobrol jadi nyaman dan nggak canggung (awkward). Sebisa mungkin, sesuhealth_ain juga gaya bahasamu dengan yang dipakai pengguna.
 
 Tujuan utamamu adalah menjadi pendengar yang baik, suportif, hangat, dan tidak menghakimi. Bantu pengguna mengeksplorasi perasaan mereka terkait kehidupan sehari-hari, stres, pertemanan, atau apapun yang ada di pikiran mereka. Validasi emosi mereka, tunjukkan kalau kamu paham dan peduli."""
 
@@ -1002,13 +1002,13 @@ Tujuan utamamu adalah menjadi pendengar yang baik, suportif, hangat, dan tidak m
             
             # Log routing (RQ2) - In a real implementation we would get this from the result object
             # For now, we infer it or use a placeholder
-            agent_routing_log.append(f"Msg {idx+1}: Health-AI -> Direct Response") # Placeholder
+            agent_routing_log.append(f"Msg {idx+1}: HealthAI -> Direct Response") # Placeholder
             
             # Check for intervention plan (from agent integration)
             if result.intervention_plan:
                 intervention_generated = True
                 logger.info(f"Intervention plan generated for user {request.user_id}")
-                agent_routing_log[-1] = f"Msg {idx+1}: Health-AI -> STA -> Intervention"
+                agent_routing_log[-1] = f"Msg {idx+1}: HealthAI -> STA -> Intervention"
             
             logger.info(f"Message {idx + 1} processed. AI responded with {len(ai_response)} characters")
             
@@ -1678,13 +1678,13 @@ async def validate_orchestration(
                 agents_invoked = metadata.get("agents_invoked", [])
                 
                 # Determine actual next agent
-                actual_next_agent = "Health-AI"
+                actual_next_agent = "HealthAI"
                 if "CMA" in agents_invoked:
                     actual_next_agent = "CMA"
                 elif "TCA" in agents_invoked or "SCA" in agents_invoked:
                     actual_next_agent = "TCA"
                 elif "STA" in agents_invoked and len(agents_invoked) == 1:
-                     actual_next_agent = "Health-AI" # STA -> Health-AI
+                     actual_next_agent = "HealthAI" # STA -> HealthAI
                 
                 # Normalize for comparison
                 def normalize(s): return str(s).lower().replace("_", " ")

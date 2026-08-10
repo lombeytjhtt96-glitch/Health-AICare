@@ -1,4 +1,4 @@
-# Nixpacks configuration for Health-AICare backend (FastAPI)
+# Nixpacks configuration for HealthAICare backend (FastAPI)
 # Intended for Coolify/Nixpacks deployments.
 
 providers = ["python"]

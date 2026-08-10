@@ -322,7 +322,7 @@ async with get_async_db() as db:
 ### System Prompt Example:
 
 ```
-Kamu adalah analis data kesehatan mental yang expert untuk platform Health-AICare Support. 
+Kamu adalah analis data kesehatan mental yang expert untuk platform HealthAICare Support. 
 Peran kamu adalah interpretasi hasil analytics, identify trends, dan kasih 
 rekomendasi actionable untuk administrator.
 

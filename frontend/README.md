@@ -1,4 +1,4 @@
-# Health-AICare Frontend (Next.js)
+# HealthAICare Frontend (Next.js)
 
 ## Local development
 

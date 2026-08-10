@@ -1,4 +1,4 @@
-"""Health-AI orchestrator - conditional routing functions.
+"""HealthAI orchestrator - conditional routing functions.
 
 LangGraph evaluates these functions after each node to decide which edge to
 follow.  They are kept deliberately thin: each one reads a small number of
@@ -48,7 +48,7 @@ def should_invoke_agents(state: HealthAIOrchestratorState) -> str:
     - ROUTE_CRISIS_PARALLEL: high/critical risk — route to SDA/CMA escalation.
     - ROUTE_TCA: moderate risk or structured-support request — TCA only.
     - ROUTE_IA: analytics query from admin or counselor — Insights Agent.
-    - ROUTE_END: direct Health-AI response, no sub-agent involvement.
+    - ROUTE_END: direct HealthAI response, no sub-agent involvement.
 
     Priority:
     1. 'next_step' field (set explicitly by decision_node._compute_routing).
@@ -73,21 +73,21 @@ def should_invoke_agents(state: HealthAIOrchestratorState) -> str:
 
     # --- Explicit next_step from decision node (highest priority) ---
     if next_step == "cma":
-        _trace("health-ai::decision->parallel_crisis")
+        _trace("health_ai::decision->parallel_crisis")
         logger.warning(
-            "Routing after Health-AI: CRISIS ESCALATION (SDA/CMA) risk=%s",
+            "Routing after HealthAI: CRISIS ESCALATION (SDA/CMA) risk=%s",
             state.get("immediate_risk_level"),
         )
         return ROUTE_CRISIS_PARALLEL
 
     if next_step == "tca":
-        _trace("health-ai::decision->tca")
-        logger.info("Routing after Health-AI: TCA (Support)")
+        _trace("health_ai::decision->tca")
+        logger.info("Routing after HealthAI: TCA (Support)")
         return ROUTE_TCA
 
     if next_step == "ia":
-        _trace("health-ai::decision->ia")
-        logger.info("Routing after Health-AI: IA (Analytics)")
+        _trace("health_ai::decision->ia")
+        logger.info("Routing after HealthAI: IA (Analytics)")
         return ROUTE_IA
 
     # --- Fallback: resolve ambiguous needs_agents=True via risk level ---
@@ -95,11 +95,11 @@ def should_invoke_agents(state: HealthAIOrchestratorState) -> str:
         immediate_risk = str(state.get("immediate_risk_level") or "none")
 
         if immediate_risk in {"high", "critical"}:
-            _trace("health-ai::decision->parallel_crisis")
+            _trace("health_ai::decision->parallel_crisis")
             return ROUTE_CRISIS_PARALLEL
 
         if immediate_risk == "moderate":
-            _trace("health-ai::decision->tca")
+            _trace("health_ai::decision->tca")
             return ROUTE_TCA
 
         user_role = str(state.get("user_role", "")).lower()
@@ -107,19 +107,19 @@ def should_invoke_agents(state: HealthAIOrchestratorState) -> str:
             state.get("intent") == "analytics_query"
             and user_role in {"admin", "counselor"}
         ):
-            _trace("health-ai::decision->ia")
+            _trace("health_ai::decision->ia")
             return ROUTE_IA
 
         # needs_agents=True but no valid routing signal — end safely.
-        _trace("health-ai::decision->end")
+        _trace("health_ai::decision->end")
         logger.warning(
             "Ambiguous needs_agents=True without valid route; ending safely."
         )
         return ROUTE_END
 
-    # --- Direct Health-AI response ---
-    _trace("health-ai::decision->end")
-    logger.info("Routing after Health-AI: Direct Response")
+    # --- Direct HealthAI response ---
+    _trace("health_ai::decision->end")
+    logger.info("Routing after HealthAI: Direct Response")
     return ROUTE_END
 
 
@@ -152,20 +152,20 @@ def should_route_to_sca(state: HealthAIOrchestratorState) -> str:
             )
 
     if severity in {"high", "critical"}:
-        _trace("health-ai::sta->sda")
+        _trace("health_ai::sta->sda")
         logger.info(
             "STA routing: severity=%s → CMA (crisis escalation)", severity
         )
         return ROUTE_SDA
 
     if next_step == "tca":
-        _trace("health-ai::sta->sca")
+        _trace("health_ai::sta->sca")
         logger.info(
             "STA routing: severity=%s, next_step=tca → TCA (support)", severity
         )
         return ROUTE_SCA
 
-    _trace("health-ai::sta->synthesize")
+    _trace("health_ai::sta->synthesize")
     logger.info(
         "STA routing: severity=%s, next_step=%s → Synthesize",
         severity,

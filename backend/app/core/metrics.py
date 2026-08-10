@@ -1,7 +1,7 @@
 """
 Prometheus metrics for production monitoring.
 
-This module defines all custom metrics for the Health-AICare Support platform,
+This module defines all custom metrics for the HealthAICare Support platform,
 including mental health-specific metrics for agents, interventions, and user engagement.
 """
 import time
@@ -350,7 +350,7 @@ appointment_no_show_rate = Gauge(
 
 system_info = Info('system_info', 'System information')
 system_info.info({
-    'application': 'Health-AICare Support',
+    'application': 'HealthAICare Support',
     'version': '1.0.0',
     'environment': 'production'
 })

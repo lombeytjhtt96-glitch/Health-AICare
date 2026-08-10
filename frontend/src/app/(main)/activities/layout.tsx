@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     canonical: "/activities",
   },
   openGraph: {
-    title: "Health-AICare Wellness Activities",
+    title: "HealthAICare Wellness Activities",
     description:
-      "Interactive exercises for daily mental wellness, integrated with Health-AICare intervention support.",
+      "Interactive exercises for daily mental wellness, integrated with HealthAICare intervention support.",
     url: "/activities",
     type: "website",
   },
   twitter: {
-    title: "Health-AICare Wellness Activities",
+    title: "HealthAICare Wellness Activities",
     description:
       "Play therapeutic activities that support grounding, stress reduction, and healthier routines.",
   },

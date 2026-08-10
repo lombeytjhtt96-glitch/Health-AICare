@@ -1,13 +1,13 @@
 """
 Agent Integration Service
 
-This module orchestrates interaction between Health-AI's chat flow and specialized AI agents:
+This module orchestrates interaction between HealthAI's chat flow and specialized AI agents:
 - STA (Safety Triage Agent): Background risk assessment
 - TCA (Therapeutic Coach Agent): User-facing intervention plans
 
 Design Principles:
 - Modular: Each agent integration is independent
-- Non-intrusive: Agents work alongside Health-AI, not replacing it
+- Non-intrusive: Agents work alongside HealthAI, not replacing it
 - Configurable: Easy to enable/disable agent features
 - Async-first: All operations are async for performance
 """
@@ -60,7 +60,7 @@ class AgentInterventionResult:
 
 
 class AgentIntegrationService:
-    """Orchestrates agent integration with Health-AI's chat flow.
+    """Orchestrates agent integration with HealthAI's chat flow.
     
     This service provides a clean interface for:
     1. Analyzing user messages for risk and distress

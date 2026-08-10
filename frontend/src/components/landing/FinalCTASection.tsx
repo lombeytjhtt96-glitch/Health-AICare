@@ -46,7 +46,7 @@ export default function FinalCTASection() {
              
              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/health_ai" className="group relative px-8 py-4 bg-white text-[#000B1F] rounded-full font-bold text-lg flex items-center justify-center hover:bg-slate-200 transition-colors w-full sm:w-auto">
-                   {t('landing.cta.primary', 'Chat with Health-AI')}
+                   {t('landing.cta.primary', 'Chat with HealthAI')}
                    <ArrowScribbleGlyph className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="/about" className="px-8 py-4 bg-[#000B1F]/70 border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/5 transition-colors w-full sm:w-auto">

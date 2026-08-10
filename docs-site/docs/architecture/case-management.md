@@ -21,7 +21,7 @@ In clinical terms, the CMA handles **care coordination** - the logistical layer 
 The CMA is triggered when:
 
 1. **Risk level ≥ 2 (HIGH/CRITICAL)**: Automatically invoked in parallel with the TCA.
-2. **Student explicitly requests counselling**: Detected by Health-AI's intent classifier (`appointment_scheduling` intent).
+2. **Student explicitly requests counselling**: Detected by HealthAI's intent classifier (`appointment_scheduling` intent).
 3. **STA post-conversation analysis recommends referral**: The STA's background analysis can write a `counsellor_recommendation` field, which a counsellor sees in their dashboard and can act on.
 
 ---
@@ -61,7 +61,7 @@ The student is shown the top two to three counsellor options and asked to confir
 
 ## Appointment Booking Flow
 
-The CMA orchestrates a multi-step booking flow through Health-AI's tool-calling interface:
+The CMA orchestrates a multi-step booking flow through HealthAI's tool-calling interface:
 
 ```
 1. get_available_counselors() → Returns ranked list of counsellors
@@ -70,7 +70,7 @@ The CMA orchestrates a multi-step booking flow through Health-AI's tool-calling 
 4. (Optional) Sends confirmation notification via SSE to frontend
 ```
 
-The entire flow happens conversationally. The student does not navigate to a separate booking page. Health-AI says something like:
+The entire flow happens conversationally. The student does not navigate to a separate booking page. HealthAI says something like:
 
 > *"I found two counsellors available this week - Bu Ratna specialises in academic stress, and Pak Andri has experience with anxiety. Which feels right? And would 10am tomorrow or 2pm Thursday work for you?"*
 

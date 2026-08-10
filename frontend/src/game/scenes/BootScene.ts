@@ -16,7 +16,7 @@ export class BootScene extends Phaser.Scene {
   preload() {
     console.log('[BootScene] Loading assets...');
 
-    // Loading bar UI with Health-AICare design system
+    // Loading bar UI with HealthAICare design system
     const progressBar = this.add.graphics();
     const progressBox = this.add.graphics();
     

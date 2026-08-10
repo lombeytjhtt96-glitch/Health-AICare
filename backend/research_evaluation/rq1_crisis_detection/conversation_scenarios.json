@@ -6,7 +6,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Halo Health-AI, lagi ada waktu nggak?"
+                "content": "Halo HealthAI, lagi ada waktu nggak?"
             },
             {
                 "role": "assistant",
@@ -37,7 +37,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, aku ngerasa kosong banget lately."
+                "content": "HealthAI, aku ngerasa kosong banget lately."
             },
             {
                 "role": "assistant",
@@ -99,7 +99,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, I'm at the top floor of the parking building right now."
+                "content": "HealthAI, I'm at the top floor of the parking building right now."
             },
             {
                 "role": "assistant",
@@ -115,7 +115,7 @@
             },
             {
                 "role": "user",
-                "content": "Everything is too much. Failed my exams, parents disappointed, girlfriend left me. What's the point anymore, Health-AI?"
+                "content": "Everything is too much. Failed my exams, parents disappointed, girlfriend left me. What's the point anymore, HealthAI?"
             },
             {
                 "role": "assistant",
@@ -161,7 +161,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, can I ask you something?"
+                "content": "HealthAI, can I ask you something?"
             },
             {
                 "role": "assistant",
@@ -223,7 +223,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, they're watching me through the ventilation in my room."
+                "content": "HealthAI, they're watching me through the ventilation in my room."
             },
             {
                 "role": "assistant",
@@ -285,7 +285,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, that professor really crossed the line today."
+                "content": "HealthAI, that professor really crossed the line today."
             },
             {
                 "role": "assistant",
@@ -347,7 +347,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Goodbye, Health-AI. Thank you for everything."
+                "content": "Goodbye, HealthAI. Thank you for everything."
             },
             {
                 "role": "assistant",
@@ -378,7 +378,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI help me, everything is spinning and I can't think straight."
+                "content": "HealthAI help me, everything is spinning and I can't think straight."
             },
             {
                 "role": "assistant",
@@ -440,7 +440,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, something terrible just happened to me."
+                "content": "HealthAI, something terrible just happened to me."
             },
             {
                 "role": "assistant",
@@ -471,7 +471,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, besok aku ada ujian Kalkulus dan aku belum siap sama sekali :("
+                "content": "HealthAI, besok aku ada ujian Kalkulus dan aku belum siap sama sekali :("
             },
             {
                 "role": "assistant",
@@ -564,7 +564,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, aku udah seminggu ini susah tidur. Tiap malem melek sampai jam 3-4 pagi."
+                "content": "HealthAI, aku udah seminggu ini susah tidur. Tiap malem melek sampai jam 3-4 pagi."
             },
             {
                 "role": "assistant",
@@ -688,7 +688,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, I feel so alone di kampus. Sepertinya everyone has their friend groups already and I'm just... there."
+                "content": "HealthAI, I feel so alone di kampus. Sepertinya everyone has their friend groups already and I'm just... there."
             },
             {
                 "role": "assistant",
@@ -812,7 +812,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, I'm feeling really homesick. Ini pertama kalinya aku jauh dari keluarga dan it's harder than I expected."
+                "content": "HealthAI, I'm feeling really homesick. Ini pertama kalinya aku jauh dari keluarga dan it's harder than I expected."
             },
             {
                 "role": "assistant",
@@ -905,7 +905,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, I feel so unmotivated lately. Like, I know I have things to do but I just... can't."
+                "content": "HealthAI, I feel so unmotivated lately. Like, I know I have things to do but I just... can't."
             },
             {
                 "role": "assistant",
@@ -1075,7 +1075,7 @@
             },
             {
                 "role": "user",
-                "content": "I'm just so tired of fighting, Health-AI. Nobody cares anyway."
+                "content": "I'm just so tired of fighting, HealthAI. Nobody cares anyway."
             },
             {
                 "role": "assistant",
@@ -1158,7 +1158,7 @@
         "turns": [
             {
                 "role": "user",
-                "content": "Health-AI, uang bulananku telat dikirim ortu. Aku bingung mau makan apa besok."
+                "content": "HealthAI, uang bulananku telat dikirim ortu. Aku bingung mau makan apa besok."
             },
             {
                 "role": "assistant",

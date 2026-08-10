@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="border-t border-dark-border bg-dark-bg py-12 px-6 text-sm text-slate-400">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         <div>
-          <h4 className="text-white font-semibold mb-3">Health-AICare</h4>
+          <h4 className="text-white font-semibold mb-3">HealthAICare</h4>
           <p className="text-xs text-slate-400 leading-relaxed">
             Platform pendukung kesehatan mental berbasis agen cerdas proaktif dengan pembuktian transparan on-chain BSC Testnet & Somnia.
           </p>
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto border-t border-dark-border/50 pt-6 text-center text-xs text-slate-500">
-        © 2026 Health-AICare. All rights reserved.
+        © 2026 HealthAICare. All rights reserved.
       </div>
     </footer>
   );

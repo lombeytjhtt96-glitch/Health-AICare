@@ -2,7 +2,7 @@
 
 /**
  * Conversations Page - Table View
- * Matches Health-AICare blue/gold color scheme with efficient scanning
+ * Matches HealthAICare blue/gold color scheme with efficient scanning
  */
 
 import React, { useState, useEffect, useCallback } from 'react';

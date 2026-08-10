@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Health-AICare Support backend models have been completely modularized from a single large `models.py` file into organized domain-specific modules. This improves maintainability, reduces coupling, and makes the codebase easier to navigate and understand.
+The HealthAICare Support backend models have been completely modularized from a single large `models.py` file into organized domain-specific modules. This improves maintainability, reduces coupling, and makes the codebase easier to navigate and understand.
 
 ## File Structure
 
@@ -212,4 +212,4 @@ from app.models import InterventionCampaign, CampaignExecution
 
 ## Conclusion
 
-The modularized models architecture provides a solid foundation for the Health-AICare Support platform's continued growth and development. It maintains backward compatibility while improving maintainability, development efficiency, and code quality. The clear domain separation makes the codebase more approachable for new developers and easier to extend with new features.
+The modularized models architecture provides a solid foundation for the HealthAICare Support platform's continued growth and development. It maintains backward compatibility while improving maintainability, development efficiency, and code quality. The clear domain separation makes the codebase more approachable for new developers and easier to extend with new features.

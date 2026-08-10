@@ -19,7 +19,7 @@ const features = [
     titleKey: 'landing.features.f1.title',
     titleFallback: 'Talk it out',
     descriptionKey: 'landing.features.f1.desc',
-    descriptionFallback: 'Health-AI helps you put feelings into words and reflect without judgment.',
+    descriptionFallback: 'HealthAI helps you put feelings into words and reflect without judgment.',
     color: "from-[#FFCA40] to-[#FFB700]"
   },
   {
@@ -27,7 +27,7 @@ const features = [
     titleKey: 'landing.features.f2.title',
     titleFallback: 'Safety prompts',
     descriptionKey: 'landing.features.f2.desc',
-    descriptionFallback: 'When messages suggest risk, Health-AI prioritizes safety and surfaces crisis resources.',
+    descriptionFallback: 'When messages suggest risk, HealthAI prioritizes safety and surfaces crisis resources.',
     color: "from-[#FF6B9D] to-[#FF8FAB]"
   },
   {
@@ -75,7 +75,7 @@ const features = [
     titleKey: 'landing.features.f8.title',
     titleFallback: 'Human support, when you want it',
     descriptionKey: 'landing.features.f8.desc',
-    descriptionFallback: 'Health-AI can point you toward people and services, not just more text.',
+    descriptionFallback: 'HealthAI can point you toward people and services, not just more text.',
     color: "from-[#EC4899] to-[#F472B6]"
   }
 ];
@@ -112,7 +112,7 @@ export default function FeaturesSection() {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {t(
               'landing.features.subtitle',
-              'From quick check-ins to preparing for counseling, Health-AI helps you take the next step without overwhelming you.'
+              'From quick check-ins to preparing for counseling, HealthAI helps you take the next step without overwhelming you.'
             )}
           </p>
         </motion.div>

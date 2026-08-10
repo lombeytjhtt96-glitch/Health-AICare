@@ -95,7 +95,7 @@ export class MenuScene extends Phaser.Scene {
     });
 
     // Footer credits
-    const footer = this.add.text(centerX, height - 40, 'Health-AICare © 2025 | Press any button to begin', {
+    const footer = this.add.text(centerX, height - 40, 'HealthAICare © 2025 | Press any button to begin', {
       fontFamily: 'Arial, sans-serif',
       fontSize: '14px',
       color: '#ffffff',

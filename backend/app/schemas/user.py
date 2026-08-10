@@ -186,8 +186,8 @@ class CheckinSettingsResponse(BaseModel):
 
 class TestEmailPayload(BaseModel):
     recipient_email: EmailStr
-    subject: str = "Health-AICare Support Test Email"
-    message: str = "This is a test message from the Health-AICare Support email utility."
+    subject: str = "HealthAICare Support Test Email"
+    message: str = "This is a test message from the HealthAICare Support email utility."
 
 
 class SyncAchievementsResponse(BaseModel):

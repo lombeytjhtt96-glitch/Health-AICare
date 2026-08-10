@@ -323,7 +323,7 @@ export default function AdminTestingPage() {
       toast.error("Please select a test user first");
       return;
     }
-    await runAction("simulate real chat (Health-AI + STA/TCA)", () =>
+    await runAction("simulate real chat (HealthAI + STA/TCA)", () =>
       simulateRealChat({
         user_id: selectedUserId,
         user_messages: [

@@ -36,8 +36,8 @@ def is_uuid_like(text: Optional[str]) -> bool:
 # --- Define Allowed Email Domains ---
 #! Disallow Gmail in production, but allow for now
 ALLOWED_EMAIL_DOMAINS: Tuple[str, ...] = (
-    "@mail.health-aicare.ac.id",
-    "@health-aicare.ac.id",
+    "@mail.health_aicare.ac.id",
+    "@health_aicare.ac.id",
     "@gmail.com", # <-- ALLOW GMAIL FOR NOW
 )
 

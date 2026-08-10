@@ -62,7 +62,7 @@ interface NextAuthUserInfo {
 const INTERNAL_API_URL = process.env.INTERNAL_API_URL;
 
 const determineRoleFromEmail = (email?: string | null) => {
-  if (email && email.toLowerCase().endsWith("@health-aicare.com")) {
+  if (email && email.toLowerCase().endsWith("@health_aicare.com")) {
     return "user";
   }
   return "guest";

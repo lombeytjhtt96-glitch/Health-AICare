@@ -127,7 +127,7 @@ export function HealthAIThinkingCompact({ message }: { message?: string }) {
         <Brain className="h-4 w-4 text-health-gold" />
       </motion.div>
       <span className="text-sm text-white/80">
-        {message || 'Health-AI sedang mengetik...'}
+        {message || 'HealthAI sedang mengetik...'}
       </span>
       <div className="flex items-center gap-0.5 ml-auto">
         {[0, 1, 2].map((i) => (

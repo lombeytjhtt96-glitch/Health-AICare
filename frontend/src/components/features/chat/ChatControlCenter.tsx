@@ -164,9 +164,9 @@ export function ChatControlCenter({
             {/* Header - Sticky on mobile */}
             <div className="flex items-start justify-between gap-4 border-b border-white/10 bg-white/5 px-5 py-4 md:px-6">
               <div className="flex-1">
-                <h2 className="text-xl font-semibold text-white md:text-2xl">Pusat Kontrol Health-AI</h2>
+                <h2 className="text-xl font-semibold text-white md:text-2xl">Pusat Kontrol HealthAI</h2>
                 <p className="mt-1 text-sm text-white/60">
-                  Sesuaikan pengaturan AI, chat, dan audio
+                  Sesuhealth_ain pengaturan AI, chat, dan audio
                 </p>
               </div>
               <button
@@ -214,7 +214,7 @@ export function ChatControlCenter({
                 <div className="rounded-xl border border-white/15 bg-white/5 p-5 backdrop-blur-sm">
                   <div className="mb-4">
                     <h3 className="text-base font-semibold text-white">Preferensi Chat</h3>
-                    <p className="mt-1 text-sm text-white/60">Atur cara interaksi saat Health-AI sedang merespons</p>
+                    <p className="mt-1 text-sm text-white/60">Atur cara interaksi saat HealthAI sedang merespons</p>
                   </div>
                   <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 transition hover:border-health-gold/40 hover:bg-white/8">
                     <input
@@ -263,7 +263,7 @@ export function ChatControlCenter({
                       <FiMic className="h-5 w-5 shrink-0 text-health-gold" />
                       <div className="flex-1">
                         <span className="block text-sm font-medium text-white">Balasan suara (TTS)</span>
-                        <span className="mt-0.5 block text-xs text-white/60">Dengarkan balasan Health-AI secara langsung</span>
+                        <span className="mt-0.5 block text-xs text-white/60">Dengarkan balasan HealthAI secara langsung</span>
                       </div>
                     </label>
                   </div>

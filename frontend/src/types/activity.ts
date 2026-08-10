@@ -25,7 +25,7 @@ export type ActivityType =
 export interface ActivityLog {
   timestamp: string;
   activity_type: ActivityType;
-  agent: string; // STA, TCA, CMA, IA, Health-AI
+  agent: string; // STA, TCA, CMA, IA, HealthAI
   message: string;
   details?: Record<string, any>;
   duration_ms?: number | null;

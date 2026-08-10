@@ -1,7 +1,7 @@
 """
 Mental Health Domain Routes
 
-This module aggregates all mental health-related routes for the Health-AICare platform.
+This module aggregates all mental health-related routes for the HealthAICare platform.
 All routes are organized by feature area and can be imported from this single location.
 
 Route Categories:

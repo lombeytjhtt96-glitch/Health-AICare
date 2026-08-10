@@ -111,14 +111,14 @@ async def create_password_reset_token(db: AsyncSession, email: str) -> bool:
         await db.commit()
         
         # Send password reset email
-        reset_url = f"https://Health-AICare Support.com/reset-password?token={reset_token}"
+        reset_url = f"https://HealthAICare Support.com/reset-password?token={reset_token}"
         
         html_content = f"""
         <!DOCTYPE html>
         <html>
         <head>
             <meta charset="utf-8">
-            <title>Password Reset - Health-AICare</title>
+            <title>Password Reset - HealthAICare</title>
             <style>
                 body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; }}
                 .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
@@ -133,12 +133,12 @@ async def create_password_reset_token(db: AsyncSession, email: str) -> bool:
             <div class="container">
                 <div class="header">
                     <h1>🔒 Password Reset Request</h1>
-                    <p>Health-AICare - Your Mental Health Companion</p>
+                    <p>HealthAICare - Your Mental Health Companion</p>
                 </div>
                 <div class="content">
                     <p>Hello,</p>
                     
-                    <p>We received a request to reset your password for your Health-AICare account. If you made this request, click the button below to reset your password:</p>
+                    <p>We received a request to reset your password for your HealthAICare account. If you made this request, click the button below to reset your password:</p>
                     
                     <div style="text-align: center;">
                         <a href="{reset_url}" class="button">Reset My Password</a>
@@ -161,11 +161,11 @@ async def create_password_reset_token(db: AsyncSession, email: str) -> bool:
                     <p>If you have any questions or concerns, please contact our support team.</p>
                     
                     <p>Stay safe,<br>
-                    <strong>The Health-AICare Team</strong></p>
+                    <strong>The HealthAICare Team</strong></p>
                 </div>
                 <div class="footer">
-                    <p>This is an automated message from Health-AICare - Please do not reply to this email</p>
-                    <p>© 2025 Health-AICare Portal - Mental Health Innovation Lab</p>
+                    <p>This is an automated message from HealthAICare - Please do not reply to this email</p>
+                    <p>© 2025 HealthAICare Portal - Mental Health Innovation Lab</p>
                 </div>
             </div>
         </body>
@@ -175,7 +175,7 @@ async def create_password_reset_token(db: AsyncSession, email: str) -> bool:
         # Send the email
         email_sent = send_email(
             recipient_email=email,
-            subject="🔒 Password Reset Request - Health-AICare",
+            subject="🔒 Password Reset Request - HealthAICare",
             html_content=html_content
         )
         

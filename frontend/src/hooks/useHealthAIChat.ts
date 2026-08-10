@@ -1,14 +1,14 @@
 /**
  * useHealthAIChat Hook
  * 
- * Enhanced chat hook that integrates Health-AI Meta-Agent orchestration
+ * Enhanced chat hook that integrates HealthAI Meta-Agent orchestration
  * with the existing chat functionality.
  */
 
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { v4 as uuidv4 } from 'uuid';
-import { useHealthAI, type AikaMessage, type AikaMetadata, type ReasoningTrace } from './useHealthAI';
+import { useHealthAI, type HealthAIMessage, type HealthAIMetadata, type ReasoningTrace } from './useHealthAI';
 import { useThinkingSteps } from '@/hooks/useThinkingSteps';
 import type { Appointment, InterventionPlan, Message } from '@/types/chat';
 
@@ -22,7 +22,7 @@ export interface ToolActivityLog {
   timestamp: string;
 }
 
-interface UseAikaChatOptions {
+interface UseHealthAIChatOptions {
   sessionId: string;
   showAgentActivity?: boolean;
   showRiskIndicators?: boolean;
@@ -36,7 +36,7 @@ export function useHealthAIChat({
   showRiskIndicators = true,
   preferredModel,
   onToolActivity 
-}: UseAikaChatOptions) {
+}: UseHealthAIChatOptions) {
   const { data: session } = useSession();
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
@@ -45,7 +45,7 @@ export function useHealthAIChat({
   const [currentThinking, setCurrentThinking] = useState<string | null>(null);
   const [thinkingTrace, setThinkingTrace] = useState<ReasoningTrace[]>([]);
   const lastConversationIdRef = useRef<string | null>(null);
-  const [lastMetadata, setLastMetadata] = useState<AikaMetadata | null>(null);
+  const [lastMetadata, setLastMetadata] = useState<HealthAIMetadata | null>(null);
 
   // Retry cooldown after a rate-limit fallback (ms remaining until the user can resend).
   const [retryCooldownMs, setRetryCooldownMs] = useState(0);
@@ -357,7 +357,7 @@ export function useHealthAIChat({
 
   // Simplified streaming - just accumulate content in a single bubble during streaming
   const {
-    sendMessage: sendToAika,
+    sendMessage: sendToHealthAI,
     loading: health_aiLoading,
     error: health_aiError,
     getRiskLevelColor,
@@ -365,7 +365,7 @@ export function useHealthAIChat({
   } = useHealthAI({
     showToasts: true,
     onAgentActivity: (agents) => {
-      console.log('🤖 Health-AI consulted agents:', agents);
+      console.log('🤖 HealthAI consulted agents:', agents);
       setActiveAgents(agents);
     },
     onRiskDetected: (assessment) => {
@@ -483,7 +483,7 @@ export function useHealthAIChat({
         {
           id: greetingId,
           role: 'assistant',
-          content: 'Halo! Aku Health-AI, asisten AI untuk kesehatan mentalmu. Bagaimana kabarmu hari ini? 💙',
+          content: 'Halo! Aku HealthAI, asisten AI untuk kesehatan mentalmu. Bagaimana kabarmu hari ini? 💙',
           timestamp: new Date(),
           session_id: sessionId,
           conversation_id: conversationId,
@@ -505,7 +505,7 @@ export function useHealthAIChat({
   }, []);
 
   /**
-   * Send message to Health-AI
+   * Send message to HealthAI
    */
   const handleSendMessage = useCallback(
     async (message?: string) => {
@@ -535,7 +535,7 @@ export function useHealthAIChat({
       setInputValue('');
       setIsLoading(true);
       setActiveAgents([]); // Reset active agents
-      setCurrentThinking('Health-AI sedang menganalisis pesanmu...');
+      setCurrentThinking('HealthAI sedang menganalisis pesanmu...');
       setThinkingTrace([]);
       partialResponseBufferRef.current = '';
       hasPartialResponseRef.current = false;
@@ -546,8 +546,8 @@ export function useHealthAIChat({
       latestAgentActivityRef.current = null;
 
       try {
-        // Prepare conversation history for Health-AI
-        const historyForAika: AikaMessage[] = [...messages, newUserMessage]
+        // Prepare conversation history for HealthAI
+        const historyForHealthAI: HealthAIMessage[] = [...messages, newUserMessage]
           .filter((m) => (m.role === 'user' || m.role === 'assistant') && !m.metadata?.isSeedGreeting)
           .slice(-10) // Last 10 messages
           .map((m) => ({
@@ -556,17 +556,17 @@ export function useHealthAIChat({
             timestamp: m.created_at,
           }));
 
-        // Send to Health-AI Meta-Agent
-        const health_aiResponse = await sendToAika(
+        // Send to HealthAI Meta-Agent
+        const health_aiResponse = await sendToHealthAI(
           userMessageContent,
-          historyForAika,
+          historyForHealthAI,
           'user', // 'user' for students, can be 'counselor' or 'admin' based on user role
           preferredModel,
           sessionId  // Forward stable session_id so all turns belong to the same DB session
         );
 
         if (!health_aiResponse) {
-          throw new Error('Failed to get response from Health-AI');
+          throw new Error('Failed to get response from HealthAI');
         }
 
         // Store metadata for UI display
@@ -694,7 +694,7 @@ export function useHealthAIChat({
         latestAppointmentRef.current = null;
         latestAgentActivityRef.current = null;
       } catch (error) {
-        console.error('Health-AI chat error:', error);
+        console.error('HealthAI chat error:', error);
 
         const streamedBubbleId = currentBubbleIdRef.current;
         const streamedAccumulatedText = partialResponseBufferRef.current;
@@ -772,7 +772,7 @@ export function useHealthAIChat({
       health_aiLoading,
       messages,
       sessionId,
-      sendToAika,
+      sendToHealthAI,
       preferredModel,
     ]
   );

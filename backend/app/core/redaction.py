@@ -16,7 +16,7 @@ except Exception:  # pragma: no cover - tests may not load full settings
 PLACEHOLDERS: Dict[str, str] = {
     "email": "[REDACTED_EMAIL]",
     "phone": "[REDACTED_PHONE]",
-    "health-aicare_id": "[REDACTED_HEALTH_AICARE_STUDENT_ID]",
+    "health_aicare_id": "[REDACTED_HEALTH_AICARE_STUDENT_ID]",
     "person": "[REDACTED_PERSON]",
     "location": "[REDACTED_LOCATION]",
     "org": "[REDACTED_ORG]",
@@ -28,7 +28,7 @@ EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 PHONE_RE = re.compile(
     r"\b(?:\+?\d{1,3}[-.\s]?)?(?:\(?\d{2,4}\)?[-.\s]?){2,4}\d\b"
 )
-# Health-AICare user ID: 12/123456/AA/12345 (case-insensitive on AA)
+# HealthAICare user ID: 12/123456/AA/12345 (case-insensitive on AA)
 health_aicare_id_re = re.compile(r"\b\d{2}/\d{6}/[A-Za-z]{2}/\d{5}\b", re.IGNORECASE)
 
 # Matches already redacted tokens to avoid double-redaction
@@ -47,7 +47,7 @@ def extract_pii(message: Optional[str]) -> Dict[str, Any]:
         findings["phones"] = phones
     health_aicare_ids = health_aicare_id_re.findall(message)
     if health_aicare_ids:
-        findings["health-aicare_user_ids"] = health_aicare_ids
+        findings["health_aicare_user_ids"] = health_aicare_ids
     return findings
 
 
@@ -68,12 +68,12 @@ def _sub_idempotent(pattern: re.Pattern[str], replacement: str, text: str) -> Tu
 
 
 def redact_pii_regex(text: str) -> Tuple[str, Dict[str, int]]:
-    redaction_counts: Dict[str, int] = {"email": 0, "phone": 0, "health-aicare_id": 0}
+    redaction_counts: Dict[str, int] = {"email": 0, "phone": 0, "health_aicare_id": 0}
     # Order matters: redact structured IDs before generic phone patterns
     redacted, c_email = _sub_idempotent(EMAIL_RE, PLACEHOLDERS["email"], text)
     redaction_counts["email"] = c_email
-    redacted, c_health_aicare = _sub_idempotent(health_aicare_id_re, PLACEHOLDERS["health-aicare_id"], redacted)
-    redaction_counts["health-aicare_id"] = c_health_aicare
+    redacted, c_health_aicare = _sub_idempotent(health_aicare_id_re, PLACEHOLDERS["health_aicare_id"], redacted)
+    redaction_counts["health_aicare_id"] = c_health_aicare
     redacted, c_phone = _sub_idempotent(PHONE_RE, PLACEHOLDERS["phone"], redacted)
     redaction_counts["phone"] = c_phone
     return redacted, redaction_counts

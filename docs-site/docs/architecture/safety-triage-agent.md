@@ -18,9 +18,9 @@ One design decision defines the STA more than any other: it runs **after** the c
 
 ## Two Modes of Operation
 
-### Mode 1 - Real-Time Signal Detection (embedded in Health-AI)
+### Mode 1 - Real-Time Signal Detection (embedded in HealthAI)
 
-Before the STA even runs as a standalone agent, Health-AI itself performs the fastest possible risk checks:
+Before the STA even runs as a standalone agent, HealthAI itself performs the fastest possible risk checks:
 
 1. **Keyword scan** (< 1 ms): Regex match against a list of crisis terms in English and Indonesian. A hit immediately escalates risk to `HIGH`.
 2. **LLM semantic classification** (~150 ms): Handled by the `health_ai_decision_node` using Gemini, which rapidly classifies intent and real-time risk level to ensure safe immediate routing.
@@ -97,7 +97,7 @@ This ensures that even if conversation logs are used for model fine-tuning or an
 
 ## Manual Trigger
 
-Counsellors and administrators can manually trigger the STA analysis on any conversation via Health-AI's `trigger_conversation_analysis` tool, or directly through the admin API at:
+Counsellors and administrators can manually trigger the STA analysis on any conversation via HealthAI's `trigger_conversation_analysis` tool, or directly through the admin API at:
 
 ```
 POST /api/v1/admin/conversation-assessments/{conversation_id}/trigger

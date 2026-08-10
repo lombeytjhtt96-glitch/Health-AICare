@@ -24,8 +24,8 @@ University administrators lack real-time information regarding population-level 
 ### 4. Cultural Friction and Stigma
 Particularly within the Indonesian university context, the stigma surrounding mental health disclosures remains high. Students are significantly less likely to self-refer into formal psychiatric or counseling services due to fear of judgment or academic repercussions.
 
-## The Objective of Health-AICare
+## The Objective of HealthAICare
 
-Health-AICare is designed to address these systemic failures by transitioning the support paradigm from a reactive service to a proactive, agentic ecosystem.
+HealthAICare is designed to address these systemic failures by transitioning the support paradigm from a reactive service to a proactive, agentic ecosystem.
 
 By leveraging a conversational AI interface, the system provides a low-friction, stigma-free environment for students to express their feelings. In the background, the platform continuously monitors for distress signals, autonomously provides evidence-based therapeutic interventions, and safely escalates critical cases to human professionals. This approach effectively mitigates the capacity bottleneck while ensuring those in immediate danger receive prompt human attention.

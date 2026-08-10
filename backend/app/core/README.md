@@ -37,7 +37,7 @@ The algorithm checks minute, hour, and day windows. If any window is exceeded, i
 
 Source: [backend/app/core/redaction.py](backend/app/core/redaction.py)
 
-The redaction logic is two-phase. First, regex redaction targets email, phone, and Health-AICare user IDs. Then an optional spaCy-based entity pass can replace named entities like PERSON or LOC.
+The redaction logic is two-phase. First, regex redaction targets email, phone, and HealthAICare user IDs. Then an optional spaCy-based entity pass can replace named entities like PERSON or LOC.
 
 `sanitize_text()` combines both passes and returns metadata on matches. The regex substitution is idempotent by design, so repeated redaction should not cascade into nested placeholders.
 

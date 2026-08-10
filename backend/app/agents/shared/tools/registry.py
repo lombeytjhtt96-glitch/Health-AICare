@@ -1,7 +1,7 @@
 """
 Tool Registry System with Decorator Pattern
 
-This module provides a centralized registry for all Health-AI tools, eliminating redundancy
+This module provides a centralized registry for all HealthAI tools, eliminating redundancy
 and providing a single source of truth for tool definitions.
 
 Architecture:
@@ -50,7 +50,7 @@ def register_tool(
     requires_user_id: bool = True,
 ):
     """
-    Decorator to register a tool with the Health-AI tool system.
+    Decorator to register a tool with the HealthAI tool system.
     
     Args:
         name: Tool name (must be unique)

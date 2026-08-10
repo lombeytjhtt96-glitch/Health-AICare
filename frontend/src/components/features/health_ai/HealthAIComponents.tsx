@@ -1,18 +1,18 @@
 /**
- * Health-AI UI Components
+ * HealthAI UI Components
  * 
- * Reusable components for displaying Health-AI Meta-Agent activity,
+ * Reusable components for displaying HealthAI Meta-Agent activity,
  * risk assessments, and escalation notifications.
  */
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, AlertTriangle, CheckCircle, Activity, Cpu } from 'lucide-react';
-import type { AikaRiskAssessment, AikaMetadata } from '@/hooks/useHealthAI';
+import type { HealthAIRiskAssessment, HealthAIMetadata } from '@/hooks/useHealthAI';
 
 /**
  * Agent Activity Badge
- * Shows which agents Health-AI consulted for this response
+ * Shows which agents HealthAI consulted for this response
  */
 interface AgentActivityBadgeProps {
   agents: string[];
@@ -51,7 +51,7 @@ export function AgentActivityBadge({ agents, processingTime }: AgentActivityBadg
  * Visual indicator for safety risk assessment
  */
 interface RiskLevelIndicatorProps {
-  assessment: AikaRiskAssessment;
+  assessment: HealthAIRiskAssessment;
   showFactors?: boolean;
 }
 
@@ -149,7 +149,7 @@ export function EscalationNotification({ caseId, onDismiss }: EscalationNotifica
         </div>
         <div className="flex-1 space-y-1">
           <h4 className="text-sm font-medium text-teal-400">
-            Kasus Telah Disampaikan
+            Kasus Telah Disamphealth_ain
           </h4>
           <p className="text-xs text-white/70">
             Tim konselor profesional kami telah dihubungi dan akan segera menghubungi Anda.
@@ -174,10 +174,10 @@ export function EscalationNotification({ caseId, onDismiss }: EscalationNotifica
 }
 
 /**
- * Health-AI Avatar
- * Branded avatar for Health-AI messages
+ * HealthAI Avatar
+ * Branded avatar for HealthAI messages
  */
-export function AikaAvatar() {
+export function HealthAIAvatar() {
   return (
     <motion.div
       initial={{ scale: 0 }}
@@ -202,25 +202,25 @@ export function AikaAvatar() {
 }
 
 /**
- * Health-AI Powered Badge
- * Shows "Powered by Health-AI" branding
+ * HealthAI Powered Badge
+ * Shows "Powered by HealthAI" branding
  */
-export function AikaPoweredBadge() {
+export function HealthAIPoweredBadge() {
   return (
     <div className="flex items-center gap-1.5 text-xs text-white/60">
       <Brain className="h-3.5 w-3.5 text-purple-400" />
-      <span>Powered by Health-AI 💙</span>
+      <span>Powered by HealthAI 💙</span>
     </div>
   );
 }
 
 /**
  * Metadata Display
- * Shows detailed metadata from Health-AI response (for debugging/admin)
+ * Shows detailed metadata from HealthAI response (for debugging/admin)
  * Enhanced with cleaner, more organized presentation
  */
 interface MetadataDisplayProps {
-  metadata: AikaMetadata;
+  metadata: HealthAIMetadata;
 }
 
 export function MetadataDisplay({ metadata }: MetadataDisplayProps) {

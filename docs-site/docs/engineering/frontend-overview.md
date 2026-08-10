@@ -8,7 +8,7 @@ sidebar_position: 1
 
 The frontend is a **Next.js 16** application written in TypeScript. It serves two distinct user experiences from the same codebase:
 
-1. **The Chat Interface** - used by students to talk to Health-AI
+1. **The Chat Interface** - used by students to talk to HealthAI
 2. **The Dashboard** - used by counsellors and administrators to monitor cases, analytics, and system health
 
 ---
@@ -38,14 +38,14 @@ frontend/src/
 
 ## Real-Time Streaming
 
-Health-AI's responses stream token-by-token using **Server-Sent Events (SSE)**. The sequence is:
+HealthAI's responses stream token-by-token using **Server-Sent Events (SSE)**. The sequence is:
 
 1. The frontend sends the user's message to `POST /api/v1/health_ai`
 2. The backend immediately opens an SSE stream (`text/event-stream`) on the same response
 3. As the backend executes the orchestrator and Gemini calls, it pushes progressive events/tokens through that stream
 4. The frontend appends each token to the current message bubble in real-time
 
-This produces the "typing" effect that makes Health-AI feel responsive rather than like a slow batch process.
+This produces the "typing" effect that makes HealthAI feel responsive rather than like a slow batch process.
 
 ---
 
@@ -74,4 +74,4 @@ Role-based UI rendering: counsellors and admins are redirected to the dashboard 
 
 The app supports both **English** and **Bahasa Indonesia**. Language selection is persisted in the user profile. All UI strings live in `messages/en.json` and `messages/id.json` - no hardcoded text in components.
 
-Health-AI's conversational responses are in the language the student uses. If they write in Indonesian, Health-AI responds in Indonesian. This is handled at the LLM prompt level, not by the frontend.
+HealthAI's conversational responses are in the language the student uses. If they write in Indonesian, HealthAI responds in Indonesian. This is handled at the LLM prompt level, not by the frontend.

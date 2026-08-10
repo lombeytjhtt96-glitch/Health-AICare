@@ -11,7 +11,7 @@ export default function AuthenticatedFooter() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <p className="text-xs text-gray-400">
-            © {currentYear} Health-AICare. All rights reserved.
+            © {currentYear} HealthAICare. All rights reserved.
           </p>
 
           {/* Navigation Links */}

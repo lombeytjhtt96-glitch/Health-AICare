@@ -1,5 +1,5 @@
 """
-Health-AI Streaming Endpoint - Progressive Agent Execution Updates
+HealthAI Streaming Endpoint - Progressive Agent Execution Updates
 Provides GitHub Copilot-style thinking indicators during agent execution.
 """
 
@@ -42,7 +42,7 @@ router = APIRouter()
 
 # Agent status messages for streaming updates
 AGENT_STATUS_MESSAGES = {
-    "health_ai_decision": "🤔 Health-AI sedang menganalisis permintaanmu...",
+    "health_ai_decision": "🤔 HealthAI sedang menganalisis permintaanmu...",
     "sta_subgraph": "🧠 Menilai keamanan emosional...",
     "tca_subgraph": "🤝 Menyusun rencana dukungan...",
     "cma_subgraph": "🚨 Mengatur jadwal dan dokumentasi...",
@@ -158,7 +158,7 @@ async def stream_health_ai_execution(
     http_request: Request,
 ) -> AsyncGenerator[str, None]:
     """
-    Stream progressive updates during Health-AI agent execution.
+    Stream progressive updates during HealthAI agent execution.
     
     Yields SSE (Server-Sent Events) formatted messages:
     - type: 'thinking' - Thinking/processing indicator
@@ -223,7 +223,7 @@ async def stream_health_ai_execution(
         health_ai_agent = get_health_ai_agent()
         if health_ai_agent is None:
             raise RuntimeError(
-                "Health-AI agent is not initialised yet. "
+                "HealthAI agent is not initialised yet. "
                 "The FastAPI lifespan startup may still be in progress."
             )
         
@@ -267,14 +267,14 @@ async def stream_health_ai_execution(
 
         while True:
             if await http_request.is_disconnected():
-                logger.info("Client disconnected during Health-AI streaming for user %s, aborting.", current_user.id)
+                logger.info("Client disconnected during HealthAI streaming for user %s, aborting.", current_user.id)
                 break
             try:
                 event = await asyncio.wait_for(astream_gen.__anext__(), timeout=ASTREAM_TIMEOUT_SECONDS)
             except StopAsyncIteration:
                 break
             except asyncio.TimeoutError:
-                logger.error("Health-AI astream timed out after %ds for user %s", ASTREAM_TIMEOUT_SECONDS, current_user.id)
+                logger.error("HealthAI astream timed out after %ds for user %s", ASTREAM_TIMEOUT_SECONDS, current_user.id)
                 yield f"data: {json.dumps({'type': 'error', 'message': 'Response generation timed out.'})}\n\n"
                 break
 
@@ -783,7 +783,7 @@ async def health_ai_stream_endpoint(
     db: AsyncSession = Depends(get_async_db),
 ):
     """
-    **Streaming Health-AI Endpoint** - Progressive agent execution with thinking indicators.
+    **Streaming HealthAI Endpoint** - Progressive agent execution with thinking indicators.
     
     Returns Server-Sent Events (SSE) stream with progressive updates:
     1. Thinking indicator
@@ -793,7 +793,7 @@ async def health_ai_stream_endpoint(
     5. Agent activity metadata
     6. Final response
     
-    **Use this endpoint for better UX** - shows users what Health-AI is doing in real-time.
+    **Use this endpoint for better UX** - shows users what HealthAI is doing in real-time.
     """
     logger.info(f"📡 Streaming request from user {current_user.id}: {request.message[:50]}...")
     

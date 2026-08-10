@@ -1,8 +1,8 @@
-import { AikaPageSkeleton } from "@/components/ui/GlobalSkeleton";
+import { HealthAIPageSkeleton } from "@/components/ui/GlobalSkeleton";
 
 /**
- * Next.js loading state for Health-AI chat page.
+ * Next.js loading state for HealthAI chat page.
  */
 export default function Loading() {
-  return <AikaPageSkeleton />;
+  return <HealthAIPageSkeleton />;
 }

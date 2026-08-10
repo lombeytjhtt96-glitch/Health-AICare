@@ -15,9 +15,9 @@ type FeatureItem = {
 const features: FeatureItem[] = [
   {
     icon: '🤖',
-    title: 'Health-AI — The Orchestrator',
+    title: 'HealthAI — The Orchestrator',
     description:
-      'A conversational AI that acts as the front-door for every student. Health-AI understands your message, decides what kind of help you need, and quietly coordinates a team of specialist agents behind the scenes.',
+      'A conversational AI that acts as the front-door for every student. HealthAI understands your message, decides what kind of help you need, and quietly coordinates a team of specialist agents behind the scenes.',
   },
   {
     icon: '🛡️',
@@ -100,8 +100,8 @@ function HomepageHero(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Health-AICare Documentation"
-      description="Technical documentation for the Health-AICare agentic mental health support platform - architecture, agent design, API reference, and deployment guides.">
+      title="HealthAICare Documentation"
+      description="Technical documentation for the HealthAICare agentic mental health support platform - architecture, agent design, API reference, and deployment guides.">
       <HomepageHero />
       <main>
         <section className={styles.features}>
@@ -109,9 +109,9 @@ export default function Home(): ReactNode {
             <div className={styles.sectionHeader}>
               <Heading as="h2">What the System Does</Heading>
               <p>
-                Health-AICare is not a single chatbot. It is a coordinated team of AI agents,
+                HealthAICare is not a single chatbot. It is a coordinated team of AI agents,
                 each with a distinct clinical role, working together to support
-                students at Health-AICare Portal.
+                students at HealthAICare Portal.
               </p>
             </div>
             <div className="row">
@@ -139,7 +139,7 @@ export default function Home(): ReactNode {
                 </Link>
               </div>
               <div className="col col--4">
-                <Link to="/docs/architecture/meta-agent-health-ai" className={styles.quickLink}>
+                <Link to="/docs/architecture/meta-agent-health_ai" className={styles.quickLink}>
                   <strong>Meet the agents</strong>
                   <span>Deep-dive into each AI agent - what it does and how it thinks.</span>
                 </Link>

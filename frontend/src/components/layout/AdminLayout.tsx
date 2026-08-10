@@ -18,7 +18,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     } else if (status === "authenticated") {
       // Check if user has admin role (this would come from your session data)
       // Check if user has admin email domain
-      const isAdmin = session?.user?.email?.endsWith('@health-aicare.com');
+      const isAdmin = session?.user?.email?.endsWith('@health_aicare.com');
       if (!isAdmin) {
         router.push('/access-denied');
       }

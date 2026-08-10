@@ -59,7 +59,7 @@ def generate_pdf_report(state: Dict[str, Any]) -> str:
         title_style.alignment = 1  # Center
         
         h2_style = styles["Heading2"]
-        h2_style.textColor = colors.HexColor("#001d58")  # Health-AICare Blue
+        h2_style.textColor = colors.HexColor("#001d58")  # HealthAICare Blue
         
         normal_style = styles["Normal"]
         normal_style.leading = 14
@@ -69,7 +69,7 @@ def generate_pdf_report(state: Dict[str, Any]) -> str:
         # 4. Content Building
         
         # Header
-        elements.append(Paragraph("Health-AICare Support Analytics Report", title_style))
+        elements.append(Paragraph("HealthAICare Support Analytics Report", title_style))
         elements.append(Spacer(1, 0.25 * inch))
         
         # Metadata
@@ -118,7 +118,7 @@ def generate_pdf_report(state: Dict[str, Any]) -> str:
             textColor=colors.gray
         )
         elements.append(Paragraph(
-            "This report was generated automatically by the Health-AICare Support Insights Agent. "
+            "This report was generated automatically by the HealthAICare Support Insights Agent. "
             "Data is k-anonymized (k>=5) to protect user privacy.", 
             disclaimer_style
         ))

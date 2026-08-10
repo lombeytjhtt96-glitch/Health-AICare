@@ -6,7 +6,7 @@ title: Evaluation Framework
 
 # Evaluation Framework
 
-To ensure the system is safe, effective, and functionally correct, the evaluation of Health-AICare is structured around specific metrics aligned with the three core Research Questions (RQs).
+To ensure the system is safe, effective, and functionally correct, the evaluation of HealthAICare is structured around specific metrics aligned with the three core Research Questions (RQs).
 
 ## Core Research Questions
 
@@ -23,7 +23,7 @@ To ensure the system is safe, effective, and functionally correct, the evaluatio
 
 **Evaluation Method:**
 - Intent classification testing using out-of-distribution adversarial prompts.
-- **Metric:** Routing accuracy rate. Health-AI must correctly hand off the conversation to the Safety Triage Agent, Therapeutic Coach Agent, or Case Management Agent without deadlocking or misclassifying the user's intent.
+- **Metric:** Routing accuracy rate. HealthAI must correctly hand off the conversation to the Safety Triage Agent, Therapeutic Coach Agent, or Case Management Agent without deadlocking or misclassifying the user's intent.
 - **Metric:** Latency and system throughput during context switching.
 
 ### RQ3: Output Quality & Privacy

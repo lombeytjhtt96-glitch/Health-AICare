@@ -210,7 +210,7 @@ export default function AboutFeaturesPage() {
           <div className="mt-8 bg-white/5 rounded-xl p-6 border border-white/10">
             <h3 className="text-xl font-bold text-white mb-3">Private Journaling</h3>
             <p className="text-white/70 mb-4">
-              Express yourself freely in a secure, encrypted journal. Use prompts, free-write, or reflect on your conversations with Health-AI.
+              Express yourself freely in a secure, encrypted journal. Use prompts, free-write, or reflect on your conversations with HealthAI.
             </p>
             <div className="flex flex-wrap gap-2">
               {["Daily Reflection", "Gratitude Journal", "Thought Records", "CBT Worksheets"].map((type, idx) => (

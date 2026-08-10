@@ -45,7 +45,7 @@ const AGENT_COLORS = {
     textColor: 'text-purple-400',
   },
   HEALTH_AI: {
-    name: 'Health-AI Orchestrator',
+    name: 'HealthAI Orchestrator',
     color: '#10b981', // Green - for orchestration
     bgColor: 'bg-green-500/20',
     borderColor: 'border-green-500',
@@ -113,7 +113,7 @@ export function CompactAgentActivity({ activeAgents }: CompactAgentActivityProps
     return (
       <div className="flex items-center gap-2">
         <Loader2 className="h-4 w-4 animate-spin text-white/60" />
-        <span className="text-xs text-white/60">Health-AI is thinking...</span>
+        <span className="text-xs text-white/60">HealthAI is thinking...</span>
       </div>
     );
   }

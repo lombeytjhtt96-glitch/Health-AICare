@@ -1,7 +1,7 @@
 """
 Finance Domain Services
 
-This module aggregates all finance-related services for the Health-AICare platform.
+This module aggregates all finance-related services for the HealthAICare platform.
 Services handle blockchain integration, token operations, and financial analytics.
 
 Service Categories:

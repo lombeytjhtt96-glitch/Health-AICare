@@ -1,4 +1,4 @@
-"""Tool definitions and handlers for Health-AI's function calling capabilities.
+"""Tool definitions and handlers for HealthAI's function calling capabilities.
 
 REFACTORED: This module now uses the NEW decorator-based registry system.
 
@@ -76,7 +76,7 @@ def get_health_ai_tools(
     allowed_tool_names: Optional[Set[str]] = None,
     user_role: Optional[str] = None,
 ) -> List[Any]:
-    """Return list of tools available to Health-AI.
+    """Return list of tools available to HealthAI.
     
     This function returns tools in the format expected by the Google GenAI SDK.
     It filters out agent-invoking tools to prevent conflicts with LangGraph routing.
@@ -134,14 +134,14 @@ def get_health_ai_tools(
         
         if allowed_tool_names is None:
             logger.info(
-                "✅ Loaded %d tool groups for Health-AI role=%s (%d declarations)",
+                "✅ Loaded %d tool groups for HealthAI role=%s (%d declarations)",
                 len(filtered_tools),
                 normalized_role,
                 selected_declarations_count,
             )
         else:
             logger.info(
-                "✅ Loaded %d tool groups for Health-AI role=%s (%d declarations after role+intent allowlist)",
+                "✅ Loaded %d tool groups for HealthAI role=%s (%d declarations after role+intent allowlist)",
                 len(filtered_tools),
                 normalized_role,
                 selected_declarations_count,
@@ -150,7 +150,7 @@ def get_health_ai_tools(
         return filtered_tools
         
     except Exception as e:
-        logger.error("Error loading Health-AI tools: %s", e)
+        logger.error("Error loading HealthAI tools: %s", e)
         return []
 
 

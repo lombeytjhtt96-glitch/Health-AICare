@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **mental_health/** domain consolidates all mental health-related functionality for the Health-AICare platform. This is the **core domain** of the application, handling therapeutic services, user wellness, and clinical operations.
+The **mental_health/** domain consolidates all mental health-related functionality for the HealthAICare platform. This is the **core domain** of the application, handling therapeutic services, user wellness, and clinical operations.
 
 ## 🎯 Purpose
 
@@ -266,7 +266,7 @@ All mental health endpoints require:
 - **Agents**: `backend/app/agents/README.md`
 - **CBT Modules**: `backend/app/cbt_modules/README.md`
 - **Safety Agents**: `docs/refactor_plan.md`
-- **Mental Health AI Guidelines**: `docs/mental-health-ai-guidelines.md`
+- **Mental Health AI Guidelines**: `docs/mental-health_ai-guidelines.md`
 - **Architecture**: `PROJECT_SINGLE_SOURCE_OF_TRUTH.md`
 
 ---

@@ -1,8 +1,8 @@
-"""Health-AI decision node — first node of the unified LangGraph orchestrator.
+"""HealthAI decision node — first node of the unified LangGraph orchestrator.
 
 Responsibility: given an incoming message and orchestrator state, classify
 the intent, decide whether a specialist sub-agent (TCA, CMA, IA) is needed,
-and either route to it or generate a direct Health-AI response via the ReAct loop.
+and either route to it or generate a direct HealthAI response via the ReAct loop.
 
 Architecture (functional decomposition)
 ----------------------------------------
@@ -424,7 +424,7 @@ def _build_rate_limit_fallback(error_str: str) -> dict[str, Any]:
         "health_ai_direct_response": (
             "Maaf ya, saat ini aku sedang melayani banyak teman-teman lain. "
             "Boleh coba kirim pesan lagi dalam 1 menit? "
-            "Kalau kamu butuh bantuan darurat, jangan ragu hubungi Crisis Centre Health-AICare."
+            "Kalau kamu butuh bantuan darurat, jangan ragu hubungi Crisis Centre HealthAICare."
         ),
         "response_source": "health_ai_direct",
         "is_fallback": True,
@@ -720,7 +720,7 @@ async def _generate_direct_response(
     execution_id: Optional[str],
     db: AsyncSession,
 ) -> _DirectResponseResult:
-    """Generate a direct Health-AI response when no sub-agent is needed (ReAct loop).
+    """Generate a direct HealthAI response when no sub-agent is needed (ReAct loop).
 
     For regular users the system instruction is optionally enriched with
     screening-awareness guidance before being sent to the model.
@@ -848,12 +848,12 @@ async def _record_decision_audit(
 # COORDINATOR
 # ===========================================================================
 
-@trace_agent("AikaDecision")
+@trace_agent("HealthAIDecision")
 async def health_ai_decision_node(
     state: HealthAIOrchestratorState,
     config: RunnableConfig,
 ) -> HealthAIOrchestratorState:
-    """First node of the unified Health-AI orchestrator graph.
+    """First node of the unified HealthAI orchestrator graph.
 
     Classifies the incoming message, decides whether specialist sub-agents are
     needed, and either routes to them or generates a direct ReAct response.
@@ -873,7 +873,7 @@ async def health_ai_decision_node(
     db: AsyncSession = db_candidate
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::decision", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::decision", "health_ai")
 
     start_time = time.time()
     raw_decision_payload: dict[str, Any] = {}
@@ -915,7 +915,7 @@ async def health_ai_decision_node(
             if execution_id:
                 execution_tracker.complete_node(
                     execution_id,
-                    "health-ai::decision",
+                    "health_ai::decision",
                     metrics={
                         "intent": "casual_chat",
                         "needs_agents": False,
@@ -923,7 +923,7 @@ async def health_ai_decision_node(
                     },
                 )
             logger.info(
-                "Health-AI Decision (deterministic smalltalk): duration=%.0fms", elapsed_ms
+                "HealthAI Decision (deterministic smalltalk): duration=%.0fms", elapsed_ms
             )
             audit_id = await _record_decision_audit(
                 db,
@@ -951,7 +951,7 @@ async def health_ai_decision_node(
         # Use the lite model for the classification/routing call itself — it only
         # needs to produce a small JSON blob (<400 tokens), not a long response.
         preferred_model: str = state.get("preferred_model") or GEMINI_LITE_MODEL
-        logger.info("Health-AI decision using model: %s", preferred_model)
+        logger.info("HealthAI decision using model: %s", preferred_model)
 
         tail_context = _build_tail_context_block(
             state.get("conversation_history") or []
@@ -1047,7 +1047,7 @@ async def health_ai_decision_node(
                     state["final_response"] = result.response_text
                     state["response_source"] = result.response_source
                     if result.tool_calls:
-                        state["agents_invoked"] = ["AikaTools"]
+                        state["agents_invoked"] = ["HealthAITools"]
                         state["tool_calls"] = result.tool_calls
 
             else:
@@ -1094,7 +1094,7 @@ async def health_ai_decision_node(
                         state["final_response"] = direct.response_text
                         state["response_source"] = direct.response_source
                         if direct.tool_calls:
-                            state["agents_invoked"] = ["AikaTools"]
+                            state["agents_invoked"] = ["HealthAITools"]
                             state["tool_calls"] = direct.tool_calls
                     except Exception as direct_err:
                         logger.warning(
@@ -1183,7 +1183,7 @@ async def health_ai_decision_node(
                 state["final_response"] = result.response_text
                 state["response_source"] = result.response_source
                 if result.tool_calls:
-                    state["agents_invoked"] = ["AikaTools"]
+                    state["agents_invoked"] = ["HealthAITools"]
                     state["tool_calls"] = result.tool_calls
 
         # -----------------------------------------------------------------
@@ -1195,7 +1195,7 @@ async def health_ai_decision_node(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::decision",
+                "health_ai::decision",
                 metrics={
                     "intent": state.get("intent"),
                     "needs_agents": state.get("needs_agents"),
@@ -1203,7 +1203,7 @@ async def health_ai_decision_node(
                 },
             )
         logger.info(
-            "Health-AI Decision: intent=%s, needs_agents=%s, duration=%.0fms",
+            "HealthAI Decision: intent=%s, needs_agents=%s, duration=%.0fms",
             state.get("intent"),
             state.get("needs_agents"),
             elapsed_ms,
@@ -1231,7 +1231,7 @@ async def health_ai_decision_node(
 
     except Exception as exc:
         error_str = str(exc)
-        error_msg = "Health-AI decision node failed: %s" % error_str
+        error_msg = "HealthAI decision node failed: %s" % error_str
         logger.error(error_msg, exc_info=True)
         state.setdefault("errors", []).append(error_msg)
 
@@ -1246,13 +1246,13 @@ async def health_ai_decision_node(
             cast(dict[str, Any], state).update(_build_rate_limit_fallback(error_str))
             if execution_id:
                 execution_tracker.complete_node(
-                    execution_id, "health-ai::decision", metrics={"fallback": "rate_limit"}
+                    execution_id, "health_ai::decision", metrics={"fallback": "rate_limit"}
                 )
         else:
             crisis_hits = _detect_crisis_keywords(str(state.get("message") or ""))
             cast(dict[str, Any], state).update(_build_model_error_fallback(error_str, crisis_hits))
             if execution_id:
-                execution_tracker.fail_node(execution_id, "health-ai::decision", error_str)
+                execution_tracker.fail_node(execution_id, "health_ai::decision", error_str)
 
         # Ensure final_response is always set so downstream nodes don't fail.
         state.setdefault("final_response", state.get("health_ai_direct_response", ""))

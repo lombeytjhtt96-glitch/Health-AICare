@@ -104,7 +104,7 @@ export default function CounselorLoginPage() {
             </div>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">Counselor Panel</h1>
-          <p className="text-white/60 text-sm">Health-AICare Clinical Access</p>
+          <p className="text-white/60 text-sm">HealthAICare Clinical Access</p>
         </div>
 
         {/* Session Expired Message */}
@@ -156,7 +156,7 @@ export default function CounselorLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full pl-10 pr-3 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#FFCA40] focus:border-transparent transition-all"
-                  placeholder="counselor@health-aicare.com"
+                  placeholder="counselor@health_aicare.com"
                 />
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function CounselorLoginPage() {
             <p className="text-xs text-white/50">
               For clinical staff and counselors only. 
               <br />
-              Need access? Contact admin@health-aicare.com
+              Need access? Contact admin@health_aicare.com
             </p>
           </div>
         </div>

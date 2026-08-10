@@ -126,7 +126,7 @@ export function AgentActivityLog({ agentActivity }: AgentActivityLogProps) {
           {/* Decision Info */}
           <div className="space-y-2">
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white/50">
-              Keputusan Health-AI
+              Keputusan HealthAI
             </h4>
             <div className="flex items-start gap-3 rounded-lg bg-white/5 p-3">
               <div className={`mt-0.5 ${intentInfo.color}`}>{intentInfo.icon}</div>
@@ -231,7 +231,7 @@ export function AgentActivityLog({ agentActivity }: AgentActivityLogProps) {
           <div className="flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2">
             <span className="text-xs text-white/70">Sumber Respons:</span>
             <span className="rounded-full bg-health-gold/20 px-3 py-1 text-xs font-medium text-health-gold">
-              {agentActivity.response_source === 'health_ai_direct' ? '🤖 Health-AI Direct' : '🔗 Sintesis Agen'}
+              {agentActivity.response_source === 'health_ai_direct' ? '🤖 HealthAI Direct' : '🔗 Sintesis Agen'}
             </span>
           </div>
         </div>

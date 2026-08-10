@@ -47,35 +47,35 @@ export default function SignUp() {
       image: "/images/student-testimonials/sari.jpg",
       university: "Yogyakarta, Indonesia",
       major: "Dosen / Pendidik",
-      review: "Health-AI telah membantu saya mengatasi kecemasan harian. Fitur journaling dan sesi CBT-nya sangat membantu dalam perjalanan mental health saya."
+      review: "HealthAI telah membantu saya mengatasi kecemasan harian. Fitur journaling dan sesi CBT-nya sangat membantu dalam perjalanan mental health saya."
     },
     {
       name: "Budi Santoso",
       image: "/images/student-testimonials/budi.jpg",
       university: "Bandung, Indonesia",
       major: "Software Engineer",
-      review: "Sebagai pekerja yang sering stress dengan pekerjaan, Health-AI memberikan dukungan 24/7 yang saya butuhkan. AI companion yang sangat understanding dan supportive."
+      review: "Sebagai pekerja yang sering stress dengan pekerjaan, HealthAI memberikan dukungan 24/7 yang saya butuhkan. AI companion yang sangat understanding dan supportive."
     },
     {
       name: "Maya Kusuma",
       image: "/images/student-testimonials/maya.jpg",
       university: "Jakarta, Indonesia",
       major: "Tenaga Kesehatan",
-      review: "Platform yang luar biasa! Health-AI membantu saya mengatasi burnout di tengah kesibukan kerja. Fitur affective tracking berbasis PAD dan latihan mindfulness sangat efektif."
+      review: "Platform yang luar biasa! HealthAI membantu saya mengatasi burnout di tengah kesibukan kerja. Fitur affective tracking berbasis PAD dan latihan mindfulness sangat efektif."
     },
     {
       name: "Rian Pratama",
       image: "/images/student-testimonials/rian.jpg",
       university: "Surabaya, Indonesia",
       major: "Wirausaha",
-      review: "Health-AICare bukan hanya aplikasi, tapi teman yang selalu ada. Health-AI membantu saya mengembangkan self-awareness dan strategi koping yang lebih baik."
+      review: "HealthAICare bukan hanya aplikasi, tapi teman yang selalu ada. HealthAI membantu saya mengembangkan self-awareness dan strategi koping yang lebih baik."
     },
     {
       name: "Indira Sari",
       image: "/images/student-testimonials/indira.jpg",
       university: "Denpasar, Indonesia",
       major: "Konsultan Keuangan",
-      review: "Sangat terkesan dengan kualitas modul terapeutik di platform ini. Health-AI memberikan panduan yang personal dan berbasis bukti untuk kesejahteraan mental."
+      review: "Sangat terkesan dengan kualitas modul terapeutik di platform ini. HealthAI memberikan panduan yang personal dan berbasis bukti untuk kesejahteraan mental."
     }
   ];
 
@@ -223,7 +223,7 @@ export default function SignUp() {
               Trusted by People Across Indonesia
             </h2>
             <p className="text-white/70 text-sm">
-              Join thousands of users who found support through Health-AICare
+              Join thousands of users who found support through HealthAICare
             </p>
           </div>
 

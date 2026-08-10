@@ -1,4 +1,4 @@
-# Nixpacks configuration for Health-AICare frontend (Next.js)
+# Nixpacks configuration for HealthAICare frontend (Next.js)
 # Intended for Coolify/Nixpacks deployments.
 
 providers = ["node"]

@@ -53,7 +53,7 @@ async def create_content_resource(
     db: AsyncSession = Depends(get_async_db),
     admin_user: User = Depends(get_admin_user),
 ) -> ContentResourceItem:
-    """Create a new content resource suitable for retrieval ahealth-aicareented generation pipelines."""
+    """Create a new content resource suitable for retrieval ahealth_aicareented generation pipelines."""
 
     logger.info("Admin %s creating content resource '%s'", admin_user.id, title)
     resource_type = type.lower()

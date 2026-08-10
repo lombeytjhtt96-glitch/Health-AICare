@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Overview
 
-Health-AICare is built across five distinct layers, each with a deliberate set of technology choices. The guiding principle was **pragmatic simplicity**: pick a technology that is production-proven, well-documented, and suited to a small team.
+HealthAICare is built across five distinct layers, each with a deliberate set of technology choices. The guiding principle was **pragmatic simplicity**: pick a technology that is production-proven, well-documented, and suited to a small team.
 
 ---
 
@@ -22,7 +22,7 @@ Health-AICare is built across five distinct layers, each with a deliberate set o
 | **NextAuth.js** | 4.x | Authentication with JWT sessions |
 | **React Hook Form + Zod** | - | Form handling with schema validation |
 
-The frontend communicates with the backend over HTTPS REST and uses **Server-Sent Events (SSE)** to stream Health-AI's responses token-by-token, giving users the "typing" experience.
+The frontend communicates with the backend over HTTPS REST and uses **Server-Sent Events (SSE)** to stream HealthAI's responses token-by-token, giving users the "typing" experience.
 
 ---
 
@@ -70,7 +70,7 @@ Gemini 2.5 Flash was selected for the real-time conversational path due to its l
 | **Redis** | Runtime cache, rate limiting, and ephemeral session tracking |
 | **S3-compatible storage** | PDF report storage (STA clinical reports, IA exports) |
 
-PostgreSQL is the system's absolute source of truth. Rather than storing conversational state in Redis, Health-AICare leverages LangGraph's native `AsyncPostgresSaver` to durably persist the orchestrator's state (including conversation history) directly to the database. Redis is reserved strictly for high-speed ephemeral tasks (for example, rate limiting and short-lived runtime/session keys).
+PostgreSQL is the system's absolute source of truth. Rather than storing conversational state in Redis, HealthAICare leverages LangGraph's native `AsyncPostgresSaver` to durably persist the orchestrator's state (including conversation history) directly to the database. Redis is reserved strictly for high-speed ephemeral tasks (for example, rate limiting and short-lived runtime/session keys).
 ---
 
 ### 5. Infrastructure & Deployment

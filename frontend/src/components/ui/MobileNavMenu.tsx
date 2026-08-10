@@ -32,7 +32,7 @@ const mobileNavGroups: MobileNavGroup[] = [
   {
     title: "Core Support",
     items: [
-      { href: "/health_ai", label: "Talk to Health-AI", icon: <BsChatDots size={18} />, highlight: true },
+      { href: "/health_ai", label: "Talk to HealthAI", icon: <BsChatDots size={18} />, highlight: true },
       { href: "/journaling", label: "Journaling", icon: <FiActivity size={18} />, highlight: true },
       { href: "/appointments", label: "Appointments", icon: <BsCalendar size={18} />, highlight: true },
     ],

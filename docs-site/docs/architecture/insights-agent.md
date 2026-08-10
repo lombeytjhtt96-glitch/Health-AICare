@@ -39,7 +39,7 @@ These two mechanisms together mean the IA can honestly say: **no individual stud
 
 ## What the IA Can Answer
 
-The IA is invoked when an administrator or counsellor asks a question through Health-AI that requires population-level data. Representative queries:
+The IA is invoked when an administrator or counsellor asks a question through HealthAI that requires population-level data. Representative queries:
 
 | Query Type | Example | Data Source |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The IA is invoked when an administrator or counsellor asks a question through He
 
 ## How the IA Works Inside LangGraph
 
-The IA node is reached when Health-AI's intent classifier routes a message to `analytics`. The node:
+The IA node is reached when HealthAI's intent classifier routes a message to `analytics`. The node:
 
 1. Parses the natural language query to identify the required metric, time range, and cohort filter
 2. Translates this to a parameterised SQL query (never raw user input - all parameters are sanitised)
@@ -62,13 +62,13 @@ The IA node is reached when Health-AI's intent classifier routes a message to `a
 
 ```mermaid
 flowchart LR
- A[Analytics intent\ndetected by Health-AI] --> B[IA Node\nparse query intent]
+ A[Analytics intent\ndetected by HealthAI] --> B[IA Node\nparse query intent]
  B --> C[Build parameterised\nSQL query]
  C --> D[Execute against\nread replica DB]
  D --> E[k-anonymity\nenforcement]
  E --> F[Differential privacy\nnoise injection]
  F --> G[Format result\ntext + JSON]
- G --> H[Synthesis node\nAika delivers answer]
+ G --> H[Synthesis node\nHealthAI delivers answer]
 ```
 
 ---
@@ -90,7 +90,7 @@ All charts are rendered client-side in the Next.js dashboard. The IA provides th
 
 IA queries are only available to users with `counsellor` or `admin` roles. This is enforced at two layers:
 
-1. **Health-AI's tool allowlist**: The `counsellor` and `admin` role allowlists include analytics-capable tools; the `user` role does not.
+1. **HealthAI's tool allowlist**: The `counsellor` and `admin` role allowlists include analytics-capable tools; the `user` role does not.
 2. **API endpoint RBAC**: The backend endpoints that serve IA data explicitly check the caller's role before processing.
 
-A student cannot ask Health-AI for population-level data and receive a meaningful response - even indirectly.
+A student cannot ask HealthAI for population-level data and receive a meaningful response - even indirectly.

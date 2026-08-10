@@ -31,14 +31,14 @@ export default function AboutPage() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFCA40]/20 backdrop-blur-xl rounded-full border border-[#FFCA40]/30 shadow-lg mb-6"
               >
                 <FaStar className="text-[#FFCA40]" />
-                <span className="text-white font-medium text-sm">About Health-AICare</span>
+                <span className="text-white font-medium text-sm">About HealthAICare</span>
               </motion.div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
                 A student-first framework for <span className="text-[#FFCA40]">university mental health support</span>
               </h1>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl">
-                Health-AICare combines safety triage, supportive coaching, and case management workflows. The goal is not to replace counselors.
+                HealthAICare combines safety triage, supportive coaching, and case management workflows. The goal is not to replace counselors.
                 It is to reduce friction in help-seeking, detect risk earlier, and route students to the right support pathway.
               </p>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
                   href="/health_ai"
                   className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-[#001D58] bg-[#FFCA40] hover:bg-[#FFCA40]/90 transition-colors"
                 >
-                  Talk to Health-AI
+                  Talk to HealthAI
                 </Link>
                 <Link
                   href="/about/privacy"
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
           <p className="text-white/90 text-lg leading-relaxed mb-6">
             Many campus mental health services are forced into a reactive posture: help arrives late, workflows are fragmented, and risk signals are easy to miss.
-            Health-AICare is built to shift the default from crisis response to earlier support.
+            HealthAICare is built to shift the default from crisis response to earlier support.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -223,7 +223,7 @@ export default function AboutPage() {
               {
                 href: "/about/health_ai",
                 icon: <FiHeart />,
-                title: "Meet Health-AI",
+                title: "Meet HealthAI",
                 description: "Learn about your AI companion",
                 color: "from-[#FFCA40] to-[#FFB700]"
               },
@@ -283,7 +283,7 @@ export default function AboutPage() {
             Want to explore the workflow?
           </h2>
           <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Try a guided conversation with Health-AI, or read how privacy and escalation are handled.
+            Try a guided conversation with HealthAI, or read how privacy and escalation are handled.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/health_ai">
@@ -292,7 +292,7 @@ export default function AboutPage() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-linear-to-r from-[#FFCA40] to-[#FFB700] text-[#001D58] rounded-full font-bold text-lg shadow-2xl shadow-[#FFCA40]/50"
               >
-                Talk to Health-AI
+                Talk to HealthAI
               </motion.button>
             </Link>
             <Link href="/about/research">

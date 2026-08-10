@@ -42,6 +42,6 @@ def test_extract_candidate_facts_extracts_identity_and_preferences() -> None:
 
 @pytest.mark.unit
 def test_extract_candidate_facts_deduplicates_within_message() -> None:
-    msg = "Call me Health-AI. call me Health-AI!"  # same fact, different casing/punctuation
+    msg = "Call me HealthAI. call me HealthAI!"  # same fact, different casing/punctuation
     facts = extract_candidate_facts(msg)
-    assert [f.text for f in facts] == ["Preferred name: Health-AI"]
+    assert [f.text for f in facts] == ["Preferred name: HealthAI"]

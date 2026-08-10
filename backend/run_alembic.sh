@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /mnt/c/Users/Asus/Downloads/Health-AICare-main2/backend
+cd /mnt/c/Users/Asus/Downloads/HealthAICare-main2/backend
 
 # Set DATABASE_URL to use local socket
 export DATABASE_URL="postgresql+psycopg://postgres:postgres@127.0.0.1:5432/aicare_db"

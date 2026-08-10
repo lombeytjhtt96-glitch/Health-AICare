@@ -3,15 +3,15 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Health-AICare',
+  title: 'HealthAICare',
   tagline: 'An Agentic AI Framework for Proactive Mental Health Support',
   favicon: 'img/favicon.ico',
 
   url: 'https://lombeytjhtt96-glitch.github.io',
-  baseUrl: '/Health-AICare/',
+  baseUrl: '/HealthAICare/',
 
   organizationName: 'lombeytjhtt96-glitch',
-  projectName: 'Health-AICare',
+  projectName: 'HealthAICare',
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -34,7 +34,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
             editUrl:
-              'https://github.com/lombeytjhtt96-glitch/Health-AICare/tree/main/docs-site/',
+              'https://github.com/lombeytjhtt96-glitch/HealthAICare/tree/main/docs-site/',
         },
         blog: false,
         theme: {
@@ -45,16 +45,16 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/health-aicare-social-card.png',
+    image: 'img/health_aicare-social-card.png',
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Health-AICare',
+      title: 'HealthAICare',
       logo: {
-        alt: 'Health-AICare Logo',
+        alt: 'HealthAICare Logo',
         src: 'img/logo.png',
       },
       items: [
@@ -70,7 +70,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/lombeytjhtt96-glitch/Health-AICare',
+          href: 'https://github.com/lombeytjhtt96-glitch/HealthAICare',
           label: 'GitHub',
           position: 'right',
         },
@@ -84,7 +84,7 @@ const config: Config = {
           items: [
             {label: 'Introduction', to: '/docs/intro'},
             {label: 'Architecture', to: '/docs/architecture/system-overview'},
-            {label: 'Health-AI Autopilot', to: '/docs/health-ai-autopilot/policy-governed-autonomy'},
+            {label: 'HealthAI Autopilot', to: '/docs/health_ai-autopilot/policy-governed-autonomy'},
           ],
         },
         {
@@ -100,7 +100,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/lombeytjhtt96-glitch/Health-AICare',
+              href: 'https://github.com/lombeytjhtt96-glitch/HealthAICare',
             },
           ],
         },
@@ -118,7 +118,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Health-AICare. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} HealthAICare. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

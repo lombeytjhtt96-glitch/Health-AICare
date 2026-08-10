@@ -1,4 +1,4 @@
-"""Tool calling integration for Health-AI's chat system.
+"""Tool calling integration for HealthAI's chat system.
 
 This module handles the tool calling loop:
 1. Send request to LLM with tools

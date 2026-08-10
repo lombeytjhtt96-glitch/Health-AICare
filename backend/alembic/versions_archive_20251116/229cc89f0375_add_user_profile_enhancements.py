@@ -91,8 +91,8 @@ def upgrade() -> None:
         op.add_column('users', sa.Column('communication_preferences', sa.Text(), nullable=True))
     if 'interface_preferences' not in existing_columns:
         op.add_column('users', sa.Column('interface_preferences', sa.Text(), nullable=True))
-    if 'health-aicare_team_notes' not in existing_columns:
-        op.add_column('users', sa.Column('health-aicare_team_notes', sa.Text(), nullable=True))
+    if 'health_aicare_team_notes' not in existing_columns:
+        op.add_column('users', sa.Column('health_aicare_team_notes', sa.Text(), nullable=True))
 
     # Check if unique constraint exists before creating
     existing_constraints = {c['name'] for c in inspector.get_unique_constraints('users')}
@@ -116,7 +116,7 @@ def upgrade() -> None:
 
 def downgrade() -> None:
     op.drop_constraint(CHECKIN_CONSTRAINT_NAME, 'users', type_='unique')
-    op.drop_column('users', 'health-aicare_team_notes')
+    op.drop_column('users', 'health_aicare_team_notes')
     op.drop_column('users', 'interface_preferences')
     op.drop_column('users', 'communication_preferences')
     op.drop_column('users', 'accessibility_needs')

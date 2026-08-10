@@ -1,12 +1,12 @@
 /**
- * Health-AI Enhanced Chat Page
+ * HealthAI Enhanced Chat Page
  * 
- * This is the enhanced version of Health-AI chat that uses the LangGraph-orchestrated
- * Meta-Agent backend. It maintains the same UI/UX as the original Health-AI while
+ * This is the enhanced version of HealthAI chat that uses the LangGraph-orchestrated
+ * Meta-Agent backend. It maintains the same UI/UX as the original HealthAI while
  * adding agent activity visibility.
  * 
  * Features:
- * - Same polished UI as original Health-AI
+ * - Same polished UI as original HealthAI
  * - LangGraph orchestration with agent visibility
  * - Real-time agent activity badges
  * - Risk level indicators
@@ -32,8 +32,8 @@ import { HealthAILoadingBubble } from '@/components/features/health_ai/HealthAIL
 import {
   RiskLevelIndicator,
   EscalationNotification,
-  AikaAvatar,
-  AikaPoweredBadge,
+  HealthAIAvatar,
+  HealthAIPoweredBadge,
 } from '@/components/features/health_ai/HealthAIComponents';
 import { ActivityLogPanel, ActivityIndicator } from '@/components/features/health_ai/ActivityLogPanel';
 import { InterventionPlansSidebar } from '@/components/features/chat/InterventionPlansSidebar';
@@ -46,22 +46,22 @@ const LoadingIndicator = () => (
       <div className="inline-block w-16 h-16 relative">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#FFCA40]"></div>
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-          <img src="/health-aicare_logo.png?v=2" alt="Health-AICare" width={32} height={32} />
+          <img src="/health_aicare_logo.png?v=2" alt="HealthAICare" width={32} height={32} />
         </div>
       </div>
-      <p className="mt-4 text-lg">Loading Health-AI...</p>
+      <p className="mt-4 text-lg">Loading HealthAI...</p>
     </div>
   </div>
 );
 
-export default function AikaEnhancedPage() {
+export default function HealthAIEnhancedPage() {
   const [mounted, setMounted] = useState(false);
   const { data: session, status } = useSession();
   const { src: profilePictureSrc } = useProfilePicture();
   const router = useRouter();
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  const [isAikaPanelOpen, setIsAikaPanelOpen] = useState(false);
+  const [isHealthAIPanelOpen, setIsHealthAIPanelOpen] = useState(false);
   const [showThinkingTrace, setShowThinkingTrace] = useState(true);
 
   // Fetch intervention plans
@@ -112,7 +112,7 @@ export default function AikaEnhancedPage() {
     addActivity({
       timestamp: toolActivity.timestamp,
       activity_type: activityType,
-      agent: 'Health-AI',
+      agent: 'HealthAI',
       message,
       duration_ms: null,
       details: {
@@ -123,7 +123,7 @@ export default function AikaEnhancedPage() {
     });
   }, [addActivity]);
 
-  // Use the Health-AI chat hook
+  // Use the HealthAI chat hook
   const {
     messages,
     inputValue,
@@ -159,8 +159,8 @@ export default function AikaEnhancedPage() {
         addActivity({
           timestamp: new Date().toISOString(),
           activity_type: 'agent_complete',
-          agent: 'Health-AI',
-          message: 'Health-AI initialized and ready',
+          agent: 'HealthAI',
+          message: 'HealthAI initialized and ready',
           duration_ms: null,
           details: { event: 'greeting', content_preview: firstMessage.content.substring(0, 50) + '...' }
         });
@@ -169,7 +169,7 @@ export default function AikaEnhancedPage() {
     }
   }, [messages, addActivity]);
 
-  // Log when user sends a message or Health-AI responds (detect new messages)
+  // Log when user sends a message or HealthAI responds (detect new messages)
   useEffect(() => {
     if (messages.length > lastMessageCountRef.current) {
       const newMessages = messages.slice(lastMessageCountRef.current);
@@ -178,19 +178,19 @@ export default function AikaEnhancedPage() {
           addActivity({
             timestamp: msg.created_at || new Date().toISOString(),
             activity_type: 'info',
-            agent: 'Health-AI',
+            agent: 'HealthAI',
             message: `User message received: "${msg.content.substring(0, 40)}${msg.content.length > 40 ? '...' : ''}"`,
             duration_ms: null,
             details: { event: 'user_message', message_id: msg.id }
           });
         }
-        // Log Health-AI's response (non-error assistant messages after greeting)
+        // Log HealthAI's response (non-error assistant messages after greeting)
         if (msg.role === 'assistant' && !msg.isError && hasLoggedGreetingRef.current) {
           addActivity({
             timestamp: msg.created_at || new Date().toISOString(),
             activity_type: 'agent_complete',
-            agent: 'Health-AI',
-            message: `Health-AI responded: "${msg.content.substring(0, 60)}${msg.content.length > 60 ? '...' : ''}"`,
+            agent: 'HealthAI',
+            message: `HealthAI responded: "${msg.content.substring(0, 60)}${msg.content.length > 60 ? '...' : ''}"`,
             duration_ms: null,
             details: { 
               event: 'health_ai_response', 
@@ -205,7 +205,7 @@ export default function AikaEnhancedPage() {
           addActivity({
             timestamp: msg.created_at || new Date().toISOString(),
             activity_type: 'agent_error',
-            agent: 'Health-AI',
+            agent: 'HealthAI',
             message: `Error occurred: ${msg.content}`,
             duration_ms: null,
             details: { event: 'error_response', message_id: msg.id, error_content: msg.content }
@@ -224,7 +224,7 @@ export default function AikaEnhancedPage() {
       addActivity({
         timestamp: new Date().toISOString(),
         activity_type: 'agent_start',
-        agent: 'Health-AI',
+        agent: 'HealthAI',
         message: 'Processing request...',
         duration_ms: null,
         details: { event: 'processing_start' }
@@ -272,7 +272,7 @@ export default function AikaEnhancedPage() {
       addActivity({
         timestamp: trace.timestamp,
         activity_type: 'reasoning_trace',
-        agent: 'Health-AI',
+        agent: 'HealthAI',
         message: trace.summary,
         duration_ms: null,
         details: {
@@ -295,7 +295,7 @@ export default function AikaEnhancedPage() {
       addActivity({
         timestamp: new Date().toISOString(),
         activity_type: 'agent_error',
-        agent: 'Health-AI',
+        agent: 'HealthAI',
         message: `Error: ${error}`,
         duration_ms: null,
         details: { event: 'error', error: error }
@@ -322,7 +322,7 @@ export default function AikaEnhancedPage() {
       addActivity({
         timestamp: new Date().toISOString(),
         activity_type: 'agent_complete',
-        agent: 'Health-AI',
+        agent: 'HealthAI',
         message: `Response generated in ${lastMetadata.processing_time_ms}ms`,
         duration_ms: lastMetadata.processing_time_ms,
         details: {
@@ -339,7 +339,7 @@ export default function AikaEnhancedPage() {
 
       sortedLogs.forEach((log: any) => {
         // Infer agent from node name
-        let agent = 'Health-AI';
+        let agent = 'HealthAI';
         if (log.name.includes('sta')) agent = 'STA';
         else if (log.name.includes('tca')) agent = 'TCA';
         else if (log.name.includes('cma')) agent = 'CMA';
@@ -364,7 +364,7 @@ export default function AikaEnhancedPage() {
         addActivity({
           timestamp: new Date().toISOString(),
           activity_type: 'risk_assessment',
-          agent: 'Health-AI',
+          agent: 'HealthAI',
           message: `Risk level detected: ${lastMetadata.risk_assessment.risk_level.toUpperCase()}`,
           duration_ms: null,
           details: lastMetadata.risk_assessment
@@ -466,8 +466,8 @@ export default function AikaEnhancedPage() {
                     onClick={() => setShowThinkingTrace((prev) => !prev)}
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-health-gold/50"
                     aria-pressed={showThinkingTrace}
-                    aria-label={showThinkingTrace ? 'Hide Health-AI Thinking Trace' : 'Show Health-AI Thinking Trace'}
-                    title={showThinkingTrace ? 'Hide Health-AI Thinking Trace' : 'Show Health-AI Thinking Trace'}
+                    aria-label={showThinkingTrace ? 'Hide HealthAI Thinking Trace' : 'Show HealthAI Thinking Trace'}
+                    title={showThinkingTrace ? 'Hide HealthAI Thinking Trace' : 'Show HealthAI Thinking Trace'}
                   >
                     {showThinkingTrace ? <Eye className="h-3.5 w-3.5" /> : <EyeOff className="h-3.5 w-3.5" />}
                     <span>{showThinkingTrace ? 'Thinking Trace: On' : 'Thinking Trace: Off'}</span>
@@ -528,7 +528,7 @@ export default function AikaEnhancedPage() {
 
           {/* Integrated Right Sidebar */}
           <AnimatePresence initial={false} mode="popLayout">
-            {isAikaPanelOpen && (
+            {isHealthAIPanelOpen && (
               <motion.aside
                 key="health_ai-sidebar"
                 layout
@@ -543,13 +543,13 @@ export default function AikaEnhancedPage() {
                     activities={showThinkingTrace ? activities : activities.filter((a) => a.activity_type !== 'reasoning_trace')}
                     metadata={lastMetadata ?? null}
                     embedded={true}
-                    onClose={() => setIsAikaPanelOpen(true)}
+                    onClose={() => setIsHealthAIPanelOpen(true)}
                   />
                 </div>
 
                 <div className="border-t border-white/10 px-3 py-3 text-center">
-                  <p className="text-[10px] text-white/40">Disclaimer: Health-AI adalah AI dan bukan pengganti profesional medis.</p>
-                  <p className="text-[10px] text-white/30 mt-1">Built with ❤️ by Health-AICare Team • Powered by LangGraph</p>
+                  <p className="text-[10px] text-white/40">Disclaimer: HealthAI adalah AI dan bukan pengganti profesional medis.</p>
+                  <p className="text-[10px] text-white/30 mt-1">Built with ❤️ by HealthAICare Team • Powered by LangGraph</p>
                 </div>
               </motion.aside>
             )}
@@ -559,7 +559,7 @@ export default function AikaEnhancedPage() {
         {/* Pull tag when sidebar is closed */}
         <div className="hidden lg:block">
           <AnimatePresence initial={false}>
-            {!isAikaPanelOpen && (
+            {!isHealthAIPanelOpen && (
               <motion.button
                 key="health_ai-panel-tag"
                 initial={{ x: 56, opacity: 0, scale: 0.98 }}
@@ -567,13 +567,13 @@ export default function AikaEnhancedPage() {
                 exit={{ x: 56, opacity: 0, scale: 0.98 }}
                 transition={{ type: 'spring', damping: 26, stiffness: 260, mass: 0.8 }}
                 type="button"
-                onClick={() => setIsAikaPanelOpen(true)}
+                onClick={() => setIsHealthAIPanelOpen(true)}
                 className="fixed right-0 top-1/2 z-70 -translate-y-1/2 origin-right rounded-l-2xl border border-r-0 border-white/10 bg-black/20 px-3 py-3 text-white/80 backdrop-blur hover:bg-black/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-health-gold/50"
-                aria-label="Buka Health-AI Panel"
+                aria-label="Buka HealthAI Panel"
               >
                 <div className="flex items-center gap-2">
                   <Activity className="h-4 w-4 text-health-gold" />
-                  <span className="text-xs font-semibold">Health-AI Panel</span>
+                  <span className="text-xs font-semibold">HealthAI Panel</span>
                 </div>
               </motion.button>
             )}

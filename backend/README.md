@@ -1,14 +1,14 @@
-# Health-AICare Backend
+# HealthAICare Backend
 
-FastAPI service that powers the Safety Agent Suite behind Health-AICare. The backend orchestrates crisis detection, CBT-informed coaching, clinical case management, and privacy-preserving analytics for university mental health support. Google Gemini 2.5 API provides empathetic conversations and evidence-based interventions through LangGraph-orchestrated agents.
+FastAPI service that powers the Safety Agent Suite behind HealthAICare. The backend orchestrates crisis detection, CBT-informed coaching, clinical case management, and privacy-preserving analytics for university mental health support. Google Gemini 2.5 API provides empathetic conversations and evidence-based interventions through LangGraph-orchestrated agents.
 
 ---
 
 ## Safety Agent Suite
 
-**NEW: Unified Health-AI Orchestrator with Direct LangGraph Invocation** (November 2025)
+**NEW: Unified HealthAI Orchestrator with Direct LangGraph Invocation** (November 2025)
 
-The backend implements an **agentic architecture** following LangGraph best practices with Health-AI as the first decision node.
+The backend implements an **agentic architecture** following LangGraph best practices with HealthAI as the first decision node.
 
 ### 🤖 Agentic Architecture Principles
 
@@ -16,13 +16,13 @@ The backend implements an **agentic architecture** following LangGraph best prac
 
 ✅ **Direct Invocation**: Graphs invoked via `.ainvoke()` or `.astream()`  
 ✅ **LangGraph Checkpointing**: Built-in conversation memory  
-✅ **Health-AI as First Node**: Intelligence and personality at entry  
+✅ **HealthAI as First Node**: Intelligence and personality at entry  
 ✅ **Conditional Routing**: Agents invoked only when needed
 
 ### 🎯 Orchestration Flow
 
 ```
-User Message → Health-AI Decision Node → [needs_agents?]
+User Message → HealthAI Decision Node → [needs_agents?]
                                      ↓               ↓
                                 [YES: STA]      [NO: Direct Response (~1.2s)]
                                      ↓
@@ -31,14 +31,14 @@ User Message → Health-AI Decision Node → [needs_agents?]
                                SDA  SCA  Synthesize → END
 ```
 
-**Key Innovation**: Health-AI decides if specialized agents are needed:
+**Key Innovation**: HealthAI decides if specialized agents are needed:
 - **Casual chat** ("hi", "how are you?") → Direct response (~1.2s)
 - **Emotional distress** → STA → SCA (intervention plan)
 - **Crisis signals** → STA → SDA (case creation)
 
 | Agent | Scope | Highlights | Status |
 |-------|-------|------------|--------|
-| 🤖 **Health-AI Meta-Agent** | Intelligent decision node | Intent classification, conditional routing, direct responses, conversation memory | ✅ **Complete** |
+| 🤖 **HealthAI Meta-Agent** | Intelligent decision node | Intent classification, conditional routing, direct responses, conversation memory | ✅ **Complete** |
 | 🛡️ **Safety Triage Agent (STA)** | Real-time risk scoring | Crisis detection (Level 0-3), PII redaction, risk assessment | ✅ **Complete** |
 | 💬 **Support Coach Agent (SCA)** | CBT-informed coaching | Intervention plans, therapeutic exercises, progress tracking | ✅ **Complete** |
 | 🗂️ **Service Desk Agent (SDA)** | Clinical case management | Case creation, SLA tracking, auto-assignment | ✅ **Complete** |
@@ -163,8 +163,8 @@ backend/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/lombeytjhtt96-glitch/Health-AICare.git
-   cd Health-AICare/backend
+   git clone https://github.com/lombeytjhtt96-glitch/HealthAICare.git
+   cd HealthAICare/backend
    ```
 
 2. **Create an isolated environment** (recommended path: `.venv` in repo root)

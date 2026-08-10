@@ -29,7 +29,7 @@ The TCA is *never* invoked for casual conversation or simple information queries
 
 ## What the TCA Produces
 
-The TCA produces an intervention plan, which is a structured object integrated into Health-AI's response and maintained in the database. The personalization process is critical. The TCA reviews previously suggested coping strategies to avoid redundancy, ensuring the agent remains effective and engaging over long-term use.
+The TCA produces an intervention plan, which is a structured object integrated into HealthAI's response and maintained in the database. The personalization process is critical. The TCA reviews previously suggested coping strategies to avoid redundancy, ensuring the agent remains effective and engaging over long-term use.
 
 ```json
 {
@@ -90,7 +90,7 @@ The TCA encourages students to maintain a digital journal within the platform. J
 
 1. **Therapeutic homework** - completing assigned reflective exercises
 2. **Longitudinal mood tracking** - the STA's background analysis can incorporate journal content for richer screening
-3. **Conversation starters** - Health-AI can reference recent journal entries to make follow-up conversations feel continuous
+3. **Conversation starters** - HealthAI can reference recent journal entries to make follow-up conversations feel continuous
 
 ---
 

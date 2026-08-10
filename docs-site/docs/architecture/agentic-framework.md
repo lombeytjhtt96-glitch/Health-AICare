@@ -10,7 +10,7 @@ sidebar_position: 2
 
 The system could theoretically function with a single AI model processing and responding to student messages. However, this approach is insufficient at scale. No individual model can effectively balance the roles of an empathetic peer, a clinical risk assessor, a CBT coach, and a case manager. Attempting to unify these distinct responsibilities within a single prompt often results in suboptimal performance across all domains.
 
-The solution is the same one used in real clinical settings: **specialisation with coordination**. A general practitioner doesn't perform neurosurgery. They assess, then refer, then coordinate. Health-AICare applies the same principle to AI.
+The solution is the same one used in real clinical settings: **specialisation with coordination**. A general practitioner doesn't perform neurosurgery. They assess, then refer, then coordinate. HealthAICare applies the same principle to AI.
 
 ---
 
@@ -18,7 +18,7 @@ The solution is the same one used in real clinical settings: **specialisation wi
 
 Each agent in the system is designed around the **BDI cognitive architecture**, a framework from academic agent theory that maps cleanly to how clinical decision-making works:
 
-| BDI Component | What It Means | In Health-AICare |
+| BDI Component | What It Means | In HealthAICare |
 |---|---|---|
 | **Belief** | What the agent *knows* about the world | User profile, conversation history, previously assessed risk level, active cases |
 | **Desire** | What the agent *wants to achieve* | Ensure student safety, reduce distress, facilitate access to professional support |
@@ -35,7 +35,7 @@ The system uses **LangGraph**, a library built on top of LangChain, to define th
 ```mermaid
 flowchart TD
  START([User Message])
- HEALTH_AI[Health-AI Decision Node\nIntent classification + risk pre-check]
+ HEALTH_AI[HealthAI Decision Node\nIntent classification + risk pre-check]
  CRISIS{Route Decision}
  PAR[Parallel Fan-out\nTCA + CMA simultaneously]
  TCA_N[TCA Node\nTherapeutic coaching plan]
@@ -66,13 +66,13 @@ flowchart TD
 
 ### Reading the Graph
 
-Health-AI serves as the primary router, classifying intent and performing a rapid keyword check for crisis signals. High or critical risk levels initiate a parallel fan-out where the TCA and CMA nodes run concurrently, providing a comprehensive response more efficiently. Moderate risk scenarios route exclusively to the TCA for coaching support without initiating a formal clinical case. Analytics requests from counselors or administrators are directed to the IA node. For low-risk or casual interactions, Health-AI provides a direct empathetic response without involving sub-agents. The STA operates outside the real-time graph as a non-blocking background task triggered after the conversation to prevent added latency for the user.
+HealthAI serves as the primary router, classifying intent and performing a rapid keyword check for crisis signals. High or critical risk levels initiate a parallel fan-out where the TCA and CMA nodes run concurrently, providing a comprehensive response more efficiently. Moderate risk scenarios route exclusively to the TCA for coaching support without initiating a formal clinical case. Analytics requests from counselors or administrators are directed to the IA node. For low-risk or casual interactions, HealthAI provides a direct empathetic response without involving sub-agents. The STA operates outside the real-time graph as a non-blocking background task triggered after the conversation to prevent added latency for the user.
 
 Key workflow decisions:
 - **High/Critical risk** triggers a **parallel fan-out** - TCA and CMA run concurrently (`asyncio.gather`) so the student gets a complete response faster.
 - **Moderate risk** routes to TCA only - deep coaching support without opening a formal clinical case.
 - **Analytics requests** (classified as `analytics_query`, counsellor/admin roles) reach the IA node.
-- **Low risk / casual conversation** returns a direct empathetic reply from Health-AI without invoking sub-agents via a ReAct tool loop.
+- **Low risk / casual conversation** returns a direct empathetic reply from HealthAI without invoking sub-agents via a ReAct tool loop.
 - **STA** is deliberately *outside* the real-time graph. It is triggered as a non-blocking background task (`trigger_sta_conversation_analysis_background`) after the conversation, so it never adds latency to the student's experience.
 
 ---
@@ -82,7 +82,7 @@ Key workflow decisions:
 The multi-agent system uses specialized persistence layers to maintain state without compromising performance.
 
 ### 1. LangGraph Memory (`AsyncPostgresSaver`)
-All conversational state for the orchestrator is durably saved in **PostgreSQL**. Health-AI utilizes LangGraph's native `AsyncPostgresSaver` checkpointer. This allows the graph to persist long-running sessions, retrieve exact thread contexts across server restarts, and enables future capabilities like human-in-the-loop interventions where the graph can "pause" and wait for a counselor's approval before resuming.
+All conversational state for the orchestrator is durably saved in **PostgreSQL**. HealthAI utilizes LangGraph's native `AsyncPostgresSaver` checkpointer. This allows the graph to persist long-running sessions, retrieve exact thread contexts across server restarts, and enables future capabilities like human-in-the-loop interventions where the graph can "pause" and wait for a counselor's approval before resuming.
 
 ### 2. The Singleton Compiler
 To avoid the high overhead of compiling the LangGraph workflow and binding database sessions on every HTTP request, the graph is compiled exactly once during the FastAPI lifespan (`_compiled_agent`). Subsequent requests retrieve the cached agent and pass the state directly.
@@ -132,23 +132,23 @@ This design means any agent can be replaced, upgraded, or tested independently -
 
 ## Tool Calling
 
-Health-AI and each sub-agent have access to a set of **tools** - functions they can invoke to fetch or modify real data. Tools are defined once in a central registry and exposed to agents via Gemini's function-calling API.
+HealthAI and each sub-agent have access to a set of **tools** - functions they can invoke to fetch or modify real data. Tools are defined once in a central registry and exposed to agents via Gemini's function-calling API.
 
-Tool access is role-scoped: a student's Health-AI instance can call `book_appointment` and `get_crisis_resources`, but cannot call `get_active_safety_cases` - that tool is only available to counsellor and admin roles.
+Tool access is role-scoped: a student's HealthAI instance can call `book_appointment` and `get_crisis_resources`, but cannot call `get_active_safety_cases` - that tool is only available to counsellor and admin roles.
 
 ```
-Student Health-AI Tools:
+Student HealthAI Tools:
  get_user_profile get_journal_entries get_activity_streak
  create_intervention_plan get_available_counselors
  suggest_appointment_times book_appointment cancel_appointment
  reschedule_appointment get_crisis_resources
 
-Counsellor Health-AI Tools:
+Counsellor HealthAI Tools:
  get_case_details get_conversation_summary
  get_risk_assessment_history trigger_conversation_analysis
  get_active_safety_cases get_escalation_protocol
 
-Admin Health-AI Tools:
+Admin HealthAI Tools:
  All counsellor tools + get_conversation_stats + search_conversations
 ```
 

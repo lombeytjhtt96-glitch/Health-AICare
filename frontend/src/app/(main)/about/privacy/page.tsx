@@ -273,7 +273,7 @@ export default function AboutPrivacyPage() {
                 <div className="bg-white/10 rounded-lg p-4">
                   <p className="text-white font-semibold mb-2">What you can see:</p>
                   <ul className="space-y-1 text-sm text-white/70">
-                    <li>• All conversations with Health-AI</li>
+                    <li>• All conversations with HealthAI</li>
                     <li>• Affective tracking history</li>
                     <li>• Journal entries</li>
                     <li>• Consent history</li>

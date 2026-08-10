@@ -471,7 +471,7 @@ async def send_counselor_reminders() -> None:
                     # --- Email reminder ---
                     if counselor_user.email:
                         counselor_name = getattr(counselor_user, 'name', None) or psychologist.name or "Counselor"
-                        subject = f"[Health-AICare] Reminder: Case {str(case.id)[:8]} needs follow-up"
+                        subject = f"[HealthAICare] Reminder: Case {str(case.id)[:8]} needs follow-up"
                         html_body = (
                             f"<p>Dear {counselor_name},</p>"
                             f"<p>This is a reminder that case <strong>{str(case.id)[:8]}</strong> "
@@ -479,7 +479,7 @@ async def send_counselor_reminders() -> None:
                             f"has not been updated in <strong>{days_stale} day(s)</strong>.</p>"
                             f"<p>Please log in to review and follow up with the user:</p>"
                             f"<p><a href='{app_url}/admin/cases'>View Cases &rarr;</a></p>"
-                            f"<p>Thank you,<br/>Health-AICare Health-AICare System</p>"
+                            f"<p>Thank you,<br/>HealthAICare HealthAICare System</p>"
                         )
                         send_email(
                             recipient_email=counselor_user.email,
@@ -716,7 +716,7 @@ async def trigger_immediate_checkin(user_id: int, reason: str = "manual") -> boo
                 primary_concerns = profile.profile_data.get("primary_concerns", [])
             
             # Get personalized message
-            user_name = user.name or user.preferred_name or 'Teman Health-AICare'
+            user_name = user.name or user.preferred_name or 'Teman HealthAICare'
             subject, html_body = get_personalized_message(
                 user_name=user_name,
                 primary_concerns=primary_concerns,

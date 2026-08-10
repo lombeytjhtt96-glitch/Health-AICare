@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Introduction
 
-## What is Health-AICare?
+## What is HealthAICare?
 
-Health-AICare is a proactive mental health support platform built specifically to provide safe, automated, and human-in-the-loop psychological support at scale. In plain terms: it is an AI-powered companion that listens, assesses risk, provides evidence-based support, connects users to human counsellors when needed - and does all of this through a natural conversation.
+HealthAICare is a proactive mental health support platform built specifically to provide safe, automated, and human-in-the-loop psychological support at scale. In plain terms: it is an AI-powered companion that listens, assesses risk, provides evidence-based support, connects users to human counsellors when needed - and does all of this through a natural conversation.
 
 ---
 
@@ -30,13 +30,13 @@ A conversational AI agent that:
 - is continuously monitoring for distress signals in the background (removing the self-report bottleneck),
 - and can escalate to human professionals precisely when needed (removing the capacity bottleneck),...may meaningfully shift the support paradigm from **reactive** to **proactive**.
 
-Health-AICare is the proof-of-concept testing that hypothesis.
+HealthAICare is the proof-of-concept testing that hypothesis.
 
 ---
 
 ## How It Works - In One Paragraph
 
-A user opens the app and starts a conversation with **Health-AI**, the system's friendly AI persona. Health-AI listens empathetically and responds naturally. Behind the scenes, every message is simultaneously routed through a **Safety Triage Agent (STA)** that scores the message for risk. Depending on that score, a **Therapeutic Coach Agent (TCA)** may generate a structured coping plan, or a **Case Management Agent (CMA)** may open a clinical case and schedule a counsellor appointment. After the conversation ends, the STA runs a deeper analysis to detect longer-term risk patterns. An **Insights Agent (IA)** aggregates anonymised data across all conversations so counsellors and administrators can see population-level trends - without ever exposing individual identities.
+A user opens the app and starts a conversation with **HealthAI**, the system's friendly AI persona. HealthAI listens empathetically and responds naturally. Behind the scenes, every message is simultaneously routed through a **Safety Triage Agent (STA)** that scores the message for risk. Depending on that score, a **Therapeutic Coach Agent (TCA)** may generate a structured coping plan, or a **Case Management Agent (CMA)** may open a clinical case and schedule a counsellor appointment. After the conversation ends, the STA runs a deeper analysis to detect longer-term risk patterns. An **Insights Agent (IA)** aggregates anonymised data across all conversations so counsellors and administrators can see population-level trends - without ever exposing individual identities.
 
 ---
 
@@ -55,6 +55,6 @@ A user opens the app and starts a conversation with **Health-AI**, the system's 
 
 - [System Architecture Overview](./architecture/system-overview)
 - [How the Agentic Framework Works](./architecture/agentic-framework)
-- [Meet Health-AI](./architecture/meta-agent-health-ai)
+- [Meet HealthAI](./architecture/meta-agent-health_ai)
 - [Technology Stack](./engineering/tech-stack)
 - [Running the Project Locally](./deployment/setup)

@@ -82,7 +82,7 @@ export default function HeroSection() {
               >
                 {t(
                   'landing.hero.description',
-                  "Health-AI is an intelligent agent designed to support your mental health. It helps you unpack your thoughts, find coping mechanisms, and connect with professional help when you're ready."
+                  "HealthAI is an intelligent agent designed to support your mental health. It helps you unpack your thoughts, find coping mechanisms, and connect with professional help when you're ready."
                 )}
               </motion.p>
             </div>
@@ -98,7 +98,7 @@ export default function HeroSection() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full sm:w-auto px-8 py-4 bg-[#FFCA40] text-[#000B1F] rounded-xl font-bold text-lg shadow-[0_0_20px_rgba(255,202,64,0.3)] hover:shadow-[0_0_30px_rgba(255,202,64,0.5)] transition-all flex items-center justify-center gap-2"
                 >
-                  {t('landing.hero.cta_primary', 'Chat with Health-AI')}
+                  {t('landing.hero.cta_primary', 'Chat with HealthAI')}
                   <ArrowScribbleGlyph className="w-5 h-5" />
                 </motion.button>
               </Link>

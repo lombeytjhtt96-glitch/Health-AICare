@@ -66,7 +66,7 @@ export default function UserProfileDrawer({ isOpen, onClose, user, screeningProf
         if (cleanPhone.startsWith('08')) {
             finalPhone = '62' + cleanPhone.substring(1);
         }
-        const message = encodeURIComponent(`Hello ${user.name || ''}, this is the Admin from Health-AICare reaching out regarding your recent wellness check-in.`);
+        const message = encodeURIComponent(`Hello ${user.name || ''}, this is the Admin from HealthAICare reaching out regarding your recent wellness check-in.`);
         return `https://wa.me/${finalPhone}?text=${message}`;
     };
 

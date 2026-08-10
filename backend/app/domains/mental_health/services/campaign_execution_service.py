@@ -372,7 +372,7 @@ class CampaignExecutionService:
             </head>
             <body>
                 <div class="header">
-                    <h1>🌟 Health-AICare AI-Care Outreach</h1>
+                    <h1>🌟 HealthAICare AI-Care Outreach</h1>
                     <p>Proactive Mental Health Support</p>
                 </div>
                 <div class="content">
@@ -387,7 +387,7 @@ class CampaignExecutionService:
                 </div>
                 <div class="footer">
                     <p><strong>Campaign:</strong> {campaign.name}</p>
-                    <p>This is an automated message from Health-AICare AI-Care Support System.</p>
+                    <p>This is an automated message from HealthAICare AI-Care Support System.</p>
                     <p>If you need immediate assistance, please contact your professional counseling center.</p>
                 </div>
             </body>
@@ -395,7 +395,7 @@ class CampaignExecutionService:
             """
             
             # Send email
-            subject = f"Health-AICare AI-Care: {campaign.name}"
+            subject = f"HealthAICare AI-Care: {campaign.name}"
             success = send_email(
                 recipient_email=user_email,  # Use decrypted email
                 subject=subject,

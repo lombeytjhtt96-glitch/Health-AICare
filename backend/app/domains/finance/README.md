@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **finance/** module consolidates all financial operations for the Health-AICare Support platform, providing a clean separation of concerns from mental health services.
+The **finance/** module consolidates all financial operations for the HealthAICare Support platform, providing a clean separation of concerns from mental health services.
 
 ## 📁 Module Structure
 
@@ -72,7 +72,7 @@ success = await revenue_tracker.auto_submit_last_month()
 
 1. **Wellness Fees**: CBT module completions, daily check-ins, coaching sessions
 2. **Subscriptions**: Premium memberships, advanced AI features
-3. **NFT Sales**: Health-AICareJournalBadges, quest completion NFTs
+3. **NFT Sales**: HealthAICareJournalBadges, quest completion NFTs
 4. **Partner Fees**: Clinical partners, merchant partnerships (Grab, GoFood)
 5. **Treasury Returns**: Halal treasury investments, DeFi yield farming
 

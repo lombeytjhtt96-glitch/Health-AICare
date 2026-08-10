@@ -135,7 +135,7 @@ export default function JournalingPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                <span className="text-[#FFCA40]">Health-AI</span> Journal
+                <span className="text-[#FFCA40]">HealthAI</span> Journal
               </h1>
               <p className="text-white/70">
                 Your private space for reflection and growth

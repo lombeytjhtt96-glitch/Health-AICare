@@ -1674,7 +1674,7 @@ async def update_my_case_status(
         feedback_redacted = prelog_redact(note_text) if note_text else None
 
         attestation_context = {
-            "schema": "health-aicare.case.decision.v1",
+            "schema": "health_aicare.case.decision.v1",
             "attestation_type": "case_decision",
             "decision": decision_event,
             "case_id": str(case.id),
@@ -1706,7 +1706,7 @@ async def update_my_case_status(
 
         action_payload = {
             "attestation_record_id": int(record.id),
-            "schema": "health-aicare.case.decision.v1",
+            "schema": "health_aicare.case.decision.v1",
             "payload_hash": f"0x{payload_hash_hex}",
             "metadata_uri": "",
             "case_id": str(case.id),
@@ -1751,7 +1751,7 @@ async def update_my_case_status(
         case_attestation = {
             "record_id": int(record.id),
             "autopilot_action_id": int(action.id),
-            "schema": "health-aicare.case.decision.v1",
+            "schema": "health_aicare.case.decision.v1",
             "decision": decision_event,
             "severity": severity_val,
         }

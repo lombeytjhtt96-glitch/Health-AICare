@@ -1,4 +1,4 @@
-"""Prompt construction utilities for the Health-AI decision pipeline.
+"""Prompt construction utilities for the HealthAI decision pipeline.
 
 All public functions are pure — they accept data, return strings, and produce
 no side effects.  This makes them straightforward to test in isolation and
@@ -45,14 +45,14 @@ __all__ = [
 # ---------------------------------------------------------------------------
 _FALLBACK_PROMPTS: dict[str, str] = {
     "user": (
-        "You are Health-AI, a warm and empathetic mental health assistant "
+        "You are HealthAI, a warm and empathetic mental health assistant "
         "for Indonesian community members."
     ),
     "counselor": (
-        "You are Health-AI, an AI assistant helping counselors "
+        "You are HealthAI, an AI assistant helping counselors "
         "with case management and clinical insights."
     ),
-    "admin": "You are Health-AI, providing analytics and insights for platform administrators.",
+    "admin": "You are HealthAI, providing analytics and insights for platform administrators.",
 }
 
 
@@ -127,7 +127,7 @@ def build_smalltalk_response(role: str) -> str:
         return "Halo! Aku siap bantu untuk cek data atau operasional platform. Mau mulai dari apa?"
     if role == "counselor":
         return "Halo! Aku siap bantu kebutuhan case management atau insight klinis. Ada yang ingin dicek dulu?"
-    return "Halo! Aku Health-AI. Senang ketemu kamu. Lagi pengin ngobrol tentang apa hari ini?"
+    return "Halo! Aku HealthAI. Senang ketemu kamu. Lagi pengin ngobrol tentang apa hari ini?"
 
 
 def build_tail_context_block(
@@ -150,7 +150,7 @@ def build_tail_context_block(
         return ""
 
     lines = [
-        f"  [{'User' if msg.get('role') == 'user' else 'Health-AI'}]: "
+        f"  [{'User' if msg.get('role') == 'user' else 'HealthAI'}]: "
         f"{(msg.get('content') or '')[:max_chars_per_turn]}"
         for msg in tail_msgs
     ]
@@ -184,8 +184,8 @@ def build_decision_prompt(
         f"Decision Criteria:\n\n"
         f"FOR REGULAR USERS (role=user — people, lecturers, and staff):\n"
         f"- ASSESS AND ROUTE DIRECTLY:\n"
-        f"  * Health-AI is the primary responder for ALL user interactions.\n"
-        f"  * Health-AI handles emotional support, crisis de-escalation, and appointment booking via tools.\n"
+        f"  * HealthAI is the primary responder for ALL user interactions.\n"
+        f"  * HealthAI handles emotional support, crisis de-escalation, and appointment booking via tools.\n"
         f"  * Route to TCA or CMA directly if needed. DO NOT route to STA synchronously.\n"
         f"  * Background processes handle deep risk analysis after the conversation.\n\n"
         f"FOR ADMINS:\n"
@@ -196,7 +196,7 @@ def build_decision_prompt(
         f"- NO AGENTS NEEDED (handle directly with tools):\n"
         f'  * Simple status checks ("is system healthy?")\n'
         f"  * General platform questions\n"
-        f"  * Specific user lookups (Health-AI can use tools for this)\n"
+        f"  * Specific user lookups (HealthAI can use tools for this)\n"
         f"  * Requests to analyse a conversation or user: use trigger_conversation_analysis tool\n\n"
         f"FOR COUNSELORS:\n"
         f"- NEEDS AGENTS (invoke CMA for case management):\n"
@@ -207,7 +207,7 @@ def build_decision_prompt(
         f'  * "How many users are stressed this week?"\n'
         f"- NO AGENTS NEEDED (handle directly with tools):\n"
         f"  * General clinical questions\n"
-        f"  * Viewing patient data (Health-AI can use tools)\n"
+        f"  * Viewing patient data (HealthAI can use tools)\n"
         f"  * Requests to analyse a conversation or risk assessment:\n"
         f"    use trigger_conversation_analysis tool directly\n\n"
         f"Return JSON with:\n"

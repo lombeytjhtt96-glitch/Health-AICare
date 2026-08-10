@@ -50,7 +50,7 @@ const ChatSettingsModal = ({ isOpen, onClose, interruptOnEnter, onToggleInterrup
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h2 className="text-lg font-semibold text-white">Pengaturan Chat</h2>
-                <p className="text-xs text-white/60">Atur preferensi untuk interaksi selama Health-AI merespons.</p>
+                <p className="text-xs text-white/60">Atur preferensi untuk interaksi selama HealthAI merespons.</p>
               </div>
               <button
                 type="button"
@@ -73,7 +73,7 @@ const ChatSettingsModal = ({ isOpen, onClose, interruptOnEnter, onToggleInterrup
                 <span>
                   <span className="font-medium text-white">Enter untuk membatalkan saat streaming</span>
                   <span className="block text-xs text-white/60">
-                    Saat aktif, menekan Enter ketika Health-AI masih merespons akan menghentikan respons dan mengirim pesan baru segera.
+                    Saat aktif, menekan Enter ketika HealthAI masih merespons akan menghentikan respons dan mengirim pesan baru segera.
                   </span>
                 </span>
               </label>

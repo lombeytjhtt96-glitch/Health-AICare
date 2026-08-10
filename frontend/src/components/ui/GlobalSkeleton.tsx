@@ -34,7 +34,7 @@ export default function GlobalSkeleton() {
 
   // Route-based skeleton selection
   if (pathname?.startsWith("/health_ai")) {
-    return <AikaPageSkeleton />;
+    return <HealthAIPageSkeleton />;
   } else if (pathname?.startsWith("/admin")) {
     return <AdminPageSkeleton />;
   } else if (pathname?.startsWith("/dashboard")) {
@@ -76,7 +76,7 @@ function DefaultPageSkeleton() {
   );
 }
 
-function AikaPageSkeleton() {
+function HealthAIPageSkeleton() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -192,7 +192,7 @@ function DashboardPageSkeleton() {
       className="min-h-screen bg-linear-to-b from-[#001D58] to-[#00308F]"
     >
       <div className="max-w-6xl mx-auto px-4 pt-20 sm:pt-24 pb-12 space-y-6 sm:space-y-10">
-        {/* Health-AI hero card */}
+        {/* HealthAI hero card */}
         <SkeletonBox className="h-28 sm:h-32 rounded-3xl" />
 
         {/* Stats cards */}
@@ -412,7 +412,7 @@ function CaretokenPageSkeleton() {
 
 // Export individual skeletons for direct use
 export {
-  AikaPageSkeleton,
+  HealthAIPageSkeleton,
   AdminPageSkeleton,
   DashboardPageSkeleton,
   AppointmentsPageSkeleton,

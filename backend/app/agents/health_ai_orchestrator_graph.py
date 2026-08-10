@@ -1,8 +1,8 @@
-"""Unified Health-AI Orchestrator Graph - LangGraph with Health-AI as First Decision Node.
+"""Unified HealthAI Orchestrator Graph - LangGraph with HealthAI as First Decision Node.
 
-This module is the assembly point for the unified Health-AI orchestrator.  All
+This module is the assembly point for the unified HealthAI orchestrator.  All
 node logic, prompt construction, routing, and background tasks now live in
-dedicated sub-modules under ``app/agents/health-ai/``.  This file only wires those
+dedicated sub-modules under ``app/agents/health_ai/``.  This file only wires those
 pieces together into a LangGraph ``StateGraph`` and exposes the two public
 factory functions below.
 
@@ -26,13 +26,13 @@ Safety Triage Agent (STA) - Post-Conversation Background Task:
     - Results persisted to ConversationRiskAssessment and ScreeningProfile tables.
 
 Sub-module map:
-    health-ai/constants.py        Static data — crisis keywords, smalltalk vocab.
-    health-ai/message_classifier.py  Pure classification helpers.
-    health-ai/prompt_builder.py   Prompt construction helpers.
-    health-ai/decision_node.py    health_ai_decision_node — first orchestrator node.
-    health-ai/background_tasks.py Fire-and-forget STA analysis + screening update.
-    health-ai/subgraph_nodes.py   TCA, CMA, IA, synthesize node implementations.
-    health-ai/routing.py          Conditional edge functions for the graph.
+    health_ai/constants.py        Static data — crisis keywords, smalltalk vocab.
+    health_ai/message_classifier.py  Pure classification helpers.
+    health_ai/prompt_builder.py   Prompt construction helpers.
+    health_ai/decision_node.py    health_ai_decision_node — first orchestrator node.
+    health_ai/background_tasks.py Fire-and-forget STA analysis + screening update.
+    health_ai/subgraph_nodes.py   TCA, CMA, IA, synthesize node implementations.
+    health_ai/routing.py          Conditional edge functions for the graph.
 """
 from __future__ import annotations
 
@@ -96,7 +96,7 @@ _compiled_agent: Any = None
 
 
 def set_health_ai_agent(agent: Any) -> None:
-    """Store the app-lifetime compiled Health-AI agent.
+    """Store the app-lifetime compiled HealthAI agent.
 
     Called exactly once from the FastAPI lifespan handler after the database
     and checkpointer have been initialised.  Subsequent requests retrieve the
@@ -106,13 +106,13 @@ def set_health_ai_agent(agent: Any) -> None:
     global _compiled_agent
     _compiled_agent = agent
     logger.info(
-        "Health-AI agent singleton registered: %s",
+        "HealthAI agent singleton registered: %s",
         type(agent).__name__,
     )
 
 
 def get_health_ai_agent() -> Any:
-    """Return the cached compiled Health-AI agent.
+    """Return the cached compiled HealthAI agent.
 
     Returns ``None`` before the FastAPI lifespan has completed startup.
     Call sites should guard against this (requests arriving before startup
@@ -126,7 +126,7 @@ def get_health_ai_agent() -> Any:
 # ============================================================================
 
 def create_health_ai_unified_graph() -> StateGraph:
-    """Assemble and return the uncompiled Health-AI orchestrator StateGraph.
+    """Assemble and return the uncompiled HealthAI orchestrator StateGraph.
 
     Graph structure::
 
@@ -181,7 +181,7 @@ def create_health_ai_unified_graph() -> StateGraph:
     workflow.add_edge("execute_ia", "synthesize")
     workflow.add_edge("synthesize", END)
 
-    logger.info("Unified Health-AI orchestrator graph created.")
+    logger.info("Unified HealthAI orchestrator graph created.")
 
     return workflow
 
@@ -189,7 +189,7 @@ def create_health_ai_unified_graph() -> StateGraph:
 def create_health_ai_agent_with_checkpointing(
     checkpointer: Optional[Any] = None,
 ) -> Any:
-    """Compile the Health-AI agent with optional conversation-persistent checkpointing.
+    """Compile the HealthAI agent with optional conversation-persistent checkpointing.
 
     Intended to be called **once** at FastAPI startup (via the lifespan handler)
     and stored as ``app.state.health_ai_agent`` or via ``set_health_ai_agent()``.
@@ -209,11 +209,11 @@ def create_health_ai_agent_with_checkpointing(
     Example — in-memory (testing / dev)::
 
         from langgraph.checkpoint.memory import MemorySaver
-        health-ai = create_health_ai_agent_with_checkpointing(MemorySaver())
+        health_ai = create_health_ai_agent_with_checkpointing(MemorySaver())
 
     Example — Postgres (production)::
 
-        health-ai = create_health_ai_agent_with_checkpointing(get_langgraph_checkpointer())
+        health_ai = create_health_ai_agent_with_checkpointing(get_langgraph_checkpointer())
 
     Args:
         checkpointer: Optional LangGraph checkpointer.  When ``None``, a
@@ -226,12 +226,12 @@ def create_health_ai_agent_with_checkpointing(
 
     if checkpointer:
         logger.info(
-            "Health-AI agent compiled WITH checkpointing: %s",
+            "HealthAI agent compiled WITH checkpointing: %s",
             type(checkpointer).__name__,
         )
         return workflow.compile(checkpointer=checkpointer)
 
-    logger.warning("Health-AI agent compiled WITHOUT checkpointing (stateless).")
+    logger.warning("HealthAI agent compiled WITHOUT checkpointing (stateless).")
     return workflow.compile()
 
 

@@ -99,12 +99,12 @@ export default function CareQuestLayout({
                 <Link href="/">
                   <button 
                     className="group relative flex items-center justify-center w-9 h-9 bg-white/10 backdrop-blur-md rounded-md border border-white/20 hover:bg-white/15 hover:border-[#FFCA40]/50 transition-all"
-                    title="Exit to Health-AICare"
+                    title="Exit to HealthAICare"
                   >
                     <Home className="w-4 h-4 text-[#FFCA40]" />
                     {/* Tooltip */}
                     <span className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
-                      Exit to Health-AICare
+                      Exit to HealthAICare
                     </span>
                   </button>
                 </Link>

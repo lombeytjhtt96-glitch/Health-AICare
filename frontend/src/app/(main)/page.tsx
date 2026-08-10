@@ -55,7 +55,7 @@ export default function Home() {
       {/* Hero Section - Main landing area with CTA */}
       <HeroSection />
       
-      {/* Benefits Section - 3 core benefits of using Health-AICare */}
+      {/* Benefits Section - 3 core benefits of using HealthAICare */}
       <BenefitsSection />
       
       {/* How It Works - Simple step-by-step guide */}

@@ -1086,13 +1086,13 @@
     },
     {
       "id": null,
-      "query": "Bagaimana peran Fakultas Psikologi Health-AICare dalam mengembangkan ilmu kesehatan mental?",
+      "query": "Bagaimana peran Fakultas Psikologi HealthAICare dalam mengembangkan ilmu kesehatan mental?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Fakultas Psikologi Health-AICare",
+        "Fakultas Psikologi HealthAICare",
         "CPMH"
       ],
-      "golden_answer": "CPMH memfasilitasi sivitas akademika Fakultas Psikologi Health-AICare untuk mengembangkan dan berkontribusi dalam ilmu dan profesi psikologi bagi masyarakat."
+      "golden_answer": "CPMH memfasilitasi sivitas akademika Fakultas Psikologi HealthAICare untuk mengembangkan dan berkontribusi dalam ilmu dan profesi psikologi bagi masyarakat."
     },
     {
       "id": null,
@@ -1160,10 +1160,10 @@
       "query_lable": "path_query",
       "golden_nodes": [
         "CPMH",
-        "Sivitas Akademika Fakultas Psikologi Health-AICare",
+        "Sivitas Akademika Fakultas Psikologi HealthAICare",
         "Masyarakat"
       ],
-      "golden_answer": "CPMH bertindak sebagai mediator antara akademisi Fakultas Psikologi Health-AICare dengan masyarakat luas, untuk memastikan ilmu dan profesi psikologi dapat bermanfaat secara nyata."
+      "golden_answer": "CPMH bertindak sebagai mediator antara akademisi Fakultas Psikologi HealthAICare dengan masyarakat luas, untuk memastikan ilmu dan profesi psikologi dapat bermanfaat secara nyata."
     },
     {
       "id": null,
@@ -1261,7 +1261,7 @@
         "Email CPMH",
         "Alamat Kantor CPMH"
       ],
-      "golden_answer": "Anda dapat menghubungi CPMH melalui nomor telepon +(62) 274 550435 ext. 100 atau 145, email cpmh@health-aicare.ac.id, atau datang langsung ke Gedung D Lantai 6 Ruang D-610 Fakultas Psikologi Health-AICare, Yogyakarta."
+      "golden_answer": "Anda dapat menghubungi CPMH melalui nomor telepon +(62) 274 550435 ext. 100 atau 145, email cpmh@health_aicare.ac.id, atau datang langsung ke Gedung D Lantai 6 Ruang D-610 Fakultas Psikologi HealthAICare, Yogyakarta."
     },
     {
       "id": null,
@@ -1275,13 +1275,13 @@
     },
     {
       "id": null,
-      "query": "Apa kontribusi CPMH bagi sivitas akademika Fakultas Psikologi Health-AICare?",
+      "query": "Apa kontribusi CPMH bagi sivitas akademika Fakultas Psikologi HealthAICare?",
       "query_lable": "path_query",
       "golden_nodes": [
         "CPMH",
-        "Sivitas Akademika Fakultas Psikologi Health-AICare"
+        "Sivitas Akademika Fakultas Psikologi HealthAICare"
       ],
-      "golden_answer": "CPMH berperan sebagai fasilitator bagi sivitas akademika Fakultas Psikologi Health-AICare untuk mengembangkan dan menyumbangkan ilmu serta profesinya kepada masyarakat."
+      "golden_answer": "CPMH berperan sebagai fasilitator bagi sivitas akademika Fakultas Psikologi HealthAICare untuk mengembangkan dan menyumbangkan ilmu serta profesinya kepada masyarakat."
     },
     {
       "id": null,
@@ -1336,14 +1336,14 @@
     },
     {
       "id": null,
-      "query": "Bagaimana Health-AICare mendukung kegiatan CPMH?",
+      "query": "Bagaimana HealthAICare mendukung kegiatan CPMH?",
       "query_lable": "path_query",
       "golden_nodes": [
-        "Health-AICare",
-        "Fakultas Psikologi Health-AICare",
+        "HealthAICare",
+        "Fakultas Psikologi HealthAICare",
         "CPMH"
       ],
-      "golden_answer": "Health-AICare melalui Fakultas Psikologi menjadi institusi induk yang mendukung seluruh aktivitas CPMH di bidang kesehatan mental masyarakat."
+      "golden_answer": "HealthAICare melalui Fakultas Psikologi menjadi institusi induk yang mendukung seluruh aktivitas CPMH di bidang kesehatan mental masyarakat."
     },
     {
       "id": null,

@@ -31,11 +31,11 @@ interface FeedbackFormProps {
 // --- Question Configuration ---
 // Define the structure of your questions here for easy management
 const feedbackQuestions = [
-    { id: 'easeOfUse', label: '1. Overall, how easy or difficult was it to use the Health-AICare webapp today?', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 3, labels: { 1: 'Very Difficult', 5: 'Very Easy' } },
-    { id: 'understanding', label: '2. How well did Health-AI understand you during your chat?', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 3, labels: { 1: 'Not at all', 5: 'Very Well' } },
+    { id: 'easeOfUse', label: '1. Overall, how easy or difficult was it to use the HealthAICare webapp today?', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 3, labels: { 1: 'Very Difficult', 5: 'Very Easy' } },
+    { id: 'understanding', label: '2. How well did HealthAI understand you during your chat?', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 3, labels: { 1: 'Not at all', 5: 'Very Well' } },
     { id: 'feltUnderstood', label: '3. During your conversation, how much did you feel heard or understood?', type: 'slider', min: 1, max: 5, step: 1, defaultValue: 3, labels: { 1: 'Not at all', 5: 'Very Much' } },
     { id: 'goalAchieved', label: '4. Did you accomplish your main goal for visiting today?', type: 'mcq', options: ['Yes', 'No', 'Partially'], defaultValue: null }, // Keep MCQ as buttons or switch if desired
-    { id: 'nps', label: '5. How likely are you to recommend Health-AICare? (0=Not Likely, 10=Very Likely)', type: 'slider', min: 0, max: 10, step: 1, defaultValue: 5, labels: { 0: 'Not Likely', 10: 'Very Likely'} },
+    { id: 'nps', label: '5. How likely are you to recommend HealthAICare? (0=Not Likely, 10=Very Likely)', type: 'slider', min: 0, max: 10, step: 1, defaultValue: 5, labels: { 0: 'Not Likely', 10: 'Very Likely'} },
     { id: 'improvementSuggestion', label: '6. What is the *one main thing* we could improve?', type: 'textarea', required: true, minLength: 5, defaultValue: '' },
 ];
 
@@ -204,7 +204,7 @@ const FeedbackForm: React.FC<FeedbackFormProps> = ({ onClose, onSubmitSuccess })
              </button>
 
             <h2 className="text-2xl font-bold mb-2 text-center text-[#FFCA40]">Share Your Feedback</h2>
-            <p className="text-sm text-gray-400 mb-6 text-center">Your anonymous feedback helps us improve Health-AICare.</p>
+            <p className="text-sm text-gray-400 mb-6 text-center">Your anonymous feedback helps us improve HealthAICare.</p>
 
             {/* Progress Indicator */}
             <div className="mb-6 sm:mb-8">

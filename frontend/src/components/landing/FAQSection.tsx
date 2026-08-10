@@ -9,9 +9,9 @@ import Link from 'next/link';
 const faqs = [
   {
     qKey: 'landing.faq.q1',
-    qDefault: 'Does Health-AI replace professional counselors?',
+    qDefault: 'Does HealthAI replace professional counselors?',
     aKey: 'landing.faq.a1',
-    aDefault: "No. Health-AI is trained to provide immediate coping support and risk assessment. For clinical issues, it explicitly guides you to connect with verified psychologists via our integrated booking system."
+    aDefault: "No. HealthAI is trained to provide immediate coping support and risk assessment. For clinical issues, it explicitly guides you to connect with verified psychologists via our integrated booking system."
   },
   {
     qKey: 'landing.faq.q2',
@@ -23,13 +23,13 @@ const faqs = [
     qKey: 'landing.faq.q3',
     qDefault: 'How does the "active intervention" work?',
     aKey: 'landing.faq.a3',
-    aDefault: 'Unlike standard chatbots that just listen, Health-AI recognizes distress patterns and proactively suggests grounding exercises (like CBT or Box Breathing) in real-time to help stabilize your mood.'
+    aDefault: 'Unlike standard chatbots that just listen, HealthAI recognizes distress patterns and proactively suggests grounding exercises (like CBT or Box Breathing) in real-time to help stabilize your mood.'
   },
   {
     qKey: 'landing.faq.q4',
     qDefault: 'Is it free for everyone?',
     aKey: 'landing.faq.a4',
-    aDefault: 'Yes, Health-AICare is a free service provided to support public mental wellness. There are no hidden costs.'
+    aDefault: 'Yes, HealthAICare is a free service provided to support public mental wellness. There are no hidden costs.'
   }
 ];
 
@@ -54,7 +54,7 @@ export default function FAQSection() {
                         <span className="text-[#FFCA40]">{t('landing.faq.subtitle', 'We have answers.')}</span>
                     </h2>
                     <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                        Everything you need to know about how Health-AI protects your privacy and helps you manage your mental health.
+                        Everything you need to know about how HealthAI protects your privacy and helps you manage your mental health.
                     </p>
                 </motion.div>
 
@@ -76,7 +76,7 @@ export default function FAQSection() {
                     </p>
                     
                     <Link href="/contact" className="inline-flex items-center text-[#FFCA40] font-bold text-sm hover:underline relative z-10">
-                        Contact Health-AICare Support &rarr;
+                        Contact HealthAICare Support &rarr;
                     </Link>
                 </motion.div>
             </div>

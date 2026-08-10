@@ -13,7 +13,7 @@ const health_aiFeatures = [
     titleKey: 'landing.meet.features.f1.title',
     titleFallback: 'Thoughtful conversations',
     descriptionKey: 'landing.meet.features.f1.desc',
-    descriptionFallback: 'Health-AI helps you reflect and put feelings into words, one question at a time.'
+    descriptionFallback: 'HealthAI helps you reflect and put feelings into words, one question at a time.'
   },
   {
     icon: PulseGlyph,
@@ -52,7 +52,7 @@ export default function MeetHealthAISection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Health-AI Avatar & Visual */}
+          {/* Left: HealthAI Avatar & Visual */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,8 +79,8 @@ export default function MeetHealthAISection() {
               {/* Avatar Image */}
               <div className="relative z-10 rounded-3xl overflow-hidden border-4 border-[#FFCA40]/30 shadow-2xl">
                 <Image
-                  src="/health-ai-wellness.png"
-                  alt="Health-AI Wellness Guide"
+                  src="/health_ai-wellness.png"
+                  alt="HealthAI Wellness Guide"
                   width={500}
                   height={500}
                   className="object-cover w-full h-full"
@@ -105,7 +105,7 @@ export default function MeetHealthAISection() {
                         className="w-3 h-3 bg-[#4ADE80] rounded-full"
                       />
                       <div>
-                        <p className="text-white font-semibold">{t('landing.meet.status.title', 'Health-AI is available')}</p>
+                        <p className="text-white font-semibold">{t('landing.meet.status.title', 'HealthAI is available')}</p>
                         <p className="text-gray-400 text-sm">{t('landing.meet.status.subtitle', 'Ready when you are')}</p>
                       </div>
                     </div>
@@ -139,14 +139,14 @@ export default function MeetHealthAISection() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-white/60 text-sm uppercase tracking-widest mb-6">
-              {t('landing.meet.eyebrow', 'Meet Health-AI')}
+              {t('landing.meet.eyebrow', 'Meet HealthAI')}
             </p>
 
             {/* Title */}
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               {t('landing.meet.title_prefix', 'Say hello to')}{' '}
               <span className="bg-linear-to-r from-[#FFCA40] via-[#FFD770] to-[#FFCA40] bg-clip-text text-transparent">
-                Health-AI
+                HealthAI
               </span>
             </h2>
 
@@ -154,7 +154,7 @@ export default function MeetHealthAISection() {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               {t(
                 'landing.meet.description',
-                'Health-AI is a conversation partner designed to support you. It can help you reflect, practice coping tools, and prepare to reach out for professional support when you want it.'
+                'HealthAI is a conversation partner designed to support you. It can help you reflect, practice coping tools, and prepare to reach out for professional support when you want it.'
               )}
             </p>
 
@@ -183,7 +183,7 @@ export default function MeetHealthAISection() {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-linear-to-r from-[#FFCA40] to-[#FFB700] text-[#001D58] rounded-full font-bold text-lg shadow-lg hover:shadow-[#FFCA40]/30 transition-shadow"
               >
-                {t('landing.meet.cta', 'Talk to Health-AI')}
+                {t('landing.meet.cta', 'Talk to HealthAI')}
               </motion.button>
             </Link>
           </motion.div>

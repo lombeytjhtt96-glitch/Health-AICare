@@ -1,4 +1,4 @@
-"""Models package for Health-AICare Support backend.
+"""Models package for HealthAICare Support backend.
 
 Core/Shared Models Only
 ========================

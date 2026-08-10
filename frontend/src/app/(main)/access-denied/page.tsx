@@ -1,4 +1,4 @@
-// filepath: d:\Astaga Ngoding\Github\Health-AICare\frontend\src\app\access-denied\page.tsx
+// filepath: d:\Astaga Ngoding\Github\HealthAICare\frontend\src\app\access-denied\page.tsx
 "use client";
 import Link from "next/link";
 import { FiLock } from "react-icons/fi";

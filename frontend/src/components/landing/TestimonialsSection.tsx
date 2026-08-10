@@ -9,7 +9,7 @@ const testimonials = [
   {
     name: "Sarah D.",
     role: "Private Employee",
-    text: "I didn't realize I was spiraling until Health-AI pointed out my sleep patterns. It gently nudged me to book a counselor before I crashed.",
+    text: "I didn't realize I was spiraling until HealthAI pointed out my sleep patterns. It gently nudged me to book a counselor before I crashed.",
     tag: "Early Detection",
     color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop"
@@ -25,7 +25,7 @@ const testimonials = [
   {
     name: "Putri R.",
     role: "Healthcare Professional",
-    text: "Knowing my data is private makes all the difference. I can be honest with Health-AI in a way I can't be with friends.",
+    text: "Knowing my data is private makes all the difference. I can be honest with HealthAI in a way I can't be with friends.",
     tag: "100% Private",
     color: "bg-purple-500/10 text-purple-400 border-purple-500/20",
     avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop"
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
                     </span>
                 </h2>
                 <p className="text-slate-400 text-lg leading-relaxed max-w-lg">
-                    {t('landing.stories.subtitle', 'See how users are using Health-AI to stay ahead of stress and maintain their mental well-being.')}
+                    {t('landing.stories.subtitle', 'See how users are using HealthAI to stay ahead of stress and maintain their mental well-being.')}
                 </p>
             </div>
             

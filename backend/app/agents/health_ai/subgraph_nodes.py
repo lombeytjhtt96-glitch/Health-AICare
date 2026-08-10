@@ -1,4 +1,4 @@
-"""Health-AI orchestrator — sub-agent execution nodes.
+"""HealthAI orchestrator — sub-agent execution nodes.
 
 Each node wraps one specialist sub-agent (TCA, CMA, IA) with consistent:
 - Execution tracking (start / complete / fail via ``execution_tracker``).
@@ -12,7 +12,7 @@ Public API used in the LangGraph graph:
     execute_sca_subgraph      TCA only (moderate risk path).
     execute_sda_subgraph      CMA only (called internally by parallel_crisis_node).
     execute_ia_subgraph       Insights Agent (analytics queries).
-    synthesize_final_response  Compose the final Health-AI reply from agent outputs.
+    synthesize_final_response  Compose the final HealthAI reply from agent outputs.
 
 Legacy (not in the active graph — STA is background-only):
     execute_sta_subgraph      Kept for manual tooling; not wired in the graph.
@@ -106,7 +106,7 @@ def _build_synthesis_prompt(
     original_message = state.get("message", "")
 
     sections = [
-        "You are Health-AI. Synthesize a final response based on the specialized agent outputs.",
+        "You are HealthAI. Synthesize a final response based on the specialized agent outputs.",
         "",
         f"Original Message: {original_message}",
     ]
@@ -152,7 +152,7 @@ def _build_synthesis_prompt(
         "1. Acknowledges the user's feelings\n"
         "2. Explains what you've done (if intervention/case created)\n"
         "3. Provides next steps or encouragement\n"
-        "4. Maintains Health-AI's personality (caring, supportive)\n"
+        "4. Maintains HealthAI's personality (caring, supportive)\n"
         "\nKeep response natural and conversational in Indonesian (for users) or "
         "professional (for admins/counselors).\n"
         "\nIMPORTANT: If an intervention plan was created (TCA), explicitly mention it:\n"
@@ -193,7 +193,7 @@ async def execute_sca_subgraph(
     db: AsyncSession = config["configurable"]["db"]
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::sca", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::sca", "health_ai")
 
     try:
         from app.agents.tca.tca_graph import get_tca_graph
@@ -218,7 +218,7 @@ async def execute_sca_subgraph(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::sca",
+                "health_ai::sca",
                 metrics={
                     "should_intervene": sca_result.get("should_intervene", False),
                     "plan_id": sca_result.get("intervention_plan_id"),
@@ -236,7 +236,7 @@ async def execute_sca_subgraph(
         logger.error(error_msg, exc_info=True)
         state.setdefault("errors", []).append(error_msg)
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::sca", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::sca", str(exc))
 
     return state
 
@@ -261,7 +261,7 @@ async def execute_sda_subgraph(
     """
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::sda", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::sda", "health_ai")
 
     try:
         from app.agents.cma.cma_graph import get_cma_graph
@@ -276,7 +276,7 @@ async def execute_sda_subgraph(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::sda",
+                "health_ai::sda",
                 metrics={
                     "case_created": sda_result.get("case_created", False),
                     "case_id": str(sda_result.get("case_id")) if sda_result.get("case_id") else None,
@@ -294,7 +294,7 @@ async def execute_sda_subgraph(
         logger.error(error_msg, exc_info=True)
         state.setdefault("errors", []).append(error_msg)
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::sda", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::sda", str(exc))
 
     return state
 
@@ -321,7 +321,7 @@ async def parallel_crisis_node(
     db: AsyncSession = config["configurable"]["db"]
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::parallel_crisis", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::parallel_crisis", "health_ai")
 
     try:
         logger.warning(
@@ -356,7 +356,7 @@ async def parallel_crisis_node(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::parallel_crisis",
+                "health_ai::parallel_crisis",
                 metrics={
                     "cma_success": True,
                     "case_created": state.get("case_created", False),
@@ -373,7 +373,7 @@ async def parallel_crisis_node(
         logger.error(error_msg, exc_info=True)
         state.setdefault("errors", []).append(error_msg)
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::parallel_crisis", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::parallel_crisis", str(exc))
 
     return state
 
@@ -403,7 +403,7 @@ async def execute_ia_subgraph(
     db: AsyncSession = config["configurable"]["db"]
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::ia", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::ia", "health_ai")
 
     try:
         from app.agents.ia.ia_graph import get_ia_graph
@@ -436,7 +436,7 @@ async def execute_ia_subgraph(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::ia",
+                "health_ai::ia",
                 metrics={
                     "report_generated": bool(ia_result.get("ia_report")),
                     "query_type": ia_result.get("query_type"),
@@ -450,7 +450,7 @@ async def execute_ia_subgraph(
         logger.error(error_msg, exc_info=True)
         state.setdefault("errors", []).append(error_msg)
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::ia", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::ia", str(exc))
 
     return state
 
@@ -458,7 +458,7 @@ async def execute_ia_subgraph(
 async def synthesize_final_response(
     state: HealthAIOrchestratorState,
 ) -> HealthAIOrchestratorState:
-    """Compose the final Health-AI reply when a sub-agent has run.
+    """Compose the final HealthAI reply when a sub-agent has run.
 
     Short-circuits immediately when ``health_ai_direct_response`` is already set
     (e.g., by the TCA path or decision_node's direct-response branch).
@@ -476,14 +476,14 @@ async def synthesize_final_response(
     """
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::synthesize", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::synthesize", "health_ai")
 
     try:
         # Short-circuit: sub-agents or decision_node already produced a response.
         if state.get("health_ai_direct_response"):
             state.setdefault("execution_path", []).append("synthesize_skipped")
             if execution_id:
-                execution_tracker.complete_node(execution_id, "health-ai::synthesize")
+                execution_tracker.complete_node(execution_id, "health_ai::synthesize")
             return state
 
         prompts = _get_health_ai_prompts()
@@ -520,7 +520,7 @@ async def synthesize_final_response(
         state.setdefault("execution_path", []).append("synthesize_response")
 
         if execution_id:
-            execution_tracker.complete_node(execution_id, "health-ai::synthesize")
+            execution_tracker.complete_node(execution_id, "health_ai::synthesize")
 
         logger.info("Final response synthesized from agent outputs.")
 
@@ -530,10 +530,10 @@ async def synthesize_final_response(
         state.setdefault("errors", []).append(error_msg)
         state["final_response"] = (
             "Maaf ya, aku mengalami sedikit kendala. "
-            "Kalau urgent, hubungi Crisis Centre Health-AICare: 0851-0111-0800"
+            "Kalau urgent, hubungi Crisis Centre HealthAICare: 0851-0111-0800"
         )
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::synthesize", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::synthesize", str(exc))
 
     return state
 
@@ -564,7 +564,7 @@ async def execute_sta_subgraph(
     """
     execution_id = state.get("execution_id")
     if execution_id:
-        execution_tracker.start_node(execution_id, "health-ai::sta", "health-ai")
+        execution_tracker.start_node(execution_id, "health_ai::sta", "health_ai")
 
     try:
         from app.agents.sta.sta_graph import create_sta_graph
@@ -579,7 +579,7 @@ async def execute_sta_subgraph(
         if execution_id:
             execution_tracker.complete_node(
                 execution_id,
-                "health-ai::sta",
+                "health_ai::sta",
                 metrics={
                     "severity": sta_result.get("severity", "unknown"),
                     "next_step": sta_result.get("next_step", "unknown"),
@@ -598,6 +598,6 @@ async def execute_sta_subgraph(
         state.setdefault("errors", []).append(error_msg)
         state["next_step"] = "end"  # Safe fallback — prevents graph from hanging.
         if execution_id:
-            execution_tracker.fail_node(execution_id, "health-ai::sta", str(exc))
+            execution_tracker.fail_node(execution_id, "health_ai::sta", str(exc))
 
     return state

@@ -6,7 +6,7 @@ Create Date: 2024-12-02
 
 This migration adds the user_screening_profiles table which stores
 longitudinal mental health screening data gathered seamlessly during
-natural conversations with Health-AI.
+natural conversations with HealthAI.
 
 IMPORTANT: This migration is IDEMPOTENT - safe to run multiple times.
 """

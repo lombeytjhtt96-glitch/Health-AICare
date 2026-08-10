@@ -43,8 +43,8 @@ const FloatingParticles = () => {
   );
 };
 
-// Animated Health-AI character component
-const AnimatedAika = () => {
+// Animated HealthAI character component
+const AnimatedHealthAI = () => {
   const [expression, setExpression] = useState<'happy' | 'sad' | 'thinking'>('sad');
   
   useEffect(() => {
@@ -86,7 +86,7 @@ const AnimatedAika = () => {
         </motion.div>
       </div>
       
-      {/* Floating hearts around Health-AI */}
+      {/* Floating hearts around HealthAI */}
       <motion.div
         className="absolute -top-2 -right-2"
         animate={{ 
@@ -255,9 +255,9 @@ export default function NotFound() {
               }}
             />
             
-            {/* Health-AI Character Section */}
+            {/* HealthAI Character Section */}
             <div className="bg-linear-to-r from-[#001545] to-[#173a7a] p-8 flex justify-center relative">
-              <AnimatedAika />
+              <AnimatedHealthAI />
               
               {/* Magic sparkles */}
               {[...Array(6)].map((_, i) => (
@@ -296,7 +296,7 @@ export default function NotFound() {
                 transition={{ delay: 0.5 }}
                 className="text-xl font-semibold text-white/90 mb-4"
               >
-                Oops! Health-AI can&apos;t find this page
+                Oops! HealthAI can&apos;t find this page
               </motion.h2>
               
               <AnimatePresence>
@@ -347,7 +347,7 @@ export default function NotFound() {
                     className="px-8 py-3 bg-white/20 text-white rounded-full font-bold flex items-center justify-center backdrop-blur-sm w-full sm:w-auto border border-white/30 hover:bg-white/30 transition-all duration-300 group"
                   >
                     <FaRobot className="mr-2 group-hover:rotate-12 transition-transform" />
-                    Talk to Health-AI
+                    Talk to HealthAI
                   </motion.button>
                 </Link>
               </div>
@@ -375,11 +375,11 @@ export default function NotFound() {
           >
             Need help? Contact{' '}
             <motion.a 
-              href="mailto:support@health-aicare.com" 
+              href="mailto:support@health_aicare.com" 
               className="text-[#FFCA40] hover:text-[#FF8C00] transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              support@health-aicare.com
+              support@health_aicare.com
             </motion.a>
           </motion.p>
         </div>
@@ -393,7 +393,7 @@ export default function NotFound() {
         className="py-6 px-6 text-center border-t border-white/10 bg-black/20 backdrop-blur-sm"
       >
         <p className="text-sm text-gray-400">
-          © 2025 Health-AICare Portal. All rights reserved.
+          © 2025 HealthAICare Portal. All rights reserved.
         </p>
         <motion.div
           className="flex justify-center mt-2 space-x-4"

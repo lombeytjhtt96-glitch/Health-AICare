@@ -1,5 +1,5 @@
 # ============================================
-# Health-AICare Backend Dependencies
+# HealthAICare Backend Dependencies
 # ============================================
 # Version Pinning Strategy:
 # - Exact versions (==): Security-critical or known stable versions

@@ -3,7 +3,7 @@ export default function TermsPage() {
     <main className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Terms of Service</h1>
       <p className="mt-4 text-sm text-muted-foreground">
-        This page is a placeholder for the Health-AICare Terms of Service.
+        This page is a placeholder for the HealthAICare Terms of Service.
       </p>
       <p className="mt-3 text-sm text-muted-foreground">
         If you are running this locally, you can replace this content with your official terms, or

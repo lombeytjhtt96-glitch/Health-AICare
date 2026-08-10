@@ -138,15 +138,15 @@ export default function SignIn() {
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-[#FFCA40]/90 flex items-center justify-center shadow-[0_0_25px_rgba(255,202,64,0.25)]">
               <Image
-                src="/health-aicare_logo.png"
-                alt="Health-AICare"
+                src="/health_aicare_logo.png"
+                alt="HealthAICare"
                 width={28}
                 height={28}
                 className="w-7 h-7"
               />
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/50">Health-AICare • Health-AI</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-white/50">HealthAICare • HealthAI</p>
               <h2 className="text-2xl font-bold text-white">Steady support, built for everyone</h2>
             </div>
           </div>
@@ -226,8 +226,8 @@ export default function SignIn() {
           <div className="text-center mb-4 lg:hidden">
             <div className="mx-auto w-12 h-12 bg-linear-to-br from-[#FFCA40] to-[#FFD700] rounded-xl flex items-center justify-center mb-2 shadow-lg">
               <Image
-                src="/health-aicare_logo.png"
-                alt="Health-AICare"
+                src="/health_aicare_logo.png"
+                alt="HealthAICare"
                 width={24}
                 height={24}
                 className="w-6 h-6"

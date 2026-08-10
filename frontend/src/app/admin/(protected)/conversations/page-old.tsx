@@ -181,7 +181,7 @@ const ConversationCard: React.FC<{
       <div className="flex items-center justify-between mb-3 min-w-0">
         {/* Brand + user hash */}
         <div className="flex items-center gap-2 min-w-0">
-          <Image src="/Health_Lambang.png" alt="Health-AICare" width={18} height={18} className="opacity-80" />
+          <Image src="/Health_Lambang.png" alt="HealthAICare" width={18} height={18} className="opacity-80" />
           <span className="bg-white/10 dark:bg-gray-700/50 px-2 py-0.5 rounded font-mono text-xs text-gray-200 truncate flex items-center gap-1">
             <Hash className="h-3 w-3 text-gray-400" /> {conversation.user_id_hash}
           </span>

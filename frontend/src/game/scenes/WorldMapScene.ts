@@ -6,7 +6,7 @@ import { EventBridge } from '../utils/EventBridge';
  * 
  * Features:
  * - Player movement (arrow keys)
- * - NPC interactions (Health-AI, counselors)
+ * - NPC interactions (HealthAI, counselors)
  * - Monster encounter zones
  * - Quest markers
  */
@@ -48,7 +48,7 @@ export class WorldMapScene extends Phaser.Scene {
     this.cursors = this.input.keyboard!.createCursorKeys();
 
     // Spawn NPCs - use relative positioning
-    this.spawnNPC('health_ai', width * 0.39, height * 0.42, 'Hai! Aku Health-AI, virtual assistant Health-AICare! 👋');
+    this.spawnNPC('health_ai', width * 0.39, height * 0.42, 'Hai! Aku HealthAI, virtual assistant HealthAICare! 👋');
 
     // Spawn monster zones - use relative positioning
     this.spawnMonsterZone(width * 0.625, height * 0.56, 'Anxiety Monster', 3);

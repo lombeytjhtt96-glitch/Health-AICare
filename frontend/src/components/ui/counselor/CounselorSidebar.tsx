@@ -64,8 +64,8 @@ export default function CounselorSidebar({
       <div className="p-4 border-b border-white/10 h-16 flex items-center shrink-0">
         <Link href="/counselor/dashboard" className="flex items-center group">
           <Image
-            src="/health-aicare_logo.png" 
-            alt="Health-AICare Logo"
+            src="/health_aicare_logo.png" 
+            alt="HealthAICare Logo"
             width={36}
             height={36}
             className="mr-2.5 group-hover:opacity-90 transition-opacity"

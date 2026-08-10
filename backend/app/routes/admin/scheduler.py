@@ -56,7 +56,7 @@ class TriggerCheckinRequest(BaseModel):
 # ---------------------------------------------------------------------------
 
 _JOB_DESCRIPTIONS: dict[str, str] = {
-    "proactive_checkin_job": "Morning user check-in — Health-AI sends email + in-app message to inactive/at-risk users (10:00 AM).",
+    "proactive_checkin_job": "Morning user check-in — HealthAI sends email + in-app message to inactive/at-risk users (10:00 AM).",
     "proactive_checkin_job_evening": "Evening user check-in — same logic as morning run, targeting high-risk users (7:00 PM).",
     "counselor_reminder_job": "Counselor daily digest — evaluates cases and sends summary notifications to Counselors (8:00 AM).",
 }

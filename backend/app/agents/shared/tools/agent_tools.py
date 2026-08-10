@@ -2,14 +2,14 @@
 Agent Orchestration Tools
 
 Tools that coordinate with LangGraph agents (STA, TCA, CMA, IA).
-These tools allow Health-AI to delegate specialized tasks to expert agents.
+These tools allow HealthAI to delegate specialized tasks to expert agents.
 
 Registered Tools:
 - run_safety_triage_agent: Crisis detection and risk assessment
 - run_therapeutic_coach_agent: CBT-informed intervention planning
 - run_case_management_agent: Case management and counselor escalation
 - run_insights_agent: Privacy-preserving analytics queries
-- general_query: General knowledge and Health-AICare information
+- general_query: General knowledge and HealthAICare information
 """
 from __future__ import annotations
 
@@ -268,7 +268,7 @@ async def run_therapeutic_coach_agent(
 
 ✅ CALL WHEN:
 - User explicitly requests to speak with human counselor
-- Situation requires professional intervention beyond Health-AI's scope
+- Situation requires professional intervention beyond HealthAI's scope
 - High-risk situation that needs human oversight
 - User asks for appointment or counseling session
 
@@ -489,16 +489,16 @@ async def run_insights_agent(
     description="""Answer general questions using Gemini's knowledge base.
 
 ✅ CALL WHEN:
-- User asks about Health-AICare facilities, locations, services
+- User asks about HealthAICare facilities, locations, services
 - Questions about mental health concepts, disorders, coping strategies
 - General knowledge questions related to wellbeing
 - Information about life resources
 
 Examples:
-- "Dimana lokasi BK Health-AICare?"
+- "Dimana lokasi BK HealthAICare?"
 - "Apa itu CBT?"
 - "Bagaimana cara mengatasi anxiety?"
-- "Apa saja layanan kesehatan mental di Health-AICare?"
+- "Apa saja layanan kesehatan mental di HealthAICare?"
 
 ❌ DO NOT CALL:
 - For personal user data (use profile tools)

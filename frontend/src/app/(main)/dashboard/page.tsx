@@ -49,7 +49,7 @@ type QuickAction = {
 const quickActions: QuickAction[] = [
   {
     href: "/health_ai",
-    label: "Talk with Health-AI now",
+    label: "Talk with HealthAI now",
     description: "Get immediate emotional support and grounding.",
     icon: <BsChatDots className="h-5 w-5" />,
   },
@@ -508,7 +508,7 @@ export default function DashboardPage() {
               <div className="relative z-10 flex items-center gap-6">
 
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-white">Talk with Health-AI</h2>
+                  <h2 className="text-2xl font-bold text-white">Talk with HealthAI</h2>
                   <p className="mt-1 text-white/80">
                     Your AI companion is ready to listen and support you, {firstName}
                   </p>
@@ -577,12 +577,12 @@ export default function DashboardPage() {
             <p className="text-xs uppercase tracking-wide text-white/60">Welcome back</p>
             <h1 className="text-3xl font-semibold text-white">Ready for your next check-in, {firstName}?</h1>
             <p className="text-sm text-white/70">
-              Health-AI is available anytime. Start a session to reflect, release, and get support tailored to you.
+              HealthAI is available anytime. Start a session to reflect, release, and get support tailored to you.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/health_ai" className="w-full sm:w-auto">
                 <span className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#FFCA40] px-6 py-3 text-sm font-semibold text-[#001D58] shadow-lg shadow-[#FFCA40]/40 transition hover:bg-[#ffd45c]">
-                  Talk with Health-AI now
+                  Talk with HealthAI now
                   <FiArrowRight className="h-4 w-4" />
                 </span>
               </Link>

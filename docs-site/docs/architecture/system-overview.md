@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## The Big Picture
 
-Health-AICare is structured as a multi-layer system where each component has a distinct responsibility. This architecture includes a user-facing frontend, a coordinating backend API, specialized AI agents, and a secure data layer. Responsibility is distributed across these layers to ensure system integrity and performance.
+HealthAICare is structured as a multi-layer system where each component has a distinct responsibility. This architecture includes a user-facing frontend, a coordinating backend API, specialized AI agents, and a secure data layer. Responsibility is distributed across these layers to ensure system integrity and performance.
 
 ```mermaid
 graph TB
@@ -30,7 +30,7 @@ graph TB
  end
 
  subgraph "AI Agent Layer - LangGraph"
- HEALTH_AI[HEALTH_AI Health-AI Orchestrator]
+ HEALTH_AI[HEALTH_AI HealthAI Orchestrator]
  STA[🛡️ Safety Triage Agent]
  TCA[TCA Therapeutic Coach Agent]
  CMA[📋 Case Management Agent]
@@ -77,7 +77,7 @@ graph TB
 
 The frontend is a **Next.js** application deployed at `aicare.sumbu.xyz`. It has two main surfaces:
 
-- **Chat interface** - the conversational window where students talk to Health-AI. Responses stream in real-time via Server-Sent Events (SSE).
+- **Chat interface** - the conversational window where students talk to HealthAI. Responses stream in real-time via Server-Sent Events (SSE).
 - **Dashboard** - a separate view for counsellors and administrators to see active cases, risk analytics, appointment schedules, and system health.
 
 Authentication uses NextAuth.js with role-based access control (RBAC): students, counsellors, and administrators see different data.
@@ -88,27 +88,27 @@ The backend is a **FastAPI** (Python) application. It handles:
 
 - **REST endpoints** for all reads and writes to the database
 - **WebSocket / SSE** for streaming chat responses back to the frontend in real-time
-- **Agent invocation** - when a student sends a message, the backend constructs the context payload and invokes the Health-AI orchestrator graph
+- **Agent invocation** - when a student sends a message, the backend constructs the context payload and invokes the HealthAI orchestrator graph
 - **Scheduled tasks** - background jobs (e.g., post-conversation STA analysis, retention reminders)
 
 The backend is stateless; the conversational state checkpointer lives in **PostgreSQL** via LangGraph's `AsyncPostgresSaver`, and high-speed runtime caching / rate limiting lives in **Redis**.
 
 ### 3. AI Agent Layer (Where the Intelligence Lives)
 
-Health-AICare utilizes a LangGraph-based multi-agent architecture rather than a single monolithic model. A master **Health-AI Orchestrator** graph handles real-time intent routing and crisis evaluation, fanning out to specialist subgraphs (Therapeutic Coach, Case Management, Insights) when needed. Deep clinical evaluation is handled by the Safety Triage Agent asynchronously as a background task to maintain sub-second response times. This is detailed on the [Agentic Framework](./agentic-framework) page.
+HealthAICare utilizes a LangGraph-based multi-agent architecture rather than a single monolithic model. A master **HealthAI Orchestrator** graph handles real-time intent routing and crisis evaluation, fanning out to specialist subgraphs (Therapeutic Coach, Case Management, Insights) when needed. Deep clinical evaluation is handled by the Safety Triage Agent asynchronously as a background task to maintain sub-second response times. This is detailed on the [Agentic Framework](./agentic-framework) page.
 
 ---
 
 ## Data Flow: A Message from Send to Response
 
-Here is what happens in the time between a student pressing "send" and seeing Health-AI's reply:
+Here is what happens in the time between a student pressing "send" and seeing HealthAI's reply:
 
 ```mermaid
 sequenceDiagram
  participant S as Student Student
  participant FE as Frontend
  participant API as FastAPI
- participant HEALTH_AI as Health-AI Orchestrator
+ participant HEALTH_AI as HealthAI Orchestrator
  participant STA as STA Background Task
  participant GEM as Gemini API
  participant DB as PostgreSQL
@@ -157,4 +157,4 @@ Privacy is not an afterthought in this system. Several mechanisms work in concer
 
 - Understand [how the agents are orchestrated →](./agentic-framework)
 - See the [full technology stack](../engineering/tech-stack)
-- Meet [Health-AI, the orchestrator](./meta-agent-health-ai)
+- Meet [HealthAI, the orchestrator](./meta-agent-health_ai)

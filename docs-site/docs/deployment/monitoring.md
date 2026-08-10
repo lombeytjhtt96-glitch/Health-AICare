@@ -1,10 +1,10 @@
 ---
 sidebar_position: 3
 id: monitoring
-title: Production Monitoring Guide for Health-AICare
+title: Production Monitoring Guide for HealthAICare
 ---
 
-# Production Monitoring Guide for Health-AICare
+# Production Monitoring Guide for HealthAICare
 
 This document is a conceptual guide (logging/metrics/alerting design). Operational commands for running a bundled ELK/Prometheus/Grafana/Langfuse stack are not included here because the previous Compose-based infra stack has been removed from this repository.
 
@@ -307,7 +307,7 @@ filter {
 output {
  elasticsearch {
  hosts => ["elasticsearch:9200"]
- index => "health-aicare-%{+YYYY.MM.dd}"
+ index => "health_aicare-%{+YYYY.MM.dd}"
  }
  
  # Debug output (optional)
@@ -511,7 +511,7 @@ db_connection_pool_size = Gauge(
 # System info
 system_info = Info('system_info', 'System information')
 system_info.info({
- 'application': 'Health-AICare',
+ 'application': 'HealthAICare',
  'version': '1.0.0',
  'environment': 'production'
 })
@@ -617,7 +617,7 @@ Update `backend/app/main.py`:
 from prometheus_client import make_asgi_app
 from prometheus_fastapi_instrumentator import Instrumentator
 
-app = FastAPI(title="Health-AICare API",...)
+app = FastAPI(title="HealthAICare API",...)
 
 # Add Prometheus metrics endpoint
 metrics_app = make_asgi_app()
@@ -717,8 +717,8 @@ global:
  evaluation_interval: 15s
 
 scrape_configs:
- # Health-AICare Backend
- - job_name: 'health-aicare-backend'
+ # HealthAICare Backend
+ - job_name: 'health_aicare-backend'
  static_configs:
  - targets: ['backend:8000']
  metrics_path: '/metrics'
@@ -990,15 +990,15 @@ receivers:
  - name: 'team-notifications'
  slack_configs:
  - api_url: 'YOUR_SLACK_WEBHOOK_URL'
- channel: '#health-aicare-alerts'
- title: 'Health-AICare Alert'
+ channel: '#health_aicare-alerts'
+ title: 'HealthAICare Alert'
  text: '{{ range.Alerts }}{{.Annotations.description }}{{ end }}'
 
  - name: 'critical-alerts'
  slack_configs:
  - api_url: 'YOUR_SLACK_WEBHOOK_URL'
- channel: '#health-aicare-critical'
- title: '🚨 CRITICAL: Health-AICare'
+ channel: '#health_aicare-critical'
+ title: '🚨 CRITICAL: HealthAICare'
  text: '{{ range.Alerts }}{{.Annotations.description }}{{ end }}'
  
  pagerduty_configs:
@@ -1007,8 +1007,8 @@ receivers:
  - name: 'warning-alerts'
  slack_configs:
  - api_url: 'YOUR_SLACK_WEBHOOK_URL'
- channel: '#health-aicare-warnings'
- title: '[Warning] Warning: Health-AICare'
+ channel: '#health_aicare-warnings'
+ title: '[Warning] Warning: HealthAICare'
  text: '{{ range.Alerts }}{{.Annotations.description }}{{ end }}'
 
 inhibit_rules:
@@ -1025,12 +1025,12 @@ inhibit_rules:
 
 ### **Grafana Dashboard JSON**
 
-Save this as a Grafana dashboard JSON in your observability stack (path is illustrative), e.g. `grafana/dashboards/health-aicare-overview.json`:
+Save this as a Grafana dashboard JSON in your observability stack (path is illustrative), e.g. `grafana/dashboards/health_aicare-overview.json`:
 
 ```json
 {
  "dashboard": {
- "title": "Health-AICare Production Overview",
+ "title": "HealthAICare Production Overview",
  "panels": [
  {
  "title": "Request Rate",

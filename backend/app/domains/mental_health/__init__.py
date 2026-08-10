@@ -1,7 +1,7 @@
 """
 Mental Health Domain Module
 
-This module encompasses all mental health-related functionality for Health-AICare:
+This module encompasses all mental health-related functionality for HealthAICare:
 - User authentication and profile management
 - Therapeutic chat and messaging
 - CBT (Cognitive Behavioral Therapy) modules

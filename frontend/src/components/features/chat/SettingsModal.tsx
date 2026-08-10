@@ -206,7 +206,7 @@ const SettingsModal = ({ isOpen, onClose }: SettingsModalProps) => {
                           <FiMic /> Putar balasan suara (TTS)
                         </span>
                         <span className="text-xs text-white/55">
-                          Nonaktifkan jika Anda tidak ingin mendengar balasan Health-AI secara langsung.
+                          Nonaktifkan jika Anda tidak ingin mendengar balasan HealthAI secara langsung.
                         </span>
                       </span>
                     </label>

@@ -29,7 +29,7 @@ const generateTranscriptId = () => {
 type LiveTalkState = {
   isLiveTalkActive: boolean;
   isListening: boolean;
-  isAikaSpeaking: boolean;
+  isHealthAISpeaking: boolean;
   conversation: { speaker: 'user' | 'health_ai'; text: string }[];
   microphones: MediaDevice[];
   speakers: MediaDevice[];
@@ -44,7 +44,7 @@ type LiveTalkState = {
   transcriptSegments: TranscriptSegment[];
   toggleLiveTalk: () => void;
   setUserSpeaking: (status: boolean) => void;
-  setAikaSpeaking: (status: boolean) => void;
+  setHealthAISpeaking: (status: boolean) => void;
   addMessage: (message: { speaker: 'user' | 'health_ai'; text: string }) => void;
   setMicrophones: (devices: MediaDevice[]) => void;
   setSpeakers: (devices: MediaDevice[]) => void;
@@ -64,7 +64,7 @@ type LiveTalkState = {
 export const useLiveTalkStore = create<LiveTalkState>((set) => ({
   isLiveTalkActive: false,
   isListening: false,
-  isAikaSpeaking: false,
+  isHealthAISpeaking: false,
   conversation: [],
   microphones: [],
   speakers: [],
@@ -79,7 +79,7 @@ export const useLiveTalkStore = create<LiveTalkState>((set) => ({
   transcriptSegments: [],
   toggleLiveTalk: () => set((state) => ({ isLiveTalkActive: !state.isLiveTalkActive })),
   setUserSpeaking: (status) => set({ isListening: status }),
-  setAikaSpeaking: (status) => set({ isAikaSpeaking: status }),
+  setHealthAISpeaking: (status) => set({ isHealthAISpeaking: status }),
   addMessage: (message) => set((state) => ({ conversation: [...state.conversation, message] })),
   setMicrophones: (devices) => set({ microphones: devices }),
   setSpeakers: (devices) => set({ speakers: devices }),

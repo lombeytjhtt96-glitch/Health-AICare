@@ -86,7 +86,7 @@ class User(Base):
     accessibility_needs: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     communication_preferences: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     interface_preferences: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
-    health_aicare_team_notes: Mapped[Optional[str]] = mapped_column("health-aicare_team_notes", Text, nullable=True)
+    health_aicare_team_notes: Mapped[Optional[str]] = mapped_column("health_aicare_team_notes", Text, nullable=True)
 
     # Relationships - use string references to avoid circular imports
     conversations: Mapped[List["Conversation"]] = relationship("Conversation", back_populates="user")

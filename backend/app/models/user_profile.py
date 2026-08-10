@@ -9,7 +9,7 @@ Industry Best Practices Applied:
 - VARCHAR(100) for names (industry standard, allows for long names)
 - TEXT for bio (unlimited length, no performance penalty in PostgreSQL)
 - ARRAY for interests (native PostgreSQL, better than comma-separated strings)
-- user_id as UNIQUE (official NIM for Health-AICare integration)
+- user_id as UNIQUE (official NIM for HealthAICare integration)
 """
 
 from sqlalchemy import Column, Integer, String, Date, Float, ForeignKey, Text, ARRAY, Boolean, DateTime
@@ -88,12 +88,12 @@ class UserProfile(Base):
     )
     
     # =====================================================================
-    # ACADEMIC INFO (Health-AICare-specific)
+    # ACADEMIC INFO (HealthAICare-specific)
     # =====================================================================
     university = Column(String(200))
     faculty = Column(
         String(200), 
-        comment="Health-AICare faculty (e.g., 'FMIPA', 'FEB', 'FK')"
+        comment="HealthAICare faculty (e.g., 'FMIPA', 'FEB', 'FK')"
     )
     department = Column(
         String(200), 

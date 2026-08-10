@@ -2,7 +2,7 @@
  * Therapeutic Activities Type Definitions
  * 
  * These types define the contract for all therapeutic activities
- * in the Health-AICare system.
+ * in the HealthAICare system.
  */
 
 // ============================================================================

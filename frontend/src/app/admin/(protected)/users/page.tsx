@@ -225,7 +225,7 @@ export default function UserManagementPage() {
     if (cleanPhone.startsWith('08')) {
       finalPhone = '62' + cleanPhone.substring(1);
     }
-    const message = encodeURIComponent(`Hello ${name || ''}, this is the Admin from Health-AICare.`);
+    const message = encodeURIComponent(`Hello ${name || ''}, this is the Admin from HealthAICare.`);
     return `https://wa.me/${finalPhone}?text=${message}`;
   };
 

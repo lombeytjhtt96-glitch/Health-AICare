@@ -15,7 +15,7 @@ class AgentNameEnum(str, enum.Enum):
     TCA = "TCA"
     CMA = "CMA"
     IA = "IA"
-    # Health-AI orchestrator and subgraphs used by the streaming endpoint
+    # HealthAI orchestrator and subgraphs used by the streaming endpoint
     HEALTH_AI = "HEALTH_AI"
 
 

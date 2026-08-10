@@ -38,7 +38,7 @@ export const useDIDLogin = () => {
     try {
       // Create message with timestamp for replay protection
       const timestamp = Date.now();
-      const message = `Login to Health-AICare as ${address} at ${timestamp}`;
+      const message = `Login to HealthAICare as ${address} at ${timestamp}`;
 
       // Sign message with connected wallet
       const signature = await signMessageAsync({ message });

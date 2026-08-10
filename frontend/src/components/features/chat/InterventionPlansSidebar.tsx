@@ -301,14 +301,14 @@ export const InterventionPlansSidebar: React.FC<InterventionPlansSidebarProps> =
                         Belum Ada Rencana
                       </h3>
                       <p className="text-[10px] text-white/40 leading-relaxed mb-4">
-                        Health-AI akan membuat rencana dukungan saat kamu butuh bantuan ekstra.
+                        HealthAI akan membuat rencana dukungan saat kamu butuh bantuan ekstra.
                       </p>
                       <div className="p-2.5 bg-health-gold/5 rounded-lg border border-health-gold/20">
                         <div className="flex items-start gap-2">
                           <Lightbulb className="w-3.5 h-3.5 text-health-gold shrink-0 mt-0.5" />
                           <p className="text-[9px] text-white/50 leading-relaxed text-left">
                             Coba katakan{' '}
-                            <span className="text-health-gold">&ldquo;Aku stress&rdquo;</span> ke Health-AI!
+                            <span className="text-health-gold">&ldquo;Aku stress&rdquo;</span> ke HealthAI!
                           </p>
                         </div>
                       </div>

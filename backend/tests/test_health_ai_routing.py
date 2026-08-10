@@ -99,7 +99,7 @@ def test_should_invoke_agents_ends_when_needs_agents_false() -> None:
 @pytest.mark.unit
 def test_smalltalk_detector_matches_greetings() -> None:
     assert _is_smalltalk_message("hi")
-    assert _is_smalltalk_message("Halo Health-AI")
+    assert _is_smalltalk_message("Halo HealthAI")
     assert _is_smalltalk_message("terima kasih")
     assert not _is_smalltalk_message("aku panik banget dan nggak bisa napas")
 

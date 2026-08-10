@@ -280,7 +280,7 @@ async def get_user_preferences(
         return {
             "user_id": user.id,
             "language": "id",  # Default to Indonesian
-            "timezone": "Asia/Jakarta",  # Default for Health-AICare
+            "timezone": "Asia/Jakarta",  # Default for HealthAICare
             "has_preferences": False,
             "message": "Using default preferences (preferences model not yet implemented)"
         }

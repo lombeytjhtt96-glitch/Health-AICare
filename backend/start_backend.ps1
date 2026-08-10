@@ -1,4 +1,4 @@
-Set-Location "C:\Users\Asus\Downloads\Health-AICare\backend"
+Set-Location "C:\Users\Asus\Downloads\HealthAICare\backend"
 
 # Force UTF-8
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -17,7 +17,7 @@ Get-Content ".env" | ForEach-Object {
 }
 
 Write-Host "================================" -ForegroundColor Cyan
-Write-Host "  Health-AICare Backend :22001  " -ForegroundColor Cyan
+Write-Host "  HealthAICare Backend :22001  " -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 Write-Host ""
 

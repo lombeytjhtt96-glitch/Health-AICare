@@ -4,17 +4,17 @@ title: Policy-Governed Autonomy
 sidebar_position: 2
 ---
 
-# Health-AI Autopilot Policy Matrix
+# HealthAI Autopilot Policy Matrix
 
 **Version**: `v1` 
 **Date**: 2026-02-16 
-**Scope**: Phase 0 policy contract for Health-AI Autopilot implementation
+**Scope**: Phase 0 policy contract for HealthAI Autopilot implementation
 
 ---
 
 ## 1. Policy objective
 
-The policy layer defines when Health-AI may execute operational actions autonomously versus when human approval is required.
+The policy layer defines when HealthAI may execute operational actions autonomously versus when human approval is required.
 
 The policy is intentionally conservative for high and critical risk scenarios.
 

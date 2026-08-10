@@ -11,7 +11,7 @@ The backend is a **FastAPI** application organised around the Domain-Driven Desi
 ```
 backend/app/
 ├── agents/ # All AI agent graphs and logic
-│ ├── health_ai/ # Health-AI identity, tools, activity logger
+│ ├── health_ai/ # HealthAI identity, tools, activity logger
 │ ├── sta/ # Safety Triage Agent graph
 │ ├── tca/ # Therapeutic Coach Agent graph
 │ ├── cma/ # Case Management Agent graph
@@ -39,12 +39,12 @@ Roles are encoded in the JWT payload:
 {
  "sub": "1203",
  "role": "user",
- "email": "user@health-aicare.com",
+ "email": "user@health_aicare.com",
  "exp": 1740700000
 }
 ```
 
-The `role` field determines which API endpoints are accessible and which Health-AI tools are available.
+The `role` field determines which API endpoints are accessible and which HealthAI tools are available.
 
 ---
 
@@ -97,7 +97,7 @@ API endpoints are rate-limited via Redis to prevent abuse:
 
 | Endpoint Group | Limit |
 | --- | --- |
-| Health-AI (`/api/v1/health_ai`) | 30 requests / minute per user |
+| HealthAI (`/api/v1/health_ai`) | 30 requests / minute per user |
 | Analytics | 60 requests / minute per user |
 | Auth | 10 requests / minute per IP |
 | All others | 120 requests / minute per user |

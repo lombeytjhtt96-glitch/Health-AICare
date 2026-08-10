@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ParticleBackground from '@/components/ui/ParticleBackground';
 
-export default function AboutAikaPage() {
+export default function AboutHealthAIPage() {
   return (
     <div className="min-h-screen bg-linear-to-b from-[#001D58] to-[#00308F] pt-24 pb-10 px-4 sm:px-6 relative">
       <div className="absolute inset-0 z-0 opacity-40">
@@ -29,18 +29,18 @@ export default function AboutAikaPage() {
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFCA40]/20 backdrop-blur-xl rounded-full border border-[#FFCA40]/30 shadow-lg mb-6"
           >
             <FiHeart className="text-[#FFCA40]" />
-            <span className="text-white font-medium text-sm">Meet Health-AI</span>
+            <span className="text-white font-medium text-sm">Meet HealthAI</span>
           </motion.div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Meet <span className="text-[#FFCA40]">Health-AI</span>
+            Meet <span className="text-[#FFCA40]">HealthAI</span>
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
             Your AI-powered mental health companion, designed to support you around the clock
           </p>
         </motion.div>
 
-        {/* Who is Health-AI Section */}
+        {/* Who is HealthAI Section */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,15 +49,15 @@ export default function AboutAikaPage() {
         >
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold text-white mb-6">Who is Health-AI?</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Who is HealthAI?</h2>
               <p className="text-white/90 text-lg mb-4 leading-relaxed">
-                Health-AI is an AI-powered mental health companion. Named after the Japanese word for <span className="text-[#FFCA40] font-semibold">&quot;love song,&quot;</span> Health-AI represents our commitment to care and support for the community.
+                HealthAI is an AI-powered mental health companion. Named after the Japanese word for <span className="text-[#FFCA40] font-semibold">&quot;love song,&quot;</span> HealthAI represents our commitment to care and support for the community.
               </p>
               <p className="text-white/90 text-lg mb-4 leading-relaxed">
-                With a focus on accessibility and privacy, Health-AI provides a safe space for users to discuss their feelings, get support during stressful periods, and access resources that promote mental wellbeing.
+                With a focus on accessibility and privacy, HealthAI provides a safe space for users to discuss their feelings, get support during stressful periods, and access resources that promote mental wellbeing.
               </p>
               <p className="text-white/90 text-lg leading-relaxed">
-                Whether you&apos;re dealing with academic pressure, relationship issues, or just need someone to talk to, Health-AI is here for you 24/7, offering judgment-free support and guidance whenever you need it.
+                Whether you&apos;re dealing with academic pressure, relationship issues, or just need someone to talk to, HealthAI is here for you 24/7, offering judgment-free support and guidance whenever you need it.
               </p>
             </div>
             <div className="md:w-1/3 relative">
@@ -74,8 +74,8 @@ export default function AboutAikaPage() {
                 className="relative h-[300px] w-[300px] mx-auto"
               >
                 <Image 
-                  src="/health-ai-human.jpeg"
-                  alt="Health-AI Character" 
+                  src="/health_ai-human.jpeg"
+                  alt="HealthAI Character" 
                   fill
                   className="object-contain drop-shadow-2xl rounded-full"
                 />
@@ -89,21 +89,21 @@ export default function AboutAikaPage() {
           </div>
         </motion.section>
 
-        {/* Health-AI's Personality */}
+        {/* HealthAI's Personality */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 md:p-12 mb-12"
         >
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Health-AI's Personality</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">HealthAI's Personality</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: <FiHeart />,
                 title: "Empathetic",
-                description: "Health-AI listens without judgment and provides warm, understanding responses tailored to your emotional state."
+                description: "HealthAI listens without judgment and provides warm, understanding responses tailored to your emotional state."
               },
               {
                 icon: <FiSmile />,
@@ -133,14 +133,14 @@ export default function AboutAikaPage() {
           </div>
         </motion.section>
 
-        {/* What Health-AI Can Help With */}
+        {/* What HealthAI Can Help With */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 md:p-12 mb-12"
         >
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">What Health-AI Can Help With</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">What HealthAI Can Help With</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -182,14 +182,14 @@ export default function AboutAikaPage() {
           </div>
         </motion.section>
 
-        {/* How Health-AI Works */}
+        {/* How HealthAI Works */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 md:p-12 mb-12"
         >
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">How Health-AI Works</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">How HealthAI Works</h2>
           
           <div className="space-y-6">
             {[
@@ -201,17 +201,17 @@ export default function AboutAikaPage() {
               {
                 step: "2",
                 title: "CBT-Informed Coaching",
-                description: "For everyday challenges, Health-AI provides evidence-based cognitive behavioral therapy (CBT) techniques and coping strategies."
+                description: "For everyday challenges, HealthAI provides evidence-based cognitive behavioral therapy (CBT) techniques and coping strategies."
               },
               {
                 step: "3",
                 title: "Professional Escalation",
-                description: "If Health-AI detects high-risk situations, she immediately connects you with licensed counselors through our Case Management Agent."
+                description: "If HealthAI detects high-risk situations, she immediately connects you with licensed counselors through our Case Management Agent."
               },
               {
                 step: "4",
                 title: "Continuous Learning",
-                description: "Your interactions help Health-AI understand your patterns better (while maintaining strict privacy), allowing for more personalized support over time."
+                description: "Your interactions help HealthAI understand your patterns better (while maintaining strict privacy), allowing for more personalized support over time."
               }
             ].map((step, idx) => (
               <motion.div
@@ -245,7 +245,7 @@ export default function AboutAikaPage() {
             <h2 className="text-2xl font-bold text-white">Always Available</h2>
           </div>
           <p className="text-white/90 text-lg max-w-2xl mx-auto">
-            Health-AI is here for you 24/7, whether it's 2 AM before an exam or late night when you need someone to talk to. 
+            HealthAI is here for you 24/7, whether it's 2 AM before an exam or late night when you need someone to talk to. 
             No appointments needed, no waiting time—just genuine support whenever you need it.
           </p>
         </motion.section>
@@ -258,7 +258,7 @@ export default function AboutAikaPage() {
           className="text-center"
         >
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Talk to Health-AI?
+            Ready to Talk to HealthAI?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/health_ai">

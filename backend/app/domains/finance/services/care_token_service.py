@@ -1,5 +1,5 @@
 """
-CARE Token Service - Integration with Health-AICare Backend
+CARE Token Service - Integration with HealthAICare Backend
 
 This service handles all interactions with the CARE token smart contract
 on the SOMNIA blockchain, including:

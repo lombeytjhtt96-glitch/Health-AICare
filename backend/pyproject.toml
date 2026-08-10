@@ -1,5 +1,5 @@
 [tool.pytest.ini_options]
-# Pytest Configuration for Health-AICare Backend Tests
+# Pytest Configuration for HealthAICare Backend Tests
 
 # Test discovery patterns
 python_files = "test_*.py"

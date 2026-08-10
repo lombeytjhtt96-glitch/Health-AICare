@@ -17,7 +17,7 @@ const features = [
     titleKey: 'landing.benefits.card2.title',
     titleFallback: 'Interactive Exercises',
     descKey: 'landing.benefits.card2.desc',
-    descFallback: 'Not just advice—Health-AI guides you through breathing, journaling, and grounding in real-time.',
+    descFallback: 'Not just advice—HealthAI guides you through breathing, journaling, and grounding in real-time.',
     icon: CompassGlyph,
     span: "md:col-span-4 lg:col-span-4"
   },
@@ -44,7 +44,7 @@ export default function BenefitsSection() {
             {t('landing.benefits.title', 'More than just a chatbot.')}
           </h2>
           <p className="text-slate-400 text-lg leading-relaxed">
-            {t('landing.benefits.subtitle', 'Our vision is simple: Getting real humans to reach out before you even know you need them. Health-AICare bridges the gap between AI triage and professional psychologist intervention.')}
+            {t('landing.benefits.subtitle', 'Our vision is simple: Getting real humans to reach out before you even know you need them. HealthAICare bridges the gap between AI triage and professional psychologist intervention.')}
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export default function BenefitsSection() {
                   {t('landing.benefits.main.title', 'Personalized Coping Strategies')}
                 </h3>
                 <p className="text-slate-400 mb-8 max-w-lg">
-                  {t('landing.benefits.main.desc', 'Health-AI doesn\'t just listen; it suggests actionable steps based on how you\'re feeling right now. From guided breathing to reframing negative thoughts.')}
+                  {t('landing.benefits.main.desc', 'HealthAI doesn\'t just listen; it suggests actionable steps based on how you\'re feeling right now. From guided breathing to reframing negative thoughts.')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                    {['Anxiety Management', 'Academic Stress', 'Sleep Hygiene', 'Social Connection'].map((tag) => (

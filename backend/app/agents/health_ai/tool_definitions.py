@@ -1,5 +1,5 @@
 """
-Health-AI Tool Definitions for Gemini Function Calling
+HealthAI Tool Definitions for Gemini Function Calling
 
 This module defines the tools (functions) that Gemini can invoke
 to activate specialized LangGraph agents conditionally.
@@ -112,7 +112,7 @@ Intervention types:
 ✅ Call this tool when user wants to connect with human professionals:
 - Explicitly asks for counselor/psychologist: "mau ketemu psikolog", "konseling", "mau curhat ke orang"
 - Requests referral to professional services: "perlu bantuan profesional"
-- Asks about GMC, HPU, or mental health services at Health-AICare
+- Asks about GMC, HPU, or mental health services at HealthAICare
 - Wants to escalate beyond AI support
 
 ✅ Also call when situation requires professional intervention:
@@ -179,7 +179,7 @@ Call when user asks for:
 - Coping strategies or techniques: "teknik relaksasi", "cara coping"
 - Educational content: "penjelasan tentang anxiety", "apa itu CBT"
 - Emergency contacts: "nomor darurat", "hotline bunuh diri"
-- Health-AICare mental health services: "GMC", "HPU", "layanan konseling"
+- HealthAICare mental health services: "GMC", "HPU", "layanan konseling"
 
 Returns curated resources based on category.
 """,
@@ -193,7 +193,7 @@ Returns curated resources based on category.
                         "relaxation_techniques", 
                         "emergency_contacts",
                         "educational_content",
-                        "health-aicare_services"
+                        "health_aicare_services"
                     ],
                     "description": "Category of resources to retrieve"
                 },
@@ -274,7 +274,7 @@ Returns curated resources based on category.
     
     {
         "name": "book_appointment",
-        "description": """Book a counseling appointment with a psychologist at Health-AICare.
+        "description": """Book a counseling appointment with a psychologist at HealthAICare.
         
         ✅ CALL WHEN USER:
         - Explicitly requests appointment: "mau booking", "jadwalin konseling", "book appointment"
@@ -322,7 +322,7 @@ Returns curated resources based on category.
     
     {
         "name": "get_available_counselors",
-        "description": """Get list of available psychologists/counselors at Health-AICare.
+        "description": """Get list of available psychologists/counselors at HealthAICare.
         
         ✅ CALL WHEN:
         - User asks "siapa psikolog yang ada?", "counselor available?"

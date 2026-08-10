@@ -84,7 +84,7 @@ def normalize_oauth_role(email: Optional[str], requested_role: Optional[str]) ->
     """Restrict accepted roles for OAuth sign-ins."""
     if requested_role in {"user", "guest"}:
         return requested_role
-    if email and email.lower().endswith("@health-aicare.ac.id"):
+    if email and email.lower().endswith("@health_aicare.ac.id"):
         return "user"
     return "guest"
 
@@ -445,7 +445,7 @@ async def register_user(
             date_of_birth=date_of_birth,
             gender=request.gender,
             city=request.city,
-            country="Indonesia",  # Default for Health-AICare
+            country="Indonesia",  # Default for HealthAICare
             university=request.university,
             major=request.major,
             year_of_study=int(request.yearOfStudy) if request.yearOfStudy and request.yearOfStudy.isdigit() else None,

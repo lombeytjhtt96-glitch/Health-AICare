@@ -398,7 +398,7 @@ async def auto_assign_node(state: SDAState, config: RunnableConfig) -> SDAState:
 
             severity_val = state.get("case_severity", "high")
             att_payload: dict = {
-                "schema": "health-aicare.case.auto_assignment.v1",
+                "schema": "health_aicare.case.auto_assignment.v1",
                 "attestation_type": "case_auto_assignment",
                 "case_id": str(case_id),
                 "assigned_to": assigned_counsellor_id_str,

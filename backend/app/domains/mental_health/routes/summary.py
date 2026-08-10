@@ -224,7 +224,7 @@ async def get_my_earned_badges(
     
 # --- Endpoint to Generate Greeting Hook ---
 GREETING_HOOK_PROMPT_TEMPLATE = """
-Anda adalah Health-AI, AI chatbot pendamping kesehatan mental dari Health-AICare yang sangat ramah, empatik, dan suportif.
+Anda adalah HealthAI, AI chatbot pendamping kesehatan mental dari HealthAICare yang sangat ramah, empatik, dan suportif.
 Tugas Anda adalah membuat SATU kalimat sapaan pembuka yang sangat singkat dan alami berdasarkan ringkasan detail dari percakapan terakhir dengan pengguna.
 Sapaan ini harus merujuk secara halus ke salah satu topik utama atau perasaan penting pengguna dari sesi terakhir, dan mengajak pengguna untuk melanjutkan percakapan.
 Fokus untuk membuat pengguna merasa didengar dan diingat.

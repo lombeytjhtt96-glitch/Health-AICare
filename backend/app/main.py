@@ -62,7 +62,7 @@ from app.agents.sta.router import router as sta_router
 from app.agents.tca.router import router as tca_router
 from app.agents.cma.router import router as cma_router
 from app.agents.ia.router import router as ia_router
-# app.include_router(health_ai_router)  # Health-AI Meta-Agent orchestrator - REMOVED (Legacy)
+# app.include_router(health_ai_router)  # HealthAI Meta-Agent orchestrator - REMOVED (Legacy)
 from contextlib import asynccontextmanager
 from app.core.scheduler import start_scheduler, shutdown_scheduler
 from fastapi.middleware.cors import CORSMiddleware # type: ignore
@@ -159,7 +159,7 @@ async def lifespan(app: FastAPI):
     except Exception:
         logger.warning("LangGraph checkpointer init failed (non-blocking)", exc_info=True)
 
-    # Compile the Health-AI agent ONCE here so every request reuses the same
+    # Compile the HealthAI agent ONCE here so every request reuses the same
     # compiled graph.  The per-request db session is injected later via
     # config["configurable"]["db"], not baked in at compile time.
     try:
@@ -174,16 +174,16 @@ async def lifespan(app: FastAPI):
             from langgraph.checkpoint.memory import MemorySaver
             _checkpointer = MemorySaver()
             logger.warning(
-                "Health-AI agent using in-memory MemorySaver "
+                "HealthAI agent using in-memory MemorySaver "
                 "(no durable checkpointer — conversation history will not persist across restarts)."
             )
         _compiled_agent = create_health_ai_agent_with_checkpointing(checkpointer=_checkpointer)
         set_health_ai_agent(_compiled_agent)
         app.state.health_ai_agent = _compiled_agent
-        startup_log("Health-AI agent compiled and cached on app.state.health_ai_agent")
+        startup_log("HealthAI agent compiled and cached on app.state.health_ai_agent")
     except Exception:
         logger.error(
-            "Health-AI agent compilation failed at startup (non-blocking — requests will fail until fixed)",
+            "HealthAI agent compilation failed at startup (non-blocking — requests will fail until fixed)",
             exc_info=True,
         )
 
@@ -246,8 +246,8 @@ async def lifespan(app: FastAPI):
 # Find the line where you create your `app` and add `lifespan=lifespan`.
 # For example, if you have `app = FastAPI()`, change it to:
 app = FastAPI(
-    title="Health-AI Chatbot API", 
-    description="API for Health-AI Chatbot - Health-AICare AI Care. Uses FastAPI.",
+    title="HealthAI Chatbot API", 
+    description="API for HealthAI Chatbot - HealthAICare AI Care. Uses FastAPI.",
     version="0.1",
     lifespan=lifespan, # Use the async context manager for startup/shutdown
     docs_url=None, # Disable default Swagger UI to use Scalar
@@ -333,8 +333,8 @@ else:
         "http://127.0.0.1:22001",
         "http://frontend:4000",  # Docker internal
         "http://backend:22001",    # Docker internal
-        "https://health-aicare.ina17.com",
-        "https://api.health-aicare.ina17.com"
+        "https://health_aicare.ina17.com",
+        "https://api.health_aicare.ina17.com"
     ]
 
 startup_log(f"CORS configured with origins: {origins}")
@@ -417,8 +417,8 @@ app.include_router(sta_router)
 app.include_router(tca_router)
 app.include_router(cma_router)
 app.include_router(ia_router)
-# app.include_router(health_ai_router)  # Health-AI Meta-Agent orchestrator
-app.include_router(health_ai_stream.router, prefix="/api/v1")  # Health-AI Streaming Endpoint
+# app.include_router(health_ai_router)  # HealthAI Meta-Agent orchestrator
+app.include_router(health_ai_stream.router, prefix="/api/v1")  # HealthAI Streaming Endpoint
 app.include_router(intervention_plans.router)  # Intervention plan records
 # app.include_router(sca_admin.router)  # REMOVED (Legacy)
 app.include_router(appointments.router)
@@ -460,7 +460,7 @@ async def scalar_html():
         title=app.title,
         servers=[
             {"url": "http://localhost:22001", "description": "Local Development"},
-            {"url": "https://api.health-aicare.ina17.com", "description": "Production"},
+            {"url": "https://api.health_aicare.ina17.com", "description": "Production"},
         ]
     )
 
@@ -470,7 +470,7 @@ async def root():
     """Root endpoint for the API"""
     logger.info("Root endpoint accessed")
     return {
-        "message": "Welcome to the Health-AI Chatbot API!",
+        "message": "Welcome to the HealthAI Chatbot API!",
         "documentation": {
             "swagger_ui": "/docs",
             "redoc": "/redoc"
@@ -501,7 +501,7 @@ async def health_check():
         "status": "healthy",
         "timestamp": datetime.now(timezone.utc).isoformat(),  # UTC timestamp (timezone-aware)
         "version": "0.1",
-        "description": "Health-AI Chatbot API - Health-AICare AI Care",
+        "description": "HealthAI Chatbot API - HealthAICare AI Care",
         "api_version": "v1",
         "api_base_url": "/api/v1",
         "allowed_origins": os.getenv("ALLOWED_ORIGINS", "*").split(","),

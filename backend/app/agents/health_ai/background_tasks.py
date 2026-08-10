@@ -1,4 +1,4 @@
-"""Background tasks for the Health-AI orchestrator.
+"""Background tasks for the HealthAI orchestrator.
 
 Functions here are fire-and-forget coroutines launched via
 ``asyncio.create_task()``.  They run after the user's response has been sent

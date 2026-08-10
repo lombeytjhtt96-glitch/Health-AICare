@@ -29,7 +29,7 @@ class InsightsInterpreter:
     
     def __init__(self):
         """Initialize the insights interpreter."""
-        self.system_prompt = """Anda adalah asisten analitik data untuk platform kesehatan mental semua orang Health-AICare Support.
+        self.system_prompt = """Anda adalah asisten analitik data untuk platform kesehatan mental semua orang HealthAICare Support.
 
 Tugas Anda:
 1. Menganalisis data statistik yang telah dianonimkan

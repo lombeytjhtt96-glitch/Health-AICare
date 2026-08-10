@@ -11,7 +11,7 @@ import { Sword, Map, Users, ShoppingBag, Zap, Trophy, Star, Home, ArrowLeft, Spa
 import ParticleBackground from '@/components/ui/ParticleBackground';
 
 /**
- * CareQuest Landing Page - Redesigned with Health-AICare Design System
+ * CareQuest Landing Page - Redesigned with HealthAICare Design System
  * 
  * Features:
  * - Design system color palette consistency (#001D58, #FFCA40)
@@ -719,7 +719,7 @@ export default function CareQuestPage() {
           </Link>
 
           <p className="text-sm text-gray-400 mt-6">
-            Part of the Health-AICare mental health ecosystem
+            Part of the HealthAICare mental health ecosystem
           </p>
         </motion.div>
       </section>

@@ -182,7 +182,7 @@ export default function AppointmentsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/health_ai">
               <button className="px-6 py-3 bg-[#FFCA40] text-[#001D58] rounded-lg font-medium">
-                Talk to Health-AI
+                Talk to HealthAI
               </button>
             </Link>
             <Link href="/appointments">

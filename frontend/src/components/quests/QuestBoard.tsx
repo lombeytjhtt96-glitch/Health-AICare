@@ -96,7 +96,7 @@ function QuestCard({
         className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#FFCA40] to-[#FFD55C] px-4 py-2 text-sm font-semibold text-[#001D58] shadow-lg shadow-[#FFCA40]/25 transition hover:shadow-[#FFCA40]/40 disabled:cursor-not-allowed disabled:opacity-40"
       >
         <FiCheckCircle className="h-4 w-4" />
-        {quest.status === "completed" ? "Quest Selesai" : isCompleting ? "Memproses..." : "Selesaikan Quest"}
+        {quest.status === "completed" ? "Quest Selesai" : isCompleting ? "Memproses..." : "Seleshealth_ain Quest"}
       </button>
     </div>
   );
@@ -156,7 +156,7 @@ export default function QuestBoard({ className }: QuestBoardProps) {
         toast.success(`Quest selesai! +${response.reward.xp} XP, +${response.reward.joy} JOY`);
       } catch (error) {
         console.error(error);
-        toast.error("Gagal menyelesaikan quest. Coba lagi nanti.");
+        toast.error("Gagal menyeleshealth_ain quest. Coba lagi nanti.");
       }
     },
     [completeQuestMutation],
@@ -170,7 +170,7 @@ export default function QuestBoard({ className }: QuestBoardProps) {
         <div>
           <h2 className="text-2xl font-semibold text-white">Quest Board</h2>
           <p className="text-sm text-white/60">
-            Langkah harian yang disiapkan Health-AI untuk menjaga keseimbanganmu.
+            Langkah harian yang disiapkan HealthAI untuk menjaga keseimbanganmu.
           </p>
         </div>
         {wellness && (

@@ -1,11 +1,11 @@
-Set-Location "C:\Users\Asus\Downloads\Health-AICare\ai"
+Set-Location "C:\Users\Asus\Downloads\HealthAICare\ai"
 
 $env:PORT = "8080"
 $env:PYTHONUTF8 = "1"
 $env:PYTHONIOENCODING = "utf-8"
 
 # Load env vars from backend .env
-$envFile = "C:\Users\Asus\Downloads\Health-AICare\backend\.env"
+$envFile = "C:\Users\Asus\Downloads\HealthAICare\backend\.env"
 if (Test-Path $envFile) {
     Get-Content $envFile | ForEach-Object {
         if ($_ -match '^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$') {

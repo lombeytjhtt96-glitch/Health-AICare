@@ -20,7 +20,7 @@ export default function HowItWorksSection() {
              {t('landing.how.title', 'Intelligent Intervention Flow')}
            </h2>
            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-             {t('landing.how.subtitle', 'Unlike generic chatbots, Health-AI actively assesses risk and routes you to the right care.')}
+             {t('landing.how.subtitle', 'Unlike generic chatbots, HealthAI actively assesses risk and routes you to the right care.')}
            </p>
         </div>
 
@@ -34,7 +34,7 @@ export default function HowItWorksSection() {
             >
                <h3 className="text-sm font-bold text-[#FFCA40] uppercase tracking-widest mb-6 flex items-center gap-2">
                   <StarburstGlyph className="w-4 h-4" />
-                  The Health-AI Difference
+                  The HealthAI Difference
                </h3>
                
                {/* Interactive Flow Diagram */}

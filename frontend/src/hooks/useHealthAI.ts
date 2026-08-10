@@ -1,7 +1,7 @@
 /**
  * useHealthAI Hook
  * 
- * React hook for interacting with the Health-AI Meta-Agent orchestrator.
+ * React hook for interacting with the HealthAI Meta-Agent orchestrator.
  * This replaces direct agent calls with a unified LangGraph-orchestrated interface.
  * 
  * Features:
@@ -16,27 +16,27 @@ import { useState, useCallback } from 'react';
 import { useSession } from 'next-auth/react';
 import toast from 'react-hot-toast';
 
-export interface AikaMessage {
+export interface HealthAIMessage {
   role: 'user' | 'assistant';
   content: string;
   timestamp?: string;
 }
 
-export interface AikaRiskAssessment {
+export interface HealthAIRiskAssessment {
   risk_level: 'low' | 'moderate' | 'high' | 'critical';
   risk_score: number;
   confidence: number;
   risk_factors: string[];
 }
 
-export interface AikaMetadata {
+export interface HealthAIMetadata {
   session_id: string;
   user_role: 'user' | 'admin' | 'counselor';
   intent: string;
   agents_invoked: string[];  // e.g., ["STA", "TCA"]
   actions_taken: string[];   // e.g., ["assess_risk", "provide_cbt_support"]
   processing_time_ms: number;
-  risk_assessment?: AikaRiskAssessment;
+  risk_assessment?: HealthAIRiskAssessment;
   escalation_triggered: boolean;
   case_id?: string;  // If case was created
   activity_logs?: any[]; // Detailed execution logs from LangGraph
@@ -54,10 +54,10 @@ export interface AikaMetadata {
   retry_after_ms?: number;
 }
 
-export interface AikaResponse {
+export interface HealthAIResponse {
   success: boolean;
   response: string;
-  metadata: AikaMetadata;
+  metadata: HealthAIMetadata;
   error?: string;
   /** True when the response came from an error-recovery branch (rate-limit or model error). */
   isFallback?: boolean;
@@ -67,7 +67,7 @@ export interface HealthAIRequest {
   user_id: number;
   role: 'user' | 'admin' | 'counselor';
   message: string;
-  conversation_history: AikaMessage[];
+  conversation_history: HealthAIMessage[];
   preferred_model?: string;
   session_id?: string;
 }
@@ -91,9 +91,9 @@ export interface ReasoningTrace {
   riskLevel?: string;
 }
 
-interface UseAikaOptions {
+interface UseHealthAIOptions {
   onAgentActivity?: (agents: string[]) => void;
-  onRiskDetected?: (assessment: AikaRiskAssessment) => void;
+  onRiskDetected?: (assessment: HealthAIRiskAssessment) => void;
   onEscalation?: (caseId: string) => void;
   onPartialResponse?: (text: string) => void;
   onAgentActivityData?: (activity: Record<string, unknown>) => void;
@@ -105,7 +105,7 @@ interface UseAikaOptions {
   showToasts?: boolean;
 }
 
-type AikaStreamEventType =
+type HealthAIStreamEventType =
   | 'agent'
   | 'tool_start'
   | 'tool_end'
@@ -120,8 +120,8 @@ type AikaStreamEventType =
   | 'complete'
   | 'error';
 
-interface AikaStreamEventPayload {
-  type: AikaStreamEventType;
+interface HealthAIStreamEventPayload {
+  type: HealthAIStreamEventType;
   agent?: string;
   tool?: string;
   tools?: string[];
@@ -135,7 +135,7 @@ interface AikaStreamEventPayload {
 
 const SSE_DATA_PREFIX = 'data: ';
 
-function buildAikaEndpoint(): string {
+function buildHealthAIEndpoint(): string {
   const apiOrigin = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/$/, '');
   return apiOrigin ? `${apiOrigin}/api/v1/health_ai` : '/api/v1/health_ai';
 }
@@ -148,7 +148,7 @@ function splitSseFrames(buffer: string): { frames: string[]; remainder: string }
   };
 }
 
-function parseSseFrame(frame: string): AikaStreamEventPayload | null {
+function parseSseFrame(frame: string): HealthAIStreamEventPayload | null {
   if (!frame.startsWith(SSE_DATA_PREFIX)) {
     return null;
   }
@@ -158,10 +158,10 @@ function parseSseFrame(frame: string): AikaStreamEventPayload | null {
     return null;
   }
 
-  return JSON.parse(jsonRaw) as AikaStreamEventPayload;
+  return JSON.parse(jsonRaw) as HealthAIStreamEventPayload;
 }
 
-function buildReasoningTrace(event: AikaStreamEventPayload): ReasoningTrace {
+function buildReasoningTrace(event: HealthAIStreamEventPayload): ReasoningTrace {
   const reasoningData = (event.data || {}) as Record<string, unknown>;
 
   return {
@@ -177,10 +177,10 @@ function buildReasoningTrace(event: AikaStreamEventPayload): ReasoningTrace {
   };
 }
 
-function buildAikaMetadataFromComplete(
+function buildHealthAIMetadataFromComplete(
   metadata: Record<string, unknown> | undefined,
   invokedAgents: Set<string>
-): AikaMetadata | null {
+): HealthAIMetadata | null {
   if (!metadata) {
     return null;
   }
@@ -192,7 +192,7 @@ function buildAikaMetadataFromComplete(
     agents_invoked: (metadata.agents_invoked as string[]) || Array.from(invokedAgents),
     actions_taken: (metadata.actions_taken as string[]) || [],
     processing_time_ms: typeof metadata.processing_time_ms === 'number' ? metadata.processing_time_ms : 0,
-    risk_assessment: metadata.risk_assessment as AikaRiskAssessment | undefined,
+    risk_assessment: metadata.risk_assessment as HealthAIRiskAssessment | undefined,
     escalation_triggered: Boolean(metadata.escalation_triggered),
     case_id: metadata.case_id as string | undefined,
     activity_logs: metadata.activity_logs as any[] | undefined,
@@ -206,11 +206,11 @@ function buildAikaMetadataFromComplete(
   };
 }
 
-export function useHealthAI(options: UseAikaOptions = {}) {
+export function useHealthAI(options: UseHealthAIOptions = {}) {
   const { data: session } = useSession();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [lastMetadata, setLastMetadata] = useState<AikaMetadata | null>(null);
+  const [lastMetadata, setLastMetadata] = useState<HealthAIMetadata | null>(null);
 
   const {
     onAgentActivity,
@@ -227,18 +227,18 @@ export function useHealthAI(options: UseAikaOptions = {}) {
   } = options;
 
   /**
-   * Send a message to Health-AI Meta-Agent over an SSE stream.
+   * Send a message to HealthAI Meta-Agent over an SSE stream.
    *
    * Stream events are normalized through small helpers above so the main logic
    * stays readable and easier to maintain.
    */
   const sendMessage = useCallback(async (
     message: string,
-    conversationHistory: AikaMessage[] = [],
+    conversationHistory: HealthAIMessage[] = [],
     role: 'user' | 'admin' | 'counselor' = 'user',
     preferredModel?: string,
     sessionId?: string,
-  ): Promise<AikaResponse | null> => {
+  ): Promise<HealthAIResponse | null> => {
     if (!session?.user?.id) {
       const errorMsg = 'User not authenticated';
       setError(errorMsg);
@@ -252,7 +252,7 @@ export function useHealthAI(options: UseAikaOptions = {}) {
     setError(null);
 
     try {
-      const endpoint = buildAikaEndpoint();
+      const endpoint = buildHealthAIEndpoint();
 
       const requestBody: HealthAIRequest = {
         user_id: parseInt(session.user.id),
@@ -291,7 +291,7 @@ export function useHealthAI(options: UseAikaOptions = {}) {
       const MAX_BUFFER_SIZE = 2 * 1024 * 1024; // 2 MB
 
       let finalResponse = '';
-      let finalMetadata: AikaMetadata | null = null;
+      let finalMetadata: HealthAIMetadata | null = null;
       const invokedAgents = new Set<string>();
       let receivedStreamChunks = false;
 
@@ -386,7 +386,7 @@ export function useHealthAI(options: UseAikaOptions = {}) {
 
               case 'complete': {
                 finalResponse = event.response || finalResponse;
-                const mapped = buildAikaMetadataFromComplete(event.metadata, invokedAgents);
+                const mapped = buildHealthAIMetadataFromComplete(event.metadata, invokedAgents);
                 if (mapped) {
                   finalMetadata = mapped;
                   setLastMetadata(mapped);
@@ -408,10 +408,10 @@ export function useHealthAI(options: UseAikaOptions = {}) {
       }
 
       if (!finalMetadata) {
-        throw new Error('Incomplete response from Health-AI');
+        throw new Error('Incomplete response from HealthAI');
       }
 
-      const result: AikaResponse = {
+      const result: HealthAIResponse = {
         success: true,
         response: finalResponse,
         metadata: finalMetadata,
@@ -458,7 +458,7 @@ export function useHealthAI(options: UseAikaOptions = {}) {
 
         if (showToasts) {
           toast.success(
-            '✅ Kasusmu telah disampaikan ke konselor profesional.',
+            '✅ Kasusmu telah disamphealth_ain ke konselor profesional.',
             { duration: 5000 }
           );
         }
@@ -474,7 +474,7 @@ export function useHealthAI(options: UseAikaOptions = {}) {
         toast.error(`Terjadi kesalahan: ${errorMessage}`);
       }
 
-      console.error('Health-AI API Error:', err);
+      console.error('HealthAI API Error:', err);
       return null;
     } finally {
       setLoading(false);

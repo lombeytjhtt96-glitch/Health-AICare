@@ -69,7 +69,7 @@ export function ChatInput({
 
   const handleModuleClick = (moduleId: string) => {
     if (isLoading) {
-      toast.error("Tunggu sampai Health-AI selesai merespons sebelum memulai modul baru.");
+      toast.error("Tunggu sampai HealthAI selesai merespons sebelum memulai modul baru.");
       return;
     }
     onStartModule(moduleId);
@@ -79,7 +79,7 @@ export function ChatInput({
   const handleSend = useCallback(() => {
     if (!inputValue.trim()) return;
     if (isLoading) {
-      toast.error("Tunggu hingga Health-AI selesai merespons sebelum mengirim pesan baru.");
+      toast.error("Tunggu hingga HealthAI selesai merespons sebelum mengirim pesan baru.");
       return;
     }
     onSendMessage();
@@ -92,7 +92,7 @@ export function ChatInput({
         if (interruptOnEnter && onCancel) {
           onCancel();
         } else {
-          toast.error("Health-AI masih merespons. Batalkan atau tunggu sebentar sebelum mengirim pesan baru.");
+          toast.error("HealthAI masih merespons. Batalkan atau tunggu sebentar sebelum mengirim pesan baru.");
         }
         return;
       }
@@ -149,7 +149,7 @@ export function ChatInput({
               value={inputValue}
               onChange={(e) => onInputChange(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder={isLoading ? "Health-AI sedang mengetik..." : isStandardMode ? "Ketik pesan..." : "Ketik jawabanmu..."}
+              placeholder={isLoading ? "HealthAI sedang mengetik..." : isStandardMode ? "Ketik pesan..." : "Ketik jawabanmu..."}
               rows={1}
               className={cn(
                 "w-full resize-none border-0 bg-transparent px-0 text-sm sm:text-[15px] text-white placeholder:text-white/40 focus:outline-none focus:ring-0 focus:border-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:border-0 transition-all duration-200"

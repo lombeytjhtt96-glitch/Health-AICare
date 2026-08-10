@@ -15,7 +15,7 @@ export default function MinimalFooter() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           {/* Copyright */}
           <p className="text-xs text-gray-400">
-            © {currentYear} Health-AICare Portal. All rights reserved.
+            © {currentYear} HealthAICare Portal. All rights reserved.
           </p>
 
           {/* Legal Links */}
@@ -45,7 +45,7 @@ export default function MinimalFooter() {
 
         {/* Disclaimer - only shown on auth pages */}
         <p className="mt-3 text-center text-[10px] text-gray-500 italic">
-          Health-AI is an AI assistant and not a substitute for professional medical advice.
+          HealthAI is an AI assistant and not a substitute for professional medical advice.
         </p>
       </div>
     </footer>

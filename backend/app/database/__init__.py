@@ -141,7 +141,7 @@ if DATABASE_URL.startswith("postgresql+asyncpg://"):
     connect_args = {
         "server_settings": {
             "jit": "off",  # Disable JIT for better compatibility
-            "application_name": "health-aicare_health-aicare",  # Identify our application in pg_stat_activity
+            "application_name": "health_aicare_health_aicare",  # Identify our application in pg_stat_activity
         },
         "command_timeout": 120,  # Timeout for individual commands (increased for eval workload)
         "timeout": 30,  # Connection establishment timeout

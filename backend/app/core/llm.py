@@ -1522,7 +1522,7 @@ async def generate_response(
             quotes = [
                 "Kesehatan mentalmu adalah prioritas utama. Tidak apa-apa untuk merasa lelah hari ini. Luangkan waktu sejenak untuk beristirahat dan menarik napas dalam-dalam. Kamu sangat berharga.",
                 "Ingatlah bahwa setiap langkah kecil yang kamu ambil hari ini adalah bentuk kemajuan yang luar biasa. Bersikaplah lembut pada dirimu sendiri, kamu sedang berjuang dengan sangat baik.",
-                "Kamu tidak harus menyelesaikan atau memikirkan segalanya hari ini. Cukup fokus pada momen saat ini, tarik napas perlahan, dan biarkan hari esok menjadi lembaran baru yang hangat.",
+                "Kamu tidak harus menyeleshealth_ain atau memikirkan segalanya hari ini. Cukup fokus pada momen saat ini, tarik napas perlahan, dan biarkan hari esok menjadi lembaran baru yang hangat.",
                 "Menjaga keseimbangan mental adalah perjalanan panjang, bukan tujuan akhir yang harus dicapai terburu-buru. Nikmati prosesnya, hargai usahamu, dan selalu ingat bahwa kamu tidak sendirian.",
                 "Ketika segalanya terasa terlalu berat, ingatlah untuk kembali ke hal-hal kecil yang memberimu ketenangan. Istirahatkan pikiranmu sejenak, karena kamu berhak mendapatkan kedamaian."
             ]

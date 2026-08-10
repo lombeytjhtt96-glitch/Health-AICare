@@ -93,8 +93,8 @@ export default function BlockMarketPage() {
     },
     {
       id: '3',
-      name: 'Health-AICare T-Shirt',
-      description: 'Official Health-AICare branded t-shirt. Available in M, L, XL.',
+      name: 'HealthAICare T-Shirt',
+      description: 'Official HealthAICare branded t-shirt. Available in M, L, XL.',
       price: 200,
       category: 'merch',
       rarity: 'rare',
@@ -103,8 +103,8 @@ export default function BlockMarketPage() {
     },
     {
       id: '4',
-      name: 'Health-AICare Tote Bag',
-      description: 'Eco-friendly canvas tote bag with Health-AICare logo. Stylish and sustainable.',
+      name: 'HealthAICare Tote Bag',
+      description: 'Eco-friendly canvas tote bag with HealthAICare logo. Stylish and sustainable.',
       price: 150,
       category: 'merch',
       rarity: 'common',

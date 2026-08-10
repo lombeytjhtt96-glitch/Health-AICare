@@ -29,7 +29,7 @@ const BaseNodeWrapper = ({ children, status, isConnectable, dashed }: any) => (
     </div>
 );
 
-// ── Standard agent node (Health-AI, TCA, CMA, IA) ─────────────────────────────────
+// ── Standard agent node (HealthAI, TCA, CMA, IA) ─────────────────────────────────
 const AgentNode = ({ data, isConnectable }: NodeProps) => (
     <BaseNodeWrapper status={data.status} isConnectable={isConnectable}>
         <div className="flex flex-col gap-1 mb-1">

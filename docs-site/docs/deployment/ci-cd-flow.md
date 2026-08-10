@@ -407,7 +407,7 @@ Security issues must be fixed first
 
 ```bash
 ssh user@production-server
-cd /path/to/Health-AICare./deploy-prod.sh rollback abc123def456
+cd /path/to/HealthAICare./deploy-prod.sh rollback abc123def456
 ```
 
 ### Find Previous Working SHA
@@ -518,5 +518,5 @@ Track in your team:
 
 ---
 
-**Maintained By:** Health-AICare DevOps Team
+**Maintained By:** HealthAICare DevOps Team
 **Last Updated:** October 31, 2025

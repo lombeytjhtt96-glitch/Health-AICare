@@ -59,7 +59,7 @@ def build_checkin_message(
         intro = "Just checking in and offering support if you need it."
     else:
         subject = f"Hi {user_name}, how are you doing lately?"
-        intro = "A short check-in from Health-AI."
+        intro = "A short check-in from HealthAI."
 
     if mapped:
         focus_line = f"If things related to {', '.join(mapped[:2])} have been heavy lately, you don’t have to handle it alone."
@@ -73,11 +73,11 @@ def build_checkin_message(
         <p>{intro}</p>
         <p>{focus_line}</p>
         <p>
-            You can talk to Health-AI anytime to get coping ideas, resources, or help finding the right next step.
+            You can talk to HealthAI anytime to get coping ideas, resources, or help finding the right next step.
         </p>
         <p style=\"margin-top: 24px;\">
             <a href=\"{app_url}/health_ai\" style=\"background-color: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block;\">
-                Chat with Health-AI
+                Chat with HealthAI
             </a>
         </p>
         <hr style=\"margin-top: 32px; border: none; border-top: 1px solid #eee;\">

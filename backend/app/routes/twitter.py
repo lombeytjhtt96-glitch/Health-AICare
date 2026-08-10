@@ -11,7 +11,7 @@ router = APIRouter()
 
 @router.get("/latest")
 async def fetch_latest_tweets():
-    url = "https://api.twitter.com/2/tweets/search/recent?query=from:Health-AICare_fess"
+    url = "https://api.twitter.com/2/tweets/search/recent?query=from:HealthAICare_fess"
     headers = {"Authorization": f"Bearer {TWITTER_BEARER_TOKEN}"}
     
     async with httpx.AsyncClient() as client:

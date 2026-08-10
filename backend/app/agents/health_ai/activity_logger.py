@@ -1,5 +1,5 @@
 """
-Activity Logger for Health-AI Meta-Agent
+Activity Logger for HealthAI Meta-Agent
 
 Tracks and broadcasts agent activities in real-time for monitoring and debugging.
 """
@@ -35,7 +35,7 @@ class ActivityEvent:
     """Single activity event"""
     timestamp: str
     activity_type: ActivityType
-    agent: str  # STA, TCA, CMA, IA, or Health-AI
+    agent: str  # STA, TCA, CMA, IA, or HealthAI
     message: str
     details: Optional[Dict[str, Any]] = None
     duration_ms: Optional[float] = None

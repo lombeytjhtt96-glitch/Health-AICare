@@ -108,7 +108,7 @@ export const useLiveTalk = ({
     isLiveTalkActive,
     selectedMicrophone,
     setUserSpeaking,
-    setAikaSpeaking,
+    setHealthAISpeaking,
     setMicrophones,
     setSpeakers,
     setVoices,
@@ -713,7 +713,7 @@ export const useLiveTalk = ({
       if (typeof window !== "undefined" && window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
-      setAikaSpeaking(false);
+      setHealthAISpeaking(false);
       return;
     }
 
@@ -726,14 +726,14 @@ export const useLiveTalk = ({
     ) {
       const text = lastMessage.content as string;
 
-      const onStart = () => setAikaSpeaking(true);
+      const onStart = () => setHealthAISpeaking(true);
       const onEnd = () => {
-        setAikaSpeaking(false);
+        setHealthAISpeaking(false);
         lastSpokenMessageIdRef.current = lastMessage.id;
       };
       const onError = (error: unknown) => {
         console.error("TTS error:", error);
-        setAikaSpeaking(false);
+        setHealthAISpeaking(false);
       };
 
       if (ttsSocketStatus === "connected" && ttsSocketRef.current && ttsEnabled) {
@@ -749,7 +749,7 @@ export const useLiveTalk = ({
         browserTextToSpeech(text, selectedVoice, onStart, onEnd, onError);
       }
     }
-  }, [messages, isLiveTalkActive, setAikaSpeaking, ttsSocketStatus, selectedVoice, ttsEnabled]);
+  }, [messages, isLiveTalkActive, setHealthAISpeaking, ttsSocketStatus, selectedVoice, ttsEnabled]);
 };
 
 

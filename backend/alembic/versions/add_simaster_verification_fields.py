@@ -5,7 +5,7 @@ Revises: add_screening_profiles
 Create Date: 2025-01-21
 
 This migration adds fields to track SIMASTER verification status
-for Health-AICare people. The bookmarklet-based import feature allows
+for HealthAICare people. The bookmarklet-based import feature allows
 people to securely import their verified academic data from SIMASTER.
 
 Fields added:

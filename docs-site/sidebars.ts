@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'architecture/system-overview',
         'architecture/agentic-framework',
-        'architecture/meta-agent-health-ai',
+        'architecture/meta-agent-health_ai',
         'architecture/safety-triage-agent',
         'architecture/therapeutic-coach-agent',
         'architecture/case-management-agent',
@@ -44,11 +44,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Health-AI Autopilot & MLOps',
+      label: 'HealthAI Autopilot & MLOps',
       collapsed: true,
       items: [
-        'health-ai-autopilot/policy-governed-autonomy',
-        'health-ai-autopilot/implementation-plan',
+        'health_ai-autopilot/policy-governed-autonomy',
+        'health_ai-autopilot/implementation-plan',
       ],
     },
     {

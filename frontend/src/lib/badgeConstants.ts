@@ -22,7 +22,7 @@ export interface BadgeMeta {
 export const badgeMetadataMap: { [key: number]: BadgeMeta } = {
     1: {
         "name": "Let there be badge",
-        "description": "Awarded for the first recorded journal entry or chat activity in Health-AICare. Welcome!",
+        "description": "Awarded for the first recorded journal entry or chat activity in HealthAICare. Welcome!",
         "image": "ipfs://bafybeidzdbsjft24ujpcn77hfkbhom7tmo5i5p2aqfsig2vtxvt3kd7jbu/let_there_be_badge.jpeg",
         "attributes": [
           {
@@ -136,7 +136,7 @@ export const badgeMetadataMap: { [key: number]: BadgeMeta } = {
       },
     8: {
         "name": "Besties!",
-        "description": "Awarded for having a single continuous chat session with Health-AI containing over 100 messages.",
+        "description": "Awarded for having a single continuous chat session with HealthAI containing over 100 messages.",
         "image": "ipfs://bafybeidzdbsjft24ujpcn77hfkbhom7tmo5i5p2aqfsig2vtxvt3kd7jbu/besties.jpeg",
         "attributes": [
           {

@@ -22,8 +22,8 @@ Before running the project locally, ensure you have:
 Both services read configuration from `.env` files. Copy the example files and fill in your values:
 
 ```bash
-cp Health-AICare/backend/env.example Health-AICare/backend/.env
-cp Health-AICare/frontend/env.example Health-AICare/frontend/.env.local
+cp HealthAICare/backend/env.example HealthAICare/backend/.env
+cp HealthAICare/frontend/env.example HealthAICare/frontend/.env.local
 ```
 
 ### Critical Backend Variables

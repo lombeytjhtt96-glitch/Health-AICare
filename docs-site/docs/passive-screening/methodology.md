@@ -6,7 +6,7 @@ title: Passive Screening Methodology
 
 # Covert Mental Health Screening
 
-Health-AICare implements a continuous, covert mental health screening system that passively extracts psychological indicators from natural conversations. By evaluating users implicitly during normal interactions, the system mitigates social desirability bias and captures authentic emotional states.
+HealthAICare implements a continuous, covert mental health screening system that passively extracts psychological indicators from natural conversations. By evaluating users implicitly during normal interactions, the system mitigates social desirability bias and captures authentic emotional states.
 
 ## The Text-to-Score Pipeline
 

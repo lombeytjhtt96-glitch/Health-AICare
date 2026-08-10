@@ -13,7 +13,7 @@ export function Navbar() {
         </div>
         <div>
           <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-health-gold bg-clip-text text-transparent">
-            Health-AICare
+            HealthAICare
           </span>
           <span className="block text-[10px] text-health-gold font-medium uppercase tracking-widest">
             Mental Health Companion
@@ -23,7 +23,7 @@ export function Navbar() {
 
       <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
         <Link href="/health_ai" className="hover:text-health-gold transition flex items-center gap-1.5">
-          <Sparkles className="w-4 h-4 text-health-gold" /> Health-AI Chat
+          <Sparkles className="w-4 h-4 text-health-gold" /> HealthAI Chat
         </Link>
         <Link href="/journaling" className="hover:text-health-gold transition flex items-center gap-1.5">
           <BookOpen className="w-4 h-4 text-blue-400" /> Jurnal

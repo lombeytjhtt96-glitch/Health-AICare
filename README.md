@@ -1,8 +1,8 @@
-# Health-AICare: Agentic Mental Health Support System 🌟
+# HealthAICare: Agentic Mental Health Support System 🌟
 
-![Health-AICare Logo](frontend/public/health-health-aicare_logo.png)
+![HealthAICare Logo](frontend/public/health-health_aicare_logo.png)
 
-**Live Demo:** [https://health-aicare.sumbu.xyz](https://health-aicare.sumbu.xyz) | **API:** [https://api.health-aicare.sumbu.xyz](https://api.health-aicare.sumbu.xyz)
+**Live Demo:** [https://health_aicare.sumbu.xyz](https://health_aicare.sumbu.xyz) | **API:** [https://api.health_aicare.sumbu.xyz](https://api.health_aicare.sumbu.xyz)
 
 ---
 
@@ -35,8 +35,8 @@ If you prefer scripts, `./dev.sh` wraps the common local commands.
 
 The repository is commonly deployed with distinct subdomains:
 
-- Frontend: `https://health-aicare.sumbu.xyz`
-- Backend: `https://api.health-aicare.sumbu.xyz`
+- Frontend: `https://health_aicare.sumbu.xyz`
+- Backend: `https://api.health_aicare.sumbu.xyz`
 
 For local development, a typical configuration is `NEXTAUTH_URL=http://localhost:22000` and `NEXT_PUBLIC_API_URL=http://localhost:22001`.
 
@@ -50,7 +50,7 @@ University mental health services globally face a "reactive capacity crisis." Tr
 
 ### 1.2 Mission & Solution Goal
 
-**Health-AICare** aims to transform university mental health support from a reactive service to a **proactive, agentic ecosystem**.
+**HealthAICare** aims to transform university mental health support from a reactive service to a **proactive, agentic ecosystem**.
 
 - **Proactive Intervention:** Early detection of distress signals using semantic analysis.
 - **Agentic Automation:** Coordinated AI agents handling triage, coaching, and case management.
@@ -62,15 +62,15 @@ University mental health services globally face a "reactive capacity crisis." Tr
 
 ### 2.1 Agentic Architecture Principles
 
-Unlike traditional chatbots, Health-AICare uses a **Multi-Agent System (MAS)** based on the **Belief-Desire-Intention (BDI)** model.
+Unlike traditional chatbots, HealthAICare uses a **Multi-Agent System (MAS)** based on the **Belief-Desire-Intention (BDI)** model.
 
 - **Belief (State):** What the agent knows (User Profile, Conversation History, Risk Level).
 - **Desire (Goal):** What the agent wants to achieve (Ensure Safety, Reduce Anxiety).
 - **Intention (Action):** What the agent decides to do (Execute Triage, Generate Plan).
 
-### 2.2 Agent Orchestration with Health-AI
+### 2.2 Agent Orchestration with HealthAI
 
-The system is orchestrated by **Health-AI**, a Meta-Agent that coordinates four specialized sub-agents using LangGraph. Each agent has a distinct responsibility, ensuring separation of concerns and efficient resource utilization.
+The system is orchestrated by **HealthAI**, a Meta-Agent that coordinates four specialized sub-agents using LangGraph. Each agent has a distinct responsibility, ensuring separation of concerns and efficient resource utilization.
 
 ```bash
                     ┌─────────────────────────────────────────────────────┐
@@ -100,7 +100,7 @@ The system is orchestrated by **Health-AI**, a Meta-Agent that coordinates four 
 
 | Agent | Full Name | Primary Responsibility | Key Functions |
 |-------|-----------|------------------------|---------------|
-| **🤖 Health-AI** | Meta-Agent Orchestrator | Central coordination and user interface | Intent classification, agent routing, response synthesis, screening profile updates |
+| **🤖 HealthAI** | Meta-Agent Orchestrator | Central coordination and user interface | Intent classification, agent routing, response synthesis, screening profile updates |
 | **🛡️ STA** | Safety Triage Agent | Risk assessment and crisis detection | Message-level risk scoring (0-3), conversation-level analysis, covert screening extraction, PII redaction |
 | **🧠 TCA** | Therapeutic Coach Agent | Evidence-based therapeutic support | CBT-based interventions, coping strategies, psychoeducation, wellness activities |
 | **📋 CMA** | Case Management Agent | Human escalation and resource coordination | Case creation, counselor assignment, appointment scheduling, follow-up tracking |
@@ -155,7 +155,7 @@ Provides anonymized analytics for institutional decision-making:
 
 ### 3.1 Covert Screening Approach
 
-Health-AICare implements a **covert mental health screening system** that passively extracts psychological indicators from natural conversation. Users are not aware they are being screened, which reduces social desirability bias and captures authentic mental states.
+HealthAICare implements a **covert mental health screening system** that passively extracts psychological indicators from natural conversation. Users are not aware they are being screened, which reduces social desirability bias and captures authentic mental states.
 
 The STA agent performs dual analysis on every message:
 
@@ -278,13 +278,13 @@ This project is guided by three core research questions:
 
 ---
 
-## 🏁 Health-AI Autopilot Operations
+## 🏁 HealthAI Autopilot Operations
 
 This section summarizes the autopilot operational control plane.
 
 ### What the system does
 
-- **Policy-governed autonomy:** Health-AI routes operational actions into an autopilot control plane with explicit decisions (`allow`, `require_approval`, `deny`).
+- **Policy-governed autonomy:** HealthAI routes operational actions into an autopilot control plane with explicit decisions (`allow`, `require_approval`, `deny`).
 - **Human approval gates:** High-risk paths are queued for admin review before execution (`/admin/autopilot`).
 - **Durable execution worker:** Queued actions run with retry scheduling and dead-letter handling to preserve execution traceability.
 - **Audited logs:** Confirmed autopilot actions are stored with secure logs for verification.
@@ -298,7 +298,7 @@ This section summarizes the autopilot operational control plane.
 
 ## 🤖 Autopilot Demo Replay
 
-Health-AICare includes a deterministic replay harness for the Health-AI Autopilot flow.
+HealthAICare includes a deterministic replay harness for the HealthAI Autopilot flow.
 
 Quick steps:
 
@@ -331,7 +331,7 @@ Reference runbook: `docs/AUTOPILOT_DEMO_RUNBOOK.md`.
 
 ```bash
 # 1. Clone Repository
-git clone https://github.com/lombeytjhtt96-glitch/Health-AICare.git
+git clone https://github.com/lombeytjhtt96-glitch/HealthAICare.git
 
 # 2. Start Backend
 cd backend
@@ -351,4 +351,4 @@ npm install && npm run dev
 **Maintainer:** [Khalaf Faith Pradyatama](https://github.com/lombeytjhtt96-glitch) (MAN 1 Surakarta, Class X)  
 **License:** MIT License. See [LICENSE](LICENSE) for details.
 
-*Built with ❤️ for Health-AICare People.*
+*Built with ❤️ for HealthAICare People.*

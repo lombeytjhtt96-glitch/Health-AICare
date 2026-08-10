@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 
 # Redis cache configuration
 CACHE_TTL_SECONDS = 3600  # 1 hour
-CACHE_KEY_PREFIX = "health-aicare:gemini:assessment"
+CACHE_KEY_PREFIX = "health_aicare:gemini:assessment"
 
 
 class GeminiSTAClassifier:
@@ -288,7 +288,7 @@ Look for: rencana masa depan, mention support, help-seeking, ambivalence, humor.
 Note kalau ada.
 
 **STEP 6 - FAKTOR KONTEKSTUAL:**
-Consider: stigma kesehatan mental Indonesia, tekanan akademik (konteks Health-AICare), norma budaya.
+Consider: stigma kesehatan mental Indonesia, tekanan akademik (konteks HealthAICare), norma budaya.
 Gimana budaya affect interpretasi?
 
 **STEP 7 - KEBUTUHAN DUKUNGAN:**

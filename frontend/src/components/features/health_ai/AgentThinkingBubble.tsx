@@ -68,11 +68,11 @@ export function AgentThinkingBubble({
       exit={{ opacity: 0, y: -10 }}
       className={`flex items-start gap-2 ${className}`}
     >
-      {/* Health-AI Avatar */}
+      {/* HealthAI Avatar */}
       <div className="shrink-0 w-8 h-8 rounded-full overflow-hidden shadow-sm border border-white/20 bg-black/20 backdrop-blur-sm">
         <Image
-          src="/health-ai-human.jpeg"
-          alt="Health-AI"
+          src="/health_ai-human.jpeg"
+          alt="HealthAI"
           width={32}
           height={32}
           className="object-cover w-full h-full"

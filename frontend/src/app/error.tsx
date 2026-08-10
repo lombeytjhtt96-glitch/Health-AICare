@@ -66,7 +66,7 @@ export default function NotFound() {
                     whileTap={{ scale: 0.95 }}
                     className="px-6 py-2 bg-white/20 text-white rounded-full font-bold flex items-center justify-center backdrop-blur-sm w-full sm:w-auto"
                   >
-                    Talk to Health-AI
+                    Talk to HealthAI
                   </motion.button>
                 </Link>
               </div>

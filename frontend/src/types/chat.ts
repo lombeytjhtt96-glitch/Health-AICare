@@ -76,14 +76,14 @@ export interface Message {
     intent: string; // "emotional_support", "crisis_detection", etc.
     intent_confidence: number; // 0.0 - 1.0
     needs_agents: boolean;
-    agent_reasoning: string; // Why Health-AI made this decision
+    agent_reasoning: string; // Why HealthAI made this decision
     response_source: string; // "health_ai_direct", "agent_synthesis"
     processing_time_ms: number;
     risk_level?: string; // If STA was invoked
     risk_score?: number; // If STA was invoked
   };
   health_aiMetadata?: {
-    // Health-AI Meta-Agent metadata
+    // HealthAI Meta-Agent metadata
     session_id: string;
     user_role: string;
     intent: string;

@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import apiClient from '@/services/api';
 import type { Message } from '@/types/chat';
 
-const DEFAULT_GREETING = "Halo! Aku Health-AI, teman AI-mu dari Health-AICare. Ada yang ingin kamu ceritakan hari ini? 😊";
+const DEFAULT_GREETING = "Halo! Aku HealthAI, teman AI-mu dari HealthAICare. Ada yang ingin kamu ceritakan hari ini? 😊";
 
 export function useGreeting(messages: Message[]) {
   const { data: session } = useSession();

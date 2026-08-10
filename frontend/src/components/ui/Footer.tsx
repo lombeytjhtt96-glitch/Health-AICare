@@ -31,15 +31,15 @@ export default function Footer() {
           >
             <Link href="/" className="inline-flex items-center group mb-3">
               <img 
-                src="/health-aicare_logo.png?v=2" 
-                alt="Health-AICare Logo" 
+                src="/health_aicare_logo.png?v=2" 
+                alt="HealthAICare Logo" 
                 width={36} 
                 height={36}
                 className="transition-transform duration-300 group-hover:scale-110"
               />
               <div className="ml-2.5">
                 <h2 className="text-base font-bold text-white group-hover:text-[#FFCA40] transition-colors duration-300">
-                  Health-AICare
+                  HealthAICare
                 </h2>
                 <p className="text-[10px] text-[#FFCA40]/80">Mental Health Support</p>
               </div>
@@ -83,7 +83,7 @@ export default function Footer() {
             </h3>
             <nav className="space-y-2">
               <FooterLink href="/signin">Sign In</FooterLink>
-              <FooterLink href="/about">About Health-AI</FooterLink>
+              <FooterLink href="/about">About HealthAI</FooterLink>
             </nav>
           </motion.div>
 
@@ -116,13 +116,13 @@ export default function Footer() {
             {/* Logo & Copyright */}
             <div className="flex items-center gap-3">
               <p className="text-[10px] text-gray-400">
-                © {currentYear} Health-AICare Portal
+                © {currentYear} HealthAICare Portal
               </p>
             </div>
 
             {/* Disclaimer */}
             <p className="text-[10px] text-gray-400/70 italic text-center sm:text-right">
-              Health-AI is an AI assistant, not a substitute for professional medical advice.
+              HealthAI is an AI assistant, not a substitute for professional medical advice.
             </p>
           </div>
         </motion.div>

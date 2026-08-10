@@ -5,7 +5,7 @@ Stores user settings: language, notifications, accessibility, AI personality.
 User-controlled preferences (safe to cache, non-sensitive).
 
 Industry Best Practices Applied:
-- Sensible defaults for Health-AICare context (preferred_language='id', timezone='Asia/Jakarta')
+- Sensible defaults for HealthAICare context (preferred_language='id', timezone='Asia/Jakarta')
 - Granular notification controls (email_frequency, notification_frequency)
 - Accessibility features (dyslexia_font, keyboard_navigation_only)
 - AI personality customization (health_ai_personality, health_ai_response_length)
@@ -43,7 +43,7 @@ class UserPreferences(Base):
     # =====================================================================
     preferred_language = Column(
         String(10),
-        default="id",  # Best Practice: Default to Indonesian for Health-AICare
+        default="id",  # Best Practice: Default to Indonesian for HealthAICare
         comment="ISO 639-1 code: 'id' (Indonesian), 'en' (English), 'jv' (Javanese)"
     )
     preferred_timezone = Column(
@@ -91,7 +91,7 @@ class UserPreferences(Base):
     email_newsletter = Column(
         Boolean,
         default=True,
-        comment="Subscribe to Health-AICare Support newsletter"
+        comment="Subscribe to HealthAICare Support newsletter"
     )
     email_updates = Column(
         Boolean,
@@ -218,7 +218,7 @@ class UserPreferences(Base):
     auto_suggest_interventions = Column(
         Boolean,
         default=True,
-        comment="Health-AI proactively suggests CBT interventions"
+        comment="HealthAI proactively suggests CBT interventions"
     )
     
     # =====================================================================
@@ -242,4 +242,4 @@ class UserPreferences(Base):
     user = relationship("User", back_populates="preferences")
     
     def __repr__(self):
-        return f"<UserPreferences(user_id={self.user_id}, lang='{self.preferred_language}', health-ai='{self.health_ai_personality}')>"
+        return f"<UserPreferences(user_id={self.user_id}, lang='{self.preferred_language}', health_ai='{self.health_ai_personality}')>"

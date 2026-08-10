@@ -209,7 +209,7 @@ export default function AboutResearchPage() {
                 <h3 className="text-2xl font-bold text-white">IRB Approval</h3>
               </div>
               <p className="text-white/70 mb-4">
-                All research protocols have been reviewed and approved by Health-AICare Portal's Institutional Review Board (IRB).
+                All research protocols have been reviewed and approved by HealthAICare Portal's Institutional Review Board (IRB).
               </p>
               <ul className="space-y-2">
                 {[
@@ -406,7 +406,7 @@ export default function AboutResearchPage() {
                 </span>
               </div>
               <p className="text-white/70 text-sm mb-3">
-                Key components of Health-AICare are open-sourced to benefit the research community:
+                Key components of HealthAICare are open-sourced to benefit the research community:
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Safety Agent Suite", "LangGraph Orchestration", "Differential Privacy Tools", "CBT Module Framework"].map((component, idx) => (

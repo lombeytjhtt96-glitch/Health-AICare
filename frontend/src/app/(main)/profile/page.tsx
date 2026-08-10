@@ -979,7 +979,7 @@ export default function ProfilePage() {
                 )}
 
                 <div className="flex items-center justify-between text-xs text-white/60">
-                  <span>Allow Health-AI to remember facts about you</span>
+                  <span>Allow HealthAI to remember facts about you</span>
                   <Switch
                     checked={form?.consent_ai_memory ?? profile.consent.consent_ai_memory}
                     onChange={handleAIMemoryConsentToggle}

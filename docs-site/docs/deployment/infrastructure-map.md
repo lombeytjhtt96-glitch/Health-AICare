@@ -15,7 +15,7 @@ This document lists all files that are `.gitignore`d but **required** on the pro
 ## Critical Files (Required)
 
 ### 1. `.env` (Project Root)
-**Location:** `Health-AICare/.env` 
+**Location:** `HealthAICare/.env` 
 **Source:** GitHub Secret `ENV_FILE_PRODUCTION` 
 **Auto-created by:** `deploy.sh` script 
 
@@ -70,7 +70,7 @@ ALLOWED_ORIGINS=https://your-domain.com
 
 **How to create manually:**
 ```bash
-cd /path/to/Health-AICare
+cd /path/to/HealthAICare
 cp env.example.env
 nano.env # Edit with your actual values
 ```
@@ -78,13 +78,13 @@ nano.env # Edit with your actual values
 ---
 
 ### 2. `alembic.ini` (Backend)
-**Location:** `Health-AICare/backend/alembic.ini` 
+**Location:** `HealthAICare/backend/alembic.ini` 
 **Why gitignored:** Can contain sensitive database URLs 
 **Required for:** Database migrations via Alembic 
 
 **How to create:**
 ```bash
-cd /path/to/Health-AICare/backend
+cd /path/to/HealthAICare/backend
 
 # Copy from example or create new
 cat > alembic.ini << 'EOF'
@@ -161,13 +161,13 @@ EOF
 **Alternative:** Copy from local development:
 ```bash
 # On your local machine
-scp backend/alembic.ini deployuser@your_vm:/path/to/Health-AICare/backend/
+scp backend/alembic.ini deployuser@your_vm:/path/to/HealthAICare/backend/
 ```
 
 ---
 
 ### 3. `alembic_supa.ini` (Backend - Optional)
-**Location:** `Health-AICare/backend/alembic_supa.ini` 
+**Location:** `HealthAICare/backend/alembic_supa.ini` 
 **Purpose:** Alternative Alembic config for Supabase 
 **Required if:** Using Supabase as database 
 
@@ -178,20 +178,20 @@ scp backend/alembic.ini deployuser@your_vm:/path/to/Health-AICare/backend/
 ## Optional Files (May Be Needed)
 
 ### 4. `logs/` Directory (Backend)
-**Location:** `Health-AICare/backend/logs/` 
+**Location:** `HealthAICare/backend/logs/` 
 **Purpose:** Application logs 
 **Auto-created:** Yes, but ensure write permissions 
 
 **How to create:**
 ```bash
-mkdir -p /path/to/Health-AICare/backend/logs
-chmod 755 /path/to/Health-AICare/backend/logs
+mkdir -p /path/to/HealthAICare/backend/logs
+chmod 755 /path/to/HealthAICare/backend/logs
 ```
 
 ---
 
 ### 5. ONNX Models (Backend)
-**Location:** `Health-AICare/backend/models/onnx/` 
+**Location:** `HealthAICare/backend/models/onnx/` 
 **Purpose:** ML models for emotion detection 
 **Auto-downloaded:** Yes, during Docker build from HuggingFace 
 **Size:** ~502 MB 
@@ -210,7 +210,7 @@ Run this on your VM after cloning/pulling the repository:
 
 set -euo pipefail
 
-PROJECT_ROOT="/path/to/Health-AICare" # UPDATE THIS!
+PROJECT_ROOT="/path/to/HealthAICare" # UPDATE THIS!
 cd "$PROJECT_ROOT"
 
 echo "[Setup] Setting up required files..."
@@ -318,7 +318,7 @@ Run these commands **once** when setting up a new VM:
 ssh deployuser@your_vm_ip
 
 # 2. Navigate to project
-cd /path/to/Health-AICare
+cd /path/to/HealthAICare
 
 # 3. Create alembic.ini (REQUIRED FOR MIGRATIONS)
 cat > backend/alembic.ini << 'EOF'
@@ -381,7 +381,7 @@ echo "[Start] VM is ready for deployment!"
 
 | File | Location | Required? | Auto-created? | How to create |
 |------|----------|-----------|---------------|---------------|
-| `.env` | `Health-AICare/.env` | [Done] Yes | [Done] Yes (by CI/CD) | From `ENV_FILE_PRODUCTION` secret |
+| `.env` | `HealthAICare/.env` | [Done] Yes | [Done] Yes (by CI/CD) | From `ENV_FILE_PRODUCTION` secret |
 | `alembic.ini` | `backend/alembic.ini` | [Done] Yes | [Missing] No | **Manually create** (see above) |
 | `alembic_supa.ini` | `backend/alembic_supa.ini` | [Optional] Optional | [Missing] No | Copy from local if needed |
 | `logs/` | `backend/logs/` | [Optional] Optional | [Done] Yes (by app) | `mkdir -p backend/logs` |

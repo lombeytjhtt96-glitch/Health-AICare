@@ -295,13 +295,13 @@ export default function HealthAIChatWidget() {
             <button
                 onClick={() => setIsOpen(true)}
                 className="fixed bottom-6 right-6 p-4 bg-[#FFCA40] hover:bg-[#ffc107] text-[#001D58] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
-                aria-label="Open Health-AI Chat"
+                aria-label="Open HealthAI Chat"
             >
                 <div className="relative">
                     <FiMessageSquare className="w-6 h-6" />
                 </div>
                 <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-1 bg-[#001D58] text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                    Chat with Health-AI
+                    Chat with HealthAI
                 </span>
             </button>
         );
@@ -316,7 +316,7 @@ export default function HealthAIChatWidget() {
                         A
                     </div>
                     <div>
-                        <h3 className="text-white font-semibold text-sm">Health-AI Assistant</h3>
+                        <h3 className="text-white font-semibold text-sm">HealthAI Assistant</h3>
                         <div className="flex items-center gap-1.5">
                             <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
                             <span className="text-[10px] text-white/60 uppercase tracking-wider">Online</span>
@@ -346,7 +346,7 @@ export default function HealthAIChatWidget() {
                         {messages.length === 0 && (
                             <div className="text-center py-8 text-white/40">
                                 <div className="text-4xl mb-3">👋</div>
-                                <p className="text-sm mb-4">Halo! Aku Health-AI, asisten AI untuk admin. Ada yang bisa aku bantu hari ini?</p>
+                                <p className="text-sm mb-4">Halo! Aku HealthAI, asisten AI untuk admin. Ada yang bisa aku bantu hari ini?</p>
                                 <div className="flex flex-wrap justify-center gap-2 px-2">
                                     <button 
                                         onClick={() => handleCardSelection("Tampilkan statistik platform hari ini")}
@@ -522,7 +522,7 @@ export default function HealthAIChatWidget() {
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                placeholder="Ask Health-AI..."
+                                placeholder="Ask HealthAI..."
                                 className="flex-1 bg-black/20 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#FFCA40]/50 focus:ring-1 focus:ring-[#FFCA40]/50 transition-all"
                                 disabled={isLoading}
                             />

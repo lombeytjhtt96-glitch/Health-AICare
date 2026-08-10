@@ -38,7 +38,7 @@ const sidebarNavGroups: NavGroup[] = [
   {
     title: "Core Support",
     items: [
-      { href: "/health_ai", label: "Talk to Health-AI", icon: <BsChatDots size={18} />, featured: true },
+      { href: "/health_ai", label: "Talk to HealthAI", icon: <BsChatDots size={18} />, featured: true },
       { href: "/journaling", label: "Journaling", icon: <FiActivity size={18} />, featured: true },
       { href: "/appointments", label: "Appointments", icon: <BsCalendar size={18} />, featured: true },
       { href: "/quests", label: "Quest Board", icon: <FiZap size={18} />, featured: true },

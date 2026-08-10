@@ -165,7 +165,7 @@ export function MessageBubble({
     visible: { opacity: 1, y: 0, transition: { duration: 0.25, ease: "easeOut" } },
   };
 
-  const senderName = isUser ? (userDisplayName?.trim() || 'You') : 'Health-AI';
+  const senderName = isUser ? (userDisplayName?.trim() || 'You') : 'HealthAI';
   const normalizedUserImageUrl =
     typeof userImageUrl === 'string' && userImageUrl.trim() && userImageUrl !== 'null' && userImageUrl !== 'undefined'
       ? userImageUrl.trim()
@@ -201,7 +201,7 @@ export function MessageBubble({
     }
     return (
       <div className="shrink-0 w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-black/20 shadow-sm backdrop-blur-sm">
-        <img src="/health-ai-avatar.png?v=2" alt="Health-AI" width={28} height={28} className="object-cover w-full h-full" />
+        <img src="/health_ai-avatar.png?v=2" alt="HealthAI" width={28} height={28} className="object-cover w-full h-full" />
       </div>
     );
   };
@@ -214,7 +214,7 @@ export function MessageBubble({
             <HealthAIThinkingCompact message={message.toolIndicator} />
           ) : (
             <div className="flex items-center justify-start h-full px-3 py-2 text-health-blue-dark">
-              <LoadingDots text="Health-AI sedang mengetik..." />
+              <LoadingDots text="HealthAI sedang mengetik..." />
             </div>
           )}
         </div>
@@ -379,7 +379,7 @@ export function MessageBubble({
               onScheduled={(appointment) => {
                 setWidgetAppointment(appointment);
               }}
-              onAikaFollowup={(text) => onCardSelect?.(text)}
+              onHealthAIFollowup={(text) => onCardSelect?.(text)}
             />
           </div>
         )}

@@ -1,7 +1,7 @@
 """
 Appointment Scheduling Tools (Decorator Pattern)
 
-Conversational appointment scheduling capabilities for Health-AI, allowing people
+Conversational appointment scheduling capabilities for HealthAI, allowing people
 to book, cancel, and reschedule appointments with psychologists through natural language.
 
 All tools are registered using @register_tool decorator for zero-redundancy architecture.
@@ -145,7 +145,7 @@ def _matches_preferred_language(
 
 @register_tool(
     name="get_available_counselors",
-    description="""Get list of available psychologists/counselors at Health-AICare.
+    description="""Get list of available psychologists/counselors at HealthAICare.
 
 ✅ CALL WHEN:
 - User asks "siapa psikolog yang ada?", "counselor available?"
@@ -394,7 +394,7 @@ async def suggest_appointment_times(
 
 @register_tool(
     name="book_appointment",
-    description="""Book a counseling appointment with a psychologist at Health-AICare.
+    description="""Book a counseling appointment with a psychologist at HealthAICare.
 
 ✅ CALL WHEN USER:
 - Explicitly requests appointment: "mau booking", "jadwalin konseling"
@@ -487,7 +487,7 @@ async def book_appointment(
             appointment_type_id=appointment_type_id,
             status="scheduled",
             notes=notes,
-            # location="Ruang Konseling Gedung UC Lt. 3, Health-AICare" # Removed: Not in model
+            # location="Ruang Konseling Gedung UC Lt. 3, HealthAICare" # Removed: Not in model
         )
         
         db.add(appointment)

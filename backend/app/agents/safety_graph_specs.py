@@ -85,7 +85,7 @@ STA_GRAPH_SPEC: GraphSpec = {
         {
             "id": "respond_user",
             "label": "Respond to User",
-            "description": "Send tailored reassurance or guided CBT prompts back to Health-AI chat.",
+            "description": "Send tailored reassurance or guided CBT prompts back to HealthAI chat.",
             "column": 4,
             "row": 1,
         },

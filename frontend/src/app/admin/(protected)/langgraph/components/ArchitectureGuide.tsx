@@ -14,9 +14,9 @@ const CASE_SCENARIOS = [
         borderColor: 'border-slate-500/20',
         bgColor: 'bg-slate-500/5',
         badgeColor: 'bg-slate-700 text-slate-300',
-        example: '"Halo Health-AI! Gimana kabarmu?"',
+        example: '"Halo HealthAI! Gimana kabarmu?"',
         steps: [
-            { node: 'Health-AI Decision', detail: 'intent = casual_chat · next_step = none', color: 'bg-blue-500/20 text-blue-300' },
+            { node: 'HealthAI Decision', detail: 'intent = casual_chat · next_step = none', color: 'bg-blue-500/20 text-blue-300' },
             { node: 'END (direct)', detail: 'health_ai_direct_response set in decision node — no agents invoked', color: 'bg-slate-500/20 text-slate-300' },
         ],
         agentsFired: [],
@@ -33,7 +33,7 @@ const CASE_SCENARIOS = [
         badgeColor: 'bg-yellow-900/40 text-yellow-300',
         example: '"Aku merasa overwhelmed banget akhir-akhir ini, susah fokus."',
         steps: [
-            { node: 'Health-AI Decision', detail: 'intent = emotional_support · immediate_risk = moderate', color: 'bg-blue-500/20 text-blue-300' },
+            { node: 'HealthAI Decision', detail: 'intent = emotional_support · immediate_risk = moderate', color: 'bg-blue-500/20 text-blue-300' },
             { node: 'TCA (execute_sca)', detail: 'CBT-informed coping plan generated for moderate risk', color: 'bg-yellow-500/20 text-yellow-300' },
             { node: 'Synthesize', detail: 'Final empathetic response assembled from TCA output', color: 'bg-blue-500/20 text-blue-300' },
         ],
@@ -51,7 +51,7 @@ const CASE_SCENARIOS = [
         badgeColor: 'bg-red-900/40 text-red-300',
         example: '"Aku udah gak kuat lagi, pengen menyakiti diriku sendiri…"',
         steps: [
-            { node: 'Health-AI Decision', detail: 'immediate_risk = high · holding message set instantly for user', color: 'bg-blue-500/20 text-blue-300' },
+            { node: 'HealthAI Decision', detail: 'immediate_risk = high · holding message set instantly for user', color: 'bg-blue-500/20 text-blue-300' },
             { node: 'Parallel Crisis', detail: 'asyncio.gather → TCA ∥ CMA run concurrently (max latency, not sum)', color: 'bg-red-500/20 text-red-300' },
             { node: 'TCA (parallel)', detail: 'CBT crisis plan + immediate coping strategies', color: 'bg-yellow-500/20 text-yellow-300' },
             { node: 'CMA (parallel)', detail: 'Case created, counselor auto-assigned, SLA clock started', color: 'bg-orange-500/20 text-orange-300' },
@@ -71,7 +71,7 @@ const CASE_SCENARIOS = [
         badgeColor: 'bg-purple-900/40 text-purple-300',
         example: '"Topik apa yang paling sering muncul minggu ini?"',
         steps: [
-            { node: 'Health-AI Decision', detail: 'intent = analytics_query · next_step = ia', color: 'bg-blue-500/20 text-blue-300' },
+            { node: 'HealthAI Decision', detail: 'intent = analytics_query · next_step = ia', color: 'bg-blue-500/20 text-blue-300' },
             { node: 'IA (execute_ia)', detail: 'k-anonymity (k≥5) + differential privacy applied to aggregate query', color: 'bg-purple-500/20 text-purple-300' },
             { node: 'Synthesize', detail: 'Privacy-preserving trend report formatted for counselor dashboard', color: 'bg-blue-500/20 text-blue-300' },
         ],
@@ -89,7 +89,7 @@ const CASE_SCENARIOS = [
         badgeColor: 'bg-indigo-900/40 text-indigo-300',
         example: '"sampai jumpa" / 5 minutes of inactivity / explicit session end',
         steps: [
-            { node: 'Health-AI Decision', detail: 'conversation_ended flag set; asyncio.create_task fires background job', color: 'bg-blue-500/20 text-blue-300' },
+            { node: 'HealthAI Decision', detail: 'conversation_ended flag set; asyncio.create_task fires background job', color: 'bg-blue-500/20 text-blue-300' },
             { node: 'STA Background', detail: 'Analyzes full conversation history — PHQ-9, GAD-7, DASS-21 extraction', color: 'bg-indigo-500/20 text-indigo-300' },
             { node: 'DB Persist', detail: 'ConversationRiskAssessment upserted; screening profile updated', color: 'bg-slate-500/20 text-slate-300' },
         ],
@@ -110,7 +110,7 @@ const AGENT_BDI = [
             desire: 'Route each message to the correct agent path with minimal latency; ensure safety is never bypassed.',
             intention: 'Run Gemini decision call → evaluate conditional edge → invoke zero, one, or two sub-agents in parallel.',
         },
-        description: 'The entry point for all messages. Health-AI runs a single Gemini JSON decision call, evaluates the routing condition, and dispatches downstream. For direct responses it uses a ReAct tool loop.',
+        description: 'The entry point for all messages. HealthAI runs a single Gemini JSON decision call, evaluates the routing condition, and dispatches downstream. For direct responses it uses a ReAct tool loop.',
     },
     {
         id: 'tca',
@@ -230,7 +230,7 @@ export function ArchitectureGuide() {
                             <div className="bg-linear-to-r from-blue-500/10 to-purple-500/10 border border-white/5 rounded-2xl p-8 text-center">
                                 <h3 className="text-2xl font-bold text-white mb-4">Belief-Desire-Intention (BDI) Architecture</h3>
                                 <p className="text-white/60 max-w-3xl mx-auto text-lg leading-relaxed">
-                                    The BDI model characterizes an agent using its mental state. In Health-AICare, this maps to
+                                    The BDI model characterizes an agent using its mental state. In HealthAICare, this maps to
                                     LangGraph State (Beliefs), Conditional Edges (Desires), and Node Functions (Intentions).
                                 </p>
                             </div>
@@ -423,7 +423,7 @@ workflow.add_node("execute_sca",     execute_sca_subgraph)  # TCA only
 workflow.add_node("execute_ia",      execute_ia_subgraph)   # IA
 workflow.add_node("synthesize",      synthesize_final_response)
 
-# Single conditional edge from Health-AI
+# Single conditional edge from HealthAI
 workflow.add_conditional_edges(
     "health_ai_decision",
     should_invoke_agents,

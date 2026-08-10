@@ -1,4 +1,4 @@
-"""Static constants used across Health-AI agent modules.
+"""Static constants used across HealthAI agent modules.
 
 Isolated here so that both ``message_classifier`` and the orchestrator graph
 can import them without pulling in any heavy dependencies or risking circular
@@ -49,14 +49,14 @@ SMALLTALK_EXACT: frozenset[str] = frozenset({
 })
 
 # ---------------------------------------------------------------------------
-# Health-AI-name prefix smalltalk variants (Tier-2, max 22 chars)
+# HealthAI-name prefix smalltalk variants (Tier-2, max 22 chars)
 # ---------------------------------------------------------------------------
 SMALLTALK_HEALTH_AI_PREFIX: frozenset[str] = frozenset({
-    "hi health-ai", "halo health-ai", "hai health-ai", "hello health-ai", "hey health-ai",
-    "thank you health-ai", "makasih ya", "terima kasih ya",
-    "oke health-ai", "ok health-ai", "sip health-ai", "noted health-ai", "bye health-ai",
     "hi health_ai", "halo health_ai", "hai health_ai", "hello health_ai", "hey health_ai",
-    "thank you health_ai", "oke health_ai", "ok health_ai", "sip health_ai", "noted health_ai", "bye health_ai",
+    "thank you health_ai", "makasih ya", "terima kasih ya",
+    "oke health_ai", "ok health_ai", "sip health_ai", "noted health_ai", "bye health_ai",
+    "hi healthai", "halo healthai", "hai healthai", "hello healthai", "hey healthai",
+    "thank you healthai", "oke healthai", "ok healthai", "sip healthai", "noted healthai", "bye healthai",
 })
 
 # ---------------------------------------------------------------------------

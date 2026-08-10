@@ -517,7 +517,7 @@ class ExecutionStateTracker:
         initial_parse_failed: bool,
         repaired: bool,
     ) -> None:
-        """Record Health-AI decision-parse quality metrics and trigger threshold alerts."""
+        """Record HealthAI decision-parse quality metrics and trigger threshold alerts."""
         self.record_custom_metric(
             execution_id,
             "health_ai_decision_parse_attempt",
@@ -593,7 +593,7 @@ class ExecutionStateTracker:
             await self._create_alert(
                 alert_type="quality",
                 severity=severity,
-                title="Health-AI Decision Parse Failure Rate Elevated",
+                title="HealthAI Decision Parse Failure Rate Elevated",
                 message=(
                     f"Decision parse failure rate is {failure_rate:.2f}% over the last {days} day(s) "
                     f"({summary.get('failed_parses', 0)}/{attempts} attempts)."
@@ -766,7 +766,7 @@ class ExecutionStateTracker:
             return {}
 
     async def get_decision_parse_health(self, days: int = 7) -> Dict[str, Any]:
-        """Return Health-AI decision JSON parse health summary for dashboard/alerts."""
+        """Return HealthAI decision JSON parse health summary for dashboard/alerts."""
         try:
             async with AsyncSessionLocal() as db:
                 cutoff_date = datetime.now() - timedelta(days=days)

@@ -132,7 +132,7 @@ class LLMService:
             quotes = [
                 "Kesehatan mentalmu adalah prioritas utama. Tidak apa-apa untuk merasa lelah hari ini. Luangkan waktu sejenak untuk beristirahat dan menarik napas dalam-dalam. Kamu sangat berharga.",
                 "Ingatlah bahwa setiap langkah kecil yang kamu ambil hari ini adalah bentuk kemajuan yang luar biasa. Bersikaplah lembut pada dirimu sendiri, kamu sedang berjuang dengan sangat baik.",
-                "Kamu tidak harus menyelesaikan atau memikirkan segalanya hari ini. Cukup fokus pada momen saat ini, tarik napas perlahan, dan biarkan hari esok menjadi lembaran baru yang hangat.",
+                "Kamu tidak harus menyeleshealth_ain atau memikirkan segalanya hari ini. Cukup fokus pada momen saat ini, tarik napas perlahan, dan biarkan hari esok menjadi lembaran baru yang hangat.",
                 "Menjaga keseimbangan mental adalah perjalanan panjang, bukan tujuan akhir yang harus dicapai terburu-buru. Nikmati prosesnya, hargai usahamu, dan selalu ingat bahwa kamu tidak sendirian.",
                 "Ketika segalanya terasa terlalu berat, ingatlah untuk kembali ke hal-hal kecil yang memberimu ketenangan. Istirahatkan pikiranmu sejenak, karena kamu berhak mendapatkan kedamaian."
             ]
@@ -340,7 +340,7 @@ class LLMService:
                     Faktor psikologis seperti trauma yang mengakibatkan stres dan faktor biologis seperti genetik merupakan faktor yang berkontribusi terhadap terjadinya gangguan jiwa. 
                     Sebesar 50% gangguan jiwa berawal pada usia 14 tahun.
 
-                    Layanan Psikologi Health-AICare dan Fakultas
+                    Layanan Psikologi HealthAICare dan Fakultas
 
                     Klinik GMC (Mental Health Support)
                     Psikolog: +62 813-2620-0342
@@ -389,9 +389,9 @@ class LLMService:
                         "description": "Sebesar 50% gangguan jiwa berawal pada usia 14 tahun."
                         },
                         {
-                        "name": "Layanan Kesehatan Mental Rumah Sakit Akademik Health-AICare",
+                        "name": "Layanan Kesehatan Mental Rumah Sakit Akademik HealthAICare",
                         "type": "Penyedia_Layanan",
-                        "description": "Layanan kesehatan mental yang disediakan oleh Rumah Sakit Akademik (RSA) Health-AICare. Kontak dapat dilakukan melalui telepon di +62 811-2548-118."
+                        "description": "Layanan kesehatan mental yang disediakan oleh Rumah Sakit Akademik (RSA) HealthAICare. Kontak dapat dilakukan melalui telepon di +62 811-2548-118."
                         },
                         {
                         "name": "Klinik GMC - Mental Health Support",
@@ -401,12 +401,12 @@ class LLMService:
                         {
                         "name": "Layanan Psikologi Fakultas Biologi",
                         "type": "Penyedia_Layanan",
-                        "description": "Layanan psikologi khusus untuk sivitas Fakultas Biologi Health-AICare. Pendaftaran dilakukan dengan mengisi form registrasi yang tersedia."
+                        "description": "Layanan psikologi khusus untuk sivitas Fakultas Biologi HealthAICare. Pendaftaran dilakukan dengan mengisi form registrasi yang tersedia."
                         },
                         {
                         "name": "Layanan Konsultasi Fakultas Ekonomika dan Bisnis",
                         "type": "Penyedia_Layanan",
-                        "description": "Layanan konsultasi khusus untuk sivitas Fakultas Ekonomika dan Bisnis Health-AICare. Pendaftaran dapat dilakukan melalui telepon di +62 811-2843-884 atau dengan mengisi Form Registrasi via Portal SINTESIS."
+                        "description": "Layanan konsultasi khusus untuk sivitas Fakultas Ekonomika dan Bisnis HealthAICare. Pendaftaran dapat dilakukan melalui telepon di +62 811-2843-884 atau dengan mengisi Form Registrasi via Portal SINTESIS."
                         }
                     ],
                     "relations": [
@@ -442,17 +442,17 @@ class LLMService:
                         },
                         {
                         "sumber": "Klinik GMC - Mental Health Support",
-                        "target": "Layanan Kesehatan Mental Health-AICare",
+                        "target": "Layanan Kesehatan Mental HealthAICare",
                         "tipe": "Bagian_Dari"
                         },
                         {
                         "sumber": "Layanan Psikologi Fakultas Biologi",
-                        "target": "Layanan Kesehatan Mental Health-AICare",
+                        "target": "Layanan Kesehatan Mental HealthAICare",
                         "tipe": "Bagian_Dari"
                         },
                         {
                         "sumber": "Layanan Konsultasi Fakultas Ekonomika dan Bisnis",
-                        "target": "Layanan Kesehatan Mental Health-AICare",
+                        "target": "Layanan Kesehatan Mental HealthAICare",
                         "tipe": "Bagian_Dari"
                         },
                     ]

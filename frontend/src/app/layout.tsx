@@ -25,15 +25,15 @@ const siteUrl = getSiteUrl();
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Health-AICare | AI Mental Health Support",
-    template: "%s | Health-AICare",
+    default: "HealthAICare | AI Mental Health Support",
+    template: "%s | HealthAICare",
   },
   description:
-    "Health-AICare helps you access earlier mental health support through AI-guided check-ins, supportive conversations, and clear pathways to professional services.",
+    "HealthAICare helps you access earlier mental health support through AI-guided check-ins, supportive conversations, and clear pathways to professional services.",
   keywords: [
-    "Health-AICare",
+    "HealthAICare",
     "mental health support",
-    "Health-AI assistant",
+    "HealthAI assistant",
     "wellbeing",
     "professional counseling",
     "mental health AI Indonesia",
@@ -44,25 +44,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    siteName: "Health-AICare",
-    title: "Health-AICare | AI Mental Health Support",
+    siteName: "HealthAICare",
+    title: "HealthAICare | AI Mental Health Support",
     description:
       "Self-care and mental health support with proactive AI triage, reflective journaling, and guided access to professional resources.",
     images: [
       {
-        url: "/health-aicare_logo.png",
+        url: "/health_aicare_logo.png",
         width: 1200,
         height: 630,
-        alt: "Health-AICare platform",
+        alt: "HealthAICare platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Health-AICare | AI Mental Health Support",
+    title: "HealthAICare | AI Mental Health Support",
     description:
       "A platform for earlier mental health support, AI-guided conversations, and professional care navigation.",
-    images: ["/health-aicare_logo.png"],
+    images: ["/health_aicare_logo.png"],
   },
   robots: {
     index: true,

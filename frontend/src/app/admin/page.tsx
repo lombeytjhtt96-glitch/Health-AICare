@@ -28,7 +28,7 @@ export default function AdminLoginPage() {
 
   // Development credentials - REMOVE IN PRODUCTION
   const developmentCredentials = {
-    email: process.env.NEXT_PUBLIC_ADMIN_EMAIL_DEFAULT || "admin@health-aicare.com",
+    email: process.env.NEXT_PUBLIC_ADMIN_EMAIL_DEFAULT || "admin@health_aicare.com",
     password: "admin123" // This would normally come from env, but shown for dev convenience
   };
 
@@ -107,14 +107,14 @@ export default function AdminLoginPage() {
         <div className="bg-white/10 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-xl shadow-2xl border border-white/20">
           <div className="flex flex-col items-center mb-6">
             <Image
-              src="/health-aicare_logo.png"
-              alt="Health-AICare Logo"
+              src="/health_aicare_logo.png"
+              alt="HealthAICare Logo"
               width={60}
               height={60}
               className="mb-3"
             />
             <h1 className="text-2xl sm:text-3xl font-bold text-white">Admin Panel</h1>
-            <p className="text-white/70 text-sm sm:text-base">Health-AICare Management</p>
+            <p className="text-white/70 text-sm sm:text-base">HealthAICare Management</p>
           </div>
 
           {/* Development Credentials Hint - REMOVE IN PRODUCTION */}
@@ -200,7 +200,7 @@ export default function AdminLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-3 py-2 bg-white/5 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-[#FFCA40] focus:border-[#FFCA40] outline-none transition-colors text-sm"
-                  placeholder="admin@health-aicare.com"
+                  placeholder="admin@health_aicare.com"
                 />
               </div>
             </div>

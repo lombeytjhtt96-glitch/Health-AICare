@@ -158,7 +158,7 @@ pytest test_ia_k_anonymity.py -v
 ---
 
 ### RQ2: Orchestration Workflow Validation
-**Question**: How effectively does the Health-AI Meta-Agent orchestrate multi-agent workflows?
+**Question**: How effectively does the HealthAI Meta-Agent orchestrate multi-agent workflows?
 
 **Method**: Langfuse trace analysis with 10 representative flows
 

@@ -57,7 +57,7 @@ async def analyze_conversation_risk(
     recent_history = conversation_history[-30:] if len(conversation_history) > 30 else conversation_history
     
     conversation_text = "\n\n".join([
-        f"{'User' if msg['role'] == 'user' else 'Health-AI'}: {msg['content']}"
+        f"{'User' if msg['role'] == 'user' else 'HealthAI'}: {msg['content']}"
         for msg in recent_history
     ])
     conversation_text += f"\n\nUser: {current_message}"
@@ -67,7 +67,7 @@ async def analyze_conversation_risk(
     
     # Build analysis prompt with integrated screening extraction
     analysis_prompt = f"""
-You are a clinical mental health analyst reviewing a complete conversation between a user and Health-AI (AI mental health assistant).
+You are a clinical mental health analyst reviewing a complete conversation between a user and HealthAI (AI mental health assistant).
 
 CONVERSATION HISTORY ({len(conversation_history) + 1} total messages, duration: {duration:.0f}s):
 {'='*80}

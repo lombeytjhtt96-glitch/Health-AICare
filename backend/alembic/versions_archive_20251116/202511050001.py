@@ -69,8 +69,8 @@ def upgrade() -> None:
         sa.Column('province', sa.String(100), nullable=True),  # NEW: Indonesian provinces
         sa.Column('country', sa.String(100), nullable=True, default='Indonesia'),  # NEW
         
-        # Academic (Health-AICare-specific)
-        sa.Column('university', sa.String(200), nullable=True, default='Health-AICare'),
+        # Academic (HealthAICare-specific)
+        sa.Column('university', sa.String(200), nullable=True, default='HealthAICare'),
         sa.Column('faculty', sa.String(200), nullable=True),  # NEW: Fakultas (e.g., FMIPA, FT, FK)
         sa.Column('department', sa.String(200), nullable=True),  # NEW: Jurusan
         sa.Column('major', sa.String(200), nullable=True),  # Program Studi
@@ -137,7 +137,7 @@ def upgrade() -> None:
         sa.Column('warning_signs', postgresql.ARRAY(sa.String()), nullable=True),  # NEW: Crisis warning signs
         sa.Column('coping_strategies', postgresql.ARRAY(sa.String()), nullable=True),  # NEW: Helpful strategies
         
-        # Current Therapy (External - not Health-AICare)
+        # Current Therapy (External - not HealthAICare)
         sa.Column('is_in_external_therapy', sa.Boolean(), nullable=False, default=False),
         sa.Column('external_therapist_name', sa.String(200), nullable=True),
         sa.Column('external_therapist_contact', sa.String(200), nullable=True),
@@ -153,8 +153,8 @@ def upgrade() -> None:
         sa.Column('medication_start_date', sa.Date(), nullable=True),  # NEW
         sa.Column('prescribing_doctor', sa.String(200), nullable=True),  # NEW: Doctor name (optional)
         
-        # Internal Notes (Health-AICare team ONLY)
-        sa.Column('health-aicare_team_notes', sa.Text(), nullable=True),
+        # Internal Notes (HealthAICare team ONLY)
+        sa.Column('health_aicare_team_notes', sa.Text(), nullable=True),
         sa.Column('flagged_for_review', sa.Boolean(), nullable=False, default=False, index=True),
         sa.Column('flagged_reason', sa.String(500), nullable=True),
         sa.Column('flagged_at', sa.DateTime(), nullable=True),  # NEW

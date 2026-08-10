@@ -15,8 +15,8 @@ export default function QuestDialogueWindow({
   lines,
   tone,
   className,
-  title = "Health-AI",
-  avatarSrc = "/health-ai-human.jpeg",
+  title = "HealthAI",
+  avatarSrc = "/health_ai-human.jpeg",
 }: QuestDialogueWindowProps) {
   if (!lines.length) return null;
 

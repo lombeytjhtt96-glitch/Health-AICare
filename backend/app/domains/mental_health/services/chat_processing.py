@@ -68,7 +68,7 @@ async def process_chat_message(
 
     prompt_id = str(uuid4())
     logger.info(
-        "Invoking Health-AI agent for user_id=%s role=%s",
+        "Invoking HealthAI agent for user_id=%s role=%s",
         current_user.id,
         user_role,
         extra={"user_id": current_user.id, "session_id": session_id, "prompt_id": prompt_id},
@@ -77,7 +77,7 @@ async def process_chat_message(
     health_ai_agent = get_health_ai_agent()
     if health_ai_agent is None:
         raise RuntimeError(
-            "Health-AI agent is not initialised yet. "
+            "HealthAI agent is not initialised yet. "
             "The FastAPI lifespan startup may still be in progress."
         )
 

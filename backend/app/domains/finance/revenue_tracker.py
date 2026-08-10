@@ -217,7 +217,7 @@ class RevenueTrackerService:
         Calculate NFT achievement badge sales for the month
         
         Revenue sources:
-        - Health-AICareJournalBadges mints
+        - HealthAICareJournalBadges mints
         - Quest completion NFTs
         - Special event badges
         """

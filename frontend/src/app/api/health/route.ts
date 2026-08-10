@@ -26,7 +26,7 @@ export async function GET() {
   return NextResponse.json(
     {
       status: 'ok',
-      service: 'health-aicare-frontend',
+      service: 'health_aicare-frontend',
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV || 'unknown',
       version: process.env.npm_package_version || 'unknown',

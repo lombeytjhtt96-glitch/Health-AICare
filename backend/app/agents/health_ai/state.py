@@ -1,7 +1,7 @@
 """
-Health-AI State Management
+HealthAI State Management
 
-Defines the state structure passed through Health-AI's orchestration graph.
+Defines the state structure passed through HealthAI's orchestration graph.
 """
 
 from typing import Dict, List, Literal, Optional, Any
@@ -9,9 +9,9 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 
 
-class AikaState(BaseModel):
+class HealthAIState(BaseModel):
     """
-    State passed through Health-AI's LangGraph orchestration.
+    State passed through HealthAI's LangGraph orchestration.
     
     This state carries context through the entire agent workflow,
     allowing each agent to access and update relevant information.
@@ -125,8 +125,8 @@ class AikaState(BaseModel):
         arbitrary_types_allowed = True
 
 
-class AikaResponseMetadata(BaseModel):
-    """Metadata about Health-AI's response for debugging and analytics"""
+class HealthAIResponseMetadata(BaseModel):
+    """Metadata about HealthAI's response for debugging and analytics"""
     
     session_id: str
     user_role: str

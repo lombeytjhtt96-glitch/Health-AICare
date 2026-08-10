@@ -1,7 +1,7 @@
 """
-Health-AI - The Meta-Agent
+HealthAI - The Meta-Agent
 
-Health-AI (愛佳) is the unified AI consciousness of Health-AICare Support.
+HealthAI (愛佳) is the unified AI consciousness of HealthAICare Support.
 She orchestrates all four Safety Agent Suite agents based on user role and intent.
 
 Architecture:
@@ -16,13 +16,13 @@ Name meaning:
 
 ⚠️ IMPORTANT: Use the cached agent singleton, NOT per-request compilation!
   from app.agents.health_ai_orchestrator_graph import get_health_ai_agent
-  health-ai = get_health_ai_agent()  # compiled once at startup, reused per request
-  result = await health-ai.ainvoke(state, config={"configurable": {"thread_id": "...", "db": db}})
+  health_ai = get_health_ai_agent()  # compiled once at startup, reused per request
+  result = await health_ai.ainvoke(state, config={"configurable": {"thread_id": "...", "db": db}})
 """
 
 # ✅ REMOVED: Legacy HealthAIOrchestrator - use health_ai_orchestrator_graph.py instead
 from .identity import HEALTH_AI_IDENTITY, HEALTH_AI_SYSTEM_PROMPTS, HEALTH_AI_GREETINGS, HEALTH_AI_CAPABILITIES
-from .state import AikaState, AikaResponseMetadata
+from .state import HealthAIState, HealthAIResponseMetadata
 from .tools import get_health_ai_tools, execute_tool_call
 
 __all__ = [
@@ -31,8 +31,8 @@ __all__ = [
     "HEALTH_AI_SYSTEM_PROMPTS",
     "HEALTH_AI_GREETINGS",
     "HEALTH_AI_CAPABILITIES",
-    "AikaState",
-    "AikaResponseMetadata",
+    "HealthAIState",
+    "HealthAIResponseMetadata",
     "get_health_ai_tools",
     "execute_tool_call",
 ]

@@ -57,7 +57,7 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
   };
 
   const navLinks = [
-    { href: "/health_ai", label: "Talk to Health-AI" }, // Added Talk to Health-AI
+    { href: "/health_ai", label: "Talk to HealthAI" }, // Added Talk to HealthAI
     { href: "/about", label: "About" },
     { href: "/about/features", label: "Features" },
   ];
@@ -102,14 +102,14 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
               <Link href="/" className="flex items-center gap-3 group">
                 <div className="relative w-9 h-9 overflow-hidden rounded-full border-2 border-white/20 group-hover:border-[#FFCA40] transition-colors duration-300 shadow-md">
                   <img
-                    src="/health-aicare_logo.png?v=2"
-                    alt="Health-AICare Logo"
+                    src="/health_aicare_logo.png?v=2"
+                    alt="HealthAICare Logo"
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-base font-bold leading-none text-white tracking-wide group-hover:text-[#FFCA40] transition-colors">
-                    Health-AICare
+                    HealthAICare
                   </span>
                   <span className="text-[9px] uppercase tracking-widest text-white/60 font-medium mt-0.5">
                     Mental Health

@@ -56,7 +56,7 @@ Output format (JSON):
     {"title": "Grounding", "description": "Sebutin 5 hal yang kamu lihat sekarang untuk grounding diri", "duration_min": 3}
   ],
   "resource_cards": [
-    {"title": "Latihan Napas Terpandu", "description": "Follow pola napas yang calming", "url": "https://health-aicare.example/calm/breathing"}
+    {"title": "Latihan Napas Terpandu", "description": "Follow pola napas yang calming", "url": "https://health_aicare.example/calm/breathing"}
   ],
   "next_check_in": {
     "timeframe": "1 jam",
@@ -98,7 +98,7 @@ Output format (JSON):
     {"title": "Mulai Kecil", "description": "Pilih bagian yang paling gampang untuk mulai hari ini", "duration_min": 2}
   ],
   "resource_cards": [
-    {"title": "Worksheet Problem Solving", "description": "Template terstruktur untuk break down tantangan", "url": "https://health-aicare.example/tools/problem-solving"}
+    {"title": "Worksheet Problem Solving", "description": "Template terstruktur untuk break down tantangan", "url": "https://health_aicare.example/tools/problem-solving"}
   ],
   "next_check_in": {
     "timeframe": "Besok pagi",
@@ -137,7 +137,7 @@ Output format (JSON):
     {"title": "Refleksi Positif", "description": "Tulis satu hal yang udah kamu handle dengan baik recently", "duration_min": 3}
   ],
   "resource_cards": [
-    {"title": "Strategi Coping yang Healthy", "description": "Teknik evidence-based untuk manage stress", "url": "https://health-aicare.example/coping/strategies"}
+    {"title": "Strategi Coping yang Healthy", "description": "Teknik evidence-based untuk manage stress", "url": "https://health_aicare.example/coping/strategies"}
   ],
   "next_check_in": {
     "timeframe": "2 hari lagi",
@@ -183,7 +183,7 @@ Output format (JSON):
     {"title": "Evaluasi Ulang", "description": "Gimana perasaan kamu sekarang dengan perspektif baru ini? Rate 0-10", "duration_min": 2}
   ],
   "resource_cards": [
-    {"title": "Jebakan Pikiran yang Umum", "description": "Kenali pola seperti all-or-nothing thinking, catastrophizing, mind-reading", "url": "https://health-aicare.example/cbt/thinking-traps"}
+    {"title": "Jebakan Pikiran yang Umum", "description": "Kenali pola seperti all-or-nothing thinking, catastrophizing, mind-reading", "url": "https://health_aicare.example/cbt/thinking-traps"}
   ],
   "next_check_in": {
     "timeframe": "Besok sore",
@@ -227,7 +227,7 @@ Output format (JSON):
     {"title": "Rate Mood Akhir", "description": "Setelah selesai, rate mood kamu lagi. Notice perubahan apapun", "duration_min": 2}
   ],
   "resource_cards": [
-    {"title": "Breaking the Inactivity Cycle", "description": "Gimana small actions boost mood dan motivation", "url": "https://health-aicare.example/cbt/activation"}
+    {"title": "Breaking the Inactivity Cycle", "description": "Gimana small actions boost mood dan motivation", "url": "https://health_aicare.example/cbt/activation"}
   ],
   "next_check_in": {
     "timeframe": "Nanti malam",

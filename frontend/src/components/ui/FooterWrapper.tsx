@@ -11,7 +11,7 @@ import AuthenticatedFooter from "./AuthenticatedFooter";
  * - Full footer: Landing page only (marketing context)
  * - Minimal footer: Auth pages, static content pages (about, privacy, terms, resources)
  * - Authenticated footer: Logged-in app pages
- * - No footer: Immersive pages (Health-AI chat, CareQuest, admin/counselor dashboards)
+ * - No footer: Immersive pages (HealthAI chat, CareQuest, admin/counselor dashboards)
  */
 export default function FooterWrapper() {
   const pathname = usePathname();
