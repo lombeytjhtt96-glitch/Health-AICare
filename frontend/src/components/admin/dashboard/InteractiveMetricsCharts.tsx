@@ -183,7 +183,7 @@ export function InteractiveMetricsCharts({ overview, trends }: InteractiveMetric
                 tick={{ fontSize: 11 }}
                 width={130}
               />
-              <Tooltip content={<NumberTooltip />} />
+              <Tooltip content={<NumberTooltip />} cursor={{ fill: 'rgba(255, 255, 255, 0.05)' }} />
               <Bar dataKey="count" radius={[0, 8, 8, 0]} fill="#3b82f6" name="Mentions" />
             </BarChart>
           </ResponsiveContainer>
