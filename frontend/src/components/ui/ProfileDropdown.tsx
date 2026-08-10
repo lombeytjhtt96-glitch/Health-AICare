@@ -124,7 +124,7 @@ export default function ProfileDropdown({ isOpen, user, onClose, onSignOut, well
             <div className="p-2 space-y-1">
               {menuItems.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.label}
                   href={item.href}
                   onClick={onClose}
                   role="menuitem"
