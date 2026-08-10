@@ -1,0 +1,29 @@
+# Fly.io deployment config for HealthAICare Backend
+app = "health-aicare-backend"
+primary_region = "sin"  # Singapore - closest to Indonesia
+
+[build]
+  dockerfile = "backend/Dockerfile"
+
+[env]
+  APP_ENV = "production"
+  LOG_LEVEL = "info"
+  PYTHONUNBUFFERED = "1"
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20
+
+[[vm]]
+  memory = "512mb"
+  cpu_kind = "shared"
+  cpus = 1
