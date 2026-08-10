@@ -116,11 +116,13 @@ class UserProfile(Base):
     # IDENTITY VERIFICATION
     # =====================================================================
     identity_verified = Column(
+        "simaster_verified",
         Boolean,
         default=False,
         comment="Whether profile identity has been verified"
     )
     identity_verified_at = Column(
+        "simaster_verified_at",
         DateTime,
         comment="Timestamp when identity verification occurred"
     )
