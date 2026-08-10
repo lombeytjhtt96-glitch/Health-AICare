@@ -1,5 +1,5 @@
 /**
- * Deploy UGMJournalBadges (ERC1155) to BNB Smart Chain.
+ * Deploy HealthJournalBadges (ERC1155) to BNB Smart Chain.
  *
  * Usage:
  *   npx hardhat run scripts/deployBadgesBSC.ts --network bscTestnet
@@ -13,7 +13,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  console.log("=== Deploying UGMJournalBadges to BNB Smart Chain ===\n");
+  console.log("=== Deploying HealthJournalBadges to BNB Smart Chain ===\n");
 
   const [deployer] = await ethers.getSigners();
   console.log(`Deployer account : ${deployer.address}`);
@@ -24,14 +24,14 @@ async function main() {
   // Empty initial base URI; per-token URIs are set via setTokenUri() after publish
   const initialBaseUri = "";
 
-  const BadgeContractFactory = await ethers.getContractFactory("UGMJournalBadges");
+  const BadgeContractFactory = await ethers.getContractFactory("HealthJournalBadges");
   console.log(`Deploying with base URI: "${initialBaseUri}"`);
 
   const badgeContract = await BadgeContractFactory.deploy(initialBaseUri);
   await badgeContract.waitForDeployment();
 
   const contractAddress = await badgeContract.getAddress();
-  console.log(`\n✅ UGMJournalBadges deployed to: ${contractAddress}`);
+  console.log(`\n✅ HealthJournalBadges deployed to: ${contractAddress}`);
   console.log(`   Network: BNB Smart Chain`);
   console.log(`   Chain ID: ${(await ethers.provider.getNetwork()).chainId}`);
 

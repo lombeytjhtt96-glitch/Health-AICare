@@ -888,7 +888,7 @@ Create the corresponding Prometheus alert rules in your observability stack (pat
 
 ```yaml
 groups:
- - name: ugm_aicare_alerts
+ - name: health_aicare_alerts
  interval: 30s
  rules:
  # High Error Rate

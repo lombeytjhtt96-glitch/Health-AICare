@@ -12,7 +12,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // Default UGM Style
+        // Default Style
         default: 'bg-health-blue text-health-gold hover:bg-health-blue-dark',
         // Destructive variant (example)
         destructive: 'bg-red-500 text-destructive-foreground hover:bg-red-500/90',

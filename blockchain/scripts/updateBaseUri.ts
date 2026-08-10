@@ -26,9 +26,9 @@ async function main() {
   console.log(`New Base URI to set:   ${newBaseUri}`);
 
   // --- Get Contract Instance ---
-  // This assumes your contract artifact name is "UGMJournalBadges"
-  console.log("Getting contract factory 'UGMJournalBadges'...");
-  const badgeContract = await ethers.getContractAt("UGMJournalBadges", contractAddress);
+  // This assumes your contract artifact name is "HealthJournalBadges"
+  console.log("Getting contract factory 'HealthJournalBadges'...");
+  const badgeContract = await ethers.getContractAt("HealthJournalBadges", contractAddress);
   console.log("Contract instance obtained.");
 
   // --- Call setBaseUri Function ---

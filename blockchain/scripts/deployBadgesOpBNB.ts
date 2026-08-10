@@ -1,5 +1,5 @@
 /**
- * Deploy UGMJournalBadges (ERC1155) to opBNB Testnet.
+ * Deploy HealthJournalBadges (ERC1155) to opBNB Testnet.
  *
  * Usage:
  *   npx hardhat run scripts/deployBadgesOpBNB.ts --network opbnbTestnet
@@ -14,7 +14,7 @@
 import { ethers, network } from "hardhat";
 
 async function main() {
-  console.log("=== Deploying UGMJournalBadges to opBNB ===\n");
+  console.log("=== Deploying HealthJournalBadges to opBNB ===\n");
 
   const [deployer] = await ethers.getSigners();
   const chain = await ethers.provider.getNetwork();
@@ -29,14 +29,14 @@ async function main() {
   // Empty initial base URI; per-token URIs are set via setTokenUri() after publish
   const initialBaseUri = "";
 
-  const BadgeContractFactory = await ethers.getContractFactory("UGMJournalBadges");
+  const BadgeContractFactory = await ethers.getContractFactory("HealthJournalBadges");
   console.log(`Deploying with base URI: "${initialBaseUri}"`);
 
   const badgeContract = await BadgeContractFactory.deploy(initialBaseUri);
   await badgeContract.waitForDeployment();
 
   const contractAddress = await badgeContract.getAddress();
-  console.log(`\n✅ UGMJournalBadges deployed to: ${contractAddress}`);
+  console.log(`\n✅ HealthJournalBadges deployed to: ${contractAddress}`);
   console.log(`   Network: opBNB Testnet`);
   console.log(`   Chain ID: ${chain.chainId}`);
   console.log(`   Explorer: https://opbnb-testnet.bscscan.com/address/${contractAddress}`);

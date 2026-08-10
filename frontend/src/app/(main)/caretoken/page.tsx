@@ -855,7 +855,7 @@ const WhitepaperSection = () => {
               <p className="text-white/60 mb-4">{doc.description}</p>
               <div className="text-[#FFCA40] text-sm font-semibold mb-6">{doc.pages}</div>
               <a
-                href={`https://github.com/gigahidjrikaaa/Health-AICare/blob/main/docs/CARE_TOKEN/${doc.file}`}
+                href={`https://github.com/lombeytjhtt96-glitch/Health-AICare/blob/main/docs/CARE_TOKEN/${doc.file}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#FFCA40] text-[#001D58] rounded-full font-semibold hover:bg-yellow-500 transition-all w-full justify-center"
@@ -901,7 +901,7 @@ const WhitepaperSection = () => {
           <h4 className="text-xl font-bold text-white mb-6">More Resources</h4>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://github.com/gigahidjrikaaa/Health-AICare"
+              href="https://github.com/lombeytjhtt96-glitch/Health-AICare"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-white/5 text-white rounded-full hover:bg-white/10 transition-all border border-white/10 flex items-center gap-2"

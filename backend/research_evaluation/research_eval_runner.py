@@ -362,7 +362,7 @@ def build_manifest(config: RunnerConfig) -> dict[str, Any]:
 
 
 async def main_async(argv: list[str]) -> int:
-    parser = argparse.ArgumentParser(description="Headless thesis evaluation runner")
+    parser = argparse.ArgumentParser(description="Headless research evaluation runner")
     parser.add_argument(
         "--backend-url",
         default=os.getenv("HEALTH_AI_BACKEND_URL", "http://127.0.0.1:22001"),

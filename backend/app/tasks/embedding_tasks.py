@@ -40,7 +40,7 @@ async def _process_embedding(resource_id: int) -> None:
         await db.commit()
 
 
-@celery_app.task(name="ugm_aicare.process_embedding_job")
+@celery_app.task(name="health_aicare.process_embedding_job")
 def process_embedding_job(resource_id: int) -> None:
     logger.info("Processing embedding job for resource %s", resource_id)
     _run_async(_process_embedding(resource_id))

@@ -13,7 +13,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           'ring-offset-background placeholder:text-muted-foreground',
           'focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
-          'border-health-blue-light focus:border-health-gold', // UGM Colors
+          'border-health-blue-light focus:border-health-gold', // Health Colors
           className
         )}
         ref={ref}

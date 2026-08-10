@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts/utils/Strings.sol"; // If needed for URI generation
 
-contract UGMJournalBadges is ERC1155, AccessControl {
+contract HealthJournalBadges is ERC1155, AccessControl {
     // Role definition for who can mint new badges
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 

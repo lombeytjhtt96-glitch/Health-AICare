@@ -44,7 +44,7 @@
 
 #### 1. Academic & Career Stress (n=9)
 
-- Exam anxiety, thesis overwhelm, career uncertainty, procrastination.
+- Exam anxiety, academic overwhelm, career uncertainty, procrastination.
 - IDs: `non_crisis_conv_001`, `005`, `009`, `013`, `014`, `015`, `018`, `021`, `025`
 
 #### 2. Social & Relationship Issues (n=8)
@@ -124,7 +124,7 @@ Actual Non-Crisis          2 (FP)             23 (TN)
 - **Accuracy**: 45/50 = 90% (45 correct predictions out of 50 total)
 - **Precision**: 22/24 = 91.7% (22 true crises out of 24 flagged messages)
 
-## Thesis Documentation Template
+## Research Documentation Template
 
 ### For Chapter 4 Section 4.2 (RQ1 Results)
 
@@ -218,6 +218,6 @@ between normal student stress and genuine crisis situations.
 
 ## Author Notes
 
-This dataset is designed for **research evaluation purposes only** and should not be used for CI/CD testing or production validation. All scenarios are synthetic and created for academic thesis evaluation.
+This dataset is designed for **research evaluation purposes only** and should not be used for CI/CD testing or production validation. All scenarios are synthetic and created for evaluation.
 
 **Last Updated**: November 12, 2025

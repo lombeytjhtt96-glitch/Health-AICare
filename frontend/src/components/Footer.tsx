@@ -11,9 +11,9 @@ export function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-3">Layanan Darurat</h4>
           <ul className="text-xs space-y-2 text-slate-400">
-            <li>Hotline Kemenkes: <span className="text-ugm-gold">119 (ext 8)</span></li>
-            <li>Hotline Pendampingan: <span className="text-ugm-gold">0811-2858-000</span></li>
-            <li>Into The Light: <span className="text-ugm-gold">pendampingan@intothelightid.org</span></li>
+            <li>Hotline Kemenkes: <span className="text-health-gold">119 (ext 8)</span></li>
+            <li>Hotline Pendampingan: <span className="text-health-gold">0811-2858-000</span></li>
+            <li>Into The Light: <span className="text-health-gold">pendampingan@intothelightid.org</span></li>
           </ul>
         </div>
         <div>

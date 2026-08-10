@@ -6,21 +6,19 @@ sidebar_position: 1
 
 ## What is Health-AICare?
 
-Health-AICare is a proactive mental health support platform built specifically for students at **Health-AICare Portal (UGM)**. In plain terms: it is an AI-powered companion that listens, assesses risk, provides evidence-based support, connects students to human counsellors when needed - and does all of this through a natural conversation.
-
-The project began as a bachelor's thesis in Information Engineering at UGM's Department of Electrical and Information Engineering (DTETI), developed by **Giga Hidjrika Aura Adkhy** and **Ega Rizky Setiawan**.
+Health-AICare is a proactive mental health support platform built specifically to provide safe, automated, and human-in-the-loop psychological support at scale. In plain terms: it is an AI-powered companion that listens, assesses risk, provides evidence-based support, connects users to human counsellors when needed - and does all of this through a natural conversation.
 
 ---
 
 ## The Problem It Solves
 
-University mental health services worldwide share a common structural failure: they are **reactive**. Students must recognise they have a problem, overcome the stigma of seeking help, navigate administrative barriers, and wait for an appointment - all while their condition may be deteriorating.
+Traditional mental health services worldwide share a common structural failure: they are **reactive**. Users must recognise they have a problem, overcome the stigma of seeking help, navigate administrative barriers, and wait for an appointment - all while their condition may be deteriorating.
 
 Three specific pressures make this worse at scale:
 
-1. **Capacity gaps.** Counsellor-to-student ratios commonly exceed 1:1,000. No human team can monitor for early distress signals across an entire campus.
+1. **Capacity gaps.** Counsellor-to-user ratios commonly exceed 1:1,000. No human team can monitor for early distress signals across an entire population.
 2. **Blind spots in data.** Without real-time information about population-level trends, mental health services cannot prioritise resources or plan proactively.
-3. **Cultural friction.** In the Indonesian university context, stigma around mental health disclosures runs high. Students are less likely to self-refer into formal services.
+3. **Cultural friction.** In many communities, stigma around mental health disclosures runs high. People are less likely to self-refer into formal services.
 
 ---
 
@@ -38,7 +36,7 @@ Health-AICare is the proof-of-concept testing that hypothesis.
 
 ## How It Works - In One Paragraph
 
-A student opens the app and starts a conversation with **Health-AI**, the system's friendly AI persona. Health-AI listens empathetically and responds naturally. Behind the scenes, every message is simultaneously routed through a **Safety Triage Agent (STA)** that scores the message for risk. Depending on that score, a **Therapeutic Coach Agent (TCA)** may generate a structured coping plan, or a **Case Management Agent (CMA)** may open a clinical case and schedule a counsellor appointment. After the conversation ends, the STA runs a deeper analysis to detect longer-term risk patterns. An **Insights Agent (IA)** aggregates anonymised data across all conversations so counsellors and administrators can see population-level trends - without ever exposing individual identities.
+A user opens the app and starts a conversation with **Health-AI**, the system's friendly AI persona. Health-AI listens empathetically and responds naturally. Behind the scenes, every message is simultaneously routed through a **Safety Triage Agent (STA)** that scores the message for risk. Depending on that score, a **Therapeutic Coach Agent (TCA)** may generate a structured coping plan, or a **Case Management Agent (CMA)** may open a clinical case and schedule a counsellor appointment. After the conversation ends, the STA runs a deeper analysis to detect longer-term risk patterns. An **Insights Agent (IA)** aggregates anonymised data across all conversations so counsellors and administrators can see population-level trends - without ever exposing individual identities.
 
 ---
 

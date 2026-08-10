@@ -39,7 +39,7 @@ Roles are encoded in the JWT payload:
 {
  "sub": "1203",
  "role": "user",
- "email": "student@mail.ugm.ac.id",
+ "email": "user@health-aicare.com",
  "exp": 1740700000
 }
 ```

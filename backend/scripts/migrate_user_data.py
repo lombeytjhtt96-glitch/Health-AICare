@@ -7,7 +7,7 @@ normalized tables created by migration 202511050001.
 Run this AFTER running the Alembic migration.
 
 Usage:
-    docker exec ugm_aicare_backend_dev python scripts/migrate_user_data.py
+    docker exec health_aicare_backend_dev python scripts/migrate_user_data.py
     
 Or directly:
     cd backend && python scripts/migrate_user_data.py

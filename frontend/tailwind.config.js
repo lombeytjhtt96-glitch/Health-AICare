@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ugm: {
+        health: {
           blue: {
             DEFAULT: '#001D58',
             dark: '#00134A',

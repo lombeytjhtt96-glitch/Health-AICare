@@ -100,25 +100,25 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/khalaf/Health-AICare',
+              href: 'https://github.com/lombeytjhtt96-glitch/Health-AICare',
             },
           ],
         },
         {
-          title: 'Research',
+          title: 'Resources',
           items: [
             {
-              label: 'Health-AICare Portal',
-              href: 'https://ugm.ac.id',
+              label: 'WHO Guidelines',
+              href: 'https://www.who.int/publications/i/item/9789240031081',
             },
             {
-              label: 'DTETI UGM',
-              href: 'https://jteti.ugm.ac.id',
+              label: 'Kemenkes RI',
+              href: 'https://kemkes.go.id',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Health-AICare. Built with Docusaurus. A project by Khalaf Faith Pradyatama, DTETI — Health-AICare Portal.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Health-AICare. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

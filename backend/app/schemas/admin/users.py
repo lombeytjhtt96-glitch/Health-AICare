@@ -19,7 +19,7 @@ UserRole = Literal[
     # Legacy aliases — resolved to canonical by normalize_role() before persistence
     "student",     # → user  (any authenticated app user, incl. lecturers)
     "therapist",   # → counselor
-    # Edge-case OAuth role for non-UGM sign-ins (auth.py only)
+    # Edge-case OAuth role for external guest sign-ins (auth.py only)
     "guest",
 ]
 

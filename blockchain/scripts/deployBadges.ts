@@ -2,7 +2,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  console.log("Deploying UGMJournalBadges contract...");
+  console.log("Deploying HealthJournalBadges contract...");
 
   // **IMPORTANT**: Define your initial Base URI for the NFT metadata.
   // This often points to an IPFS folder containing your JSON metadata files,
@@ -11,7 +11,7 @@ async function main() {
   const initialBaseUri = "" // "ipfs://METADATA_CID/"; //! <<< CHANGE TO IPFS SOMETIME LATER!
 
   // Get the contract factory
-  const BadgeContractFactory = await ethers.getContractFactory("UGMJournalBadges");
+  const BadgeContractFactory = await ethers.getContractFactory("HealthJournalBadges");
 
   // Start the deployment, passing constructor arguments
   console.log(`Deploying with Base URI: ${initialBaseUri}`);
@@ -22,7 +22,7 @@ async function main() {
 
   // Get the deployed contract address
   const contractAddress = await badgeContract.getAddress();
-  console.log(`UGMJournalBadges deployed to: ${contractAddress}`);
+  console.log(`HealthJournalBadges deployed to: ${contractAddress}`);
 
   // Optional: Log the deployer address
   const [deployer] = await ethers.getSigners();

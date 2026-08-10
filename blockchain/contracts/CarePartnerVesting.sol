@@ -18,7 +18,7 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
  * - Revocation mechanism for underperforming partners
  * 
  * Allocation:
- * - UGM Merchants: 60M CARE (24-month vesting)
+ * - Local Merchants: 60M CARE (24-month vesting)
  * - Clinical Partners: 40M CARE (24-month vesting)
  * 
  * Cliff Periods by Tier:

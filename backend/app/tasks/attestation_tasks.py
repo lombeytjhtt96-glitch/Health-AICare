@@ -38,7 +38,7 @@ async def _queue_attestation(record_id: int) -> None:
         logger.info("Attestation record %s queued for downstream publishing", record_id)
 
 
-@celery_app.task(name="ugm_aicare.queue_attestation_job")
+@celery_app.task(name="health_aicare.queue_attestation_job")
 def queue_attestation_job(record_id: int) -> None:
     logger.info("Queueing attestation job for record %s", record_id)
     _run_async(_queue_attestation(record_id))
