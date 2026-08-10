@@ -66,12 +66,11 @@ const navGroups = [
     ],
   },
   {
-    label: 'Agentic & On-Chain',
+    label: 'Agentic Operations',
     items: [
       { name: 'Agent Decisions', icon: <FiEye size={18} />, href: '/admin/agent-decisions' },
       { name: 'Autopilot Queue', icon: <FiZap size={18} />, href: '/admin/autopilot' },
       { name: 'Autopilot Policy', icon: <FiShield size={18} />, href: '/admin/policy' },
-      { name: 'Blockchain Hub', icon: <FiLink size={18} />, href: '/admin/blockchain' },
     ],
   },
   {

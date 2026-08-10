@@ -12,12 +12,9 @@ from sqlalchemy import select
 from sqlalchemy.exc import DBAPIError, OperationalError
 
 from app.database import AsyncSessionLocal, get_database_endpoint_summary
-from app.domains.blockchain.attestation import (
-    AttestationClientFactory,
-    DEFAULT_ATTESTATION_CHAIN_ID,
-)
-from app.domains.blockchain.nft.chain_registry import DEFAULT_BADGE_CHAIN_ID
-from app.domains.blockchain.nft.nft_client_factory import NFTClientFactory
+# Blockchain imports removed
+DEFAULT_BADGE_CHAIN_ID = 97
+DEFAULT_ATTESTATION_CHAIN_ID = 97
 from app.domains.mental_health.models.assessments import UserScreeningProfile
 from app.domains.mental_health.models.autopilot_actions import (
     AutopilotAction,
@@ -81,7 +78,7 @@ def _get_retry_config() -> tuple[int, int]:
 
 
 def _is_onchain_placeholder_enabled() -> bool:
-    return _parse_bool(os.getenv("AUTOPILOT_ONCHAIN_PLACEHOLDER"), default=True)
+    return True
 
 
 def _risk_to_case_severity(risk_level: str) -> CaseSeverityEnum:
@@ -238,93 +235,11 @@ async def _handle_onchain_placeholder(action: AutopilotAction) -> dict[str, Any]
 
 
 async def _handle_mint_badge(action: AutopilotAction) -> dict[str, Any]:
-    payload = action.payload_json or {}
-    chain_id = int(payload.get("chain_id") or DEFAULT_BADGE_CHAIN_ID)
-    badge_id_raw = payload.get("badge_id", payload.get("token_id"))
-    if badge_id_raw is None:
-        raise ValueError("mint_badge requires badge_id or token_id")
-
-    badge_id = int(badge_id_raw)
-    amount = int(payload.get("amount") or 1)
-    recipient_wallet = await _resolve_wallet_from_payload(payload)
-    if not recipient_wallet:
-        raise ValueError("mint_badge requires recipient_wallet/wallet_address or a user with linked wallet")
-
-    tx_hash = await NFTClientFactory.mint_badge(chain_id, recipient_wallet, badge_id, amount)
-    if not tx_hash:
-        raise RuntimeError("Failed to submit mint_badge transaction")
-
-    return {"chain_id": chain_id, "tx_hash": tx_hash, "badge_id": badge_id, "amount": amount}
+    return await _handle_onchain_placeholder(action)
 
 
 async def _handle_publish_attestation(action: AutopilotAction) -> dict[str, Any]:
-    payload = action.payload_json or {}
-    chain_id = int(payload.get("chain_id") or DEFAULT_ATTESTATION_CHAIN_ID)
-    attestation_id = _derive_attestation_id(action)
-    attestation_record_id = payload.get("attestation_record_id")
-
-    payload_hash_value = payload.get("payload_hash")
-    if isinstance(payload_hash_value, str) and payload_hash_value.strip():
-        payload_hash = _normalize_bytes32_hex(payload_hash_value, "payload_hash")
-    else:
-        payload_hash = f"0x{action.payload_hash}"
-
-    schema = str(payload.get("schema") or "health-aicare.autopilot.attestation.v1")
-    metadata_uri = str(payload.get("metadata_uri") or "")
-    subject = payload.get("subject_wallet") or payload.get("wallet_address")
-    subject_wallet = str(subject).strip() if isinstance(subject, str) and subject.strip() else None
-
-    logger.info(
-        "Autopilot attestation publish start action_id=%s chain_id=%s attestation_record_id=%s attestation_id=%s",
-        action.id,
-        chain_id,
-        attestation_record_id,
-        attestation_id,
-    )
-
-    tx_hash = await AttestationClientFactory.publish_attestation(
-        chain_id=chain_id,
-        attestation_id=attestation_id,
-        payload_hash=payload_hash,
-        action_id=int(action.id),
-        subject=subject_wallet,
-        schema=schema,
-        metadata_uri=metadata_uri,
-    )
-    if not tx_hash:
-        raise RuntimeError("Failed to submit publish_attestation transaction")
-
-    if isinstance(attestation_record_id, int):
-        async with AsyncSessionLocal() as db:
-            record = (
-                await db.execute(
-                    select(AttestationRecord).where(AttestationRecord.id == attestation_record_id)
-                )
-            ).scalar_one_or_none()
-            if record is not None:
-                record.status = AttestationStatusEnum.CONFIRMED
-                record.processed_at = datetime.utcnow()
-                extra = dict(record.extra_data or {})
-                extra["tx_hash"] = tx_hash
-                extra["chain_id"] = chain_id
-                extra["attestation_id"] = attestation_id
-                record.extra_data = extra
-                await db.commit()
-
-    logger.info(
-        "Autopilot attestation publish submitted action_id=%s chain_id=%s tx_hash=%s attestation_id=%s",
-        action.id,
-        chain_id,
-        tx_hash,
-        attestation_id,
-    )
-
-    return {
-        "chain_id": chain_id,
-        "tx_hash": tx_hash,
-        "attestation_id": attestation_id,
-        "schema": schema,
-    }
+    return await _handle_onchain_placeholder(action)
 
 
 async def execute_autopilot_action(action: AutopilotAction) -> dict[str, Any]:

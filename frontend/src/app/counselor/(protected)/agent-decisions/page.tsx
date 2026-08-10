@@ -55,7 +55,7 @@ export default function CounselorAgentDecisionsPage() {
       <div className="rounded-2xl border border-white/10 bg-linear-to-r from-white/10 via-white/5 to-transparent p-5">
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold text-white">Agent Decision Transparency</h1>
-          <p className="text-sm text-white/70">Review AI-driven decisions affecting your assigned students and linked attestation status.</p>
+          <p className="text-sm text-white/70">Review AI-driven decisions affecting your assigned students.</p>
           <p className="text-xs text-white/50">Visible records: <span className="font-medium text-white">{total}</span></p>
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function CounselorAgentDecisionsPage() {
       ) : null}
 
       <section className="rounded-xl border border-white/10 bg-white/5 p-4">
-        <h2 className="text-lg font-medium text-white">Decision & Attestation Timeline</h2>
+        <h2 className="text-lg font-medium text-white">Decision Timeline</h2>
         <div className="mt-3 overflow-x-auto">
           <table className="min-w-full text-sm text-white/90">
             <thead>
@@ -83,8 +83,6 @@ export default function CounselorAgentDecisionsPage() {
                 <th className="px-3 py-2">Action</th>
                 <th className="px-3 py-2">Reasoning</th>
                 <th className="px-3 py-2">Status</th>
-                <th className="px-3 py-2">Attestation</th>
-                <th className="px-3 py-2">Tx</th>
                 <th className="px-3 py-2">Created</th>
               </tr>
             </thead>
@@ -100,24 +98,6 @@ export default function CounselorAgentDecisionsPage() {
                   </td>
                   <td className="px-3 py-2">
                     <span className={`rounded-md border px-2 py-1 text-xs ${badgeClass(item.status)}`}>{item.status}</span>
-                  </td>
-                  <td className="px-3 py-2">
-                    <div>record: {item.attestation_record_id ?? '-'}</div>
-                    <div className="text-xs text-white/50">status: {item.attestation_status ?? '-'}</div>
-                    <div className="text-xs text-white/50">err: {item.attestation_last_error ?? '-'}</div>
-                  </td>
-                  <td className="px-3 py-2">
-                    <div>{shortHash(item.tx_hash)}</div>
-                    {item.explorer_tx_url && item.tx_hash ? (
-                      <a
-                        href={item.explorer_tx_url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-1 inline-flex items-center rounded-md border border-[#FFCA40]/40 bg-[#FFCA40]/10 px-2 py-1 text-xs text-[#FFCA40] hover:bg-[#FFCA40]/15"
-                      >
-                        Open Explorer
-                      </a>
-                    ) : null}
                   </td>
                   <td className="px-3 py-2 text-xs text-white/70">{formatDate(item.created_at)}</td>
                 </tr>

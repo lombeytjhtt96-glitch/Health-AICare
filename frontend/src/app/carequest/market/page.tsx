@@ -12,7 +12,7 @@ import ParticleBackground from '@/components/ui/ParticleBackground';
  * - RPG shop interface with item rarity
  * - Animated purchase effects
  * - Inventory-style grid
- * - Wallet display with $CARE token animations
+ * - Wallet display with points animations
  */
 
 interface MarketItem {
@@ -141,7 +141,7 @@ export default function BlockMarketPage() {
     if (balance >= item.price) {
       alert(`Purchasing ${item.name}... (Coming soon)`);
     } else {
-      alert('Not enough $CARE tokens!');
+      alert('Not enough Wellness Points!');
     }
   };
 
@@ -167,7 +167,7 @@ export default function BlockMarketPage() {
             <ShoppingBag className="w-12 h-12 text-[#FFCA40]" />
           </div>
           <p className="text-xl text-white/70">
-            Trade Your $CARE Tokens for Real-World Rewards
+            Trade Your Wellness Points for Real-World Rewards
           </p>
         </motion.div>
 
@@ -184,13 +184,13 @@ export default function BlockMarketPage() {
                 <Wallet className="w-8 h-8 text-white" />
               </div>
               <div>
-                <div className="text-sm text-green-300 mb-1">Your $CARE Balance</div>
+                <div className="text-sm text-green-300 mb-1">Your Points Balance</div>
                 <motion.div
                   className="text-5xl font-black text-green-400"
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  {balance} $CARE
+                  {balance} Points
                 </motion.div>
               </div>
             </div>
@@ -300,7 +300,7 @@ export default function BlockMarketPage() {
                     <div className="flex items-center justify-center gap-2">
                       <Wallet className="w-5 h-5 text-green-400" />
                       <span className="text-3xl font-black text-green-400">{item.price}</span>
-                      <span className="text-sm text-green-400 font-bold">$CARE</span>
+                      <span className="text-sm text-green-400 font-bold">Points</span>
                     </div>
 
                     <motion.button
@@ -314,7 +314,7 @@ export default function BlockMarketPage() {
                           : 'bg-gray-600/50 text-gray-400 cursor-not-allowed'
                       }`}
                     >
-                      {canAfford ? '💰 Purchase' : '🔒 Not Enough $CARE'}
+                      {canAfford ? '💰 Purchase' : '🔒 Not Enough Points'}
                     </motion.button>
                   </div>
                 </div>
@@ -335,7 +335,7 @@ export default function BlockMarketPage() {
             Marketplace Coming Soon
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Purchase functionality is currently in development. Soon you&apos;ll be able to redeem your $CARE tokens
+            Purchase functionality is currently in development. Soon you&apos;ll be able to redeem your Wellness Points
             for real vouchers and merchandise delivered right to you!
           </p>
         </motion.div>

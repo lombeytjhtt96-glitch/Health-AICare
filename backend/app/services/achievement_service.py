@@ -9,19 +9,14 @@ from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.domains.blockchain.nft.chain_registry import DEFAULT_BADGE_CHAIN_ID, get_chain_config
-from app.domains.blockchain.nft.nft_client_factory import NFTClientFactory
+# Blockchain imports removed
 from app.models import BadgeTemplate, PendingBadgeGrant, User, UserBadge
 from app.domains.mental_health.models import Conversation, JournalEntry, PlayerWellnessState
 from app.schemas.user import EarnedBadgeInfo
 
 logger = logging.getLogger(__name__)
 
-# HACKATHON: Hardcoded dual-chain minting configuration.
-# TODO: Replace with environment variable config (e.g., AUTOPILOT_MINT_CHAINS=97,656476,204)
-# These chains will receive simultaneous badge mints when a user earns a badge.
-# Currently: BSC Testnet only for BNB Chain hackathon
-DUAL_MINT_CHAIN_IDS: list[int] = [97]  # BSC Testnet
+# Dual-chain minting variables removed
 
 
 LET_THERE_BE_BADGE_BADGE_ID = 1
@@ -325,19 +320,7 @@ async def trigger_achievement_check(
             )
         )
 
-    # Persist pending grants so they survive until the user links a wallet.
-    # ON CONFLICT DO NOTHING semantics: if a record already exists (user already
-    # qualified before), the IntegrityError is caught below and we roll back cleanly.
-    for grant_info in pending_grants_to_add:
-        db.add(
-            PendingBadgeGrant(
-                user_id=user.id,
-                badge_id=grant_info["badge_id"],
-                reason=grant_info["reason"],
-                action_context=grant_info.get("action"),
-                qualified_at=current_time,
-            )
-        )
+    # Pending grants loop removed since badges are immediately saved to the DB
 
     try:
         await db.commit()
@@ -377,100 +360,5 @@ async def sync_user_achievements(
 
 
 async def drain_pending_grants(db: AsyncSession, user: User) -> List[EarnedBadgeInfo]:
-    """Retroactively mint all pending badge grants for a user who just linked their wallet.
-
-    Called immediately after a successful wallet linkage so that any eligibility
-    recorded while the user had no wallet is honoured without requiring manual sync.
-    """
-    if not user.wallet_address:
-        return []
-
-    grants_result = await db.execute(
-        select(PendingBadgeGrant).where(PendingBadgeGrant.user_id == user.id)
-    )
-    grants = grants_result.scalars().all()
-
-    if not grants:
-        return []
-
-    factory = NFTClientFactory()
-    awarded_badges_res = await db.execute(
-        select(UserBadge.badge_id, UserBadge.chain_id).filter(UserBadge.user_id == user.id)
-    )
-    awarded_badges: Set[tuple[int, int]] = {(int(r[0]), int(r[1])) for r in awarded_badges_res.all()}
-
-    minted: List[EarnedBadgeInfo] = []
-    now = datetime.now()
-
-    for grant in grants:
-        succeeded_on_any_chain = False
-        for chain_id in DUAL_MINT_CHAIN_IDS:
-            cfg = get_chain_config(chain_id)
-            if not cfg or not cfg.contract_address:
-                continue
-
-            badge_key = (grant.badge_id, chain_id)
-            if badge_key in awarded_badges:
-                succeeded_on_any_chain = True
-                continue
-
-            try:
-                tx_hash = await factory.mint_badge(chain_id, user.wallet_address, grant.badge_id)
-                if tx_hash:
-                    awarded_badges.add(badge_key)
-                    db.add(
-                        UserBadge(
-                            user_id=user.id,
-                            badge_id=grant.badge_id,
-                            chain_id=chain_id,
-                            contract_address=cfg.contract_address,
-                            transaction_hash=tx_hash,
-                            awarded_at=now,
-                        )
-                    )
-                    minted.append(
-                        EarnedBadgeInfo(
-                            badge_id=grant.badge_id,
-                            awarded_at=now,
-                            transaction_hash=tx_hash,
-                            contract_address=cfg.contract_address,
-                        )
-                    )
-                    succeeded_on_any_chain = True
-                    logger.info(
-                        "Drained pending grant: badge %s minted on chain %s for user %s",
-                        grant.badge_id,
-                        chain_id,
-                        user.id,
-                    )
-            except Exception as exc:
-                logger.warning(
-                    "Failed to drain pending grant badge %s on chain %s for user %s: %s",
-                    grant.badge_id,
-                    chain_id,
-                    user.id,
-                    exc,
-                )
-
-        # Delete the pending row only when at least one chain succeeded (or was already minted).
-        if succeeded_on_any_chain:
-            await db.delete(grant)
-
-    try:
-        await db.commit()
-    except IntegrityError:
-        await db.rollback()
-        logger.warning(
-            "Integrity error during pending grant drain for user %s — badges may already exist.",
-            user.id,
-        )
-    except Exception:
-        await db.rollback()
-        raise
-
-    logger.info(
-        "Drained %s pending badge grants for user %s",
-        len(minted),
-        user.id,
-    )
-    return minted
+    """Retroactively mint all pending badge grants - DEACTIVATED"""
+    return []

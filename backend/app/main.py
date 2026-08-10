@@ -58,7 +58,6 @@ from app.domains.mental_health.routes import (
 
 # Finance domain routes (commented out - domain incomplete)
 # from app.domains.finance import finance_router
-# from app.domains.blockchain import blockchain_router  # Blockchain domain routes (commented out)
 from app.agents.sta.router import router as sta_router
 from app.agents.tca.router import router as tca_router
 from app.agents.cma.router import router as cma_router
@@ -188,18 +187,7 @@ async def lifespan(app: FastAPI):
             exc_info=True,
         )
 
-    # Initialize blockchain connections (NFT + attestation registries) - COMMENTED OUT FOR OFFLINE LOCAL OPERATION
-    # from app.domains.blockchain import init_nft_client
-    # nft_result = init_nft_client()
-    # if inspect.isawaitable(nft_result):
-    #     await nft_result
-    #
-    # try:
-    #     from app.domains.blockchain.attestation import AttestationClientFactory
-    #
-    #     await AttestationClientFactory.init_all()
-    # except Exception:
-    #     logger.warning("Attestation client initialization failed (non-blocking)", exc_info=True)
+    # Initialize blockchain connections (NFT + attestation registries) - REMOVED FOR OFFLINE OPERATION
 
     # Start the background scheduler
     start_scheduler()
@@ -224,10 +212,7 @@ async def lifespan(app: FastAPI):
                 )
         except Exception:
             logger.warning("Failed to start autopilot worker (non-blocking)", exc_info=True)
-    # Start the finance revenue scheduler
-    from app.domains.finance import start_scheduler as start_finance_scheduler
-    start_finance_scheduler()
-    startup_log("Finance revenue scheduler started")
+    # Finance revenue scheduler - DISABLED
     # Initialize event bus subscriptions for SSE broadcasting
     from app.services.event_sse_bridge import initialize_event_subscriptions
     sub_result = initialize_event_subscriptions()
@@ -248,10 +233,7 @@ async def lifespan(app: FastAPI):
             autopilot_worker_task.cancel()
         except Exception:
             logger.warning("Autopilot worker shutdown failed (non-blocking)", exc_info=True)
-    # Stop the finance revenue scheduler
-    from app.domains.finance import stop_scheduler as stop_finance_scheduler
-    stop_finance_scheduler()
-    startup_log("Finance revenue scheduler stopped")
+    # Finance revenue scheduler - DISABLED
     # Close database connections
     try:
         from app.core.langgraph_checkpointer import close_langgraph_checkpointer
@@ -405,8 +387,7 @@ app.include_router(auth.router)
 app.include_router(legacy_chat.router)
 app.include_router(chat.router)
 app.include_router(feedback.router)
-# app.include_router(link_did.router)
-# app.include_router(link_ocid.router)
+# Blockchain did/ocid routers - DELETED
 
 app.include_router(legacy_journal.router)
 app.include_router(journal.router)
@@ -416,7 +397,7 @@ app.include_router(session_events.session_event_router) # This will have prefix 
 app.include_router(summary.activity_router) # This will have prefix /api/v1/activity-summary
 app.include_router(summary.user_data_router)  # This will have prefix /api/v1/user
 app.include_router(profile.router)
-# app.include_router(proof.router)
+# Blockchain proof router - DELETED
 app.include_router(quests.router)
 app.include_router(legacy_quests.router)
 app.include_router(admin_counselors.router)  # Admin counselor management (MUST be before admin.router to avoid route conflicts)
@@ -447,8 +428,7 @@ app.include_router(surveys.user_router)
 # However, we re-enable it for the admin panel via admin router inclusion until sca is fully implemented.
 
 app.include_router(clinical_analytics_routes.router)  # New clinical analytics endpoints
-# app.include_router(finance_router, prefix="/api/v1/finance", tags=["Finance"])  # Finance domain routes (commented out - domain incomplete)
-# app.include_router(blockchain_router, prefix="/api/v1/blockchain", tags=["Blockchain"])  # Blockchain domain routes
+# Finance and Blockchain routers - DELETED
 # logger.info(f"List of routers (/api/v1): {app.routes}")
 startup_log(f"Allowed origins: {origins}")
 

@@ -163,7 +163,7 @@ backend/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/khalaf/Health-AICare.git
+   git clone https://github.com/lombeytjhtt96-glitch/Health-AICare.git
    cd Health-AICare/backend
    ```
 
@@ -197,7 +197,7 @@ backend/
      | Email | `EMAIL_USERNAME`, `EMAIL_PASSWORD`, `EMAIL_SMTP_SERVER`, `EMAIL_SMTP_PORT` | Needed for outreach + crisis alerts |
 
    | LLM | `GOOGLE_GENAI_API_KEY` | Required for Gemini access; update the Gemma service URL in `app/core/llm.py` if you host a local runtime |
-     | Blockchain (optional) | `EDU_TESTNET_RPC_URL`, `NFT_CONTRACT_ADDRESS`, `BACKEND_MINTER_PRIVATE_KEY` | Required only if on-chain rewards are enabled |
+
      | Social (optional) | `TWITTER_*` keys | Needed for campaign connectors |
      | Runtime | `APP_ENV`, `PORT` | `APP_ENV=development` for local work |
 

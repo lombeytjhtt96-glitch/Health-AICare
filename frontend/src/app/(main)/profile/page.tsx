@@ -814,14 +814,7 @@ export default function ProfilePage() {
                     <p>{profile.contact.alternate_phone ?? "Not provided"}</p>
                   )}
                 </div>
-                <div className="space-y-1">
-                  <p className="text-xs uppercase tracking-wide text-white/50">Wallet address</p>
-                  <p>
-                    {profile.header.wallet_address
-                      ? `${profile.header.wallet_address.slice(0, 6)}...${profile.header.wallet_address.slice(-4)}`
-                      : "Not linked"}
-                  </p>
-                </div>
+
                 <div className="space-y-1">
                   <p className="text-xs uppercase tracking-wide text-white/50">Digital ID</p>
                   <p>{profile.header.google_sub ?? "Not linked"}</p>

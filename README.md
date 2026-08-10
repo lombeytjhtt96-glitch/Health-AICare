@@ -242,7 +242,7 @@ This project is guided by three core research questions:
 - **Intelligence:** Google Gemini 2.5 (Chain-of-Thought Reasoning).
 - **Backend:** FastAPI (Python), SQLAlchemy 2 (Async), Redis.
 - **Frontend:** Next.js 15, Tailwind CSS 4, Framer Motion.
-- **Blockchain:** EDU Chain (ERC1155) for Achievement Badges.
+- **Achievements:** Local milestone badge rewards.
 
 ### 5.2 Project Structure
 
@@ -278,32 +278,23 @@ This project is guided by three core research questions:
 
 ---
 
-## 🏁 Hackathon Focus: Health-AI Autopilot + Onchain Attestation Ledger
+## 🏁 Health-AI Autopilot Operations
 
-This section summarizes the exact feature set implemented for hackathon judging.
+This section summarizes the autopilot operational control plane.
 
 ### What the system does
 
 - **Policy-governed autonomy:** Health-AI routes operational actions into an autopilot control plane with explicit decisions (`allow`, `require_approval`, `deny`).
 - **Human approval gates:** High-risk paths are queued for admin review before execution (`/admin/autopilot`).
 - **Durable execution worker:** Queued actions run with retry scheduling and dead-letter handling to preserve execution traceability.
-- **Onchain attestation path:** Confirmed autopilot actions store `tx_hash` and `chain_id` for ledger-style verification.
-- **Proof timeline:** User-facing and admin-facing proof views expose lifecycle states from queue to confirmation (`/proof`).
+- **Audited logs:** Confirmed autopilot actions are stored with secure logs for verification.
 - **Replayable evidence:** Deterministic replay script exports artifact JSON for reproducible demo checks (`docs/autopilot_demo_artifact.json`).
 
-### Verification surfaces for judges
+### Verification surfaces for admins
 
 - **Admin queue UI:** `/admin/autopilot` (approval and status transition visibility).
-- **Proof UI:** `/proof` (status, tx hash, explorer link visibility).
 - **Admin APIs:** `/api/v1/admin/autopilot/actions`, `/api/v1/admin/autopilot/actions/{id}/approve`, `/api/v1/admin/autopilot/actions/{id}/reject`.
-- **Proof API:** `/api/v1/proof/actions`.
 - **Demo runbook:** `docs/AUTOPILOT_DEMO_RUNBOOK.md`.
-
-### Safety note on current demo mode
-
-- If `AUTOPILOT_ONCHAIN_PLACEHOLDER=true`, tx hashes are synthetic placeholders and no real chain submission occurs.
-- Backend startup and worker logs include explicit warnings for placeholder tx generation.
-- Switching to real onchain submission requires replacing placeholder handlers in autopilot execution paths.
 
 ## 🤖 Autopilot Demo Replay
 
@@ -325,12 +316,8 @@ This generates:
 
 Reference runbook: `docs/AUTOPILOT_DEMO_RUNBOOK.md`.
 
-Important:
-
-- If `AUTOPILOT_ONCHAIN_PLACEHOLDER=true`, tx hashes are synthetic placeholders for demo stability.
-- Backend logs include warnings whenever placeholder tx hashes are produced.
 - Set `AUTOPILOT_DEMO_USER_ID` or `AUTOPILOT_DEMO_EMAIL` to an existing account before running replay.
-- Replay uses API auth for approval/proof checks, so backend must be running and demo auth/token env vars must be available.
+- Replay uses API auth for approval checks, so backend must be running and demo auth/token env vars must be available.
 
 ## 🚀 Getting Started
 
@@ -344,7 +331,7 @@ Important:
 
 ```bash
 # 1. Clone Repository
-git clone https://github.com/khalaf/Health-AICare.git
+git clone https://github.com/lombeytjhtt96-glitch/Health-AICare.git
 
 # 2. Start Backend
 cd backend
@@ -361,7 +348,7 @@ npm install && npm run dev
 
 ## 🤝 Contributing & License
 
-**Maintainer:** [Khalaf Faith Pradyatama](#)  
+**Maintainer:** [Khalaf Faith Pradyatama](https://github.com/lombeytjhtt96-glitch) (MAN 1 Surakarta, Class X)  
 **License:** MIT License. See [LICENSE](LICENSE) for details.
 
 *Built with ❤️ for Health-AICare People.*

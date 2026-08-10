@@ -24,11 +24,8 @@ from .campaigns import router as campaigns_router
 from .quests import router as quests_router
 from .database import router as database_router
 from .screening import router as screening_router
-from .badges import router as badges_router
 from .api_keys import router as api_keys_router
 from .autopilot import router as autopilot_router
-from .contracts import router as contracts_router
-from .attestations import router as attestations_router
 from .agent_decisions import router as agent_decisions_router
 from .scheduler import router as scheduler_router
 
@@ -60,11 +57,8 @@ router.include_router(campaigns_router)
 router.include_router(quests_router)
 router.include_router(database_router)
 router.include_router(screening_router)
-router.include_router(badges_router)
 router.include_router(api_keys_router)
 router.include_router(autopilot_router)
-router.include_router(contracts_router)
-router.include_router(attestations_router)
 router.include_router(agent_decisions_router)
 router.include_router(scheduler_router)
 
@@ -81,11 +75,8 @@ __all__ = [
     "quests",
     "database",
     "screening",
-    "badges",
     "api_keys",
     "autopilot",
-    "contracts",
-    "attestations",
     "agent_decisions",
     "scheduler",
 ]

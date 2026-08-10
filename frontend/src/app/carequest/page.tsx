@@ -19,12 +19,10 @@ import ParticleBackground from '@/components/ui/ParticleBackground';
  * - Glassmorphism with backdrop-blur-md
  * - RPG-style hero with animated stats
  * - Quest preview cards
- * - NFT Achievement showcase (EDU Chain / ERC-1155)
+ * - Achievement showcase
  * - Game-style navigation
  * 
- * NFT Badges are minted via HealthAIJournalBadges.sol contract on EDU Chain
- * Metadata: blockchain/metadata/*.json
- * Assets: public/nft-asset/*.jpeg
+ * Badges are earned by completing daily activities and milestones.
  */
 export default function CareQuestPage() {
   const { joy, care, harmony } = useGameStore();
@@ -253,7 +251,7 @@ export default function CareQuestPage() {
               },
               {
                 title: 'Market',
-                description: 'Spend $CARE on rewards and power-ups',
+                description: 'Spend points on rewards and power-ups',
                 icon: ShoppingBag,
                 href: '/carequest/market',
                 color: 'from-health-gold to-yellow-600',
@@ -397,7 +395,7 @@ export default function CareQuestPage() {
         </motion.div>
       </section>
 
-      {/* Achievement Showcase - NFT Badges from EDU Chain */}
+      {/* Achievement Showcase - Wellness Badges */}
       <section className="container mx-auto px-6 mb-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -415,7 +413,7 @@ export default function CareQuestPage() {
                 Unlock{' '}
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-health-gold via-yellow-300 to-health-gold">
-                NFT Achievements
+                Wellness Achievements
               </span>
             </motion.h2>
             <motion.p
@@ -425,10 +423,10 @@ export default function CareQuestPage() {
               transition={{ delay: 0.2 }}
               className="text-xl text-gray-300 mb-2"
             >
-              🏆 Earn blockchain-verified badges on EDU Chain 🏆
+              🏆 Earn wellness badges as you complete milestones 🏆
             </motion.p>
             <p className="text-sm text-gray-400">
-              Complete quests and milestones to unlock exclusive NFT badges
+              Complete quests and milestones to unlock exclusive wellness badges
             </p>
           </div>
 
@@ -531,7 +529,7 @@ export default function CareQuestPage() {
 
                 {/* Badge Card */}
                 <div className="relative bg-gradient-to-br from-health-blue/90 to-health-blue-dark/90 backdrop-blur-sm rounded-2xl border-2 border-white/20 overflow-hidden shadow-xl group-hover:shadow-2xl group-hover:border-white/40 transition-all">
-                  {/* NFT Image */}
+                  {/* Badge Image */}
                   <div className="relative aspect-square overflow-hidden">
                     <Image
                       src={badge.image}
@@ -579,16 +577,11 @@ export default function CareQuestPage() {
                       {badge.description}
                     </p>
 
-                    {/* Blockchain indicator */}
+                    {/* Badge type indicator */}
                     <div className="mt-3 flex items-center justify-between">
                       <div className="flex items-center gap-2 text-xs text-health-gold">
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                        >
-                          ⛓️
-                        </motion.div>
-                        <span className="font-semibold">EDU Chain</span>
+                        <span>⭐</span>
+                        <span className="font-semibold">Milestone Badge</span>
                       </div>
                       {badge.unlocked && (
                         <div className="flex items-center gap-1 text-xs text-green-400">
@@ -635,7 +628,7 @@ export default function CareQuestPage() {
               </motion.button>
             </Link>
             <p className="text-sm text-gray-400 mt-4">
-              All badges are minted as NFTs on EDU Chain • Fully owned by you • Tradeable
+              All badges are earned locally and represent your therapeutic milestones
             </p>
           </motion.div>
         </motion.div>
@@ -670,7 +663,7 @@ export default function CareQuestPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Earn Rewards</h3>
                 <p className="text-gray-300 text-sm">
-                  Collect JOY and $CARE tokens to level up and unlock new features
+                  Collect JOY and Wellness Points to level up and unlock new features
                 </p>
               </div>
               <div className="text-center">
@@ -679,7 +672,7 @@ export default function CareQuestPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Real Benefits</h3>
                 <p className="text-gray-300 text-sm">
-                  Spend $CARE on real-world rewards in our marketplace
+                  Spend points on real-world rewards in our marketplace
                 </p>
               </div>
             </div>

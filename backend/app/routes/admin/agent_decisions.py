@@ -10,8 +10,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_async_db
 from app.dependencies import get_admin_user
-from app.domains.blockchain.attestation.chain_registry import get_attestation_chain_config
-from app.domains.blockchain.nft.chain_registry import get_chain_config
+# Blockchain imports removed
 from app.domains.mental_health.models.agent_decision_events import AgentDecisionEvent
 from app.domains.mental_health.models.autopilot_actions import AutopilotAction
 from app.domains.mental_health.models.quests import AttestationRecord
@@ -90,17 +89,6 @@ def _to_str(value: Any) -> Optional[str]:
 
 
 def _build_explorer_url(chain_id: Optional[int], tx_hash: Optional[str]) -> Optional[str]:
-    if chain_id is None or not tx_hash:
-        return None
-
-    nft_cfg = get_chain_config(int(chain_id))
-    if nft_cfg is not None:
-        return nft_cfg.explorer_tx_url(tx_hash)
-
-    att_cfg = get_attestation_chain_config(int(chain_id))
-    if att_cfg is not None:
-        return att_cfg.explorer_tx_url(tx_hash)
-
     return None
 
 

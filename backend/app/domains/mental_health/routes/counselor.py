@@ -17,8 +17,7 @@ from sqlalchemy.orm import joinedload
 
 from app.database import get_async_db
 from app.dependencies import get_current_active_user
-from app.domains.blockchain.attestation.chain_registry import get_attestation_chain_config
-from app.domains.blockchain.nft.chain_registry import get_chain_config
+# Blockchain imports removed
 from app.domains.mental_health.models.autopilot_actions import (
     AutopilotAction,
     AutopilotActionType,
@@ -173,17 +172,6 @@ def _to_str(value: Any) -> Optional[str]:
 
 
 def _build_explorer_url(chain_id: Optional[int], tx_hash: Optional[str]) -> Optional[str]:
-    if chain_id is None or not tx_hash:
-        return None
-
-    nft_cfg = get_chain_config(int(chain_id))
-    if nft_cfg is not None:
-        return nft_cfg.explorer_tx_url(tx_hash)
-
-    att_cfg = get_attestation_chain_config(int(chain_id))
-    if att_cfg is not None:
-        return att_cfg.explorer_tx_url(tx_hash)
-
     return None
 
 
@@ -562,45 +550,7 @@ async def get_case_latest_attestation(
     db: AsyncSession = Depends(get_async_db),
     current_user: User = Depends(require_counselor),
 ) -> CounselorCaseAttestationResponse:
-    profile_query = select(CounselorProfile).where(CounselorProfile.user_id == current_user.id)
-    profile = (await db.execute(profile_query)).scalar_one_or_none()
-    if not profile:
-        raise HTTPException(status_code=404, detail="Counselor profile not found")
-
-    case = (await db.execute(select(Case).where(Case.id == case_id))).scalar_one_or_none()
-    if not case:
-        raise HTTPException(status_code=404, detail="Case not found")
-
-    if case.assigned_to != str(profile.id):
-        raise HTTPException(status_code=403, detail="Not authorized for this case")
-
-    record = (
-        await db.execute(
-            select(AttestationRecord)
-            .where(AttestationRecord.extra_data.op("->>")("case_id") == str(case.id))
-            .order_by(AttestationRecord.created_at.desc())
-            .limit(1)
-        )
-    ).scalar_one_or_none()
-
-    if record is None:
-        return CounselorCaseAttestationResponse(found=False)
-
-    extra = record.extra_data or {}
-    return CounselorCaseAttestationResponse(
-        found=True,
-        record_id=int(record.id),
-        status=record.status.value if hasattr(record.status, "value") else str(record.status),
-        schema=_to_str(extra.get("schema")),
-        attestation_type=_to_str(extra.get("attestation_type")),
-        decision=_to_str(extra.get("decision")),
-        feedback_redacted=_to_str(extra.get("feedback_redacted")),
-        tx_hash=_to_str(extra.get("tx_hash")),
-        chain_id=_to_int(extra.get("chain_id")),
-        autopilot_action_id=_to_int(extra.get("autopilot_action_id")),
-        created_at=record.created_at.isoformat() if record.created_at else None,
-        processed_at=record.processed_at.isoformat() if record.processed_at else None,
-    )
+    return CounselorCaseAttestationResponse(found=False)
 
 
 async def get_counselor_profile(user: User, db: AsyncSession) -> CounselorProfile:

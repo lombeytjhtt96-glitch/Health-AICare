@@ -44,7 +44,7 @@ from app.domains.finance.models import (
 )
 
 # Blockchain imports
-from app.domains.blockchain import OracleClient
+OracleClient = None
 
 logger = logging.getLogger(__name__)
 

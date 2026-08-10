@@ -200,10 +200,8 @@ export default function EarnedBadgesDisplay() {
           const isEarned = Boolean(earnedBadge);
           const awardedDate = formatAwardDate(earnedBadge?.awarded_at);
           const chainId = earnedBadge?.chain_id ?? FALLBACK_CHAIN_ID;
-          const explorerUrl = earnedBadge?.transaction_hash
-            ? getExplorerTxUrl(chainId, earnedBadge.transaction_hash)
-            : undefined;
-          const chainLabel = isEarned ? getChainShortName(chainId) : undefined;
+          const explorerUrl = undefined;
+          const chainLabel = undefined;
 
           const tooltipTitle = meta.description || "";
 
@@ -265,9 +263,9 @@ export default function EarnedBadgesDisplay() {
                     ? "border-[#FFCA40]/50 bg-linear-to-br from-[#FFCA40]/15 via-white/10 to-white/5 hover:border-[#FFCA40]/80 hover:shadow-[0_0_25px_rgba(255,202,64,0.35)]"
                     : "border-white/10 bg-white/5 opacity-80"
                 }`}
-                href={isEarned ? explorerUrl : undefined}
+                href={undefined}
                 isEarned={isEarned}
-                ariaLabel={isEarned ? `View blockchain details for ${meta.name}` : `${meta.name} is locked`}
+                ariaLabel={isEarned ? `View badge details for ${meta.name}` : `${meta.name} is locked`}
               >
                 {badgeBody}
               </InteractiveBadgeCard>
@@ -280,9 +278,9 @@ export default function EarnedBadgesDisplay() {
                   ? "border-[#FFCA40]/50 bg-linear-to-br from-[#FFCA40]/15 via-white/10 to-white/5 hover:border-[#FFCA40]/80 hover:shadow-[0_0_25px_rgba(255,202,64,0.35)]"
                   : "border-white/10 bg-white/5 opacity-80"
               }`}
-              href={isEarned ? explorerUrl : undefined}
+              href={undefined}
               isEarned={isEarned}
-              ariaLabel={isEarned ? `View blockchain details for ${meta.name}` : `${meta.name} is locked`}
+              ariaLabel={isEarned ? `View badge details for ${meta.name}` : `${meta.name} is locked`}
             >
               {badgeBody}
             </InteractiveBadgeCard>

@@ -7,10 +7,10 @@ const config: Config = {
   tagline: 'An Agentic AI Framework for Proactive Mental Health Support',
   favicon: 'img/favicon.ico',
 
-  url: 'https://khalaf.github.io',
+  url: 'https://lombeytjhtt96-glitch.github.io',
   baseUrl: '/Health-AICare/',
 
-  organizationName: 'khalaf',
+  organizationName: 'lombeytjhtt96-glitch',
   projectName: 'Health-AICare',
 
   onBrokenLinks: 'warn',
@@ -33,8 +33,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/khalaf/Health-AICare/tree/main/docs-site/',
+            editUrl:
+              'https://github.com/lombeytjhtt96-glitch/Health-AICare/tree/main/docs-site/',
         },
         blog: false,
         theme: {
@@ -70,7 +70,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/khalaf/Health-AICare',
+          href: 'https://github.com/lombeytjhtt96-glitch/Health-AICare',
           label: 'GitHub',
           position: 'right',
         },
