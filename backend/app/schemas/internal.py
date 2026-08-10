@@ -16,7 +16,7 @@ class UserInternalResponse(BaseModel):
 #? --- Schemas for POST /internal/sync-user ---
 class UserSyncPayload(BaseModel):
     google_sub: str
-    email: Optional[EmailStr] = None # Validate email format from frontend
+    email: Optional[str] = None # Validate email format from frontend
 
 class UserSyncResponse(BaseModel):
     message: str

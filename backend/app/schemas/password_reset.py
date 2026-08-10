@@ -5,7 +5,7 @@ from typing import Optional
 
 class ForgotPasswordRequest(BaseModel):
     """Request to initiate password reset."""
-    email: EmailStr = Field(..., description="Email address of the user")
+    email: str = Field(..., description="Email address of the user")
 
 class ForgotPasswordResponse(BaseModel):
     """Response after initiating password reset."""
@@ -40,4 +40,4 @@ class ValidateTokenResponse(BaseModel):
     """Response after token validation."""
     valid: bool = Field(..., description="Whether the token is valid")
     message: str = Field(..., description="Validation message")
-    email: Optional[EmailStr] = Field(None, description="Associated email if token is valid")
+    email: Optional[str] = Field(None, description="Associated email if token is valid")

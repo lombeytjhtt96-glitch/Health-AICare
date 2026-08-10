@@ -51,7 +51,7 @@ class UserListItem(BaseModel):
 
 
 class AdminCreateUserRequest(BaseModel):
-    email: EmailStr
+    email: str
     name: Optional[str] = None
     role: UserRole = "user"
     password: Optional[str] = Field(default=None, min_length=8)
@@ -70,7 +70,7 @@ class AdminCreateUserResponse(BaseModel):
 
 
 class AdminUpdateUserRequest(BaseModel):
-    email: Optional[EmailStr] = None
+    email: Optional[str] = None
     name: Optional[str] = None
     phone: Optional[str] = None
     wallet_address: Optional[str] = None

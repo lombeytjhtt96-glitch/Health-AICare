@@ -6,7 +6,7 @@ from pydantic import BaseModel, EmailStr, Field, ConfigDict
 
 class AdminProfileResponse(BaseModel):
     id: int
-    email: EmailStr
+    email: str
     name: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
@@ -19,7 +19,7 @@ class AdminProfileResponse(BaseModel):
 
 
 class AdminProfileUpdateRequest(BaseModel):
-    email: EmailStr
+    email: str
     name: Optional[str] = None
     first_name: Optional[str] = None
     last_name: Optional[str] = None
